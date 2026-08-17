@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IELTS – TRF Results Details</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; display:flex; }
+    .sidebar {
+      width: 220px; background:#b22222; color:#fff; padding:20px; height:100vh;
+    }
+    .sidebar h3 { margin-bottom:20px; }
+    .sidebar a {
+      display:block; color:#fff; margin:10px 0; text-decoration:none;
+      padding:5px; border-radius:5px;
+    }
+    .sidebar a:hover { background:#800000; }
+    .content { flex:1; padding:20px; background:#f4f4f4; }
+    .header {
+      display:flex; justify-content:space-between; align-items:center;
+      background:#fff; padding:10px; border-bottom:2px solid #b22222;
+    }
+    .header img { height:60px; }
+    .notice {
+      background:#eee; padding:10px; margin:15px 0; font-size:14px;
+      border:1px solid #ccc;
+    }
+    .card {
+      background:#fff; padding:20px; border-radius:10px;
+      box-shadow:0 0 10px #ccc; margin-top:20px; display:flex; gap:20px;
+    }
+    .info { flex:2; }
+    .photo { flex:1; text-align:center; }
+    .photo img { width:150px; border:1px solid #aaa; }
+    table { width:100%; border-collapse:collapse; margin-top:15px; }
+    th, td { border:1px solid #aaa; padding:8px; text-align:left; }
+    input { padding:10px; width:60%; margin:10px 0; }
+    button { padding:10px 20px; }
+  </style>
+</head>
+<body>
+  <!-- الشريط الجانبي -->
+  <div class="sidebar">
+    <h3>IELTS</h3>
+    <a href="#">Home</a>
+    <a href="#">TRF Query</a>
+    <a href="#">Download Results</a>
+    <a href="#">Manage My Ro Users</a>
+    <a href="#">Update My Profile</a>
+    <a href="#">FAQs</a>
+    <a href="#">IELTS.org</a>
+  </div>
+
+  <!-- المحتوى الرئيسي -->
+  <div class="content">
+    <!-- شعار IELTS -->
+    <div class="header">
+      <img src="images/ielts-logo.png" alt="IELTS Logo">
+      <h2>TRF Results Details</h2>
+    </div>
+
+    <div class="notice">
+      <strong>Match Found</strong><br>
+      Institutions themselves are responsible for determining the IELTS Band Scores appropriate to their particular courses or requirements...
+    </div>
+
+    <input type="text" id="serial" placeholder="Enter full TRF number">
+    <button onclick="showResult()">Show Result</button>
+
+    <div id="result" class="card" style="display:none;"></div>
+  </div>
+
+  <script>
+    const students = {
+      "26AE507413ALSM113A": {
+        familyName: "ALSHEHHI",
+        firstName: "MOHAMED AHMED ABDULLA ALRUDAMI",
+        dob: "06/06/2002",
+        centreNumber: "AE113",
+        centreName: "BRITISH COUNCIL",
+        candidateNumber: "507413",
+        candidateID: "784-2002-9850508-0",
+        examDate: "11/08/2026",
+        trf: "26AE507413ALSM113A",
+        listening: 6.0,
+        reading: 5.5,
+        writing: 5.5,
+        speaking: 6.5,
+        overall: 6.0,
+        photo: "images/student1.jpg"
+      }
+    };
+
+    function showResult() {
+      const serial = document.getElementById("serial").value.trim();
+      const student = students[serial];
+      const resultDiv = document.getElementById("result");
+
+      if (student) {
+        resultDiv.innerHTML = `
+          <div class="info">
+            <p><strong>Centre Number:</strong> ${student.centreNumber}</p>
+            <p><strong>Centre Name:</strong> ${student.centreName}</p>
+            <p><strong>Candidate Number:</strong> ${student.candidateNumber}</p>
+            <p><strong>Candidate ID:</strong> ${student.candidateID}</p>
+            <p><strong>Family Name:</strong> ${student.familyName}</p>
+            <p><strong>First Name:</strong> ${student.firstName}</p>
+            <p><strong>Date of Birth:</strong> ${student.dob}</p>
+            <p><strong>Date of Examination:</strong> ${student.examDate}</p>
+            <p><strong>TRF Number:</strong> ${student.trf}</p>
+            <table>
+              <tr><th>Listening</th><td>${student.listening}</td></tr>
+              <tr><th>Reading</th><td>${student.reading}</td></tr>
+              <tr><th>Writing</th><td>${student.writing}</td></tr>
+              <tr><th>Speaking</th><td>${student.speaking}</td></tr>
+            </table>
+            <p><strong>Overall Band:</strong> ${student.overall}</p>
+          </div>
+          <div class="photo">
+            <img src="${student.photo}" alt="Student Photo">
+          </div>
+        `;
+        resultDiv.style.display = "flex";
+      } else {
+        resultDiv.innerHTML = "<p style='color:red;'>No data found for this TRF number</p>";
+        resultDiv.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
