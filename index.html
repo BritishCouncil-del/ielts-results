@@ -1,57 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>IELTS – Home</title>
-  <style>
-    body {
-      margin:0;
-      font-family:"Arial Narrow",Arial,sans-serif;
-      background:url("images/ielts-bg.jpg") no-repeat center center fixed;
-      background-size:cover;
-      text-align:center;
-      color:#fff;
-    }
-    .overlay {
-      background:rgba(0,0,0,0.6);
-      min-height:100vh;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      padding:40px;
-    }
-    h1 {font-size:36px;margin-bottom:20px;color:#ffd700;}
-    input, button {
-      padding:12px;font-size:16px;margin:10px;border:none;border-radius:5px;
-    }
-    input {width:250px;}
-    button {
-      background:#d71920;color:#fff;font-weight:bold;cursor:pointer;
-    }
-    button:hover {background:#b5121b;}
-    .error {color:#ff4444;margin-top:15px;font-weight:bold;}
-  </style>
+  <title>IELTS TRF</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="overlay">
-    <h1>Welcome to IELTS Portal</h1>
-    <p>Please enter your TRF Serial Number:</p>
-    <input type="text" id="serialInput" placeholder="Enter TRF Number">
-    <button onclick="checkSerial()">Submit</button>
-    <div id="error" class="error"></div>
+  <div class="container">
+    <h1>مرحبًا بك في نظام عرض النتائج</h1>
+    <p>من فضلك أدخل الكود الخاص بك:</p>
+    <input type="text" id="serial" placeholder="ادخل الكود هنا">
+    <button onclick="checkCode()">عرض النتيجة</button>
   </div>
 
   <script>
-    function checkSerial(){
-      const serial = document.getElementById("serialInput").value.trim();
-      const errorBox = document.getElementById("error");
-
-      if(serial === "26AE507413ALSM113A"){
-        // لو الرقم صحيح → يفتح صفحة النتائج
-        window.location.href = "index.html";
+    function checkCode() {
+      var code = document.getElementById("serial").value;
+      if(code === "12345"){ 
+        window.location.href = "results.html";
       } else {
-        errorBox.innerText = "No Match Found – الرقم المدخل غير صحيح.";
+        alert("الكود غير صحيح");
       }
     }
   </script>
