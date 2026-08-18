@@ -2,38 +2,32 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>نتيجة IELTS</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="students.js"></script>
+  <title>صفحة النتائج</title>
+  <style>
+    body {font-family: Arial; direction: rtl; margin:0; padding:0;}
+    nav {background:#333; padding:10px;}
+    nav ul {list-style:none; margin:0; padding:0; display:flex;}
+    nav ul li {margin-left:20px;}
+    nav ul li a {color:#fff; text-decoration:none;}
+    .red-bar {background:red; width:100%; height:50px; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:18px;}
+    .content {padding:20px;}
+    .btn {display:inline-block; padding:10px 20px; background:#007bff; color:#fff; text-decoration:none; border-radius:5px;}
+    .btn:hover {background:#0056b3;}
+  </style>
 </head>
 <body>
-  <div class="container" id="resultContainer">
-    <h1>نتيجة الطالب</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="results.html">نتائج</a></li>
+      <li><a href="trf.html">TRF</a></li>
+    </ul>
+  </nav>
+  <div class="red-bar">Test Results – Overall Band: 6.0</div>
+  <div class="content">
+    <p>تاريخ الاختبار: 12/08/2026</p>
+    <p>TRF Number: 123456789</p>
+    <a href="results.pdf" download class="btn">تحميل النتائج</a>
   </div>
-
-  <script>
-    const code = localStorage.getItem("studentCode");
-    const student = students[code];
-
-    if(student){
-      document.getElementById("resultContainer").innerHTML += `
-        <img src="${student.image}" alt="صورة الطالب" class="student-img">
-        <p><strong>الاسم:</strong> ${student.name}</p>
-        <p><strong>رقم المرشح:</strong> ${student.candidateNumber}</p>
-        <p><strong>تاريخ الميلاد:</strong> ${student.dob}</p>
-        <p><strong>الجنسية:</strong> ${student.nationality}</p>
-        <h2>الدرجات</h2>
-        <p><strong>الاستماع:</strong> ${student.listening}</p>
-        <p><strong>القراءة:</strong> ${student.reading}</p>
-        <p><strong>الكتابة:</strong> ${student.writing}</p>
-        <p><strong>المحادثة:</strong> ${student.speaking}</p>
-        <p><strong>المجموع الكلي:</strong> ${student.overall} (${student.cefr})</p>
-        <p><strong>تاريخ الاختبار:</strong> ${student.examDate}</p>
-        <p><strong>رقم TRF:</strong> ${student.trf}</p>
-      `;
-    } else {
-      document.getElementById("resultContainer").innerHTML += "<p>لا توجد بيانات لهذا السيريال.</p>";
-    }
-  </script>
 </body>
 </html>
