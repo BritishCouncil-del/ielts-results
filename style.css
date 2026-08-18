@@ -1,21 +1,20 @@
 body {
   font-family: Tahoma, Arial, sans-serif;
-  text-align: center;
-  background-image: url("images/background.jpg"); /* الخلفية */
+  background: url("images/background.jpg") no-repeat center center fixed;
   background-size: cover;
-  background-position: center;
   margin: 0;
   padding: 0;
 }
 
 .container {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.9);
   margin: 80px auto;
   padding: 30px;
   border-radius: 12px;
   width: 80%;
   max-width: 600px;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  text-align: center;
 }
 
 .logo {
@@ -23,32 +22,36 @@ body {
   margin-bottom: 20px;
 }
 
-input {
-  padding: 12px;
-  width: 70%;
-  font-size: 16px;
+input[type="text"] {
+  padding: 10px;
+  width: 80%;
   border: 1px solid #ccc;
   border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 16px;
 }
 
 button {
-  padding: 12px 20px;
-  font-size: 16px;
-  background-color: #007BFF;
-  color: white;
+  padding: 10px 20px;
+  background-color: #0078d7;
+  color: #fff;
   border: none;
   border-radius: 6px;
+  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #005a9e;
 }
 
-.student-img {
-  max-width: 200px;
-  border-radius: 10px;
-  margin: 15px 0;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table td {
+  border: 1px solid #ccc;
+  padding: 8px;
 }
