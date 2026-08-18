@@ -2,40 +2,41 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>نتيجة IELTS</title>
+  <title>تفاصيل نتيجة IELTS</title>
   <link rel="stylesheet" href="style.css">
   <script src="students.js"></script>
 </head>
 <body>
   <div class="container">
     <img src="images/ielts-logo1.png" alt="IELTS Logo" class="logo">
-    <h1>نتيجة اختبار IELTS</h1>
-
+    <h1>تفاصيل نتيجة الطالب</h1>
     <div id="student-info"></div>
   </div>
 
   <script>
-    var code = "26AE509284ALSB113A"; // السيريال من الشهادة
-
+    var code = localStorage.getItem("studentCode");
     if(students[code]){
-      var student = students[code];
+      var s = students[code];
       document.getElementById("student-info").innerHTML = `
-        <h2>${student.name}</h2>
-        <p><strong>اسم العائلة:</strong> ${student.familyName}</p>
-        <p><strong>رقم المرشح:</strong> ${student.candidateNumber}</p>
-        <p><strong>تاريخ الميلاد:</strong> ${student.dob}</p>
-        <p><strong>الجنسية:</strong> ${student.nationality}</p>
-        <p><strong>اللغة الأولى:</strong> ${student.firstLanguage}</p>
-        <p><strong>تاريخ الامتحان:</strong> ${student.examDate}</p>
-        <p><strong>رقم الشهادة (TRF):</strong> ${student.trf}</p>
+        <table style="width:100%; text-align:right; border-collapse:collapse;">
+          <tr><td><strong>اسم الطالب:</strong></td><td>${s.name}</td></tr>
+          <tr><td><strong>اسم العائلة:</strong></td><td>${s.familyName}</td></tr>
+          <tr><td><strong>رقم المرشح:</strong></td><td>${s.candidateNumber}</td></tr>
+          <tr><td><strong>تاريخ الميلاد:</strong></td><td>${s.dob}</td></tr>
+          <tr><td><strong>الجنسية:</strong></td><td>${s.nationality}</td></tr>
+          <tr><td><strong>اللغة الأولى:</strong></td><td>${s.firstLanguage}</td></tr>
+          <tr><td><strong>تاريخ الامتحان:</strong></td><td>${s.examDate}</td></tr>
+          <tr><td><strong>رقم الشهادة (TRF):</strong></td><td>${s.trf}</td></tr>
+        </table>
         <hr>
-        <p><strong>الاستماع:</strong> ${student.listening}</p>
-        <p><strong>القراءة:</strong> ${student.reading}</p>
-        <p><strong>الكتابة:</strong> ${student.writing}</p>
-        <p><strong>المحادثة:</strong> ${student.speaking}</p>
-        <p><strong>الدرجة الكلية:</strong> ${student.overall}</p>
-        <p><strong>المستوى CEFR:</strong> ${student.ceFR}</p>
-        <img src="images/${student.image}" alt="Student Image" class="student-img">
+        <h3>الدرجات</h3>
+        <p><strong>الاستماع:</strong> ${s.listening}</p>
+        <p><strong>القراءة:</strong> ${s.reading}</p>
+        <p><strong>الكتابة:</strong> ${s.writing}</p>
+        <p><strong>المحادثة:</strong> ${s.speaking}</p>
+        <p><strong>الدرجة الكلية:</strong> ${s.overall}</p>
+        <p><strong>المستوى CEFR:</strong> ${s.ceFR}</p>
+        <img src="images/${s.image}" alt="Student Image" class="student-img">
       `;
     } else {
       document.getElementById("student-info").innerHTML = "<p>لم يتم العثور على بيانات الطالب.</p>";
