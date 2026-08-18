@@ -15,10 +15,10 @@
 
   <script>
     var code = localStorage.getItem("studentCode");
-    if(students[code]){
+    if(code && students[code]){
       var s = students[code];
       document.getElementById("student-info").innerHTML = `
-        <table style="width:100%; text-align:right; border-collapse:collapse;">
+        <table>
           <tr><td><strong>اسم الطالب:</strong></td><td>${s.name}</td></tr>
           <tr><td><strong>اسم العائلة:</strong></td><td>${s.familyName}</td></tr>
           <tr><td><strong>رقم المرشح:</strong></td><td>${s.candidateNumber}</td></tr>
