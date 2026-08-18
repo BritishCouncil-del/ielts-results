@@ -1,42 +1,9 @@
 body {
   font-family: Tahoma, Arial, sans-serif;
   text-align: center;
-  background-image: url("images/background.jpg"); /* صورة الخلفية */
+  background-image: url("images/background.jpg"); /* لازم تكتب images/ قبل اسم الصورة */
   background-size: cover;
   background-position: center;
   margin: 0;
   padding: 0;
-}
-
-.container {
-  background-color: rgba(255, 255, 255, 0.8);
-  margin: 50px auto;
-  padding: 20px;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 600px;
-}
-
-input, button {
-  padding: 10px;
-  margin: 10px;
-  font-size: 16px;
-}
-
-button {
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-.student-img {
-  max-width: 200px;
-  border-radius: 10px;
-  margin: 15px 0;
 }
