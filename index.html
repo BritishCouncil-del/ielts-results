@@ -18,7 +18,6 @@
     function checkCode() {
       var code = document.getElementById("serial").value;
       if(students[code]){
-        // حفظ الكود في التخزين المؤقت علشان نعرض بياناته في صفحة النتائج
         localStorage.setItem("studentCode", code);
         window.location.href = "results.html";
       } else {
