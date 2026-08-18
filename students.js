@@ -1,9 +1,11 @@
-// قاعدة بيانات الطلاب
 var students = {
   "26AE509284ALSB113A": {
-    name: "BUTI SAEED SALEM ALMAHDI",
+    name: "BUTI SAEED SALEM ALMAHDHI",
+    familyName: "ALSHAMSI",
     candidateNumber: "509284",
+    candidateID: "784-2009-7640391-3",
     dob: "18/02/2009",
+    sex: "M",
     nationality: "UNITED ARAB EMIRATES",
     firstLanguage: "ARABIC",
     examDate: "11/08/2026",
