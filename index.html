@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>IELTS TRF</title>
   <link rel="stylesheet" href="style.css">
+  <script src="students.js"></script>
 </head>
 <body>
   <div class="container">
@@ -16,10 +17,10 @@
   <script>
     function checkCode() {
       var code = document.getElementById("serial").value;
-
-      if(code === "26AE509284ALSLB113A"){ 
-        // الطالب BUTI SAEED SALEM ALMAHDHI
-        window.location.href = "results-509284.html"; 
+      if(students[code]){
+        // حفظ الكود في التخزين المؤقت علشان نعرض بياناته في صفحة النتائج
+        localStorage.setItem("studentCode", code);
+        window.location.href = "results.html";
       } else {
         alert("السيريال غير صحيح");
       }
