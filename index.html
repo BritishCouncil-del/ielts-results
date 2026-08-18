@@ -1,41 +1,10 @@
-26AE509284ALSB113A
 <!DOCTYPE html>
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
   <title>IELTS TRF</title>
-  <!-- ربط ملف الاستايل -->
-  <link rel="stylesheet" href="style.css">
-  <!-- ربط ملف الطلاب -->
-  <script src="students.js"></script>
+  <meta http-equiv="refresh" content="0; url=results.html">
 </head>
 <body>
-  <div class="container">
-    <!-- شعار IELTS -->
-    <img src="images/ielts-logo1.png" alt="IELTS Logo" class="logo">
-    
-    <!-- العنوان -->
-    <h1>مرحبًا بك في نظام عرض النتائج</h1>
-    <p>من فضلك أدخل السيريال نمبر من الشهادة:</p>
-    
-    <!-- إدخال السيريال -->
-    <input type="text" id="serial" placeholder="ادخل السيريال هنا">
-    
-    <!-- زر عرض النتيجة -->
-    <button onclick="checkCode()">عرض النتيجة</button>
-  </div>
-
-  <!-- كود التحقق -->
-  <script>
-    function checkCode() {
-      var code = document.getElementById("serial").value;
-      if(students[code]){
-        localStorage.setItem("studentCode", code);
-        window.location.href = "results.html";
-      } else {
-        alert("السيريال غير صحيح");
-      }
-    }
-  </script>
 </body>
 </html>
