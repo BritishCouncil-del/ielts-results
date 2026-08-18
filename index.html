@@ -20,8 +20,7 @@
       var code = document.getElementById("serial").value.trim();
       if(students[code]){
         localStorage.setItem("studentCode", code);
-        // تحويل مباشر لصفحة النتائج الرسمية
-        window.location.href = "results.html";
+        window.location.href = "results.html"; // تحويل مباشر
       } else {
         alert("السيريال غير صحيح");
       }
