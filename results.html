@@ -2,38 +2,40 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>نتيجة الطالب</title>
-  <!-- ربط ملف الاستايل -->
+  <title>نتيجة IELTS</title>
   <link rel="stylesheet" href="style.css">
-  <!-- ربط ملف الطلاب -->
   <script src="students.js"></script>
 </head>
 <body>
   <div class="container">
-    <!-- شعار IELTS -->
     <img src="images/ielts-logo1.png" alt="IELTS Logo" class="logo">
-
-    <!-- العنوان -->
     <h1>نتيجة اختبار IELTS</h1>
 
-    <!-- بيانات الطالب -->
     <div id="student-info"></div>
   </div>
 
   <script>
-    // جلب الكود المخزن من الصفحة السابقة
-    var code = localStorage.getItem("studentCode");
+    var code = "26AE509284ALSB113A"; // السيريال من الشهادة
 
     if(students[code]){
       var student = students[code];
       document.getElementById("student-info").innerHTML = `
         <h2>${student.name}</h2>
-        <img src="images/${student.image}" alt="Student Image" class="student-img">
-        <p><strong>الدرجة الكلية:</strong> ${student.score}</p>
+        <p><strong>اسم العائلة:</strong> ${student.familyName}</p>
+        <p><strong>رقم المرشح:</strong> ${student.candidateNumber}</p>
+        <p><strong>تاريخ الميلاد:</strong> ${student.dob}</p>
+        <p><strong>الجنسية:</strong> ${student.nationality}</p>
+        <p><strong>اللغة الأولى:</strong> ${student.firstLanguage}</p>
+        <p><strong>تاريخ الامتحان:</strong> ${student.examDate}</p>
+        <p><strong>رقم الشهادة (TRF):</strong> ${student.trf}</p>
+        <hr>
         <p><strong>الاستماع:</strong> ${student.listening}</p>
         <p><strong>القراءة:</strong> ${student.reading}</p>
         <p><strong>الكتابة:</strong> ${student.writing}</p>
         <p><strong>المحادثة:</strong> ${student.speaking}</p>
+        <p><strong>الدرجة الكلية:</strong> ${student.overall}</p>
+        <p><strong>المستوى CEFR:</strong> ${student.ceFR}</p>
+        <img src="images/${student.image}" alt="Student Image" class="student-img">
       `;
     } else {
       document.getElementById("student-info").innerHTML = "<p>لم يتم العثور على بيانات الطالب.</p>";
