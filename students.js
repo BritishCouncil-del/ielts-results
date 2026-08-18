@@ -1,17 +1,19 @@
-const students = {
-  "26AE509284ALSLB113A": {
-    name: "BUTI SAEED SALEM ALMAHDHI",
+// قاعدة بيانات الطلاب
+var students = {
+  "26AE509284ALSB113A": {
+    name: "BUTI SAEED SALEM ALMAHDI",
     candidateNumber: "509284",
     dob: "18/02/2009",
-    nationality: "الإمارات العربية المتحدة",
+    nationality: "UNITED ARAB EMIRATES",
+    firstLanguage: "ARABIC",
+    examDate: "11/08/2026",
+    trf: "26AE509284ALSB113A",
     listening: 6.0,
     reading: 5.5,
     writing: 5.5,
     speaking: 6.5,
     overall: 6.0,
-    cefr: "B2",
-    examDate: "11/08/2026",
-    trf: "26AE509284ALSLB113A",
-    image: "images/buti.jpg" // ضع صورة الطالب هنا في مجلد images
+    ceFR: "B2",
+    image: "buti.jpg"
   }
 };
