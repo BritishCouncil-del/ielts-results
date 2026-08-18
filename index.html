@@ -16,8 +16,13 @@
   <script>
     function checkCode() {
       var code = document.getElementById("serial").value;
+
       if(code === "12345"){ 
-        window.location.href = "results.html";
+        // الطالب الأول (مثال قديم)
+        window.location.href = "results.html"; 
+      } else if(code === "509284"){ 
+        // الطالب الجديد (BUTI SAEED SALEM ALMAHDHI)
+        window.location.href = "results-509284.html"; 
       } else {
         alert("الكود غير صحيح");
       }
