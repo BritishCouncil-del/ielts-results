@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -21,76 +21,4 @@
     .student-data p {padding:10px;margin:0;border:1px solid #ccc;font-size:14px;}
     .student-data p:nth-child(odd){background:#e0e0e0;} .student-data p:nth-child(even){background:#fff;}
     .photo {text-align:center;} .photo img {height:180px;border:none;padding:0;}
-    table {width:100%;border-collapse:collapse;margin-top:20px;}
-    th,td {border:1px solid #ccc;padding:10px;text-align:left;font-weight:bold;font-size:14px;}
-    table tr:nth-child(odd){background:#e0e0e0;} table tr:nth-child(even){background:#fff;}
-  </style>
-</head>
-<body>
-  <!-- القائمة الجانبية -->
-  <div class="sidebar">
-    <div class="ielts-header">IELTS</div>
-    <a href="home.html">HOME</a>
-    <a href="home.html">TRF QUERY</a>
-    <a href="#" onclick="downloadPDF()">DOWNLOAD RESULTS</a>
-    <a href="manage.html">MANAGE MY RO USERS</a>
-    <a href="profile.html">UPDATE MY PROFILE</a>
-    <a href="faqs.html">FAQS</a>
-    <a href="https://www.ielts.org" target="_blank">IELTS.ORG</a>
-  </div>
-
-  <!-- المحتوى الرئيسى -->
-  <div class="main" id="resultsPage">
-    <div class="header">
-      <h2>ENGLISH FOR INTERNATIONAL OPPORTUNITY</h2>
-      <h3>TRF RESULTS DETAILS</h3>
-    </div>
-
-    <div class="match-box">
-      <h2>Match Found</h2>
-      <p>Institutions themselves are responsible for determining the IELTS Band Scores appropriate...</p>
-    </div>
-
-    <div class="result">
-      <div class="student-data">
-        <p><strong>Centre Number:</strong> AE113</p>
-        <p><strong>Centre Name:</strong> BRITISH COUNCIL</p>
-        <p><strong>Candidate Number:</strong> 507413</p>
-        <p><strong>Candidate ID:</strong> 784-2002-9850508-0</p>
-        <p><strong>Family Name:</strong> ALSHEHHI</p>
-        <p><strong>First Name:</strong> MOHAMED AHMED ABDULLA ALRUDAMI</p>
-        <p><strong>Date of Birth:</strong> 06/06/2002</p>
-        <p><strong>Sex (M/F):</strong> M</p>
-      </div>
-      <div class="photo"><img src="images/student1.jpg" alt="Student Photo"></div>
-    </div>
-
-    <div class="overall-band">
-      <span>Test Results</span>
-      <span>Overall Band 6.0</span>
-      <span>Band Scores explained</span>
-    </div>
-
-    <table>
-      <tr><th>Date of Examination</th><td>11/08/2026</td></tr>
-      <tr><th>TRF Number</th><td>26AE507413ALSM113A</td></tr>
-      <tr><th>Listening</th><td>6.0</td></tr>
-      <tr><th>Reading</th><td>5.5</td></tr>
-      <tr><th>Writing</th><td>5.5</td></tr>
-      <tr><th>Speaking</th><td>6.5</td></tr>
-    </table>
-  </div>
-
-  <!-- دالة تحميل PDF -->
-  <script>
-    function downloadPDF(){
-      const { jsPDF } = window.jspdf;
-      const doc = new jsPDF({orientation:"portrait",unit:"pt",format:"a4"});
-      doc.html(document.querySelector("#resultsPage"), {
-        callback: function (pdf) { pdf.save("IELTS_TRF_Result.pdf"); },
-        x: 20, y: 20, width: 550
-      });
-    }
-  </script>
-</body>
-</html>
+    table {width:100%;border-collapse
