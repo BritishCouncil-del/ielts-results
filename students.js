@@ -12,6 +12,6 @@ const students = {
     cefr: "B2",
     examDate: "11/08/2026",
     trf: "26AE509284ALSLB113A",
-    image: "images/buti.jpg" // اسم الصورة اللي هتحطها في مجلد images
+    image: "images/buti.jpg" // ضع صورة الطالب هنا في مجلد images
   }
 };
