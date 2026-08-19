@@ -82,4 +82,5 @@ body.welcome {
 .sidebar a:hover { background-color: #b71c1c; }
 
 .match-found {
-  width: 75%; margin-left: 22%; margin-top
+  width: 75%; margin-left: 22%; margin-top: 20px;
+  background-color: #e8f5e9; border: 1px
