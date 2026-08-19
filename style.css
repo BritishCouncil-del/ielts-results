@@ -1,46 +1,15 @@
-body {
-  font-family: Tahoma, Arial, sans-serif;
-  background: url("images/background.jpg") no-repeat center center fixed;
-  background-size: cover;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  background-color: rgba(255, 255, 255, 0.95);
-  margin: 50px auto;
-  padding: 30px;
-  border-radius: 12px;
-  width: 85%;
-  max-width: 700px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  text-align: center;
-}
-
-.logo {
-  max-width: 120px;
-  margin-bottom: 20px;
-}
-
-.results-table, .scores-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-.results-table td, .scores-table td {
-  border: 1px solid #ccc;
-  padding: 8px;
-  text-align: right;
-}
-
-.scores-table td:first-child {
+.red-bar {
+  background-color: #d32f2f; /* أحمر */
+  color: #fff;
   font-weight: bold;
+  padding: 12px;
+  display: flex;              /* يخلي العناصر جنب بعض */
+  justify-content: space-around; /* توزيع متساوي بعرض الصفحة */
+  align-items: center;        /* محاذاة عمودية */
+  width: 100%;                /* بعرض الشاشة بالكامل */
+  box-sizing: border-box;
+  font-size: 18px;
 }
-
-.student-img {
-  max-width: 200px;
-  border-radius: 10px;
-  margin-top: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+.red-bar span {
+  margin: 0 15px;
 }
