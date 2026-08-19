@@ -7,43 +7,45 @@
   <script src="students.js"></script>
 </head>
 <body>
-  <!-- الشعار والقائمة العلوية -->
-  <div class="topbar">
+  <!-- الهيدر -->
+  <div class="header">
     <img src="images/ielts-logo1.png" alt="IELTS Logo" class="logo">
-    <h2>IELTS – ENGLISH FOR INTERNATIONAL OPPORTUNITY</h2>
-    <nav class="menu">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="download.html">تحميل النتائج</a></li>
-        <li><a href="contact.html">تواصل معنا</a></li>
-      </ul>
-    </nav>
+    <h2>ENGLISH FOR INTERNATIONAL OPPORTUNITY</h2>
+    <h3>TRF RESULTS DETAILS</h3>
   </div>
 
-  <h3>TRF RESULTS DETAILS</h3>
   <h1>Match Found</h1>
 
-  <div class="info-layout">
-    <!-- بيانات الطالب -->
-    <div class="info-table">
-      <table>
-        <tr class="gray"><td><strong>Centre Number:</strong></td><td id="centreNumber"></td></tr>
-        <tr class="white"><td><strong>Centre Name:</strong></td><td id="centreName"></td></tr>
-        <tr class="gray"><td><strong>Candidate Number:</strong></td><td id="candidateNumber"></td></tr>
-        <tr class="white"><td><strong>Candidate ID:</strong></td><td id="candidateID"></td></tr>
-        <tr class="gray"><td><strong>Family Name:</strong></td><td id="familyName"></td></tr>
-        <tr class="white"><td><strong>First Name:</strong></td><td id="firstName"></td></tr>
-        <tr class="gray"><td><strong>Date of Birth:</strong></td><td id="dob"></td></tr>
-        <tr class="white"><td><strong>Sex (M/F):</strong></td><td id="sex"></td></tr>
-        <tr class="gray"><td><strong>Repeating IELTS:</strong></td><td id="repeat"></td></tr>
-        <tr class="white"><td><strong>Previous Test Date:</strong></td><td id="prevDate"></td></tr>
-        <tr class="gray"><td><strong>Previous Test Centre:</strong></td><td id="prevCentre"></td></tr>
-      </table>
+  <div class="layout">
+    <!-- العمود الجانبي الأحمر -->
+    <div class="sidebar">
+      <ul>
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="download.html">⬇️ تحميل النتائج</a></li>
+        <li><a href="contact.html">📧 تواصل معنا</a></li>
+      </ul>
     </div>
 
-    <!-- صورة الطالب -->
-    <div class="student-photo">
-      <img id="studentImage" src="" alt="Student Image">
+    <!-- بيانات الطالب + صورة -->
+    <div class="info-layout">
+      <div class="info-table">
+        <table>
+          <tr class="gray"><td><strong>Centre Number:</strong></td><td id="centreNumber"></td></tr>
+          <tr class="white"><td><strong>Centre Name:</strong></td><td id="centreName"></td></tr>
+          <tr class="gray"><td><strong>Candidate Number:</strong></td><td id="candidateNumber"></td></tr>
+          <tr class="white"><td><strong>Candidate ID:</strong></td><td id="candidateID"></td></tr>
+          <tr class="gray"><td><strong>Family Name:</strong></td><td id="familyName"></td></tr>
+          <tr class="white"><td><strong>First Name:</strong></td><td id="firstName"></td></tr>
+          <tr class="gray"><td><strong>Date of Birth:</strong></td><td id="dob"></td></tr>
+          <tr class="white"><td><strong>Sex (M/F):</strong></td><td id="sex"></td></tr>
+          <tr class="gray"><td><strong>Repeating IELTS:</strong></td><td id="repeat"></td></tr>
+          <tr class="white"><td><strong>Previous Test Date:</strong></td><td id="prevDate"></td></tr>
+          <tr class="gray"><td><strong>Previous Test Centre:</strong></td><td id="prevCentre"></td></tr>
+        </table>
+      </div>
+      <div class="student-photo">
+        <img id="studentImage" src="" alt="Student Image">
+      </div>
     </div>
   </div>
 
