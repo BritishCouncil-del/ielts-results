@@ -1,74 +1,87 @@
-/* خلفية صفحة الترحيب */
-body.welcome {
-  background: url("images/background.jpg") no-repeat center center fixed;
-  background-size: cover;
-  font-family: Tahoma, Arial, sans-serif;
-  direction: rtl;
+/* الهيدر */
+.header-red {
+  background-color: #d32f2f;
+  color: #fff;
+  padding: 20px;
+  text-align: left;
 }
-
-/* المربع الأبيض */
-.welcome-box {
-  background: rgba(255, 255, 255, 0.95);
-  width: 420px;
-  margin: 120px auto;
-  padding: 25px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 0 20px rgba(0,0,0,0.4);
-  border: 2px solid #d32f2f;
-}
-
-/* كلمة IELTS */
-.ielts-title {
-  font-size: 55px;
-  color: #d32f2f;
-  margin-bottom: 10px;
+.ielts-logo {
+  font-size: 48px;
   font-weight: bold;
-  text-align: center;
+  color: #fff;
 }
 
-/* السطر الفرعي */
-.portal-subtitle {
-  font-size: 20px;
-  color: #d32f2f;
-  margin-bottom: 15px;
-  text-align: center;
-  font-style: italic;
+/* القوائم الجانبية */
+.sidebar {
+  width: 20%;
+  background-color: #d32f2f;
+  padding: 15px;
+  float: left;
+  min-height: 100vh;
 }
-
-/* العنوان الكبير */
-.big-ielts {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 20px;
+.sidebar ul { list-style: none; padding: 0; }
+.sidebar li { margin: 12px 0; }
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
   font-weight: bold;
-  text-align: center;
+  display: block;
+  padding: 8px;
+  border-radius: 4px;
 }
+.sidebar a:hover { background-color: #b71c1c; }
 
-/* إدخال البيانات */
-.welcome-box input {
-  width: 90%;
-  padding: 12px;
-  margin-bottom: 15px;
+/* بيانات الطالب + الصورة */
+.info-layout {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin-left: 22%;
+  margin-top: 20px;
+}
+.info-table table { width: 100%; border-collapse: collapse; }
+.info-table td { padding: 8px; font-size: 14px; }
+.dark { background-color: #d6d6d6; }
+.white { background-color: #fff; }
+.student-photo img {
+  max-width: 150px;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 8px;
+  margin-left: 15px;
+}
+
+/* الصف الأحمر للـ Scores */
+.scores-red {
+  background-color: #d32f2f;
+  color: #fff;
+  font-weight: bold;
+  padding: 15px;
+  text-align: center;
+  width: 75%;
+  margin-left: 22%;
+  font-size: 18px;
+  margin-top: 25px;
+  border-bottom: 3px solid #b71c1c;
+}
+
+/* جدول الدرجات */
+.scores-table {
+  width: 75%;
+  margin-left: 22%;
+  border-collapse: collapse;
+}
+.scores-table td {
+  padding: 12px;
   font-size: 15px;
 }
+.scores-table .dark { background-color: #d6d6d6; }
+.scores-table .white { background-color: #fff; }
 
-/* زر الدخول */
-.welcome-box button {
-  width: 95%;
-  background: linear-gradient(45deg, #1976d2, #0d47a1);
+/* الفوتر */
+.footer {
+  background-color: #000;
   color: #fff;
-  border: none;
-  padding: 12px;
-  font-weight: bold;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s;
-  font-size: 16px;
-}
-.welcome-box button:hover {
-  background: linear-gradient(45deg, #0d47a1, #1976d2);
-  transform: scale(1.05);
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
 }
