@@ -94,4 +94,21 @@ body.welcome {
 .match-found {
   width: 75%; margin-left: 22%; margin-top: 20px;
   background-color: #e8f5e9; border: 1px solid #4caf50;
-  padding: 15px; border-radius: 6px; color: #
+  padding: 15px; border-radius: 6px; color: #2e7d32;
+  font-size: 14px; line-height: 1.6;
+}
+.match-found h3 { margin: 0 0 10px; font-size: 16px; font-weight: bold; }
+
+/* عنوان TRF Results Details */
+.results-title {
+  font-size: 20px; font-weight: bold; color: #d32f2f;
+  margin: 20px 22% 10px; border-bottom: 2px solid #d32f2f;
+  display: inline-block; padding-bottom: 5px;
+}
+
+/* بيانات الطالب + صورة */
+.info-layout {
+  display: flex; justify-content: space-between;
+  width: 75%; margin-left: 22%; margin-top: 20px;
+}
+.info-table table {
