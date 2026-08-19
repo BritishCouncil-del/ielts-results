@@ -1,4 +1,4 @@
-/* خلفية صفحة الترحيب */
+/* ===== صفحة الترحيب ===== */
 body.welcome {
   background: url("images/background.jpg") no-repeat center center fixed;
   background-size: cover;
@@ -6,7 +6,6 @@ body.welcome {
   direction: rtl;
 }
 
-/* المربع الأبيض */
 .welcome-box {
   background: rgba(255, 255, 255, 0.95);
   width: 420px;
@@ -18,7 +17,6 @@ body.welcome {
   border: 2px solid #d32f2f;
 }
 
-/* كلمة IELTS */
 .ielts-title {
   font-size: 55px;
   color: #d32f2f;
@@ -27,7 +25,6 @@ body.welcome {
   text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
 }
 
-/* السطر الفرعي */
 .portal-subtitle {
   font-size: 20px;
   color: #d32f2f;
@@ -35,7 +32,6 @@ body.welcome {
   font-style: italic;
 }
 
-/* العنوان الكبير */
 .big-ielts {
   font-size: 24px;
   color: #333;
@@ -43,7 +39,6 @@ body.welcome {
   font-weight: bold;
 }
 
-/* إدخال البيانات */
 .welcome-box input {
   width: 90%;
   padding: 12px;
@@ -53,7 +48,6 @@ body.welcome {
   font-size: 15px;
 }
 
-/* زر الدخول */
 .welcome-box button {
   width: 95%;
   background: linear-gradient(45deg, #1976d2, #0d47a1);
@@ -70,3 +64,38 @@ body.welcome {
   background: linear-gradient(45deg, #0d47a1, #1976d2);
   transform: scale(1.05);
 }
+
+/* ===== صفحة النتائج ===== */
+.header-red {
+  background: linear-gradient(90deg, #d32f2f, #b71c1c);
+  color: #fff;
+  padding: 20px;
+  text-align: left; /* كلمة IELTS على الشمال */
+}
+.ielts-logo {
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+/* القوائم */
+.sidebar {
+  width: 20%;
+  background-color: #d32f2f;
+  padding: 15px;
+  float: left;
+  min-height: 100vh;
+}
+.sidebar ul { list-style: none; padding: 0; }
+.sidebar li { margin: 15px 0; }
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px; /* خط كبير */
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+}
+.sidebar a:hover {
