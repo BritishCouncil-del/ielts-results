@@ -8,7 +8,7 @@ body.welcome {
 
 .ielts-title {
   font-size: 55px;
-  color: #d32f2f; /* أحمر */
+  color: #d32f2f;
   margin-bottom: 5px;
   font-weight: bold;
   text-align: center;
@@ -42,184 +42,91 @@ body.welcome {
   border: 2px solid #d32f2f;
 }
 
-.welcome-box p {
-  margin-bottom: 15px;
-  font-size: 16px;
-}
-
+.welcome-box p { margin-bottom: 15px; font-size: 16px; }
 .welcome-box input {
-  width: 90%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 15px;
+  width: 90%; padding: 12px; margin-bottom: 15px;
+  border: 1px solid #ccc; border-radius: 6px; font-size: 15px;
 }
-
 .welcome-box button {
-  width: 95%;
-  background: linear-gradient(45deg, #1976d2, #0d47a1);
-  color: #fff;
-  border: none;
-  padding: 12px;
-  font-weight: bold;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s;
-  font-size: 16px;
+  width: 95%; background: linear-gradient(45deg, #1976d2, #0d47a1);
+  color: #fff; border: none; padding: 12px; font-weight: bold;
+  border-radius: 6px; cursor: pointer; transition: 0.3s; font-size: 16px;
 }
-
 .welcome-box button:hover {
   background: linear-gradient(45deg, #0d47a1, #1976d2);
   transform: scale(1.05);
 }
 
 /* ===== صفحة النتائج ===== */
-.header-red {
-  background-color: #d32f2f;
-  color: #fff;
-  padding: 15px;
-  font-size: 26px;
-  font-weight: bold;
-  text-align: left;
-}
 
-.ielts-logo {
-  margin-left: 20px;
-  font-size: 30px;
-  font-weight: bold;
+/* الهيدر الأحمر */
+.header-red {
+  background-color: #d32f2f; color: #fff;
+  padding: 15px; font-size: 26px; font-weight: bold; text-align: left;
 }
+.ielts-logo { margin-left: 20px; font-size: 30px; font-weight: bold; }
 
 /* القوائم الجانبية */
 .sidebar {
-  width: 20%;
-  background-color: #d32f2f;
-  padding: 15px;
-  float: left;
-  min-height: 100vh;
+  width: 20%; background-color: #d32f2f;
+  padding: 15px; float: left; min-height: 100vh;
 }
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar li {
-  margin: 12px 0;
-}
-
+.sidebar ul { list-style: none; padding: 0; }
+.sidebar li { margin: 12px 0; }
 .sidebar a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  display: block;
-  padding: 8px;
-  border-radius: 4px;
+  color: #fff; text-decoration: none; font-weight: bold;
+  display: block; padding: 8px; border-radius: 4px;
 }
-
-.sidebar a:hover {
-  background-color: #b71c1c;
-}
+.sidebar a:hover { background-color: #b71c1c; }
 
 /* نص Match Found */
 .match-found {
-  width: 75%;
-  margin-left: 22%;
-  margin-top: 20px;
-  background-color: #e8f5e9;
-  border: 1px solid #4caf50;
-  padding: 15px;
-  border-radius: 6px;
-  color: #2e7d32;
-  font-size: 14px;
-  line-height: 1.6;
+  width: 75%; margin-left: 22%; margin-top: 20px;
+  background-color: #e8f5e9; border: 1px solid #4caf50;
+  padding: 15px; border-radius: 6px; color: #2e7d32;
+  font-size: 14px; line-height: 1.6;
 }
+.match-found h3 { margin: 0 0 10px; font-size: 16px; font-weight: bold; }
 
 /* عنوان TRF Results Details */
 .results-title {
-  font-size: 20px;
-  font-weight: bold;
-  color: #d32f2f;
-  margin: 20px 22% 10px;
-  border-bottom: 2px solid #d32f2f;
-  display: inline-block;
-  padding-bottom: 5px;
+  font-size: 20px; font-weight: bold; color: #d32f2f;
+  margin: 20px 22% 10px; border-bottom: 2px solid #d32f2f;
+  display: inline-block; padding-bottom: 5px;
 }
 
 /* بيانات الطالب + صورة */
 .info-layout {
-  display: flex;
-  justify-content: space-between;
-  width: 75%;
-  margin-left: 22%;
-  margin-top: 20px;
+  display: flex; justify-content: space-between;
+  width: 75%; margin-left: 22%; margin-top: 20px;
 }
-
-.info-table table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.info-table td {
-  padding: 8px;
-  font-size: 14px;
-}
-
-.gray {
-  background-color: #f0f0f0;
-}
-
-.white {
-  background-color: #fff;
-}
-
+.info-table table { width: 100%; border-collapse: collapse; }
+.info-table td { padding: 8px; font-size: 14px; }
+.gray { background-color: #f0f0f0; }
+.white { background-color: #fff; }
 .student-photo img {
-  max-width: 100px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin-left: 15px;
+  max-width: 120px; border: 1px solid #ccc;
+  border-radius: 8px; margin-left: 15px;
 }
 
 /* الصف الأحمر للـ Scores */
 .scores-red {
-  background-color: #d32f2f;
-  color: #fff;
-  font-weight: bold;
-  padding: 15px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  font-size: 18px;
-  margin: 25px 0;
+  background-color: #d32f2f; color: #fff; font-weight: bold;
+  padding: 15px; display: flex; justify-content: space-around;
+  align-items: center; width: 100%; font-size: 18px;
+  margin: 25px 0; border-bottom: 3px solid #b71c1c;
 }
 
-/* جدول الدرجات */
+/* جدول الدرجات أبيض/رمادي */
 .scores-table {
-  width: 75%;
-  margin-left: 22%;
-  border-collapse: collapse;
+  width: 75%; margin-left: 22%; border-collapse: collapse;
 }
-
-.scores-table td {
-  padding: 10px;
-  font-size: 14px;
-}
-
-.scores-table .gray {
-  background-color: #f0f0f0;
-}
-
-.scores-table .white {
-  background-color: #fff;
-}
+.scores-table td { padding: 10px; font-size: 14px; }
+.scores-table .gray { background-color: #f0f0f0; }
+.scores-table .white { background-color: #fff; }
 
 /* الفوتر */
 .footer {
-  background-color: #000;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  margin-top: 30px;
-  font-size: 13px;
+  background-color: #000; color: #fff; text-align: center;
+  padding: 10px; margin-top: 30px; font-size: 13px;
 }
