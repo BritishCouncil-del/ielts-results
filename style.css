@@ -6,24 +6,27 @@ body.welcome {
   direction: rtl;
 }
 
-/* كلمة IELTS */
+/* كلمة IELTS باللون الأحمر */
 .ielts-title {
   font-size: 55px;
-  color: #d32f2f;
+  color: #d32f2f; /* أحمر */
   margin-bottom: 5px;
   font-weight: bold;
   text-align: center;
   text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  letter-spacing: 2px;
 }
 
 /* كلمة IELTS Results Portal */
 .portal-subtitle {
   font-size: 22px;
-  color: #d32f2f;
+  color: #d32f2f; /* أحمر */
   margin-bottom: 15px;
   text-align: center;
   font-style: italic;
-  letter-spacing: 1px;
+  border-bottom: 2px solid #d32f2f;
+  display: inline-block;
+  padding-bottom: 3px;
 }
 
 /* كلمة مرحباً بك */
