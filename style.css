@@ -1,3 +1,53 @@
+body.welcome {
+  background: url("images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: Tahoma, Arial, sans-serif;
+  direction: rtl;
+}
+
+.big-ielts {
+  font-size: 45px;
+  color: #d32f2f;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.welcome-box {
+  background: rgba(255, 255, 255, 0.9);
+  width: 400px;
+  margin: 120px auto;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.welcome-box p {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.welcome-box input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.welcome-box button {
+  background-color: #1976d2; /* أزرق زي الصورة */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.welcome-box button:hover {
+  background
 /* ===== صفحة الترحيب ===== */
 body.welcome {
   background: url("images/background.jpg") no-repeat center center fixed;
