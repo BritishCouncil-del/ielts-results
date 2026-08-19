@@ -2,7 +2,7 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>تفاصيل نتيجة الطالب</title>
+  <title>IELTS TRF Results</title>
   <link rel="stylesheet" href="style.css">
   <script src="students.js"></script>
 </head>
@@ -10,6 +10,7 @@
   <div class="header">
     <img src="images/ielts-logo1.png" alt="IELTS Logo" class="logo">
     <h2>ENGLISH FOR INTERNATIONAL OPPORTUNITY</h2>
+    <h3>TRF RESULTS DETAILS</h3>
   </div>
 
   <!-- الصف الأحمر -->
@@ -20,7 +21,7 @@
   </div>
 
   <div class="main">
-    <h1>تفاصيل نتيجة الطالب</h1>
+    <h1>Match Found</h1>
     <div id="student-info"></div>
   </div>
 
@@ -28,31 +29,4 @@
     var code = localStorage.getItem("studentCode");
     if(code && students[code]){
       var s = students[code];
-      document.getElementById("student-info").innerHTML = `
-        <table class="results-table">
-          <tr><td><strong>اسم الطالب:</strong></td><td>${s.name}</td></tr>
-          <tr><td><strong>اسم العائلة:</strong></td><td>${s.familyName}</td></tr>
-          <tr><td><strong>رقم المرشح:</strong></td><td>${s.candidateNumber}</td></tr>
-          <tr><td><strong>تاريخ الميلاد:</strong></td><td>${s.dob}</td></tr>
-          <tr><td><strong>الجنسية:</strong></td><td>${s.nationality}</td></tr>
-          <tr><td><strong>اللغة الأولى:</strong></td><td>${s.firstLanguage}</td></tr>
-          <tr><td><strong>تاريخ الامتحان:</strong></td><td>${s.examDate}</td></tr>
-          <tr><td><strong>رقم الشهادة (TRF):</strong></td><td>${s.trf}</td></tr>
-        </table>
-        <hr>
-        <h3>الدرجات</h3>
-        <table class="scores-table">
-          <tr><td>الاستماع</td><td>${s.listening}</td></tr>
-          <tr><td>القراءة</td><td>${s.reading}</td></tr>
-          <tr><td>الكتابة</td><td>${s.writing}</td></tr>
-          <tr><td>المحادثة</td><td>${s.speaking}</td></tr>
-          <tr><td><strong>الدرجة الكلية</strong></td><td><strong>${s.overall}</strong></td></tr>
-          <tr><td>المستوى CEFR</td><td>${s.ceFR}</td></tr>
-        </table>
-        <img src="images/${s.image}" alt="Student Image" class="student-img">
-      `;
-    } else {
-      document.getElementById("student-info").innerHTML = "<p style='color:red;'>⚠️ لم يتم العثور على بيانات الطالب.</p>";
-    }
-  </script>
-</body>
+      document.getElementById("student-info").innerHTML
