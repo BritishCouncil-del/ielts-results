@@ -2,28 +2,18 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>IELTS TRF</title>
+  <title>IELTS Portal</title>
   <link rel="stylesheet" href="style.css">
-  <script>
-    function goToResults() {
-      var code = document.getElementById("serial").value;
-      if(code.trim() !== ""){
-        localStorage.setItem("studentCode", code);
-        window.location.href = "results.html";
-      } else {
-        alert("من فضلك أدخل رقم الشهادة (السيريال)");
-      }
-    }
-  </script>
 </head>
 <body class="welcome">
   <div class="welcome-box">
-    <h1 class="ielts-title">IELTS</h1>
-    <h2 class="portal-subtitle">English for International Opportunity</h2>
-    <h2 class="big-ielts">مرحباً بك في نظام عرض النتائج</h2>
-    <p>من فضلك أدخل رقم الشهادة (السيريال)</p>
-    <input type="text" id="serial" placeholder="ادخل السيريال هنا">
-    <button onclick="goToResults()">عرض النتيجة</button>
+    <div class="ielts-title">IELTS</div>
+    <div class="portal-subtitle">English for International Opportunity</div>
+    <div class="big-ielts">Test Report Form Portal</div>
+    <p>أدخل بياناتك للتحقق من نتيجة IELTS الخاصة بك</p>
+    <input type="text" placeholder="رقم المرشح">
+    <input type="text" placeholder="رقم TRF">
+    <button onclick="window.location.href='results.html'">عرض النتيجة</button>
   </div>
 </body>
 </html>
