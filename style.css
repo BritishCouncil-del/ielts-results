@@ -1,11 +1,33 @@
-
 .header {
-  text-align: center;
-  margin-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+  padding: 10px;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
-  max-width: 120px;
+  max-width: 100px;
+  margin-right: 15px;
+}
+
+.title-text h1 {
+  color: #d32f2f;
+  margin: 0;
+}
+
+.title-text h2 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.title-text h3 {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
 }
 
 .note {
@@ -40,6 +62,10 @@
   font-weight: bold;
 }
 
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
 .info-layout {
   display: flex;
   justify-content: space-between;
@@ -70,37 +96,4 @@
 
 .student-photo {
   width: 30%;
-  text-align: center;
-}
-
-.student-photo img {
-  max-width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-.red-bar {
-  background-color: #d32f2f;
-  color: #fff;
-  font-weight: bold;
-  padding: 12px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  font-size: 18px;
-  margin: 20px 0;
-}
-
-.scores {
-  margin-top: 20px;
-}
-
-.scores ul {
-  list-style: none;
-  padding: 0;
-}
-
-.scores li {
-  margin: 5px 0;
-}
+  text-align
