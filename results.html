@@ -7,20 +7,19 @@
   <script src="students.js"></script>
 </head>
 <body>
-  <!-- الهيدر الأحمر -->
+  <!-- الصف الأحمر العلوي -->
   <div class="top-red-bar">
     <h1>IELTS</h1>
     <span>English for International Opportunity</span>
   </div>
 
-  <h2>TRF Results Details:</h2>
-  <h3>Match Found</h3>
+  <h1>Match Found</h1>
   <p class="note">
-    Institutions themselves are responsible for determining the IELTS Band Scores appropriate to their particular courses or requirements. Institutions should note that IELTS Band Scores reflect English language proficiency alone which is one of the many factors relevant to academic success or failure. It is standard practice for the scores reported on an IELTS Test Report Form to be accepted by institutions as evidence of a candidate’s English language ability for a two-year period from the date of the test.
+    Institutions themselves are responsible for determining the IELTS Band Scores appropriate to their particular courses or requirements...
   </p>
 
   <div class="layout">
-    <!-- القوائم الجانبية -->
+    <!-- العمود الجانبي الأحمر -->
     <div class="sidebar">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -53,10 +52,10 @@
     </div>
   </div>
 
-  <!-- الصف الأحمر للـ Test Results + Overall Band -->
+  <!-- الصف الأحمر للـ Overall Band -->
   <div class="red-bar">
-    <span>Test Results</span>
     <span>Overall Band: <span id="overallBand"></span></span>
+    <span>Band Scores explained</span>
   </div>
 
   <!-- جدول الدرجات + تاريخ الاختبار والسيريال -->
@@ -75,4 +74,30 @@
     if(code && students[code]){
       var s = students[code];
       document.getElementById("centreNumber").textContent = s.centreNumber;
-      document.getElementById("
+      document.getElementById("centreName").textContent = s.centreName;
+      document.getElementById("candidateNumber").textContent = s.candidateNumber;
+      document.getElementById("candidateID").textContent = s.candidateID;
+      document.getElementById("familyName").textContent = s.familyName;
+      document.getElementById("firstName").textContent = s.name;
+      document.getElementById("dob").textContent = s.dob;
+      document.getElementById("sex").textContent = s.sex;
+      document.getElementById("studentImage").src = "images/" + s.image;
+
+      document.getElementById("examDate").textContent = s.examDate;
+      document.getElementById("trf").textContent = s.trf;
+      document.getElementById("listening").textContent = s.listening;
+      document.getElementById("reading").textContent = s.reading;
+      document.getElementById("writing").textContent = s.writing;
+      document.getElementById("speaking").textContent = s.speaking;
+      document.getElementById("overallBand").textContent = s.overall;
+    } else {
+      document.body.innerHTML += "<p style='color:red;text-align:center;'>لم يتم العثور على بيانات لهذا السيريال</p>";
+    }
+  </script>
+
+  <!-- شريط أسود صغير في الأسفل -->
+  <footer class="footer">
+    <p>© IELTS Official Results Portal</p>
+  </footer>
+</body>
+</html>
