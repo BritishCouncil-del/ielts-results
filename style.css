@@ -13,19 +13,25 @@
   margin: 20px 0;
 }
 
-.sidebar {
+.info-table {
   width: 65%;
 }
 
-.sidebar ul {
-  list-style: none;
-  padding: 0;
+.info-table table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.sidebar li {
-  border: 1px solid #ccc;
+.info-table td {
   padding: 6px;
-  margin-bottom: 5px;
+}
+
+.gray {
+  background-color: #f0f0f0;
+}
+
+.white {
+  background-color: #fff;
 }
 
 .student-photo {
