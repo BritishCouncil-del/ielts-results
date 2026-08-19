@@ -119,9 +119,14 @@ body.welcome {
 
 /* جدول الدرجات أبيض/رمادي */
 .scores-table {
-  width: 75%; margin-left: 22%; border-collapse: collapse;
+  width: 100%; /* بعرض الشاشة */
+  border-collapse: collapse;
+  margin: 0 auto;
 }
-.scores-table td { padding: 10px; font-size: 14px; }
+.scores-table td {
+  padding: 12px;
+  font-size: 15px;
+}
 .scores-table .gray { background-color: #f0f0f0; }
 .scores-table .white { background-color: #fff; }
 
