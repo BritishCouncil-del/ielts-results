@@ -7,19 +7,13 @@
   <script src="students.js"></script>
 </head>
 <body>
-  <!-- الصف الأحمر العلوي -->
-  <div class="top-red-bar">
-    <h1>IELTS</h1>
-    <span>English for International Opportunity</span>
+  <!-- الصف الأحمر العريض أعلى الصفحة -->
+  <div class="header-red">
+    <span class="ielts-logo">IELTS</span>
   </div>
 
-  <h1>Match Found</h1>
-  <p class="note">
-    Institutions themselves are responsible for determining the IELTS Band Scores appropriate to their particular courses or requirements...
-  </p>
-
   <div class="layout">
-    <!-- العمود الجانبي الأحمر -->
+    <!-- القوائم الجانبية -->
     <div class="sidebar">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -52,15 +46,16 @@
     </div>
   </div>
 
-  <!-- الصف الأحمر للدرجات -->
-  <div class="red-bar">
-    <span>Date of Examination: <span id="examDate"></span></span>
-    <span>TRF Number: <span id="trf"></span></span>
+  <!-- الصف الأحمر للـ Scores -->
+  <div class="scores-red">
+    <span>Test Results</span>
     <span>Overall Band: <span id="overallBand"></span></span>
   </div>
 
   <!-- جدول الدرجات -->
   <table class="scores-table">
+    <tr class="gray"><td><strong>Date of Examination:</strong></td><td id="examDate"></td></tr>
+    <tr class="white"><td><strong>TRF Number:</strong></td><td id="trf"></td></tr>
     <tr class="gray"><td><strong>Listening:</strong></td><td id="listening"></td></tr>
     <tr class="white"><td><strong>Reading:</strong></td><td id="reading"></td></tr>
     <tr class="gray"><td><strong>Writing:</strong></td><td id="writing"></td></tr>
@@ -78,20 +73,4 @@
       document.getElementById("candidateID").textContent = s.candidateID;
       document.getElementById("familyName").textContent = s.familyName;
       document.getElementById("firstName").textContent = s.name;
-      document.getElementById("dob").textContent = s.dob;
-      document.getElementById("sex").textContent = s.sex;
-      document.getElementById("studentImage").src = "images/" + s.image;
-
-      document.getElementById("examDate").textContent = s.examDate;
-      document.getElementById("trf").textContent = s.trf;
-      document.getElementById("listening").textContent = s.listening;
-      document.getElementById("reading").textContent = s.reading;
-      document.getElementById("writing").textContent = s.writing;
-      document.getElementById("speaking").textContent = s.speaking;
-      document.getElementById("overallBand").textContent = s.overall;
-    } else {
-      document.body.innerHTML += "<p style='color:red;text-align:center;'>لم يتم العثور على بيانات لهذا السيريال</p>";
-    }
-  </script>
-</body>
-</html>
+      document
