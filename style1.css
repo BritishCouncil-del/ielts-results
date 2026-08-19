@@ -1,4 +1,71 @@
-/* الهيدر */
+/* ===== صفحة الترحيب ===== */
+body.welcome {
+  background: url("images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: Tahoma, Arial, sans-serif;
+  direction: rtl;
+}
+
+.welcome-box {
+  background: rgba(255, 255, 255, 0.95);
+  width: 420px;
+  margin: 120px auto;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  border: 2px solid #d32f2f;
+}
+
+.ielts-title {
+  font-size: 55px;
+  color: #d32f2f;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+.portal-subtitle {
+  font-size: 20px;
+  color: #d32f2f;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.big-ielts {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.welcome-box input {
+  width: 90%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.welcome-box button {
+  width: 95%;
+  background: linear-gradient(45deg, #1976d2, #0d47a1);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+}
+.welcome-box button:hover {
+  background: linear-gradient(45deg, #0d47a1, #1976d2);
+  transform: scale(1.05);
+}
+
+/* ===== صفحة النتائج ===== */
 .header-red {
   background: linear-gradient(90deg, #d32f2f, #b71c1c);
   color: #fff;
@@ -31,6 +98,21 @@
 }
 .sidebar a:hover { background-color: #b71c1c; }
 
+/* مربع Match Found */
+.match-found {
+  width: 75%;
+  margin-left: 22%;
+  margin-top: 20px;
+  background-color: #e8f5e9;
+  border-left: 6px solid #4caf50;
+  padding: 20px;
+  border-radius: 8px;
+  color: #2e7d32;
+  font-size: 15px;
+  line-height: 1.6;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
 /* بيانات الطالب + الصورة */
 .info-layout {
   display: flex;
@@ -46,7 +128,7 @@
 .info-table tr:nth-child(odd) { background-color: #999; } /* رمادي غامق */
 
 /* صورة الطالب */
-.student-photo img {
+.info-layout .photo {
   max-width: 150px;
   border: 2px solid #ccc;
   border-radius: 8px;
