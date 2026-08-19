@@ -77,4 +77,34 @@ body.welcome {
 }
 
 .sidebar ul {
-  list-style: none
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.info-layout {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: 20px;
+}
+
+.info-table {
+  width: 65%;
+}
+
+.info-table table {
+  width:
