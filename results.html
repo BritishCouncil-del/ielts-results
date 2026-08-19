@@ -1,48 +1,54 @@
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-  <meta charset="UTF-8">
-  <title>IELTS TRF Results</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="students.js"></script>
-</head>
 <body>
-  <!-- الصف الأحمر العريض أعلى الصفحة -->
+  <!-- الهيدر الأحمر -->
   <div class="header-red">
-    <span class="ielts-logo">IELTS</span>
+    <span class="ielts-logo">IELTS – English for International Opportunity</span>
   </div>
 
-  <div class="layout">
-    <!-- القوائم الجانبية -->
-    <div class="sidebar">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="trf.html">TRF Query</a></li>
-        <li><a href="download.html">Download Results</a></li>
-        <li><a href="manage.html">Manage My Ro Users</a></li>
-        <li><a href="profile.html">Update My Profile</a></li>
-        <li><a href="faqs.html">FAQs</a></li>
-        <li><a href="https://ielts.org" target="_blank">IELTS.org</a></li>
-      </ul>
-    </div>
+  <!-- القوائم الجانبية -->
+  <div class="sidebar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="trf.html">TRF Query</a></li>
+      <li><a href="download.html">Download Results</a></li>
+      <li><a href="manage.html">Manage My Ro Users</a></li>
+      <li><a href="profile.html">Update My Profile</a></li>
+      <li><a href="faqs.html">FAQs</a></li>
+      <li><a href="https://ielts.org" target="_blank">IELTS.org</a></li>
+    </ul>
+  </div>
 
-    <!-- بيانات الطالب + صورة -->
-    <div class="info-layout">
-      <div class="info-table">
-        <table>
-          <tr class="gray"><td><strong>Centre Number:</strong></td><td id="centreNumber"></td></tr>
-          <tr class="white"><td><strong>Centre Name:</strong></td><td id="centreName"></td></tr>
-          <tr class="gray"><td><strong>Candidate Number:</strong></td><td id="candidateNumber"></td></tr>
-          <tr class="white"><td><strong>Candidate ID:</strong></td><td id="candidateID"></td></tr>
-          <tr class="gray"><td><strong>Family Name:</strong></td><td id="familyName"></td></tr>
-          <tr class="white"><td><strong>First Name:</strong></td><td id="firstName"></td></tr>
-          <tr class="gray"><td><strong>Date of Birth:</strong></td><td id="dob"></td></tr>
-          <tr class="white"><td><strong>Sex (M/F):</strong></td><td id="sex"></td></tr>
-        </table>
-      </div>
-      <div class="student-photo">
-        <img id="studentImage" src="" alt="Student Image">
-      </div>
+  <!-- نص Match Found -->
+  <div class="match-found">
+    <h3>✅ Match Found</h3>
+    <p>
+      Institutions themselves are responsible for determining the IELTS Band Scores appropriate 
+      to their particular courses or requirements. Institutions should note that IELTS Band Scores 
+      reflect English language proficiency alone which is one of the many factors relevant to academic 
+      success or failure. It is standard practice for the scores reported on an IELTS Test Report Form 
+      to be accepted by institutions as evidence of a candidate’s English language ability for a two-year 
+      period from the date of the test.
+    </p>
+  </div>
+
+  <!-- عنوان TRF Results Details -->
+  <div class="results-title">TRF Results Details</div>
+
+  <!-- بيانات الطالب + صورة -->
+  <div class="info-layout">
+    <div class="info-table">
+      <table>
+        <tr class="gray"><td><strong>Centre Number:</strong></td><td id="centreNumber"></td></tr>
+        <tr class="white"><td><strong>Centre Name:</strong></td><td id="centreName"></td></tr>
+        <tr class="gray"><td><strong>Candidate Number:</strong></td><td id="candidateNumber"></td></tr>
+        <tr class="white"><td><strong>Candidate ID:</strong></td><td id="candidateID"></td></tr>
+        <tr class="gray"><td><strong>Family Name:</strong></td><td id="familyName"></td></tr>
+        <tr class="white"><td><strong>First Name:</strong></td><td id="firstName"></td></tr>
+        <tr class="gray"><td><strong>Date of Birth:</strong></td><td id="dob"></td></tr>
+        <tr class="white"><td><strong>Sex (M/F):</strong></td><td id="sex"></td></tr>
+      </table>
+    </div>
+    <div class="student-photo">
+      <img id="studentImage" src="" alt="Student Image">
     </div>
   </div>
 
@@ -61,32 +67,4 @@
     <tr class="gray"><td><strong>Writing:</strong></td><td id="writing"></td></tr>
     <tr class="white"><td><strong>Speaking:</strong></td><td id="speaking"></td></tr>
   </table>
-
-  <!-- سكربت عرض البيانات -->
-  <script>
-    var code = localStorage.getItem("studentCode");
-    if(code && students[code]){
-      var s = students[code];
-      document.getElementById("centreNumber").textContent = s.centreNumber;
-      document.getElementById("centreName").textContent = s.centreName;
-      document.getElementById("candidateNumber").textContent = s.candidateNumber;
-      document.getElementById("candidateID").textContent = s.candidateID;
-      document.getElementById("familyName").textContent = s.familyName;
-      document.getElementById("firstName").textContent = s.name;
-      document.getElementById("dob").textContent = s.dob;
-      document.getElementById("sex").textContent = s.sex;
-      document.getElementById("studentImage").src = "images/" + s.image;
-
-      document.getElementById("examDate").textContent = s.examDate;
-      document.getElementById("trf").textContent = s.trf;
-      document.getElementById("listening").textContent = s.listening;
-      document.getElementById("reading").textContent = s.reading;
-      document.getElementById("writing").textContent = s.writing;
-      document.getElementById("speaking").textContent = s.speaking;
-      document.getElementById("overallBand").textContent = s.overall;
-    } else {
-      document.body.innerHTML += "<p style='color:red;text-align:center;'>لم يتم العثور على بيانات لهذا السيريال</p>";
-    }
-  </script>
 </body>
-</html>
