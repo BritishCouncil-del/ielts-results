@@ -1,4 +1,4 @@
-/* ===== صفحة الترحيب ===== */
+/* خلفية صفحة الترحيب */
 body.welcome {
   background: url("images/background.jpg") no-repeat center center fixed;
   background-size: cover;
@@ -6,18 +6,9 @@ body.welcome {
   direction: rtl;
 }
 
-/* كلمة IELTS */
-.ielts-title {
-  font-size: 50px;
-  color: #d32f2f;
-  margin-bottom: 10px;
-  font-weight: bold;
-  text-align: center;
-}
-
-/* كلمة استعلام نتائج الايلتس */
-.big-ielts {
-  font-size: 35px;
+/* العنوان الكبير */
+.welcome-title {
+  font-size: 28px;
   color: #333;
   margin-bottom: 20px;
   font-weight: bold;
