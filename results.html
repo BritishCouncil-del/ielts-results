@@ -73,4 +73,20 @@
       document.getElementById("candidateID").textContent = s.candidateID;
       document.getElementById("familyName").textContent = s.familyName;
       document.getElementById("firstName").textContent = s.name;
-      document
+      document.getElementById("dob").textContent = s.dob;
+      document.getElementById("sex").textContent = s.sex;
+      document.getElementById("studentImage").src = "images/" + s.image;
+
+      document.getElementById("examDate").textContent = s.examDate;
+      document.getElementById("trf").textContent = s.trf;
+      document.getElementById("listening").textContent = s.listening;
+      document.getElementById("reading").textContent = s.reading;
+      document.getElementById("writing").textContent = s.writing;
+      document.getElementById("speaking").textContent = s.speaking;
+      document.getElementById("overallBand").textContent = s.overall;
+    } else {
+      document.body.innerHTML += "<p style='color:red;text-align:center;'>لم يتم العثور على بيانات لهذا السيريال</p>";
+    }
+  </script>
+</body>
+</html>
