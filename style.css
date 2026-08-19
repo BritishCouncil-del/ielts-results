@@ -94,4 +94,69 @@ body.welcome {
 .match-found {
   width: 75%; margin-left: 22%; margin-top: 20px;
   background-color: #e8f5e9; border: 1px solid #4caf50;
-  padding: 15
+  padding: 15px; border-radius: 6px; color: #2e7d32;
+  font-size: 14px; line-height: 1.6;
+}
+.match-found h3 { margin: 0 0 10px; font-size: 16px; font-weight: bold; }
+
+/* عنوان TRF Results Details */
+.results-title {
+  font-size: 20px; font-weight: bold; color: #d32f2f;
+  margin: 20px 22% 10px; border-bottom: 2px solid #d32f2f;
+  display: inline-block; padding-bottom: 5px;
+}
+
+/* بيانات الطالب + صورة */
+.info-layout {
+  display: flex; justify-content: space-between;
+  width: 75%; margin-left: 22%; margin-top: 20px;
+}
+.info-table table { width: 100%; border-collapse: collapse; }
+.info-table td { padding: 8px; font-size: 14px; }
+.dark { background-color: #d6d6d6; } /* رمادي غامق */
+.white { background-color: #fff; }
+.student-photo img {
+  max-width: 120px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-left: 15px;
+}
+
+/* الصف الأحمر للـ Scores */
+.scores-red {
+  background-color: #d32f2f;
+  color: #fff;
+  font-weight: bold;
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  font-size: 18px;
+  margin: 25px 0;
+  border-bottom: 3px solid #b71c1c;
+}
+
+/* جدول الدرجات */
+.scores-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+.scores-table td {
+  padding: 12px;
+  font-size: 15px;
+}
+.scores-table .dark { background-color: #d6d6d6; }
+.scores-table .white { background-color: #fff; }
+.scores-table td strong { font-weight: bold; }
+
+/* الفوتر */
+.footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+  font-size: 13px;
+}
