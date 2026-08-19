@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>IELTS TRF Results</title>
@@ -13,20 +13,75 @@
     <h3>TRF RESULTS DETAILS</h3>
   </div>
 
+  <h1>Match Found</h1>
+
+  <div class="info-layout">
+    <!-- القوائم الجانبية -->
+    <div class="sidebar">
+      <ul>
+        <li><strong>Centre Number:</strong> <span id="centreNumber"></span></li>
+        <li><strong>Centre Name:</strong> <span id="centreName"></span></li>
+        <li><strong>Candidate Number:</strong> <span id="candidateNumber"></span></li>
+        <li><strong>Candidate ID:</strong> <span id="candidateID"></span></li>
+        <li><strong>Family Name:</strong> <span id="familyName"></span></li>
+        <li><strong>First Name:</strong> <span id="firstName"></span></li>
+        <li><strong>Date of Birth:</strong> <span id="dob"></span></li>
+        <li><strong>Sex (M/F):</strong> <span id="sex"></span></li>
+        <li><strong>Repeating IELTS:</strong> <span id="repeat"></span></li>
+        <li><strong>Previous Test Date:</strong> <span id="prevDate"></span></li>
+        <li><strong>Previous Test Centre:</strong> <span id="prevCentre"></span></li>
+      </ul>
+    </div>
+
+    <!-- صورة الطالب -->
+    <div class="student-photo">
+      <img id="studentImage" src="" alt="Student Image">
+    </div>
+  </div>
+
   <!-- الصف الأحمر -->
   <div class="red-bar">
     <span>Test Results</span>
-    <span>Overall Band 6.0</span>
+    <span id="overallBand"></span>
     <span>Band Scores explained</span>
   </div>
 
-  <div class="main">
-    <h1>Match Found</h1>
-    <div id="student-info"></div>
+  <div class="scores">
+    <p><strong>Date of Examination:</strong> <span id="examDate"></span></p>
+    <p><strong>TRF Number:</strong> <span id="trf"></span></p>
+    <ul>
+      <li>Listening: <span id="listening"></span></li>
+      <li>Reading: <span id="reading"></span></li>
+      <li>Writing: <span id="writing"></span></li>
+      <li>Speaking: <span id="speaking"></span></li>
+    </ul>
   </div>
 
   <script>
     var code = localStorage.getItem("studentCode");
     if(code && students[code]){
       var s = students[code];
-      document.getElementById("student-info").innerHTML
+      document.getElementById("centreNumber").textContent = s.centreNumber;
+      document.getElementById("centreName").textContent = s.centreName;
+      document.getElementById("candidateNumber").textContent = s.candidateNumber;
+      document.getElementById("candidateID").textContent = s.candidateID;
+      document.getElementById("familyName").textContent = s.familyName;
+      document.getElementById("firstName").textContent = s.name;
+      document.getElementById("dob").textContent = s.dob;
+      document.getElementById("sex").textContent = s.sex;
+      document.getElementById("repeat").textContent = s.repeat;
+      document.getElementById("prevDate").textContent = s.prevDate;
+      document.getElementById("prevCentre").textContent = s.prevCentre;
+      document.getElementById("studentImage").src = "images/" + s.image;
+
+      document.getElementById("overallBand").textContent = "Overall Band " + s.overall;
+      document.getElementById("examDate").textContent = s.examDate;
+      document.getElementById("trf").textContent = s.trf;
+      document.getElementById("listening").textContent = s.listening;
+      document.getElementById("reading").textContent = s.reading;
+      document.getElementById("writing").textContent = s.writing;
+      document.getElementById("speaking").textContent = s.speaking;
+    }
+  </script>
+</body>
+</html>
