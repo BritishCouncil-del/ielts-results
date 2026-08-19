@@ -1,4 +1,80 @@
-/* ===== الهيدر الأحمر العريض ===== */
+/* ===== صفحة الترحيب ===== */
+body.welcome {
+  background: url("images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: Tahoma, Arial, sans-serif;
+  direction: rtl;
+}
+
+.ielts-title {
+  font-size: 55px;
+  color: #d32f2f; /* أحمر */
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.portal-subtitle {
+  font-size: 22px;
+  color: #d32f2f;
+  margin-bottom: 15px;
+  text-align: center;
+  font-style: italic;
+}
+
+.big-ielts {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.welcome-box {
+  background: rgba(255, 255, 255, 0.92);
+  width: 420px;
+  margin: 120px auto;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  border: 2px solid #d32f2f;
+}
+
+.welcome-box p {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.welcome-box input {
+  width: 90%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.welcome-box button {
+  width: 95%;
+  background: linear-gradient(45deg, #1976d2, #0d47a1);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.welcome-box button:hover {
+  background: linear-gradient(45deg, #0d47a1, #1976d2);
+  transform: scale(1.05);
+}
+
+/* ===== صفحة النتائج ===== */
 .header-red {
   background-color: #d32f2f;
   color: #fff;
@@ -14,7 +90,7 @@
   font-weight: bold;
 }
 
-/* ===== القوائم الجانبية ===== */
+/* القوائم الجانبية */
 .sidebar {
   width: 20%;
   background-color: #d32f2f;
@@ -45,7 +121,7 @@
   background-color: #b71c1c;
 }
 
-/* ===== نص Match Found ===== */
+/* نص Match Found */
 .match-found {
   width: 75%;
   margin-left: 22%;
@@ -59,7 +135,7 @@
   line-height: 1.6;
 }
 
-/* ===== عنوان TRF Results Details ===== */
+/* عنوان TRF Results Details */
 .results-title {
   font-size: 20px;
   font-weight: bold;
@@ -70,7 +146,7 @@
   padding-bottom: 5px;
 }
 
-/* ===== بيانات الطالب + صورة ===== */
+/* بيانات الطالب + صورة */
 .info-layout {
   display: flex;
   justify-content: space-between;
@@ -104,7 +180,7 @@
   margin-left: 15px;
 }
 
-/* ===== الصف الأحمر للـ Scores ===== */
+/* الصف الأحمر للـ Scores */
 .scores-red {
   background-color: #d32f2f;
   color: #fff;
@@ -118,7 +194,7 @@
   margin: 25px 0;
 }
 
-/* ===== جدول الدرجات ===== */
+/* جدول الدرجات */
 .scores-table {
   width: 75%;
   margin-left: 22%;
@@ -138,7 +214,7 @@
   background-color: #fff;
 }
 
-/* ===== الفوتر ===== */
+/* الفوتر */
 .footer {
   background-color: #000;
   color: #fff;
