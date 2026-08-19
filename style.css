@@ -128,30 +128,4 @@ body.welcome {
   padding: 15px;
   width: 75%;
   margin-left: 22%;
-  font-size: 18px;
-  margin-top: 25px;
-  border-bottom: 3px solid #b71c1c;
-  text-align: center;
-}
-
-/* جدول الدرجات */
-.scores-table {
-  width: 75%;
-  margin-left: 22%;
-  border-collapse: collapse;
-}
-.scores-table td {
-  padding: 12px;
-  font-size: 15px;
-}
-.scores-table tr:nth-child(even) { background-color: #fff; }
-.scores-table tr:nth-child(odd) { background-color: #999; }
-
-/* الفوتر */
-.footer {
-  background-color: #000;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  margin-top: 30px;
-}
+  font-size: 18px
