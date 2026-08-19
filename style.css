@@ -96,14 +96,4 @@ body.welcome {
   padding: 8px;
   border-radius: 4px;
 }
-.sidebar a:hover { background-color: #b71c1c; }
-
-.match-found {
-  width: 75%;
-  margin-left: 22%;
-  margin-top: 20px;
-  background-color: #e8f5e9;
-  border: 1px solid #4caf50;
-  padding: 15px;
-  border-radius: 6px;
-  color
+.sidebar a:hover { background-color: #b71
