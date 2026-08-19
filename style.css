@@ -1,4 +1,4 @@
-/* الهيدر الأحمر بعرض الصفحة */
+/* الهيدر */
 .header-red {
   background-color: #d32f2f;
   color: #fff;
@@ -11,7 +11,7 @@
   color: #fff;
 }
 
-/* القوائم الجانبية */
+/* القوائم */
 .sidebar {
   width: 20%;
   background-color: #d32f2f;
@@ -31,7 +31,7 @@
 }
 .sidebar a:hover { background-color: #b71c1c; }
 
-/* Match Found باللون الأخضر */
+/* Match Found */
 .match-found {
   width: 75%;
   margin-left: 22%;
@@ -41,10 +41,7 @@
   padding: 15px;
   border-radius: 6px;
   color: #2e7d32;
-  font-size: 14px;
-  line-height: 1.6;
 }
-.match-found h3 { margin: 0 0 10px; font-size: 16px; font-weight: bold; }
 
 /* بيانات الطالب + الصورة */
 .info-layout {
@@ -71,9 +68,7 @@
   color: #fff;
   font-weight: bold;
   padding: 15px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  text-align: center;
   width: 75%;
   margin-left: 22%;
   font-size: 18px;
@@ -101,5 +96,4 @@
   text-align: center;
   padding: 10px;
   margin-top: 30px;
-  font-size: 13px;
 }
