@@ -10,10 +10,23 @@
     <div class="ielts-title">IELTS</div>
     <div class="portal-subtitle">English for International Opportunity</div>
     <div class="big-ielts">Test Report Form Portal</div>
-    <p>أدخل بياناتك للتحقق من نتيجة IELTS الخاصة بك</p>
-    <input type="text" placeholder="رقم المرشح">
-    <input type="text" placeholder="رقم TRF">
-    <button onclick="window.location.href='results.html'">عرض النتيجة</button>
+    <form action="results.html" method="get" onsubmit="return validateForm()">
+      <input type="text" id="candidate" placeholder="رقم المرشح" required>
+      <input type="text" id="serial" placeholder="رقم السيريال" required>
+      <button type="submit">عرض النتيجة</button>
+    </form>
   </div>
+
+  <script>
+    function validateForm() {
+      const candidate = document.getElementById("candidate").value.trim();
+      const serial = document.getElementById("serial").value.trim();
+      if(candidate === "" || serial === "") {
+        alert("يجب إدخال رقم المرشح ورقم السيريال");
+        return false;
+      }
+      return true;
+    }
+  </script>
 </body>
 </html>
