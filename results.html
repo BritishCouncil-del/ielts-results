@@ -57,7 +57,6 @@
   <div class="red-bar">
     <span>Test Results</span>
     <span>Overall Band: <span id="overallBand"></span></span>
-    <span>Band Scores explained</span>
   </div>
 
   <!-- جدول الدرجات + تاريخ الاختبار والسيريال -->
@@ -76,30 +75,4 @@
     if(code && students[code]){
       var s = students[code];
       document.getElementById("centreNumber").textContent = s.centreNumber;
-      document.getElementById("centreName").textContent = s.centreName;
-      document.getElementById("candidateNumber").textContent = s.candidateNumber;
-      document.getElementById("candidateID").textContent = s.candidateID;
-      document.getElementById("familyName").textContent = s.familyName;
-      document.getElementById("firstName").textContent = s.name;
-      document.getElementById("dob").textContent = s.dob;
-      document.getElementById("sex").textContent = s.sex;
-      document.getElementById("studentImage").src = "images/" + s.image;
-
-      document.getElementById("examDate").textContent = s.examDate;
-      document.getElementById("trf").textContent = s.trf;
-      document.getElementById("listening").textContent = s.listening;
-      document.getElementById("reading").textContent = s.reading;
-      document.getElementById("writing").textContent = s.writing;
-      document.getElementById("speaking").textContent = s.speaking;
-      document.getElementById("overallBand").textContent = s.overall;
-    } else {
-      document.body.innerHTML += "<p style='color:red;text-align:center;'>لم يتم العثور على بيانات لهذا السيريال</p>";
-    }
-  </script>
-
-  <!-- شريط أسود صغير في الأسفل -->
-  <footer class="footer">
-    <p>© IELTS Official Results Portal</p>
-  </footer>
-</body>
-</html>
+      document.getElementById("
