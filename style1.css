@@ -43,7 +43,7 @@
 .info-table table { width: 100%; border-collapse: collapse; }
 .info-table td { padding: 10px; font-size: 14px; }
 .info-table tr:nth-child(even) { background-color: #fff; }
-.info-table tr:nth-child(odd) { background-color: #999; } /* رمادي غامق */
+.info-table tr:nth-child(odd) { background-color: #999; }
 
 /* صورة الطالب */
 .photo {
@@ -53,7 +53,7 @@
   margin-left: 20px;
 }
 
-/* الصف الأحمر للـ Scores */
+/* صف الاسكور الأحمر */
 .scores-red {
   background-color: #d32f2f;
   color: #fff;
