@@ -70,7 +70,7 @@ body.welcome {
   background: linear-gradient(90deg, #d32f2f, #b71c1c);
   color: #fff;
   padding: 20px;
-  text-align: left; /* كلمة IELTS على الشمال */
+  text-align: left;
 }
 .ielts-logo {
   font-size: 48px;
@@ -93,9 +93,23 @@ body.welcome {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  font-size: 18px; /* خط كبير */
+  font-size: 18px;
   display: block;
   padding: 10px;
   border-radius: 4px;
 }
-.sidebar a:hover {
+.sidebar a:hover { background-color: #b71c1c; }
+
+/* Match Found */
+.match-found {
+  width: 75%;
+  margin-left: 22%;
+  margin-top: 20px;
+  background-color: #e8f5e9;
+  border-left: 6px solid #4caf50;
+  padding: 20px;
+  border-radius: 8px;
+  color: #2e7d32;
+  font-size: 15px;
+  line-height: 1.6;
+  box-shadow
