@@ -6,8 +6,26 @@ body.welcome {
   direction: rtl;
 }
 
-/* العنوان الكبير */
-.welcome-title {
+/* كلمة IELTS */
+.ielts-title {
+  font-size: 50px;
+  color: #d32f2f;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* كلمة IELTS Results Portal */
+.portal-subtitle {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 15px;
+  text-align: center;
+  font-style: italic;
+}
+
+/* كلمة مرحباً بك */
+.big-ielts {
   font-size: 28px;
   color: #333;
   margin-bottom: 20px;
