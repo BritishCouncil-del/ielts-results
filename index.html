@@ -4,27 +4,24 @@
   <meta charset="UTF-8">
   <title>IELTS TRF</title>
   <link rel="stylesheet" href="style.css">
-  <script src="students.js"></script>
-</head>
-<body>
-  <div class="container">
-    <img src="images/ielts-logo1.png" alt="IELTS Logo" class="logo">
-    <h1>مرحبًا بك في نظام عرض النتائج</h1>
-    <p>من فضلك أدخل رقم الشهادة (السيريال):</p>
-    <input type="text" id="serial" placeholder="ادخل السيريال هنا">
-    <button onclick="checkCode()">عرض النتيجة</button>
-  </div>
-
   <script>
-    function checkCode() {
-      var code = document.getElementById("serial").value.trim();
-      if(students[code]){
+    function goToResults() {
+      var code = document.getElementById("serial").value;
+      if(code.trim() !== ""){
         localStorage.setItem("studentCode", code);
         window.location.href = "results.html";
       } else {
-        alert("⚠️ السيريال غير صحيح");
+        alert("من فضلك أدخل رقم الشهادة (السيريال)");
       }
     }
   </script>
+</head>
+<body class="welcome">
+  <div class="welcome-box">
+    <h1>مرحباً بك في نظام عرض النتائج</h1>
+    <p>من فضلك أدخل رقم الشهادة (السيريال)</p>
+    <input type="text" id="serial" placeholder="أدخل السيريال هنا">
+    <button onclick="goToResults()">عرض النتيجة</button>
+  </div>
 </body>
 </html>
