@@ -1,4 +1,71 @@
-/* الهيدر */
+/* ===== صفحة الترحيب ===== */
+body.welcome {
+  background: url("images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: Tahoma, Arial, sans-serif;
+  direction: rtl;
+}
+
+.welcome-box {
+  background: rgba(255, 255, 255, 0.95);
+  width: 420px;
+  margin: 120px auto;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  border: 2px solid #d32f2f;
+}
+
+.ielts-title {
+  font-size: 55px;
+  color: #d32f2f;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+.portal-subtitle {
+  font-size: 20px;
+  color: #d32f2f;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.big-ielts {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.welcome-box input {
+  width: 90%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.welcome-box button {
+  width: 95%;
+  background: linear-gradient(45deg, #1976d2, #0d47a1);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+}
+.welcome-box button:hover {
+  background: linear-gradient(45deg, #0d47a1, #1976d2);
+  transform: scale(1.05);
+}
+
+/* ===== صفحة النتائج ===== */
 .header-red {
   background: linear-gradient(90deg, #d32f2f, #b71c1c);
   color: #fff;
@@ -45,66 +112,4 @@
   color: #2e7d32;
   font-size: 15px;
   line-height: 1.6;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-.match-found h3 {
-  margin: 0 0 10px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #1b5e20;
-}
-
-/* بيانات الطالب + الصورة */
-.info-layout {
-  display: flex;
-  justify-content: space-between;
-  width: 75%;
-  margin-left: 22%;
-  margin-top: 20px;
-}
-.info-table table { width: 100%; border-collapse: collapse; }
-.info-table td { padding: 10px; font-size: 14px; }
-.info-table tr:nth-child(even) { background-color: #fff; }
-.info-table tr:nth-child(odd) { background-color: #d6d6d6; }
-.student-photo img {
-  max-width: 150px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin-left: 15px;
-}
-
-/* الصف الأحمر للـ Scores */
-.scores-red {
-  background-color: #d32f2f;
-  color: #fff;
-  font-weight: bold;
-  padding: 15px;
-  text-align: center;
-  width: 75%;
-  margin-left: 22%;
-  font-size: 18px;
-  margin-top: 25px;
-  border-bottom: 3px solid #b71c1c;
-}
-
-/* جدول الدرجات */
-.scores-table {
-  width: 75%;
-  margin-left: 22%;
-  border-collapse: collapse;
-}
-.scores-table td {
-  padding: 12px;
-  font-size: 15px;
-}
-.scores-table tr:nth-child(even) { background-color: #fff; }
-.scores-table tr:nth-child(odd) { background-color: #d6d6d6; }
-
-/* الفوتر */
-.footer {
-  background-color: #000;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  margin-top: 30px;
-}
+  box-shadow: 0
