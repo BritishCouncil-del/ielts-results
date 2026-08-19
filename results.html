@@ -2,7 +2,7 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>تفاصيل نتيجة IELTS</title>
+  <title>تفاصيل نتيجة الطالب</title>
   <link rel="stylesheet" href="style.css">
   <script src="students.js"></script>
 </head>
@@ -18,7 +18,7 @@
     if(code && students[code]){
       var s = students[code];
       document.getElementById("student-info").innerHTML = `
-        <table>
+        <table class="results-table">
           <tr><td><strong>اسم الطالب:</strong></td><td>${s.name}</td></tr>
           <tr><td><strong>اسم العائلة:</strong></td><td>${s.familyName}</td></tr>
           <tr><td><strong>رقم المرشح:</strong></td><td>${s.candidateNumber}</td></tr>
@@ -30,12 +30,14 @@
         </table>
         <hr>
         <h3>الدرجات</h3>
-        <p><strong>الاستماع:</strong> ${s.listening}</p>
-        <p><strong>القراءة:</strong> ${s.reading}</p>
-        <p><strong>الكتابة:</strong> ${s.writing}</p>
-        <p><strong>المحادثة:</strong> ${s.speaking}</p>
-        <p><strong>الدرجة الكلية:</strong> ${s.overall}</p>
-        <p><strong>المستوى CEFR:</strong> ${s.ceFR}</p>
+        <table class="scores-table">
+          <tr><td>الاستماع</td><td>${s.listening}</td></tr>
+          <tr><td>القراءة</td><td>${s.reading}</td></tr>
+          <tr><td>الكتابة</td><td>${s.writing}</td></tr>
+          <tr><td>المحادثة</td><td>${s.speaking}</td></tr>
+          <tr><td><strong>الدرجة الكلية</strong></td><td><strong>${s.overall}</strong></td></tr>
+          <tr><td>المستوى CEFR</td><td>${s.ceFR}</td></tr>
+        </table>
         <img src="images/${s.image}" alt="Student Image" class="student-img">
       `;
     } else {
