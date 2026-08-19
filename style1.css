@@ -2,12 +2,11 @@
 .header-red {
   background: linear-gradient(90deg, #d32f2f, #b71c1c);
   color: #fff;
-  padding: 25px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  padding: 20px;
+  text-align: left; /* يخلي كلمة IELTS على الشمال */
 }
 .ielts-logo {
-  font-size: 52px;
+  font-size: 48px;
   font-weight: bold;
   color: #fff;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
@@ -22,13 +21,14 @@
   min-height: 100vh;
 }
 .sidebar ul { list-style: none; padding: 0; }
-.sidebar li { margin: 12px 0; }
+.sidebar li { margin: 15px 0; }
 .sidebar a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  font-size: 18px; /* يخلي الخط كبير */
   display: block;
-  padding: 8px;
+  padding: 10px;
   border-radius: 4px;
 }
 .sidebar a:hover { background-color: #b71c1c; }
@@ -63,9 +63,9 @@
   margin-top: 20px;
 }
 .info-table table { width: 100%; border-collapse: collapse; }
-.info-table td { padding: 8px; font-size: 14px; }
-.dark { background-color: #d6d6d6; }
-.white { background-color: #fff; }
+.info-table td { padding: 10px; font-size: 14px; }
+.info-table tr:nth-child(even) { background-color: #fff; }
+.info-table tr:nth-child(odd) { background-color: #d6d6d6; }
 .student-photo img {
   max-width: 150px;
   border: 1px solid #ccc;
@@ -97,8 +97,8 @@
   padding: 12px;
   font-size: 15px;
 }
-.scores-table .dark { background-color: #d6d6d6; }
-.scores-table .white { background-color: #fff; }
+.scores-table tr:nth-child(even) { background-color: #fff; }
+.scores-table tr:nth-child(odd) { background-color: #d6d6d6; }
 
 /* الفوتر */
 .footer {
