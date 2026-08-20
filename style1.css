@@ -20,24 +20,23 @@ body.welcome {
   z-index: 10;
 }
 
-/* البانر */
-.header-banner {
-  text-align: center;
-  margin-top: 80px;
-}
-.header-banner img {
-  width: 90%;
-  max-width: 900px;
-  height: auto;
-  display: inline-block;
-  background: none;
+/* شعار IELTS أعلى الصفحة */
+.ielts-top-logo {
+  position: absolute;
+  top: 60px;
+  left: 40px;
+  font-size: 48px;
+  font-weight: bold;
+  color: #d32f2f;
+  font-family: Arial, sans-serif;
+  letter-spacing: 2px;
 }
 
 /* مربع الترحيب */
 .welcome-box {
   background:#fff;
   width:420px;
-  margin:40px auto;
+  margin:140px auto 60px auto;
   padding:25px;
   border-radius:12px;
   text-align:center;
@@ -68,4 +67,20 @@ body.welcome {
 .welcome-box button:hover {
   background:linear-gradient(45deg,#0d47a1,#1976d2);
   transform:scale(1.05);
+}
+
+/* البانر الأفقي للشعارات */
+.footer-banner {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.footer-banner img {
+  width: 90%;
+  max-width: 900px;
+  height: auto;
+  background: none; /* بدون خلفية */
+  display: inline-block;
 }
