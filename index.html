@@ -6,36 +6,21 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="welcome">
+  <div class="news-bar">مرحباً بك في بوابة نتائج IELTS</div>
 
-  <!-- شريط الأخبار -->
-  <div class="news-bar">
-    <marquee behavior="scroll" direction="left" scrollamount="6" onmouseover="this.stop();" onmouseout="this.start();">
-      IELTS Academic | IELTS General Training | IELTS UKVI | IELTS Life Skills
-    </marquee>
-  </div>
-
-  <!-- مربع الترحيب الأبيض -->
   <div class="welcome-box">
-    <h1 class="ielts-title">IELTS</h1>
-    <p class="portal-subtitle">English for International Opportunity</p>
-    <h2 class="big-ielts">Test Report Form Portal</h2>
-    <form onsubmit="return validateForm()" action="results.html">
-      <input type="text" id="candidate" placeholder="رقم المرشح" required>
-      <input type="text" id="serial" placeholder="رقم السيريال" required>
-      <button type="submit">عرض النتيجة</button>
-    </form>
-  </div>
+    <div class="ielts-title">IELTS</div>
+    <div class="portal-subtitle">English for International Opportunity</div>
 
-  <script>
-    function validateForm() {
-      const candidate = document.getElementById("candidate").value.trim();
-      const serial = document.getElementById("serial").value.trim();
-      if(candidate === "" || serial === "") {
-        alert("يجب إدخال رقم المرشح ورقم السيريال");
-        return false;
-      }
-      return true;
-    }
-  </script>
+    <!-- إضافة الشعارات -->
+    <div class="logos">
+      <img src="images/british-council-logo.png" alt="British Council Logo">
+      <img src="images/idp-logo.png" alt="IDP Logo">
+    </div>
+
+    <div class="big-ielts">نتيجة امتحان الآيلتس</div>
+    <input type="text" placeholder="أدخل رقم المرشح">
+    <button>عرض النتيجة</button>
+  </div>
 </body>
 </html>
