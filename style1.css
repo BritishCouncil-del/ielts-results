@@ -2,6 +2,8 @@
 body {
   font-family: 'Cairo', Tahoma, Arial, sans-serif;
   direction: rtl;
+  margin: 0;
+  padding: 0;
 }
 
 /* ===== الشريط العلوي ===== */
@@ -92,15 +94,52 @@ body.results {
   background: url("images/background.jpg") no-repeat center center fixed;
   background-size: cover;
 }
+
+/* القوائم الجانبية */
+.sidebar {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 220px;
+  height: 100%;
+  background: #d32f2f;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.15);
+  padding-top: 20px;
+  z-index: 9;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar ul li {
+  margin: 12px 0;
+}
+.sidebar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+  display: block;
+  padding: 10px 15px;
+  transition: 0.3s;
+}
+.sidebar ul li a:hover {
+  background: #fff;
+  color: #d32f2f;
+  border-radius: 8px;
+}
+
+/* مربع النتائج */
 .results-box {
-  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(245,245,245,0.95));
+  background: rgba(255,255,255,0.95);
   width:700px;
   margin:120px auto 60px auto;
   padding:40px;
   border-radius:25px;
   text-align:left;
   box-shadow:0 0 35px rgba(0,0,0,0.25);
-  border:2px solid #1976d2;
+  border:2px solid #d32f2f;
 }
 .results-title {
   font-size:28px;
@@ -115,15 +154,40 @@ body.results {
   margin-bottom:20px;
   text-align:center;
 }
-.results-section {
-  margin-bottom:25px;
-  font-size:16px;
-  color:#222;
+
+/* صورة الطالب */
+.student-photo {
+  text-align:right;
+  margin-bottom:20px;
 }
-.results-section h3 {
-  font-size:18px;
-  color:#1976d2;
-  margin-bottom:10px;
+.student-photo img {
+  height:120px;
+  border:2px solid #ccc;
+  border-radius:10px;
 }
-.scores {
-  list-style
+
+/* جدول البيانات */
+.results-table, .scores-table {
+  width:100%;
+  border-collapse: collapse;
+  margin-bottom:20px;
+}
+.results-table td, .scores-table td {
+  padding:10px;
+  font-size:15px;
+}
+.row-light {
+  background:#fff;
+}
+.row-dark {
+  background:#f0f0f0;
+}
+
+/* البانر أسفل الصفحة */
+.footer-banner img {
+  width: 100%;
+  max-width: 1600px;
+  height: auto;
+  background: none;
+  display: inline-block;
+}
