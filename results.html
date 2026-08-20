@@ -2,86 +2,63 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>IELTS TRF Results</title>
+  <title>IELTS Results</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
-<body>
-  <!-- الهيدر -->
-  <div class="header-red">
-    <h1 class="ielts-logo">IELTS</h1>
-    <span class="subtitle">English for International Opportunity</span>
-    <h2 class="trf-title">TRF Results Details</h2>
+<body class="results">
+  <!-- الشريط العلوي -->
+  <div class="news-bar">
+    <marquee behavior="scroll" direction="left">
+      تفاصيل نتيجة امتحان الآيلتس – IELTS Test Report Form
+    </marquee>
   </div>
 
-  <!-- القوائم -->
+  <!-- القوائم الجانبية -->
   <div class="sidebar">
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#" onclick="downloadPDF()">تحميل النتائج PDF</a></li>
-      <li><a href="trf.html">TRF Query</a></li>
-      <li><a href="manage.html">Manage My Ro Users</a></li>
-      <li><a href="profile.html">Update My Profile</a></li>
-      <li><a href="faqs.html">FAQs</a></li>
-      <li><a href="https://ielts.org" target="_blank">IELTS.org</a></li>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="results.html">📄 TRF Query</a></li>
+      <li><a href="#">⬇️ Download Results</a></li>
+      <li><a href="#">👤 Manage My Ro Users</a></li>
+      <li><a href="#">⚙️ Update My Profile</a></li>
+      <li><a href="#">❓ FAQs</a></li>
+      <li><a href="https://www.ielts.org" target="_blank">🌐 IELTS.org</a></li>
     </ul>
   </div>
 
-  <!-- Match Found -->
-  <div class="match-found">
-    <strong>Match Found</strong><br>
-    Institutions themselves are responsible for determining the IELTS Band Scores appropriate...
-  </div>
+  <!-- مربع النتائج -->
+  <div class="results-box">
+    <h1 class="results-title">IELTS English for International Opportunity</h1>
+    <h2 class="results-subtitle">TRF Results Details</h2>
 
-  <!-- بيانات الطالب + الصورة -->
-  <div class="info-layout">
-    <div class="info-table">
-      <table>
-        <tr><td><strong>Centre Number:</strong></td><td>AE113</td></tr>
-        <tr><td><strong>Centre Name:</strong></td><td>BRITISH COUNCIL</td></tr>
-        <tr><td><strong>Candidate Number:</strong></td><td>507413</td></tr>
-        <tr><td><strong>Candidate ID:</strong></td><td>784-2002-9850508-0</td></tr>
-        <tr><td><strong>Family Name:</strong></td><td>ALSHEHHI</td></tr>
-        <tr><td><strong>First Name:</strong></td><td>MOHAMED AHMED ABDULLA ALRUDAMI</td></tr>
-        <tr><td><strong>Date of Birth:</strong></td><td>06/06/2002</td></tr>
-        <tr><td><strong>Sex (M/F):</strong></td><td>M</td></tr>
-      </table>
+    <div class="results-section">
+      <p><strong>Centre Number:</strong> AE113</p>
+      <p><strong>Centre Name:</strong> BRITISH COUNCIL</p>
+      <p><strong>Candidate Number:</strong> 507413</p>
+      <p><strong>Candidate ID:</strong> 784-2002-9850508-0</p>
+      <p><strong>Family Name:</strong> ALSHEHHI</p>
+      <p><strong>First Name:</strong> MOHAMED AHMED ABDULLA ALRUDAMI</p>
+      <p><strong>Date of Birth:</strong> 06/06/2002</p>
+      <p><strong>Sex (M/F):</strong> M</p>
     </div>
-    <div>
-      <img class="photo" src="images/baut.jpg" alt="Student Image">
+
+    <div class="results-section">
+      <h3>Test Results</h3>
+      <p><strong>Overall Band:</strong> 6.0</p>
+      <p><strong>Date of Examination:</strong> 11/08/2026</p>
+      <p><strong>TRF Number:</strong> 26AE507413ALSM113A</p>
+      <ul class="scores">
+        <li><strong>Listening:</strong> 6.0</li>
+        <li><strong>Reading:</strong> 5.5</li>
+        <li><strong>Writing:</strong> 5.5</li>
+        <li><strong>Speaking:</strong> 6.5</li>
+      </ul>
     </div>
   </div>
 
-  <!-- صف الاسكور الأحمر -->
-  <div class="scores-red">
-    <span>Test Results</span>
-    <span>Overall Band: 6.0</span>
+  <!-- البانر الأفقي للشعارات الثلاثة أسفل الصفحة -->
+  <div class="footer-banner">
+    <img src="images/ielts-banner.png" alt="IELTS Banner">
   </div>
-
-  <!-- جدول الدرجات -->
-  <table class="scores-table">
-    <tr><td><strong>Date of Examination:</strong></td><td>11/08/2026</td></tr>
-    <tr><td><strong>TRF Number:</strong></td><td>26AE507413ALSM113A</td></tr>
-    <tr><td><strong>Listening:</strong></td><td><strong>6.0</strong></td></tr>
-    <tr><td><strong>Reading:</strong></td><td><strong>5.5</strong></td></tr>
-    <tr><td><strong>Writing:</strong></td><td><strong>5.5</strong></td></tr>
-    <tr><td><strong>Speaking:</strong></td><td><strong>6.5</strong></td></tr>
-  </table>
-
-  <!-- الفوتر -->
-  <div class="footer">
-    © 2026 IELTS Results Portal
-  </div>
-
-  <script>
-    function downloadPDF(){
-      const { jsPDF } = window.jspdf;
-      const doc = new jsPDF({orientation:"portrait",unit:"pt",format:"a4"});
-      doc.html(document.querySelector("body"), {
-        callback: function (pdf) { pdf.save("IELTS_TRF_Result.pdf"); },
-        x: 20, y: 20, width: 550
-      });
-    }
-  </script>
 </body>
 </html>
