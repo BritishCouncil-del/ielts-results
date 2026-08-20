@@ -17,34 +17,18 @@ body.welcome {
 }
 
 /* مربع الترحيب */
-.welcome-box { ... }
-
-/* الهيدر الأحمر */
-.header-red {
-  background: linear-gradient(135deg, #d32f2f, #b71c1c);
-  color: #fff;
-  padding: 20px;
-  text-align: left;
-  border-bottom: 5px solid #7f0000;
+.welcome-box {
+  background: rgba(255, 255, 255, 0.95);
+  width: 420px;
+  margin: 100px auto;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  border: 2px solid #d32f2f;
 }
-.ielts-logo { font-size: 50px; font-weight: bold; }
-.subtitle { font-size: 16px; margin-left: 15px; font-style: italic; }
-
-/* مربع Match Found */
-.match-found { background:#e8f5e9; border-left:6px solid #4caf50; ... }
-
-/* جدول البيانات والدرجات */
-.info-table tr:nth-child(even),
-.scores-table tr:nth-child(even) { background-color:#fff; }
-.info-table tr:nth-child(odd),
-.scores-table tr:nth-child(odd) { background-color:#f0f0f0; }
-
-/* صورة الطالب */
-.photo { max-width:150px; border:2px solid #ccc; border-radius:8px; }
-
-/* صف الاسكور الأحمر */
-.scores-red { background:#d32f2f; color:#fff; display:flex; justify-content:space-between; ... }
-
-/* القوائم الجانبية */
-.sidebar { width:20%; background:#d32f2f; float:left; min-height:100vh; }
-.sidebar a { color:#fff; font-weight:bold;
+.ielts-title { font-size: 55px; color: #d32f2f; margin-bottom: 10px; font-weight: bold; }
+.portal-subtitle { font-size: 20px; color: #d32f2f; margin-bottom: 15px; font-style: italic; }
+.big-ielts { font-size: 24px; color: #333; margin-bottom: 20px; font-weight: bold; }
+.welcome-box input { width: 90%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px; }
+.welcome-box button { width: 95%; background: linear-gradient(45deg, #1976d2, #0d47a1); color: #fff; border: none;
