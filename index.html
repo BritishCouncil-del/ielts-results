@@ -20,10 +20,16 @@
 
   <!-- مربع الترحيب -->
   <div class="welcome-box">
-    <div class="big-ielts">نتيجة امتحان الآيلتس</div>
-    <form action="results.html" method="get">
-      <input type="text" name="candidate" placeholder="أدخل رقم المرشح" required>
-      <input type="text" name="serial" placeholder="أدخل رقم السيريال" required>
+    <div class="big-ielts"><span class="ielts-red">IELTS</span> نتيجة امتحان الآيلتس</div>
+    <form action="results.html" method="get" class="search-form">
+      <div class="input-group">
+        <input type="text" name="candidate" placeholder="أدخل رقم المرشح" required>
+        <span class="icon">🔍</span>
+      </div>
+      <div class="input-group">
+        <input type="text" name="serial" placeholder="أدخل رقم السيريال" required>
+        <span class="icon">🔑</span>
+      </div>
       <button type="submit">عرض النتيجة</button>
     </form>
   </div>
