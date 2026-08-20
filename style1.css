@@ -38,23 +38,23 @@ body.welcome {
 /* الشعارات أسفل الصفحة */
 .footer-logos {
   position: fixed;
-  bottom: 10px;
-  left: 10px;
+  bottom: 15px;
+  left: 15px;
   display: flex;
-  gap: 15px;
+  gap: 5px; /* مسافة صغيرة بينهم */
 }
 .footer-logos img {
-  height: 50px;
-  background: transparent; /* إزالة الخلفية */
-  transition: transform 0.3s;
+  height: 70px;          /* تكبير الحجم */
+  background: none;      /* إزالة الخلفية */
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-.footer-logos img:hover { transform: scale(1.1); }
+.footer-logos img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px rgba(0,0,0,0.3);
+}
 
 /* ===== صفحة النتائج ===== */
 .header-red { background:linear-gradient(135deg,#d32f2f,#b71c1c);color:#fff;padding:20px;text-align:left;border-bottom:5px solid #7f0000; }
 .ielts-logo { font-size:50px;font-weight:bold; }
 .subtitle { font-size:16px;margin-left:15px;font-style:italic; }
-.trf-title { font-size:20px;margin-left:15px; }
-
-.sidebar { width:20%;background-color:#d32f2f;padding:15px;float:left;min-height:100vh; }
-.sidebar ul { list-style:none;padding:0; }
+.trf-title { font-size:20px;margin-left:15px
