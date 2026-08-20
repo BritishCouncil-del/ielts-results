@@ -7,7 +7,11 @@
 </head>
 <body class="welcome">
   <!-- الشريط العلوي -->
-  <div class="news-bar">مرحباً بك في بوابة نتائج IELTS</div>
+  <div class="news-bar">
+    <marquee behavior="scroll" direction="left">
+      مرحباً بكم في بوابة نتائج الآيلتس – لجميع اختبارات الآيلتس
+    </marquee>
+  </div>
 
   <!-- الهيدر مع الصورة المجمعة -->
   <div class="header-logos">
@@ -16,7 +20,7 @@
 
   <!-- مربع الترحيب -->
   <div class="welcome-box">
-    <div class="big-ielts">نتيجة امتحان الآيلتس</div>
+    <div class="big-ielts"><span style="color:#d32f2f;">IELTS</span> نتيجة امتحان الآيلتس</div>
     <form action="results.html" method="get">
       <input type="text" name="candidate" placeholder="أدخل رقم المرشح" required>
       <input type="text" name="serial" placeholder="أدخل رقم السيريال" required>
