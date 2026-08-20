@@ -1,12 +1,10 @@
-/* ===== صفحة الترحيب ===== */
-body.welcome {
-  background: url("images/background.jpg") no-repeat center center fixed;
-  background-size: cover;
+/* ===== إعدادات عامة ===== */
+body {
   font-family: 'Cairo', Tahoma, Arial, sans-serif;
   direction: rtl;
 }
 
-/* الشريط العلوي */
+/* ===== الشريط العلوي ===== */
 .news-bar {
   background-color:#d32f2f;
   color:#fff;
@@ -20,7 +18,11 @@ body.welcome {
   z-index: 10;
 }
 
-/* شعار IELTS أعلى الصفحة */
+/* ===== صفحة الترحيب ===== */
+body.welcome {
+  background: url("images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
 .ielts-top-logo {
   position: absolute;
   top: 90px;
@@ -30,11 +32,9 @@ body.welcome {
   height: 140px;
   background: none;
 }
-
-/* مربع الترحيب */
 .welcome-box {
   background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(245,245,245,0.95));
-  width:480px; /* أعرض شوية */
+  width:480px;
   margin:280px auto 60px auto;
   padding:45px;
   border-radius:25px;
@@ -55,8 +55,6 @@ body.welcome {
   color:#444;
   margin-bottom:25px;
 }
-
-/* تنسيق البحث */
 .search-form input {
   width:90%;
   padding:14px;
@@ -89,18 +87,43 @@ body.welcome {
   transform:scale(1.05);
 }
 
-/* البانر الأفقي للشعارات أسفل الصفحة */
-.footer-banner {
-  position: fixed;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
+/* ===== صفحة النتائج ===== */
+body.results {
+  background: url("images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
-.footer-banner img {
-  width: 100%;       /* تاخد العرض كله */
-  max-width: 1600px; /* أكبر حجم */
-  height: auto;
-  background: none;
-  display: inline-block;
+.results-box {
+  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(245,245,245,0.95));
+  width:700px;
+  margin:120px auto 60px auto;
+  padding:40px;
+  border-radius:25px;
+  text-align:left;
+  box-shadow:0 0 35px rgba(0,0,0,0.25);
+  border:2px solid #1976d2;
 }
+.results-title {
+  font-size:28px;
+  color:#d32f2f;
+  margin-bottom:10px;
+  text-align:center;
+  font-weight:bold;
+}
+.results-subtitle {
+  font-size:20px;
+  color:#333;
+  margin-bottom:20px;
+  text-align:center;
+}
+.results-section {
+  margin-bottom:25px;
+  font-size:16px;
+  color:#222;
+}
+.results-section h3 {
+  font-size:18px;
+  color:#1976d2;
+  margin-bottom:10px;
+}
+.scores {
+  list-style
