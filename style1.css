@@ -2,18 +2,18 @@
 .header-red {
   background: linear-gradient(135deg, #d32f2f, #b71c1c);
   color: #fff;
-  padding: 25px;
-  text-align: center;
+  padding: 20px;
+  text-align: left; /* الكلمة على الشمال */
   border-bottom: 5px solid #7f0000;
 }
 .ielts-logo {
-  font-size: 60px;
+  font-size: 50px;
   font-weight: bold;
-  margin: 0;
+  margin-right: 20px;
 }
 .subtitle {
-  font-size: 18px;
-  margin: 0;
+  font-size: 16px;
+  margin-left: 10px;
   font-style: italic;
 }
 
