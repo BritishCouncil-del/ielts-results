@@ -1,7 +1,6 @@
 /* ===== صفحة الترحيب ===== */
 body.welcome {
-  background: url("images/background.jpg") no-repeat center center fixed;
-  background-size: cover;
+  background: #f9f9f9;
   font-family: Tahoma, Arial, sans-serif;
   direction: rtl;
 }
@@ -22,13 +21,13 @@ body.welcome {
 }
 .header-logos img { max-width: 250px; }
 .welcome-box {
-  background:rgba(255,255,255,0.95);
+  background:#fff;
   width:420px;
   margin:40px auto;
   padding:25px;
   border-radius:12px;
   text-align:center;
-  box-shadow:0 0 20px rgba(0,0,0,0.4);
+  box-shadow:0 0 20px rgba(0,0,0,0.2);
   border:2px solid #d32f2f;
 }
 .big-ielts { font-size:24px;color:#333;margin-bottom:20px;font-weight:bold; }
@@ -46,6 +45,7 @@ body.welcome {
 }
 .footer-logos img {
   height: 50px;
+  background: transparent; /* إزالة الخلفية */
   transition: transform 0.3s;
 }
 .footer-logos img:hover { transform: scale(1.1); }
