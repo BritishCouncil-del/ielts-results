@@ -42,6 +42,8 @@ body.welcome {
   bottom: 15px;
   left: 15px;
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
   gap: 0; /* بدون مسافة بينهم */
 }
 .footer-logos img {
