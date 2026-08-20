@@ -43,12 +43,13 @@ body.welcome {
   border:2px solid #d32f2f;
 }
 .big-ielts {
-  font-size:32px;
-  color:#333;
-  margin-bottom:20px;
+  font-size:36px;
+  color:#d32f2f; /* كلمة IELTS باللون الأحمر */
+  margin-bottom:25px;
   font-weight:bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
-.ielts-red { color:#d32f2f; }
 
 /* تنسيق البحث */
 .search-form input {
