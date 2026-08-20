@@ -27,16 +27,16 @@ body.welcome {
   left: 40px;
 }
 .ielts-top-logo img {
-  height: 140px; /* حجم مناسب */
+  height: 140px;
   background: none;
 }
 
 /* مربع الترحيب */
 .welcome-box {
-  background:rgba(255,255,255,0.95); /* خلفية شبه شفافة */
+  background:rgba(255,255,255,0.95);
   width:420px;
   margin:280px auto 60px auto;
-  padding:35px;
+  padding:40px;
   border-radius:20px;
   text-align:center;
   box-shadow:0 0 30px rgba(0,0,0,0.25);
@@ -51,8 +51,8 @@ body.welcome {
   letter-spacing: 3px;
 }
 .sub-text {
-  font-size:14px;
-  color:#555;
+  font-size:15px;
+  color:#333;
   margin-bottom:20px;
 }
 
@@ -98,7 +98,7 @@ body.welcome {
 }
 .footer-banner img {
   width: 100%; /* تكبير الصورة لتملأ العرض */
-  max-width: 1300px; /* أكبر من قبل */
+  max-width: 1400px; /* أكبر من قبل */
   height: auto;
   background: none;
   display: inline-block;
