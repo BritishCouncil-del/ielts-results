@@ -1,4 +1,4 @@
-body.welcome, body.results {
+body.results {
   background: url("images/background.jpg") no-repeat center center fixed;
   background-size: cover;
   font-family: 'Cairo', Tahoma, Arial, sans-serif;
@@ -22,20 +22,6 @@ body.welcome, body.results {
 .header-title { color:#fff; font-size:40px; margin:0 20px 0 0; font-weight:bold; }
 .header-sub { color:#fff; font-size:16px; }
 
-/* News bar */
-.news-bar {
-  background-color:#fff;
-  padding:10px;
-  font-size:16px;
-  width:100%;
-  margin-top:70px;
-}
-.red-text { color:#d32f2f; font-weight:bold; }
-.blue-text { color:#0077cc; font-weight:bold; }
-
-/* Top logo */
-.ielts-top-logo img { height:60px; margin-left:20px; }
-
 /* Sidebar */
 .sidebar {
   position: fixed;
@@ -56,96 +42,86 @@ body.welcome, body.results {
 }
 .sidebar ul li a:hover { background:#fff; color:#d32f2f; border-radius:8px; }
 
-/* Welcome box */
-.welcome-box {
-  background:rgba(255,255,255,0.9);
-  width:500px;
-  margin:200px auto 60px auto;
-  padding:40px;
+/* Results box */
+.results-box {
+  background:rgba(255,255,255,0.95);
+  width:calc(100% - 240px);
+  margin:160px 20px 60px 240px;
+  padding:60px;
   border-radius:20px;
-  text-align:center;
-  box-shadow:0 0 30px rgba(0,0,0,0.25);
+  box-shadow:0 0 35px rgba(0,0,0,0.25);
   border:2px solid #d32f2f;
   opacity:0;
   transform:translateY(30px);
   animation: fadeInUp 1.5s ease forwards;
 }
-.big-ielts { font-size:50px; color:#d32f2f; margin-bottom:25px; font-weight:bold; text-transform:uppercase; letter-spacing:3px; }
-.search-form input {
-  width:90%; padding:14px; margin-bottom:15px;
-  border:1px solid #ccc; border-radius:10px; font-size:16px;
-}
-.search-form button {
-  width:95%; background:linear-gradient(45deg,#d32f2f,#b71c1c);
-  color:#fff; border:none; padding:14px; font-weight:bold;
-  border-radius:10px; cursor:pointer; font-size:18px;
-}
-.search-form button:hover { background:linear-gradient(45deg,#b71c1c,#d32f2f); transform:scale(1.05); }
 
-/* Results box */
-.results-box {
-  background:rgba(255,255,255,0.95);
-  width
-/* ===== صفحة النتائج ===== */
-body.results {
-  background: url("images/background.jpg") no-repeat center center fixed;
-  background-size: cover;
-  font-family: 'Cairo', Tahoma, Arial, sans-serif;
-  margin:0;
-  padding:0;
-}
-
-/* الهيدر الأحمر */
-.header-bar {
-  background:#d32f2f;
-  width:100%;
+/* Notice */
+.notice {
+  background:#fff8e6;
+  border:1px solid #ccc;
   padding:15px;
+  margin-bottom:20px;
+  font-size:14px;
+  color:#333;
+  border-radius:8px;
+}
+
+/* Candidate data + photo */
+.data-photo {
   display:flex;
-  align-items:center;
-  justify-content:flex-start;
-  position:fixed;
-  top:0;
-  left:0;
-  z-index:1000;
+  justify-content:space-between;
+  align-items:flex-start;
 }
-.header-title {
-  color:#fff;
-  font-size:40px;
-  margin:0 20px 0 0;
-  font-weight:bold;
-}
-.header-sub {
-  color:#fff;
-  font-size:16px;
+.student-photo img {
+  height:150px;
+  border:2px solid #ccc;
+  border-radius:10px;
 }
 
-/* البار الأبيض */
-.news-bar {
-  background-color:#fff;
-  padding:10px;
-  font-size:16px;
+/* Tables */
+.results-table, .scores-table {
   width:100%;
-  margin-top:70px;
+  border-collapse: collapse;
+  margin-bottom:20px;
+  box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
-.red-text { color:#d32f2f; font-weight:bold; }
-.blue-text { color:#0077cc; font-weight:bold; }
+.results-table td, .scores-table td {
+  padding:10px;
+  font-size:15px;
+}
+.row-light { background:#fff; }
+.row-dark { background:#666; color:#fff; }
 
-/* القوائم الجانبية */
-.sidebar {
+/* Download button */
+.download-btn {
+  background:#d32f2f;
+  color:#fff;
+  border:none;
+  padding:10px 20px;
+  font-size:14px;
+  border-radius:8px;
+  cursor:pointer;
+}
+.download-btn:hover { background:#b71c1c; }
+
+/* Footer logos */
+.footer-banner {
   position: fixed;
-  top: 70px; /* ملتصق بالهيدر */
-  left: 0;
-  width: 220px;
-  background: #d32f2f;
-  box-shadow: 2px 0 10px rgba(0,0,0,0.15);
-  padding-top: 20px;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.footer-banner img {
+  width: 95%;
+  max-width: 1000px;
   height: auto;
-  max-height: 600px; /* يتقصر علشان يبان الشعارات */
-  overflow-y:auto;
+  opacity:0.8;
 }
 
-/* مربع النتائج */
-.results-box {
-  background: rgba(255,255,255,0.95);
-  width: calc(100% - 240px); /* يكبر بعرض الشاشة مع ترك العمود */
-  margin:160
+/* Animation */
+@keyframes fadeInUp {
+  from { opacity:0; transform:translateY(30px); }
+  to { opacity:1; transform:translateY(0); }
+}
