@@ -82,3 +82,4 @@ body.welcome, body.results {
   width:95%; background:linear-gradient(45deg,#d32f2f,#b71c1c);
   color:#fff; border:none; padding:14px; font-weight:bold;
   border-radius:10px; cursor:pointer;
+  font-size:18px
