@@ -22,18 +22,17 @@ body.results {
   padding:15px;
   display:flex;
   align-items:center;
-  justify-content:space-between;
+  justify-content:flex-start;
 }
 .header-title {
   color:#fff;
   font-size:40px;
-  margin:0;
+  margin:0 20px 0 0;
   font-weight:bold;
 }
 .header-sub {
   color:#fff;
   font-size:16px;
-  margin-left:20px;
 }
 
 /* الشريط العلوي */
@@ -43,7 +42,6 @@ body.results {
   font-weight:bold;
   padding:10px;
   font-size:16px;
-  position: relative;
   width:100%;
   z-index: 10;
 }
@@ -58,7 +56,6 @@ body.results {
   background: #d32f2f;
   box-shadow: 2px 0 10px rgba(0,0,0,0.15);
   padding-top: 20px;
-  z-index: 9;
 }
 .sidebar-header {
   color:#fff;
@@ -81,7 +78,6 @@ body.results {
   font-size: 15px;
   display: block;
   padding: 10px 15px;
-  transition: 0.3s;
 }
 .sidebar ul li a:hover {
   background: #fff;
@@ -132,25 +128,3 @@ body.results {
 .results-table td, .scores-table td {
   padding:10px;
   font-size:15px;
-}
-.results-table td:first-child, .scores-table td:first-child {
-  text-align:left; /* القيم على الشمال */
-}
-.results-table td:last-child, .scores-table td:last-child {
-  font-weight:bold;
-  text-align:right; /* البيانات على اليمين */
-}
-.row-light {
-  background:#fff;
-}
-.row-dark {
-  background:#e0e0e0;
-}
-
-/* البانر أسفل الصفحة */
-.footer-banner img {
-  width: 100%;
-  max-width: 1600px;
-  height: auto;
-  display: inline-block;
-}
