@@ -22,6 +22,10 @@ body.results {
   display:flex;
   align-items:center;
   justify-content:flex-start;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:1000;
 }
 .header-title {
   color:#fff;
@@ -42,15 +46,16 @@ body.results {
   padding:10px;
   font-size:16px;
   width:100%;
+  margin-top:70px; /* علشان يبان تحت الهيدر */
 }
 
 /* القوائم الجانبية */
 .sidebar {
   position: fixed;
-  top: 160px; /* مرفوع شوية علشان يبان البانر */
+  top: 120px; /* مرفوع شوية علشان يبان البانر */
   left: 0;
   width: 220px;
-  height: calc(100% - 280px);
+  height: calc(100% - 200px);
   background: #d32f2f;
   box-shadow: 2px 0 10px rgba(0,0,0,0.15);
   padding-top: 20px;
@@ -81,8 +86,8 @@ body.results {
 .results-box {
   background: rgba(255,255,255,0.95);
   width: calc(100% - 260px);
-  margin:200px 20px 60px 240px;
-  padding:40px;
+  margin:220px 20px 60px 240px;
+  padding:60px; /* تكبير المربع */
   border-radius:20px;
   box-shadow:0 0 35px rgba(0,0,0,0.25);
   border:2px solid #d32f2f;
@@ -105,7 +110,7 @@ body.results {
   margin-bottom:20px;
 }
 .student-photo img {
-  height:120px;
+  height:150px; /* تكبير الصورة */
   border:2px solid #ccc;
   border-radius:10px;
 }
@@ -125,7 +130,8 @@ body.results {
   background:#fff;
 }
 .row-dark {
-  background:#b0b0b0; /* رمادي غامق */
+  background:#888; /* رمادي غامق */
+  color:#fff;
 }
 
 /* زر تحميل PDF */
