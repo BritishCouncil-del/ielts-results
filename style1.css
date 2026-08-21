@@ -1,98 +1,11 @@
-/* ===== إعدادات عامة ===== */
-body {
-  font-family: 'Cairo', Tahoma, Arial, sans-serif;
-  direction: rtl;
-  margin: 0;
-  padding: 0;
-}
-
-/* ===== الشريط العلوي ===== */
-.news-bar {
-  background-color:#d32f2f;
-  color:#fff;
-  font-weight:bold;
-  padding:10px;
-  font-size:16px;
-  position: fixed;
-  top:0;
-  left:0;
-  width:100%;
-  z-index: 10;
-}
-
-/* ===== صفحة الترحيب ===== */
-body.welcome {
-  background: url("images/background.jpg") no-repeat center center fixed;
-  background-size: cover;
-}
-.ielts-top-logo {
-  position: absolute;
-  top: 90px;
-  left: 40px;
-}
-.ielts-top-logo img {
-  height: 140px;
-  background: none;
-}
-.welcome-box {
-  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(245,245,245,0.95));
-  width:480px;
-  margin:280px auto 60px auto;
-  padding:45px;
-  border-radius:25px;
-  text-align:center;
-  box-shadow:0 0 35px rgba(0,0,0,0.25);
-  border:2px solid #d32f2f;
-}
-.big-ielts {
-  font-size:48px;
-  color:#d32f2f;
-  margin-bottom:15px;
-  font-weight:bold;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-.sub-text {
-  font-size:16px;
-  color:#444;
-  margin-bottom:25px;
-}
-.search-form input {
-  width:90%;
-  padding:14px;
-  margin-bottom:15px;
-  border:1px solid #ccc;
-  border-radius:10px;
-  font-size:16px;
-  transition:0.3s;
-}
-.search-form input:focus {
-  border-color:#d32f2f;
-  box-shadow:0 0 10px rgba(211,47,47,0.5);
-  outline:none;
-}
-.search-form button {
-  width:100%;
-  background:linear-gradient(45deg,#1976d2,#0d47a1);
-  color:#fff;
-  border:none;
-  padding:16px;
-  font-weight:bold;
-  border-radius:12px;
-  cursor:pointer;
-  transition:0.3s;
-  font-size:18px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.2);
-}
-.search-form button:hover {
-  background:linear-gradient(45deg,#0d47a1,#1976d2);
-  transform:scale(1.05);
-}
-
 /* ===== صفحة النتائج ===== */
 body.results {
   background: url("images/background.jpg") no-repeat center center fixed;
   background-size: cover;
+  font-family: 'Cairo', Tahoma, Arial, sans-serif;
+  direction: rtl;
+  margin:0;
+  padding:0;
 }
 
 /* القوائم الجانبية */
@@ -133,20 +46,24 @@ body.results {
 /* مربع النتائج */
 .results-box {
   background: rgba(255,255,255,0.95);
-  width:700px;
-  margin:120px auto 60px auto;
+  width: calc(100% - 260px); /* يترك مساحة للعمود */
+  margin:120px 20px 60px 240px; /* يبعد عن العمود الأحمر */
   padding:40px;
-  border-radius:25px;
-  text-align:left;
+  border-radius:20px;
   box-shadow:0 0 35px rgba(0,0,0,0.25);
   border:2px solid #d32f2f;
+  position: relative;
 }
+
+/* العنوان */
 .results-title {
   font-size:28px;
-  color:#d32f2f;
-  margin-bottom:10px;
-  text-align:center;
-  font-weight:bold;
+  color:#fff; /* كلمة IELTS بالأبيض */
+  background:#d32f2f;
+  padding:10px 15px;
+  border-radius:8px;
+  display:inline-block;
+  margin-bottom:15px;
 }
 .results-subtitle {
   font-size:20px;
@@ -157,8 +74,9 @@ body.results {
 
 /* صورة الطالب */
 .student-photo {
-  text-align:right;
-  margin-bottom:20px;
+  position: absolute;
+  top: 60px;
+  right: 30px;
 }
 .student-photo img {
   height:120px;
@@ -176,11 +94,18 @@ body.results {
   padding:10px;
   font-size:15px;
 }
+.results-table td:first-child, .scores-table td:first-child {
+  font-weight:bold;
+  text-align:left; /* العناوين على الشمال */
+}
+.results-table td:last-child, .scores-table td:last-child {
+  text-align:right; /* القيم على اليمين */
+}
 .row-light {
   background:#fff;
 }
 .row-dark {
-  background:#f0f0f0;
+  background:#e0e0e0;
 }
 
 /* البانر أسفل الصفحة */
@@ -188,6 +113,5 @@ body.results {
   width: 100%;
   max-width: 1600px;
   height: auto;
-  background: none;
   display: inline-block;
 }
