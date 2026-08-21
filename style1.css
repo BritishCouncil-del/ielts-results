@@ -151,3 +151,19 @@ body.welcome, body.results {
   from { opacity:0; transform:translateY(30px); }
   to { opacity:1; transform:translateY(0); }
 }
+.data-photo {
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+}
+
+.candidate-info {
+  flex:1;
+  margin-right:20px;
+}
+
+.student-photo img {
+  height:150px;
+  border:2px solid #ccc;
+  border-radius:10px;
+}
