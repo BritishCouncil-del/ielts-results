@@ -37,7 +37,7 @@ body.welcome, body.results {
 }
 .news-bar marquee { flex:1; color:#fff; }
 .ielts-top-logo { margin-left:20px; }
-.ielts-top-logo img { height:100px; } /* bigger logo */
+.ielts-top-logo img { height:110px; } /* bigger logo on the left */
 
 /* Sidebar (results page only) */
 .sidebar {
@@ -138,4 +138,18 @@ body.welcome, body.results {
   bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
-  text-align:
+  text-align: center;
+}
+.footer-banner img {
+  width: 100%; /* enlarged */
+  max-width: 1500px;
+  height: auto;
+  opacity:0.95;
+  animation: fadeInUp 2s ease forwards; /* smooth entrance */
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from { opacity:0; transform:translateY(30px); }
+  to { opacity:1; transform:translateY(0); }
+}
