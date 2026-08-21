@@ -14,26 +14,29 @@ body.welcome {
   font-weight:bold;
   padding:10px;
   font-size:16px;
-  width:100%; /* يكمل عرض الشاشة */
+  width:100%;
   position:fixed;
   top:0;
   left:0;
   z-index:1000;
 }
-
-/* شعار IELTS فوق على الشمال */
-.ielts-top-logo {
-  position: absolute;
-  top: 80px;
-  left: 40px;
+.bar-content {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.news-bar marquee {
+  flex:1;
+  color:#fff;
 }
 .ielts-top-logo img {
-  height: 120px;
+  height:60px;
+  margin-left:20px;
 }
 
 /* مربع البحث */
 .welcome-box {
-  background:#fff;
+  background:rgba(255,255,255,0.9); /* شفاف شوية */
   width:500px;
   margin:200px auto 60px auto;
   padding:40px;
@@ -86,5 +89,5 @@ body.welcome {
   width: 95%;
   max-width: 1000px;
   height: auto;
-  background: none;
+  opacity:0.8; /* شفاف */
 }
