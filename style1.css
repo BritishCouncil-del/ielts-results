@@ -1,105 +1,80 @@
-/* ===== صفحة الترحيب ===== */
-body.welcome {
-  background: url("images/background.jpg") no-repeat center center fixed;
-  background-size: cover;
-  font-family: 'Cairo', Tahoma, Arial, sans-serif;
-  direction: rtl;
-}
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>IELTS Results</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="results">
+  <!-- الهيدر الأحمر -->
+  <div class="header-bar">
+    <h1 class="header-title">IELTS</h1>
+    <span class="header-sub">Academic | General | UKVI | Life Skills</span>
+  </div>
 
-/* ===== صفحة النتائج ===== */
-body.results {
-  background: url("images/background.jpg") no-repeat center center fixed;
-  background-size: cover;
-  font-family: 'Cairo', Tahoma, Arial, sans-serif;
-  margin:0;
-  padding:0;
-}
+  <!-- الشريط العلوي -->
+  <div class="news-bar">
+    <marquee behavior="scroll" direction="left">
+      تفاصيل نتيجة امتحان الآيلتس – IELTS Test Report Form
+    </marquee>
+  </div>
 
-/* الهيدر الأحمر */
-.header-bar {
-  background:#d32f2f;
-  padding:15px;
-  display:flex;
-  align-items:center;
-  justify-content:flex-start;
-}
-.header-title {
-  color:#fff;
-  font-size:40px;
-  margin:0 20px 0 0;
-  font-weight:bold;
-}
-.header-sub {
-  color:#fff;
-  font-size:16px;
-}
+  <!-- القوائم الجانبية -->
+  <div class="sidebar">
+    <ul>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="results.html">📄 TRF Query</a></li>
+      <li><a href="#">⬇️ Download Results</a></li>
+      <li><a href="#">👤 Manage My Ro Users</a></li>
+      <li><a href="#">⚙️ Update My Profile</a></li>
+      <li><a href="#">❓ FAQs</a></li>
+      <li><a href="https://www.ielts.org" target="_blank">🌐 IELTS.org</a></li>
+    </ul>
+  </div>
 
-/* الشريط العلوي */
-.news-bar {
-  background-color:#d32f2f;
-  color:#fff;
-  font-weight:bold;
-  padding:10px;
-  font-size:16px;
-  width:100%;
-}
+  <!-- مربع النتائج -->
+  <div class="results-box">
+    <!-- نص ماتش فوند -->
+    <div class="notice">
+      <strong>Match Found</strong><br>
+      Institutions themselves are responsible for determining the IELTS Band Scores appropriate...
+    </div>
 
-/* القوائم الجانبية */
-.sidebar {
-  position: fixed;
-  top: 160px;
-  left: 0;
-  width: 220px;
-  height: calc(100% - 260px);
-  background: #d32f2f;
-  box-shadow: 2px 0 10px rgba(0,0,0,0.15);
-  padding-top: 20px;
-}
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.sidebar ul li {
-  margin: 12px 0;
-}
-.sidebar ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  font-size: 15px;
-  display: block;
-  padding: 10px 15px;
-}
-.sidebar ul li a:hover {
-  background: #fff;
-  color: #d32f2f;
-  border-radius: 8px;
-}
+    <!-- بيانات الطالب + صورة بجوارها -->
+    <div class="data-photo">
+      <table class="results-table">
+        <tr class="row-light"><td>Centre Number</td><td>AE113</td></tr>
+        <tr class="row-dark"><td>Centre Name</td><td>BRITISH COUNCIL</td></tr>
+        <tr class="row-light"><td>Candidate Number</td><td>507413</td></tr>
+        <tr class="row-dark"><td>Candidate ID</td><td>784-2002-9850508-0</td></tr>
+        <tr class="row-light"><td>Family Name</td><td>ALSHEHHI</td></tr>
+        <tr class="row-dark"><td>First Name</td><td>MOHAMED AHMED ABDULLA ALRUDAMI</td></tr>
+        <tr class="row-light"><td>Date of Birth</td><td>06/06/2002</td></tr>
+        <tr class="row-dark"><td>Sex (M/F)</td><td>M</td></tr>
+      </table>
+      <div class="student-photo">
+        <img src="images/baut.png" alt="Student Photo">
+      </div>
+    </div>
 
-/* مربع النتائج */
-.results-box {
-  background: rgba(255,255,255,0.95);
-  width: calc(100% - 260px);
-  margin:180px 20px 60px 240px;
-  padding:40px;
-  border-radius:20px;
-  box-shadow:0 0 35px rgba(0,0,0,0.25);
-  border:2px solid #d32f2f;
-}
+    <!-- نتائج الاختبار -->
+    <div class="results-section">
+      <h3>Test Results</h3>
+      <table class="scores-table">
+        <tr class="row-light"><td>Listening</td><td>6.0</td></tr>
+        <tr class="row-dark"><td>Reading</td><td>5.5</td></tr>
+        <tr class="row-light"><td>Writing</td><td>5.5</td></tr>
+        <tr class="row-dark"><td>Speaking</td><td>6.5</td></tr>
+      </table>
+      <p><strong>Overall Band:</strong> 6.0</p>
+      <p><strong>Date of Examination:</strong> 11/08/2026</p>
+      <p><strong>TRF Number:</strong> 26AE507413ALSM113A</p>
+    </div>
+  </div>
 
-/* نص ماتش فوند */
-.notice {
-  background:#fff8e6;
-  border:1px solid #ccc;
-  padding:15px;
-  margin-bottom:20px;
-  font-size:14px;
-  color:#333;
-  border-radius:8px;
-}
-
-/* بيانات + صورة */
-.data-photo {
-  display:flex;
-  justify-content:space
+  <!-- البانر أسفل الصفحة -->
+  <div class="footer-banner">
+    <img src="images/ielts-banner.png" alt="IELTS Banner">
+  </div>
+</body>
+</html>
