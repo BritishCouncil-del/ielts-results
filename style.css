@@ -6,7 +6,7 @@ body.welcome, body.results {
   padding:0;
 }
 
-/* Header bar */
+/* Header bar (results page) */
 .header-bar {
   background:#d32f2f;
   width:100%;
@@ -22,7 +22,7 @@ body.welcome, body.results {
 .header-title { color:#fff; font-size:40px; margin:0 20px 0 0; font-weight:bold; }
 .header-sub { color:#fff; font-size:16px; }
 
-/* News bar */
+/* News bar (welcome + results) */
 .news-bar {
   background-color:#d32f2f;
   color:#fff;
@@ -31,14 +31,12 @@ body.welcome, body.results {
   font-size:16px;
   width:100%;
   margin-top:70px;
-}
-.bar-content {
   display:flex;
   align-items:center;
   justify-content:space-between;
 }
 .news-bar marquee { flex:1; color:#fff; }
-.ielts-top-logo img { height:80px; margin-left:20px; } /* شعار أكبر */
+.ielts-top-logo img { height:90px; margin-left:20px; } /* bigger logo */
 
 /* Sidebar (results page only) */
 .sidebar {
@@ -142,8 +140,8 @@ body.welcome, body.results {
   text-align: center;
 }
 .footer-banner img {
-  width: 100%; /* مكبرة */
-  max-width: 1200px;
+  width: 100%; /* enlarged */
+  max-width: 1300px;
   height: auto;
   opacity:0.9;
 }
