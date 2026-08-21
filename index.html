@@ -6,25 +6,29 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="welcome">
-  <!-- الشريط العلوي -->
+  <!-- البار الأحمر -->
   <div class="news-bar">
     <marquee behavior="scroll" direction="left">
-      مرحباً بكم في بوابة نتائج الآيلتس – لجميع أنواع اختبارات الآيلتس (Academic - General - UKVI - Life Skills)
+      جميع أنواع اختبار الآيلتس (Academic - General - UKVI - Life Skills)
     </marquee>
   </div>
 
-  <!-- مربع الترحيب -->
+  <!-- شعار IELTS فوق على الشمال -->
+  <div class="ielts-top-logo">
+    <img src="images/ielts-logos.png" alt="IELTS Logos">
+  </div>
+
+  <!-- مربع البحث في النص -->
   <div class="welcome-box">
     <h1 class="big-ielts">IELTS</h1>
-    <p class="sub-text">أدخل بياناتك للتحقق من نتيجة IELTS الخاصة بك</p>
     <form action="results.html" method="get" class="search-form">
-      <input type="text" name="candidate" placeholder="أدخل رقم المرشح" required>
-      <input type="text" name="serial" placeholder="أدخل رقم السيريال" required>
-      <button type="submit">عرض النتيجة</button>
+      <input type="text" name="candidate" placeholder="Enter Candidate Number" required>
+      <input type="text" name="serial" placeholder="Enter Serial Number" required>
+      <button type="submit">View Result</button>
     </form>
   </div>
 
-  <!-- البانر أسفل الصفحة -->
+  <!-- صورة الثلاث شعارات الشفافة تحت -->
   <div class="footer-banner">
     <img src="images/ielts-banner.png" alt="IELTS Banner">
   </div>
