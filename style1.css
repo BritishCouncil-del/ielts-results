@@ -48,10 +48,10 @@ body.results {
   top: 70px; /* ملتصق بالهيدر */
   left: 0;
   width: 220px;
-  height: calc(100% - 250px); /* مقصوص علشان يبان البانر */
   background: #d32f2f;
   box-shadow: 2px 0 10px rgba(0,0,0,0.15);
   padding-top: 20px;
+  height:auto; /* يتوقف عند المربع الأبيض */
 }
 .sidebar ul {
   list-style: none;
@@ -97,10 +97,10 @@ body.results {
   border-radius:8px;
 }
 
-/* صورة الطالب */
-.student-photo {
-  text-align:right;
-  margin-top:20px;
+/* صورة الطالب فوق يمين البيانات */
+.data-header {
+  display:flex;
+  justify-content:flex-end;
 }
 .student-photo img {
   height:150px;
