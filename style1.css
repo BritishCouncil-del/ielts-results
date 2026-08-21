@@ -10,7 +10,7 @@ body.results {
 /* الهيدر الأحمر */
 .header-bar {
   background:#d32f2f;
-  width:100%; /* يكمل عرض الشاشة */
+  width:100%;
   padding:15px;
   display:flex;
   align-items:center;
@@ -31,16 +31,18 @@ body.results {
   font-size:16px;
 }
 
-/* الشريط العلوي */
+/* البار الأبيض */
 .news-bar {
-  background-color:#d32f2f;
-  color:#fff;
+  background-color:#fff;
+  color:#d32f2f;
   font-weight:bold;
   padding:10px;
   font-size:16px;
   width:100%;
-  margin-top:70px; /* تحت الهيدر */
+  margin-top:70px;
 }
+.red-text { color:#d32f2f; font-weight:bold; }
+.blue-text { color:#0077cc; font-weight:bold; }
 
 /* القوائم الجانبية */
 .sidebar {
@@ -51,7 +53,8 @@ body.results {
   background: #d32f2f;
   box-shadow: 2px 0 10px rgba(0,0,0,0.15);
   padding-top: 20px;
-  height:auto; /* يتوقف عند المربع الأبيض */
+  max-height: 600px; /* يتقصر علشان يبان الشعارات */
+  overflow-y:auto;
 }
 .sidebar ul {
   list-style: none;
@@ -123,7 +126,7 @@ body.results {
   background:#fff;
 }
 .row-dark {
-  background:#666; /* رمادي غامق */
+  background:#666;
   color:#fff;
 }
 
