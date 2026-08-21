@@ -1,3 +1,11 @@
+/* ===== صفحة الترحيب ===== */
+body.welcome {
+  background: url("images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Cairo', Tahoma, Arial, sans-serif;
+  direction: rtl;
+}
+
 /* ===== صفحة النتائج ===== */
 body.results {
   background: url("images/background.jpg") no-repeat center center fixed;
@@ -8,17 +16,55 @@ body.results {
   padding:0;
 }
 
+/* الهيدر الأحمر */
+.header-bar {
+  background:#d32f2f;
+  padding:15px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.header-title {
+  color:#fff;
+  font-size:40px;
+  margin:0;
+  font-weight:bold;
+}
+.header-sub {
+  color:#fff;
+  font-size:16px;
+  margin-left:20px;
+}
+
+/* الشريط العلوي */
+.news-bar {
+  background-color:#d32f2f;
+  color:#fff;
+  font-weight:bold;
+  padding:10px;
+  font-size:16px;
+  position: relative;
+  width:100%;
+  z-index: 10;
+}
+
 /* القوائم الجانبية */
 .sidebar {
   position: fixed;
-  top: 80px;
+  top: 160px;
   left: 0;
   width: 220px;
-  height: 100%;
+  height: calc(100% - 260px);
   background: #d32f2f;
   box-shadow: 2px 0 10px rgba(0,0,0,0.15);
   padding-top: 20px;
   z-index: 9;
+}
+.sidebar-header {
+  color:#fff;
+  text-align:center;
+  margin-bottom:15px;
+  font-size:18px;
 }
 .sidebar ul {
   list-style: none;
@@ -46,37 +92,30 @@ body.results {
 /* مربع النتائج */
 .results-box {
   background: rgba(255,255,255,0.95);
-  width: calc(100% - 260px); /* يترك مساحة للعمود */
-  margin:120px 20px 60px 240px; /* يبعد عن العمود الأحمر */
+  width: calc(100% - 260px);
+  margin:180px 20px 60px 240px;
   padding:40px;
   border-radius:20px;
   box-shadow:0 0 35px rgba(0,0,0,0.25);
   border:2px solid #d32f2f;
-  position: relative;
 }
 
-/* العنوان */
-.results-title {
-  font-size:28px;
-  color:#fff; /* كلمة IELTS بالأبيض */
-  background:#d32f2f;
-  padding:10px 15px;
-  border-radius:8px;
-  display:inline-block;
-  margin-bottom:15px;
-}
-.results-subtitle {
-  font-size:20px;
-  color:#333;
+/* نص ماتش فوند */
+.notice {
+  background:#fff8e6;
+  border:1px solid #ccc;
+  padding:15px;
   margin-bottom:20px;
-  text-align:center;
+  font-size:14px;
+  color:#333;
+  border-radius:8px;
 }
 
-/* صورة الطالب */
-.student-photo {
-  position: absolute;
-  top: 60px;
-  right: 30px;
+/* بيانات + صورة */
+.data-photo {
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
 }
 .student-photo img {
   height:120px;
@@ -86,7 +125,7 @@ body.results {
 
 /* جدول البيانات */
 .results-table, .scores-table {
-  width:100%;
+  width:70%;
   border-collapse: collapse;
   margin-bottom:20px;
 }
@@ -95,11 +134,11 @@ body.results {
   font-size:15px;
 }
 .results-table td:first-child, .scores-table td:first-child {
-  font-weight:bold;
-  text-align:left; /* العناوين على الشمال */
+  text-align:left; /* القيم على الشمال */
 }
 .results-table td:last-child, .scores-table td:last-child {
-  text-align:right; /* القيم على اليمين */
+  font-weight:bold;
+  text-align:right; /* البيانات على اليمين */
 }
 .row-light {
   background:#fff;
