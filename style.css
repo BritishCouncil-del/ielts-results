@@ -11,7 +11,6 @@ body.results {
   background: url("images/background.jpg") no-repeat center center fixed;
   background-size: cover;
   font-family: 'Cairo', Tahoma, Arial, sans-serif;
-  direction: rtl;
   margin:0;
   padding:0;
 }
@@ -43,7 +42,6 @@ body.results {
   padding:10px;
   font-size:16px;
   width:100%;
-  z-index: 10;
 }
 
 /* القوائم الجانبية */
@@ -56,12 +54,6 @@ body.results {
   background: #d32f2f;
   box-shadow: 2px 0 10px rgba(0,0,0,0.15);
   padding-top: 20px;
-}
-.sidebar-header {
-  color:#fff;
-  text-align:center;
-  margin-bottom:15px;
-  font-size:18px;
 }
 .sidebar ul {
   list-style: none;
@@ -110,8 +102,4 @@ body.results {
 /* بيانات + صورة */
 .data-photo {
   display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-}
-.student-photo img {
-  height:
+  justify-content:space
