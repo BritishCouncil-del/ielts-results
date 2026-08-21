@@ -1,5 +1,5 @@
-/* ===== صفحة النتائج ===== */
-body.results {
+/* ===== صفحة الترحيب ===== */
+body.welcome {
   background: url("images/background.jpg") no-repeat center center fixed;
   background-size: cover;
   font-family: 'Cairo', Tahoma, Arial, sans-serif;
@@ -7,57 +7,84 @@ body.results {
   padding:0;
 }
 
-/* الهيدر الأحمر */
-.header-bar {
-  background:#d32f2f;
-  width:100%;
-  padding:15px;
-  display:flex;
-  align-items:center;
-  justify-content:flex-start;
+/* البار الأحمر */
+.news-bar {
+  background-color:#d32f2f;
+  color:#fff;
+  font-weight:bold;
+  padding:10px;
+  font-size:16px;
+  width:100%; /* يكمل عرض الشاشة */
   position:fixed;
   top:0;
   left:0;
   z-index:1000;
 }
-.header-title {
-  color:#fff;
-  font-size:40px;
-  margin:0 20px 0 0;
+
+/* شعار IELTS فوق على الشمال */
+.ielts-top-logo {
+  position: absolute;
+  top: 80px;
+  left: 40px;
+}
+.ielts-top-logo img {
+  height: 120px;
+}
+
+/* مربع البحث */
+.welcome-box {
+  background:#fff;
+  width:500px;
+  margin:200px auto 60px auto;
+  padding:40px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 0 30px rgba(0,0,0,0.25);
+  border:2px solid #d32f2f;
+}
+.big-ielts {
+  font-size:50px;
+  color:#d32f2f;
+  margin-bottom:25px;
   font-weight:bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
-.header-sub {
+.search-form input {
+  width:90%;
+  padding:14px;
+  margin-bottom:15px;
+  border:1px solid #ccc;
+  border-radius:10px;
+  font-size:16px;
+}
+.search-form button {
+  width:95%;
+  background:linear-gradient(45deg,#d32f2f,#b71c1c);
   color:#fff;
-  font-size:16px;
+  border:none;
+  padding:14px;
+  font-weight:bold;
+  border-radius:10px;
+  cursor:pointer;
+  font-size:18px;
+}
+.search-form button:hover {
+  background:linear-gradient(45deg,#b71c1c,#d32f2f);
+  transform:scale(1.05);
 }
 
-/* البار الأبيض */
-.news-bar {
-  background-color:#fff;
-  padding:10px;
-  font-size:16px;
-  width:100%;
-  margin-top:70px;
-}
-.red-text { color:#d32f2f; font-weight:bold; }
-.blue-text { color:#0077cc; font-weight:bold; }
-
-/* القوائم الجانبية */
-.sidebar {
+/* صورة الثلاث شعارات الشفافة تحت */
+.footer-banner {
   position: fixed;
-  top: 70px; /* ملتصق بالهيدر */
-  left: 0;
-  width: 220px;
-  background: #d32f2f;
-  box-shadow: 2px 0 10px rgba(0,0,0,0.15);
-  padding-top: 20px;
-  height: auto;
-  max-height: 600px; /* يتقصر علشان يبان الشعارات */
-  overflow-y:auto;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
 }
-
-/* مربع النتائج */
-.results-box {
-  background: rgba(255,255,255,0.95);
-  width: calc(100% - 240px); /* يكبر بعرض الشاشة مع ترك العمود */
-  margin:160
+.footer-banner img {
+  width: 95%;
+  max-width: 1000px;
+  height: auto;
+  background: none;
+}
