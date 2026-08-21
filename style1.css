@@ -17,6 +17,7 @@ body.results {
 /* الهيدر الأحمر */
 .header-bar {
   background:#d32f2f;
+  width:100%; /* يكمل عرض الشاشة */
   padding:15px;
   display:flex;
   align-items:center;
@@ -46,10 +47,10 @@ body.results {
 /* القوائم الجانبية */
 .sidebar {
   position: fixed;
-  top: 160px;
+  top: 180px; /* مرفوع شوية علشان يبان البانر */
   left: 0;
   width: 220px;
-  height: calc(100% - 260px);
+  height: calc(100% - 280px);
   background: #d32f2f;
   box-shadow: 2px 0 10px rgba(0,0,0,0.15);
   padding-top: 20px;
@@ -80,7 +81,7 @@ body.results {
 .results-box {
   background: rgba(255,255,255,0.95);
   width: calc(100% - 260px);
-  margin:180px 20px 60px 240px;
+  margin:200px 20px 60px 240px;
   padding:40px;
   border-radius:20px;
   box-shadow:0 0 35px rgba(0,0,0,0.25);
@@ -93,14 +94,4 @@ body.results {
   border:1px solid #ccc;
   padding:15px;
   margin-bottom:20px;
-  font-size:14px;
-  color:#333;
-  border-radius:8px;
-}
-
-/* بيانات + صورة */
-.data-photo {
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-}
+  font
