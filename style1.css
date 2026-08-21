@@ -86,3 +86,66 @@ body.welcome, body.results {
 .results-box {
   background:rgba(255,255,255,0.95);
   width
+/* ===== صفحة النتائج ===== */
+body.results {
+  background: url("images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Cairo', Tahoma, Arial, sans-serif;
+  margin:0;
+  padding:0;
+}
+
+/* الهيدر الأحمر */
+.header-bar {
+  background:#d32f2f;
+  width:100%;
+  padding:15px;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:1000;
+}
+.header-title {
+  color:#fff;
+  font-size:40px;
+  margin:0 20px 0 0;
+  font-weight:bold;
+}
+.header-sub {
+  color:#fff;
+  font-size:16px;
+}
+
+/* البار الأبيض */
+.news-bar {
+  background-color:#fff;
+  padding:10px;
+  font-size:16px;
+  width:100%;
+  margin-top:70px;
+}
+.red-text { color:#d32f2f; font-weight:bold; }
+.blue-text { color:#0077cc; font-weight:bold; }
+
+/* القوائم الجانبية */
+.sidebar {
+  position: fixed;
+  top: 70px; /* ملتصق بالهيدر */
+  left: 0;
+  width: 220px;
+  background: #d32f2f;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.15);
+  padding-top: 20px;
+  height: auto;
+  max-height: 600px; /* يتقصر علشان يبان الشعارات */
+  overflow-y:auto;
+}
+
+/* مربع النتائج */
+.results-box {
+  background: rgba(255,255,255,0.95);
+  width: calc(100% - 240px); /* يكبر بعرض الشاشة مع ترك العمود */
+  margin:160
