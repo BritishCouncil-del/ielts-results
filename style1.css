@@ -18,7 +18,7 @@ body.results {
 }
 .header-title {
   color:#fff;
-  font-size:36px; /* أكبر */
+  font-size:40px; /* أكبر */
   margin:0;
   font-weight:bold;
 }
@@ -46,7 +46,7 @@ body.results {
   top: 160px;
   left: 0;
   width: 220px;
-  height: calc(100% - 220px); /* يتقص من تحت شويه */
+  height: calc(100% - 260px); /* يتقص من تحت شويه */
   background: #d32f2f;
   box-shadow: 2px 0 10px rgba(0,0,0,0.15);
   padding-top: 20px;
@@ -126,11 +126,11 @@ body.results {
   font-size:15px;
 }
 .results-table td:first-child, .scores-table td:first-child {
-  font-weight:bold;
-  text-align:right; /* البيانات على اليمين */
+  text-align:left; /* القيم على الشمال */
 }
 .results-table td:last-child, .scores-table td:last-child {
-  text-align:left; /* القيم على الشمال */
+  font-weight:bold;
+  text-align:right; /* البيانات على اليمين */
 }
 .row-light {
   background:#fff;
