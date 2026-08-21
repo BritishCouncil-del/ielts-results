@@ -34,8 +34,6 @@ body.results {
 /* البار الأبيض */
 .news-bar {
   background-color:#fff;
-  color:#d32f2f;
-  font-weight:bold;
   padding:10px;
   font-size:16px;
   width:100%;
@@ -53,8 +51,8 @@ body.results {
   background: #d32f2f;
   box-shadow: 2px 0 10px rgba(0,0,0,0.15);
   padding-top: 20px;
+  height: auto;
   max-height: 600px; /* يتقصر علشان يبان الشعارات */
-  overflow-y:auto;
 }
 .sidebar ul {
   list-style: none;
@@ -83,7 +81,7 @@ body.results {
   background: rgba(255,255,255,0.95);
   width: calc(100% - 260px);
   margin:160px 20px 60px 240px;
-  padding:50px;
+  padding:70px; /* تكبير المربع */
   border-radius:20px;
   box-shadow:0 0 35px rgba(0,0,0,0.25);
   border:2px solid #d32f2f;
@@ -100,10 +98,11 @@ body.results {
   border-radius:8px;
 }
 
-/* صورة الطالب فوق يمين البيانات */
-.data-header {
+/* صورة الطالب بجوار البيانات */
+.data-photo {
   display:flex;
-  justify-content:flex-end;
+  justify-content:space-between;
+  align-items:flex-start;
 }
 .student-photo img {
   height:150px;
