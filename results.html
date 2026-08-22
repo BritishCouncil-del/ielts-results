@@ -6,12 +6,13 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="results">
-  <!-- ✅ شكل الصفحة الأصلي زي ما هو -->
+  <!-- ✅ الهيدر الأصلي -->
   <div class="header-bar">
     <h1 class="header-title">IELTS</h1>
     <span class="header-sub">Academic | General | UKVI | Life Skills</span>
   </div>
 
+  <!-- ✅ البانر الأصلي -->
   <div class="news-bar">
     <marquee behavior="scroll" direction="left">
       All IELTS Test Types (Academic - General - UKVI - Life Skills)
@@ -40,12 +41,8 @@
   <!-- ✅ كود جلب البيانات -->
   <script src="students.js"></script>
   <script>
-    function getQueryParam(param) {
-      const urlParams = new URLSearchParams(window.location.search);
-      return urlParams.get(param);
-    }
-
-    const serial = getQueryParam("serial");
+    const urlParams = new URLSearchParams(window.location.search);
+    const serial = urlParams.get("serial");
     const student = students[serial];
 
     if (student) {
