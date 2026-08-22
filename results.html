@@ -1,64 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>IELTS Results</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body class="results">
-  <!-- ✅ الهيدر الأحمر -->
-  <div class="header-bar">
-    <h1 class="header-title">IELTS</h1>
-    <span class="header-sub">Academic | General | UKVI | Life Skills</span>
-  </div>
+/* ===== صفحة الترحيب ===== */
+body.welcome {
+  background: #fff;
+  font-family: Arial, sans-serif;
+}
 
-  <!-- ✅ شريط الأخبار -->
-  <div class="news-bar">
-    <marquee behavior="scroll" direction="left">
-      All IELTS Test Types (Academic - General - UKVI - Life Skills)
-    </marquee>
-    <div class="ielts-top-logo">
-      <img src="images/ielts-logos.png" alt="IELTS Logos">
-    </div>
-  </div>
+.welcome-box {
+  text-align: center;
+  margin-top: 50px;
+}
 
-  <!-- ✅ مربع النتائج -->
-  <div class="results-box">
-    <img id="studentPhoto" alt="Student Photo" class="student-photo">
-    <table class="results-table">
-      <tr><th>Name</th><td id="studentName"></td></tr>
-      <tr><th>Candidate Number</th><td id="candidateNumber"></td></tr>
-      <tr><th>Date of Birth</th><td id="dob"></td></tr>
-      <tr><th>Exam Date</th><td id="examDate"></td></tr>
-      <tr><th>Listening</th><td id="listening"></td></tr>
-      <tr><th>Reading</th><td id="reading"></td></tr>
-      <tr><th>Writing</th><td id="writing"></td></tr>
-      <tr><th>Speaking</th><td id="speaking"></td></tr>
-      <tr><th>Overall Band Score</th><td id="overall"></td></tr>
-    </table>
-  </div>
+/* ===== صفحة النتائج ===== */
+body.results {
+  background: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
 
-  <!-- ✅ الكود لعرض بيانات الطالب -->
-  <script src="students.js"></script>
-  <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const serial = urlParams.get("serial");
-    const student = students[serial];
+.header-bar {
+  background-color: #d32f2f;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
 
-    if (student) {
-      document.getElementById("studentName").textContent = student.name;
-      document.getElementById("candidateNumber").textContent = student.candidate;
-      document.getElementById("dob").textContent = student.dob;
-      document.getElementById("examDate").textContent = student.examDate;
-      document.getElementById("listening").textContent = student.listening;
-      document.getElementById("reading").textContent = student.reading;
-      document.getElementById("writing").textContent = student.writing;
-      document.getElementById("speaking").textContent = student.speaking;
-      document.getElementById("overall").textContent = student.overall;
-      document.getElementById("studentPhoto").src = "images/" + student.image;
-    } else {
-      alert("No results found for this candidate.");
-    }
-  </script>
-</body>
-</html>
+.header-title {
+  margin: 0;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.header-sub {
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
+}
+
+.news-bar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  position: relative;
+}
+
+.news-bar marquee {
+  font-size: 14px;
+  color: #fff;
+}
+
+.ielts-top-logo {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+.ielts-top-logo img {
+  height: 40px;
+}
+
+.results-box {
+  background-color: #fff;
+  margin: 30px auto;
+  padding: 20px;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.student-photo {
+  width: 150px;
+  height: auto;
+  margin-right: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.results-table th {
+  text-align: left;
+  background-color: #f0f0f0;
+  padding: 8px;
+  width: 200px;
+}
+
+.results-table td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.results-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+.results-table tr:nth-child(odd) {
+  background-color: #fff;
+}
