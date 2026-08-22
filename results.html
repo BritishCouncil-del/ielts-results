@@ -4,21 +4,61 @@
   <meta charset="UTF-8">
   <title>IELTS Results</title>
   <link rel="stylesheet" href="style.css">
-
-  <!-- ✅ Meta Tags لإظهار الشعار في معاينة الرابط -->
-  <meta property="og:title" content="IELTS Results Portal">
-  <meta property="og:description" content="View your IELTS Test Report Form (TRF) results online.">
-  <meta property="og:image" content="https://britishcouncil-del.github.io/ielts-results/images/ielts-logo2.png">
-  <meta property="og:url" content="https://britishcouncil-del.github.io/ielts-results/results.html">
-  <meta property="og:type" content="website">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="IELTS Results Portal">
-  <meta name="twitter:description" content="View your IELTS Test Report Form (TRF) results online.">
-  <meta name="twitter:image" content="https://britishcouncil-del.github.io/ielts-results/images/ielts-logo2.png">
 </head>
 <body class="results">
-  <!-- ✅ هنا تسيب كل محتوى النتائج زي ما كان قبل كده -->
-  <!-- الهيدر، البانر، جدول الدرجات، زر التحميل... كله زي ما هو -->
+  <!-- ✅ الهيدر الأحمر بعرض الشاشة -->
+  <div class="header-bar">
+    <h1 class="header-title">IELTS</h1>
+    <span class="header-sub">Academic | General | UKVI | Life Skills</span>
+  </div>
+
+  <!-- ✅ شريط الأخبار + اللوجو -->
+  <div class="news-bar">
+    <marquee behavior="scroll" direction="left">
+      All IELTS Test Types (Academic - General - UKVI - Life Skills)
+    </marquee>
+    <div class="ielts-top-logo">
+      <img src="images/ielts-logos.png" alt="IELTS Logos">
+    </div>
+  </div>
+
+  <!-- ✅ مربع النتائج بنفس الشكل اللي اتفقنا عليه -->
+  <div class="results-box">
+    <img id="studentPhoto" alt="Student Photo" class="student-photo">
+    <table class="results-table">
+      <tr class="row-light"><th>Name</th><td id="studentName"></td></tr>
+      <tr class="row-dark"><th>Candidate Number</th><td id="candidateNumber"></td></tr>
+      <tr class="row-light"><th>Date of Birth</th><td id="dob"></td></tr>
+      <tr class="row-dark"><th>Exam Date</th><td id="examDate"></td></tr>
+      <tr class="row-light"><th>Listening</th><td id="listening"></td></tr>
+      <tr class="row-dark"><th>Reading</th><td id="reading"></td></tr>
+      <tr class="row-light"><th>Writing</th><td id="writing"></td></tr>
+      <tr class="row-dark"><th>Speaking</th><td id="speaking"></td></tr>
+      <tr class="row-light"><th>Overall Band Score</th><td id="overall"></td></tr>
+    </table>
+  </div>
+
+  <!-- ✅ كود جلب البيانات من students.js -->
+  <script src="students.js"></script>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const serial = urlParams.get("serial");
+    const student = students[serial];
+
+    if (student) {
+      document.getElementById("studentName").textContent = student.name;
+      document.getElementById("candidateNumber").textContent = student.candidate;
+      document.getElementById("dob").textContent = student.dob;
+      document.getElementById("examDate").textContent = student.examDate;
+      document.getElementById("listening").textContent = student.listening;
+      document.getElementById("reading").textContent = student.reading;
+      document.getElementById("writing").textContent = student.writing;
+      document.getElementById("speaking").textContent = student.speaking;
+      document.getElementById("overall").textContent = student.overall;
+      document.getElementById("studentPhoto").src = "images/" + student.image;
+    } else {
+      alert("No results found for this candidate.");
+    }
+  </script>
 </body>
 </html>
