@@ -27,20 +27,3 @@ var students = {
     overall: "5.5",
     image: "albedwawi.png"
   },
-
-  // 🆕 طالب جديد (انسخ البلوك ده وعدل البيانات)
-  /*
-  "SERIAL_NUMBER_HERE": {
-    candidate: "CANDIDATE_NUMBER_HERE",
-    name: "FULL_NAME_HERE",
-    dob: "DD/MM/YYYY",
-    examDate: "DD/MM/YYYY",
-    listening: "X.X",
-    reading: "X.X",
-    writing: "X.X",
-    speaking: "X.X",
-    overall: "X.X",
-    image: "studentPhoto.png"
-  }
-  */
-};
