@@ -1,43 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>IELTS TRF Verification Service</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>مرحبا بك</title>
+  <style>
+    body {
+      font-family: Tahoma, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+    }
+    .welcome {
+      margin-top: 100px;
+      font-size: 28px;
+      color: #333;
+    }
+    .btn {
+      margin-top: 40px;
+      padding: 12px 24px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 6px;
+    }
+    .btn:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 <body>
-  <!-- الهيدر -->
-  <header>
-    <div class="logo">IELTS</div>
-    <nav>
-      <a href="#" onclick="showWelcome()">Home</a>
-      <a href="#" onclick="showForm()">TRF Query</a>
-      <a href="#">Download Results</a>
-      <a href="#">Manage Users</a>
-      <a href="#">Update Profile</a>
-      <a href="#">FAQs</a>
-      <a href="#">IELTS.org</a>
-    </nav>
-  </header>
-
-  <!-- المحتوى الرئيسي -->
-  <main>
-    <!-- صفحة الترحيب -->
-    <section id="welcomeBox">
-      <h1>Welcome to the IELTS Test Report Form (TRF) Verification Service</h1>
-    </section>
-
-    <!-- فورم إدخال السيريال -->
-    <section id="formBox" class="hidden">
-      <h2>Enter TRF Number</h2>
-      <input type="text" id="serialInput" placeholder="Enter Serial Number">
-      <button onclick="showResult()">Submit</button>
-    </section>
-
-    <!-- النتائج -->
-    <section id="resultBox" class="result-box hidden"></section>
-  </main>
-
-  <script src="js/script.js"></script>
+  <div class="welcome">أهلاً وسهلاً بك في موقعنا 🎉</div>
+  <button class="btn" onclick="window.location.href='results.html'">عرض النتائج</button>
 </body>
 </html>
