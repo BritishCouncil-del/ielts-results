@@ -2,20 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Welcome - IELTS Results</title>
+  <title>IELTS Portal</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="IELTS Results Portal">
+  <meta property="og:description" content="Check your IELTS Test Report Form (TRF) results online.">
+  <meta property="og:image" content="https://britishcouncil-del.github.io/ielts-results/images/ielts-logo2.png">
+  <meta property="og:url" content="https://britishcouncil-del.github.io/ielts-results/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="IELTS Results Portal">
+  <meta name="twitter:description" content="Check your IELTS Test Report Form (TRF) results online.">
+  <meta name="twitter:image" content="https://britishcouncil-del.github.io/ielts-results/images/ielts-logo2.png">
 </head>
 <body class="welcome">
-  <!-- ✅ الهيدر الأحمر -->
-  <div class="header-bar">
-    <h1 class="header-title">IELTS</h1>
-    <span class="header-sub">Academic | General | UKVI | Life Skills</span>
+  <!-- صفحة الترحيب الأصلية زي ما هي -->
+  <div class="news-bar">
+    <marquee behavior="scroll" direction="left">
+      All IELTS Test Types (Academic - General - UKVI - Life Skills)
+    </marquee>
+    <div class="ielts-top-logo">
+      <img src="images/ielts-logos.png" alt="IELTS Logos">
+    </div>
   </div>
 
-  <!-- ✅ مربع الترحيب -->
-  <div class="welcome-box">
-    <h2>Welcome to IELTS Results Portal</h2>
-    <p>Please enter your candidate number and serial in the link provided to view your results.</p>
+  <div class="welcome-box fade-in">
+    <h1 class="big-ielts">IELTS</h1>
+    <form action="results.html" method="get" class="search-form">
+      <input type="text" name="candidate" placeholder="Enter Candidate Number" required>
+      <input type="text" name="serial" placeholder="Enter Serial Number" required>
+      <button type="submit">View Result</button>
+    </form>
+  </div>
+
+  <div class="footer-banner">
+    <img src="images/ielts-banner.png" alt="IELTS Banner">
   </div>
 </body>
 </html>
