@@ -2,44 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>IELTS Portal</title>
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="IELTS Results Portal">
-  <meta property="og:description" content="Check your IELTS Test Report Form (TRF) results online.">
-  <meta property="og:image" content="https://britishcouncil-del.github.io/ielts-results/images/ielts-logo2.png">
-  <meta property="og:url" content="https://britishcouncil-del.github.io/ielts-results/">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="IELTS Results Portal">
-  <meta name="twitter:description" content="Check your IELTS Test Report Form (TRF) results online.">
-  <meta name="twitter:image" content="https://britishcouncil-del.github.io/ielts-results/images/ielts-logo2.png">
+  <title>IELTS TRF Verification Service</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="welcome">
-  <!-- صفحة الترحيب الأصلية زي ما هي -->
-  <div class="news-bar">
-    <marquee behavior="scroll" direction="left">
-      All IELTS Test Types (Academic - General - UKVI - Life Skills)
-    </marquee>
-    <div class="ielts-top-logo">
-      <img src="images/ielts-logos.png" alt="IELTS Logos">
-    </div>
-  </div>
+<body>
+  <!-- الهيدر -->
+  <header>
+    <div class="logo">IELTS</div>
+    <nav>
+      <a href="#" onclick="showWelcome()">Home</a>
+      <a href="#" onclick="showForm()">TRF Query</a>
+      <a href="#">Download Results</a>
+      <a href="#">Manage Users</a>
+      <a href="#">Update Profile</a>
+      <a href="#">FAQs</a>
+      <a href="#">IELTS.org</a>
+    </nav>
+  </header>
 
-  <div class="welcome-box fade-in">
-    <h1 class="big-ielts">IELTS</h1>
-    <form action="results.html" method="get" class="search-form">
-      <input type="text" name="candidate" placeholder="Enter Candidate Number" required>
-      <input type="text" name="serial" placeholder="Enter Serial Number" required>
-      <button type="submit">View Result</button>
-    </form>
-  </div>
+  <!-- المحتوى الرئيسي -->
+  <main>
+    <!-- صفحة الترحيب -->
+    <section id="welcomeBox">
+      <h1>Welcome to the IELTS Test Report Form (TRF) Verification Service</h1>
+    </section>
 
-  <div class="footer-banner">
-    <img src="images/ielts-banner.png" alt="IELTS Banner">
-  </div>
+    <!-- فورم إدخال السيريال -->
+    <section id="formBox" class="hidden">
+      <h2>Enter TRF Number</h2>
+      <input type="text" id="serialInput" placeholder="Enter Serial Number">
+      <button onclick="showResult()">Submit</button>
+    </section>
+
+    <!-- النتائج -->
+    <section id="resultBox" class="result-box hidden"></section>
+  </main>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
