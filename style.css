@@ -66,7 +66,7 @@ body.welcome {
   background:#b71c1c;
 }
 
-/* ===== صورة الشعارات تحت (موحدة) ===== */
+/* ===== صورة الشعارات تحت ===== */
 .footer-banner, .footer-logos {
   text-align:center;
   margin:20px 0;
@@ -84,12 +84,14 @@ body.results {
   background: url("images/ielts-bg.jpg") no-repeat center center fixed;
   background-size: cover;
 }
+
+/* ===== القوائم الجانبية ===== */
 .sidebar {
   width:200px;
   float:left;
   background:#fff;
   border-right:2px solid #ccc;
-  height:100%;
+  min-height:100vh;
   padding:15px;
 }
 .sidebar ul {
@@ -107,6 +109,8 @@ body.results {
 .sidebar ul li a:hover {
   text-decoration:underline;
 }
+
+/* ===== كارت النتيجة ===== */
 .result-card {
   background:#fff;
   width:75%;
@@ -126,6 +130,8 @@ body.results {
   border:2px solid #ccc;
   border-radius:8px;
 }
+
+/* ===== جدول النتائج أبيض/رمادي ===== */
 .results-table {
   width:100%;
   border-collapse:collapse;
@@ -139,6 +145,8 @@ body.results {
 .results-table tr:nth-child(odd) {
   background:#fff; /* أبيض */
 }
+
+/* ===== زر تحميل PDF ===== */
 .download-btn {
   margin-top:20px;
   background:#d32f2f;
