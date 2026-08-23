@@ -1,188 +1,48 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IELTS Portal</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body, html {
-            height: 100%;
-            width: 100%;
-            overflow: hidden;
-        }
-
-        .bg-container {
-            background-image: url('صور/buti.jpg'); 
-            background-size: cover;
-            background-position: center;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .login-card {
-            background-color: rgba(255, 255, 255, 0.98);
-            border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-            width: 100%;
-            max-width: 420px;
-            padding: 30px 25px;
-            text-align: center;
-            border-top: 4px solid #D61A22; 
-        }
-
-        .logo-ielts {
-            color: #D61A22;
-            font-size: 42px;
-            font-weight: bold;
-            letter-spacing: 1px;
-            margin-bottom: 2px;
-        }
-
-        .sub-logo {
-            color: #D61A22;
-            font-style: italic;
-            font-size: 13px;
-            margin-bottom: 20px;
-            font-weight: 500;
-        }
-
-        .title {
-            color: #1F2937;
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-
-        .subtitle {
-            color: #6B7280;
-            font-size: 12px;
-            margin-bottom: 25px;
-        }
-
-        .input-group {
-            margin-bottom: 15px;
-            position: relative;
-            display: flex;
-            align-items: center;
-        }
-
-        .input-field {
-            width: 100%;
-            padding: 12px 50px 12px 15px;
-            border: 1px solid #D1D5DB;
-            border-radius: 6px;
-            font-size: 14px;
-            text-align: right;
-            outline: none;
-            color: #374151;
-        }
-
-        /* زر النسخ الصغير المدمج بالحقل */
-        .btn-copy-input {
-            position: absolute;
-            right: 10px;
-            background-color: #f3f4f6;
-            border: 1px solid #cbd5e1;
-            padding: 5px 8px;
-            border-radius: 4px;
-            font-size: 11px;
-            cursor: pointer;
-            color: #4b5563;
-            transition: all 0.2s;
-        }
-
-        .btn-copy-input:hover {
-            background-color: #e5e7eb;
-            color: #111827;
-        }
-
-        .error-message {
-            color: #D61A22;
-            font-size: 13px;
-            margin-bottom: 15px;
-            display: none;
-            font-weight: bold;
-        }
-
-        .btn-submit {
-            width: 100%;
-            background-color: #1D4ED8;
-            color: white;
-            border: none;
-            padding: 13px;
-            border-radius: 6px;
-            font-size: 15px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.2s;
-            margin-top: 10px;
-        }
-
-        .btn-submit:hover {
-            background-color: #1E40AF;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>IELTS TRF</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+    header {
+      margin-bottom: 20px;
+    }
+    img.logo {
+      width: 150px;
+    }
+    .student {
+      margin: 20px auto;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background: #fff;
+      width: 300px;
+    }
+    .student img {
+      width: 100%;
+      height: auto;
+    }
+    .student h2 {
+      margin: 10px 0;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <img src="images/ielts-logo.png" alt="IELTS Logo" class="logo">
+    <h1>IELTS TRF</h1>
+  </header>
 
-    <div class="bg-container">
-        <div class="login-card">
-            <div class="logo-ielts">IELTS</div>
-            <div class="sub-logo">English for International Opportunity</div>
-            
-            <div class="title">Test Report Form Portal</div>
-            <div class="subtitle">أدخل بياناتك للتحقق من نتيجة IELTS الخاصة بك</div>
-            
-            <form id="loginForm">
-                <div class="input-group">
-                    <input type="text" id="candidateNumber" class="input-field" placeholder="رقم المرشح: 507413" required>
-                    <button type="button" class="btn-copy-input" onclick="copyValue('507413', this)">نسخ</button>
-                </div>
-                <div class="input-group">
-                    <input type="text" id="trfNumber" class="input-field" placeholder="رقم السريال: 26AE507413ALSM113A" required>
-                    <button type="button" class="btn-copy-input" onclick="copyValue('26AE507413ALSM113A', this)">نسخ</button>
-                </div>
-                
-                <div id="errorBox" class="error-message">عذراً، رقم المرشح أو رقم السريال غير صحيح!</div>
-                
-                <button type="submit" class="btn-submit">عرض النتيجة</button>
-            </form>
-        </div>
-    </div>
+  <section class="student">
+    <img src="images/student1.jpg" alt="Student Photo">
+    <h2>Ahmed Ali</h2>
+    <p>Score: 7.5</p>
+  </section>
 
-    <script>
-        // دالة النسخ التلقائي للحقول
-        function copyValue(text, element) {
-            navigator.clipboard.writeText(text).then(() => {
-                const originalText = element.innerText;
-                element.innerText = "تم ✅";
-                setTimeout(() => { element.innerText = originalText; }, 1500);
-            });
-        }
-
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const candidateInput = document.getElementById('candidateNumber').value.trim();
-            const trfInput = document.getElementById('trfNumber').value.trim();
-            const errorBox = document.getElementById('errorBox');
-            
-            if (candidateInput === "507413" && trfInput.toUpperCase() === "26AE507413ALSM113A") {
-                errorBox.style.display = "none";
-                window.location.href = "results-502984.html";
-            } else {
-                errorBox.style.display = "block";
-            }
-        });
-    </script>
 </body>
+</html>
