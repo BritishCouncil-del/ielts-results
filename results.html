@@ -17,9 +17,9 @@
             background-color: #f3f4f6;
             display: flex;
             flex-direction: column;
+            overflow: hidden;
         }
 
-        /* الشريط العلوي الأحمر */
         .top-navbar {
             background-color: #b30006;
             color: white;
@@ -37,7 +37,6 @@
             gap: 15px;
         }
 
-        /* حاوية العرض الرئيسية المقسمة */
         .main-wrapper {
             display: flex;
             flex: 1;
@@ -45,20 +44,6 @@
             position: relative;
         }
 
-        /* صورة الخلفية الكبيرة خلف البطاقة البيضاء */
-        .content-area-bg {
-            flex: 1;
-            background-image: url('buti.jpg'); 
-            background-size: cover;
-            background-position: center;
-            padding: 30px;
-            overflow-y: auto;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-        }
-
-        /* القائمة الجانبية الحمراء */
         .sidebar {
             width: 240px;
             background-color: #c9141b;
@@ -66,6 +51,7 @@
             padding-top: 20px;
             display: flex;
             flex-direction: column;
+            z-index: 5;
         }
 
         .sidebar a {
@@ -83,15 +69,26 @@
             background-color: #a80f14;
         }
 
-        /* البطاقة البيضاء الرئيسية للبيانات */
+        .content-area-bg {
+            flex: 1;
+            background-image: url('صور/buti.jpg'); 
+            background-size: cover;
+            background-position: center;
+            padding: 30px;
+            overflow-y: auto;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
         .verification-card {
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.96);
             width: 100%;
             max-width: 780px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
             padding: 25px;
-            margin-bottom: 60px; 
+            margin-bottom: 40px;
             position: relative;
         }
 
@@ -116,9 +113,9 @@
             color: #666;
             font-size: 12px;
             margin-bottom: 20px;
+            line-height: 1.4;
         }
 
-        /* هيكلة وتصميم الجداول والمحاذاة */
         .profile-section {
             display: flex;
             gap: 20px;
@@ -134,7 +131,7 @@
 
         .info-table td {
             padding: 8px 12px;
-            border: 4px solid white; 
+            border: 4px solid white;
         }
 
         .info-table td.label-cell {
@@ -149,7 +146,6 @@
             color: #222;
         }
 
-        /* مربع الصورة الشخصية للمرشح */
         .candidate-photo {
             width: 110px;
             height: 135px;
@@ -167,7 +163,6 @@
             object-fit: cover;
         }
 
-        /* عنوان جدول الدرجات */
         .section-title {
             font-size: 14px;
             font-weight: bold;
@@ -204,22 +199,42 @@
             padding-left: 30px;
         }
 
-        /* درجات وتواريخ الملخص السفلي */
+        .summary-wrapper {
+            background-color: #f8fafc;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            border: 1px dashed #cbd5e1;
+        }
+
         .summary-text {
             font-size: 13px;
             color: #222;
-            margin-bottom: 8px;
-        }
-        
-        .summary-text strong {
-            font-weight: bold;
-        }
-
-        /* زر تحميل الـ PDF الأحمر */
-        .btn-download {
-            display: inline-flex;
+            margin-bottom: 6px;
+            display: flex;
             align-items: center;
             gap: 8px;
+        }
+
+        /* زر النسخ الأنيق الصغير لـ TRF */
+        .copy-badge {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 11px;
+            cursor: pointer;
+            margin-left: 8px;
+            font-weight: normal;
+        }
+
+        .copy-badge:hover {
+            background-color: #2563eb;
+        }
+
+        .btn-download {
+            display: inline-block;
             background-color: #d61a22;
             color: white;
             border: none;
@@ -229,17 +244,16 @@
             border-radius: 4px;
             cursor: pointer;
             text-decoration: none;
-            margin-top: 15px;
+            margin-top: 5px;
+            margin-bottom: 25px;
         }
 
-        /* شريط الشعارات الرسمية السفلي */
         .footer-logos {
-            margin-top: 30px;
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 40px;
-            padding-top: 15px;
+            padding-top: 20px;
             border-top: 1px solid rgba(0,0,0,0.1);
         }
 
@@ -251,7 +265,6 @@
 </head>
 <body>
 
-    <!-- شريط الموقع العلوي -->
     <div class="top-navbar">
         <div class="left-links">
             <span>IELTS</span>
@@ -261,7 +274,6 @@
     </div>
 
     <div class="main-wrapper">
-        <!-- القائمة الجانبية -->
         <div class="sidebar">
             <a href="index.html">🏠 Home</a>
             <a href="#" class="active">📄 TRF Query</a>
@@ -272,19 +284,16 @@
             <a href="#" style="margin-top: auto; border-top: 1px solid rgba(255,255,255,0.1);">🌐 IELTS.org</a>
         </div>
 
-        <!-- منطقة المحتوى الرئيسية الحاضنة للبطاقة وبقية التفاصيل -->
         <div class="content-area-bg">
             <div class="verification-card">
                 
-                <!-- شعار IELTS الداخلي للبطاقة -->
                 <div class="card-header-logo">
-                    <img src="ielts-logos.png" alt="IELTS Logo">
+                    <img src="صور/ielts-logos.png" alt="IELTS Logo">
                 </div>
 
                 <div class="match-title">Match Found</div>
                 <div class="match-subtitle">Institutions themselves are responsible for determining the IELTS Band Scores appropriate...</div>
 
-                <!-- قسم البيانات الشخصية والصورة -->
                 <div class="profile-section">
                     <table class="info-table">
                         <tr>
@@ -321,15 +330,16 @@
                         </tr>
                     </table>
 
-                    <!-- الصورة الشخصية المربوطة بملف baut.jpg بملفاتك -->
                     <div class="candidate-photo">
-                        <img src="baut.jpg" alt="Candidate Photo">
+                        <img src="صور/baut.jpg" alt="Candidate Photo">
                     </div>
                 </div>
 
-                <!-- قسم درجات الاختبار الرسمية -->
                 <div class="section-title">Test Results</div>
                 <table class="results-table">
                     <tr>
                         <td class="label-cell">Listening</td>
                         <td class="value-cell">5.0</td>
+                    </tr>
+                    <tr>
+                        <td class="label-cell">Reading</td>
