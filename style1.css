@@ -65,10 +65,3 @@ body.welcome {
 }
 .search-form button:hover {
   background:#b71c1c;
-}
-.footer-banner {
-  position: fixed;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
