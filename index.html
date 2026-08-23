@@ -2,47 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>IELTS TRF</title>
+  <title>IELTS TRF Portal</title>
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      margin: 20px;
-      background-color: #f9f9f9;
+      background: #f9f9f9;
       text-align: center;
     }
     header {
-      margin-bottom: 20px;
-    }
-    img.logo {
-      width: 150px;
-    }
-    .student {
-      margin: 20px auto;
+      background: #b30000; /* البار الأحمر */
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       padding: 10px;
-      border: 1px solid #ccc;
-      background: #fff;
+    }
+    header img {
+      height: 40px;
+      margin-left: 10px;
+    }
+    .banner {
+      margin: 20px auto;
+    }
+    .banner img {
+      width: 250px;
+    }
+    .transparent {
+      margin-top: 40px;
+    }
+    .transparent img {
       width: 300px;
-    }
-    .student img {
-      width: 100%;
-      height: auto;
-    }
-    .student h2 {
-      margin: 10px 0;
+      opacity: 0.5; /* شفافة */
     }
   </style>
 </head>
 <body>
+
+  <!-- البار الأحمر مع النص والشعار -->
   <header>
-    <img src="images/ielts-logo.png" alt="IELTS Logo" class="logo">
-    <h1>IELTS TRF</h1>
+    <span>جميع أنواع اختبار الآيلتس</span>
+    <img src="images/ielts-logo.png" alt="IELTS Logo">
   </header>
 
-  <section class="student">
-    <img src="images/student1.jpg" alt="Student Photo">
-    <h2>Ahmed Ali</h2>
-    <p>Score: 7.5</p>
-  </section>
+  <!-- الشعارات الثلاثة -->
+  <div class="banner">
+    <img src="images/three-logos.png" alt="IELTS Three Logos">
+  </div>
 
-</body>
-</html>
+  <!-- صورة الشعارات الثلاثة الشفافة -->
+  <div class="transparent">
+    <img src="images/three-logos-transparent.png" alt="Transparent Logos">
