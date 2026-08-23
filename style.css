@@ -20,6 +20,61 @@
   height:60px;
 }
 
+/* ===== صفحة الترحيب ===== */
+body.welcome {
+  background: url("images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Cairo', Tahoma, Arial, sans-serif;
+  margin:0;
+  padding:0;
+}
+.welcome-box {
+  background:#fff;
+  width:400px;
+  margin:200px auto 60px auto;
+  padding:30px;
+  border-radius:15px;
+  text-align:center;
+  box-shadow:0 0 20px rgba(0,0,0,0.25);
+  border:2px solid #d32f2f;
+}
+.big-ielts {
+  font-size:40px;
+  color:#d32f2f;
+  margin-bottom:20px;
+  font-weight:bold;
+}
+.search-form input {
+  width:90%;
+  padding:12px;
+  margin-bottom:12px;
+  border:1px solid #ccc;
+  border-radius:8px;
+  font-size:14px;
+}
+.search-form button {
+  width:95%;
+  background:#d32f2f;
+  color:#fff;
+  border:none;
+  padding:12px;
+  font-weight:bold;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:16px;
+}
+.search-form button:hover {
+  background:#b71c1c;
+}
+.footer-banner {
+  text-align:center;
+  margin:20px 0;
+}
+.footer-banner .footer-img {
+  height:40px;   /* ✅ تصغير حجم صورة الشعارات */
+  width:auto;
+}
+
 /* ===== صفحة النتائج ===== */
 body.results {
   font-family: Arial, sans-serif;
@@ -94,6 +149,6 @@ body.results {
   margin:20px 0;
 }
 .footer-logos .footer-img {
-  height:40px; /* ✅ تصغير حجم الشعارات */
+  height:40px;   /* ✅ نفس الحجم للشعارات الثلاثة */
   margin:0 10px;
 }
