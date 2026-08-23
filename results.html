@@ -11,53 +11,87 @@
       background-size: cover;
       color: #333;
     }
-    /* البار الأحمر */
+    /* الهيدر الأحمر */
     header {
       background: #b30000;
       color: #fff;
       display: flex;
       align-items: center;
-      justify-content: space-between;
       padding: 10px 20px;
     }
     header img {
       height: 40px;
+      margin-right: 15px;
     }
+    /* البار الماشي */
+    .marquee {
+      background: #b30000;
+      color: #fff;
+      padding: 5px;
+      overflow: hidden;
+      position: relative;
+    }
+    .marquee span {
+      white-space: nowrap;
+      position: absolute;
+      animation: marquee 12s linear infinite;
+    }
+    @keyframes marquee {
+      0% { left: 100%; }
+      100% { left: -100%; }
+    }
+    /* القوائم الجانبية */
     nav {
-      display: flex;
-      gap: 15px;
+      background: #b30000;
+      color: #fff;
+      width: 200px;
+      min-height: 100vh;
+      float: left;
+      padding: 20px;
     }
     nav a {
+      display: block;
       color: #fff;
       text-decoration: none;
-      font-size: 14px;
+      margin: 10px 0;
     }
     nav a:hover {
       text-decoration: underline;
     }
-    /* الكارد الخاص بالنتائج */
+    /* كارد النتائج */
+    .content {
+      margin-left: 220px;
+      padding: 20px;
+    }
     .result-card {
       background: rgba(255,255,255,0.95);
       border: 1px solid #ccc;
       width: 600px;
-      margin: 40px auto;
+      margin: 20px auto;
       padding: 20px;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
       border-radius: 6px;
+      display: flex;
+      gap: 20px;
     }
-    .result-card h2 {
-      text-align: center;
-      color: #b30000;
-      margin-bottom: 20px;
+    .result-card img {
+      width: 120px;
+      height: auto;
+      border: 1px solid #ccc;
     }
-    .result-card p {
-      font-size: 15px;
-      margin: 6px 0;
+    table {
+      width: 100%;
+      border-collapse: collapse;
     }
-    .scores {
-      margin-top: 15px;
-      border-top: 1px solid #ccc;
-      padding-top: 10px;
+    table tr:nth-child(even) {
+      background: #f2f2f2;
+    }
+    table tr:nth-child(odd) {
+      background: #fff;
+    }
+    table td {
+      padding: 8px;
+      border: 1px solid #ccc;
     }
     .download-btn {
       display: block;
@@ -82,64 +116,42 @@
     .logos img {
       width: 350px;
     }
-    .transparent {
-      margin-top: 40px;
-      text-align: center;
-    }
-    .transparent img {
-      width: 350px;
-      opacity: 0.5;
-    }
   </style>
 </head>
 <body>
 
-  <!-- البار الأحمر مع شعار الآيلتس وروابط التنقل -->
+  <!-- الهيدر الأحمر -->
   <header>
     <img src="images/ielts-logo1.png" alt="IELTS Logo">
-    <nav>
-      <a href="index.html">الرئيسية</a>
-      <a href="#">استعلام TRF</a>
-      <a href="#">تحميل النتائج</a>
-      <a href="#">إدارة المستخدمين</a>
-      <a href="#">تحديث الملف</a>
-      <a href="#">الأسئلة الشائعة</a>
-      <a href="https://ielts.org">IELTS.org</a>
-    </nav>
+    <h1>نتائج اختبار الآيلتس</h1>
   </header>
 
-  <!-- الكارد الخاص بالنتائج -->
-  <div class="result-card">
-    <h2>تفاصيل الطالب</h2>
-    <p><strong>رقم المركز:</strong> AE113</p>
-    <p><strong>اسم المركز:</strong> British Council</p>
-    <p><strong>رقم الطالب:</strong> 507413</p>
-    <p><strong>الاسم:</strong> محمد أحمد عبد الله الرُدامي</p>
-    <p><strong>تاريخ الميلاد:</strong> 06/06/2002</p>
-    <p><strong>الجنس:</strong> M</p>
-
-    <div class="scores">
-      <p><strong>الاستماع:</strong> 6.0</p>
-      <p><strong>القراءة:</strong> 5.5</p>
-      <p><strong>الكتابة:</strong> 5.5</p>
-      <p><strong>المحادثة:</strong> 6.5</p>
-      <p><strong>الدرجة الكلية:</strong> 6.0</p>
-      <p><strong>تاريخ الامتحان:</strong> 11/08/2026</p>
-      <p><strong>رقم TRF:</strong> 26AE507413ALSM113A</p>
-    </div>
-
-    <a href="#" class="download-btn">تحميل PDF</a>
+  <!-- البار الماشي -->
+  <div class="marquee">
+    <span>جميع أنواع اختبار الآيلتس</span>
   </div>
 
-  <!-- الشعارات الثلاثة -->
-  <div class="logos">
-    <img src="images/ielts-logos.png" alt="IELTS Three Logos">
-  </div>
+  <!-- القوائم الجانبية -->
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="#">استعلام TRF</a>
+    <a href="#">تحميل النتائج</a>
+    <a href="#">إدارة المستخدمين</a>
+    <a href="#">تحديث الملف</a>
+    <a href="#">الأسئلة الشائعة</a>
+    <a href="https://ielts.org">IELTS.org</a>
+  </nav>
 
-  <!-- الشعارات الثلاثة الشفافة -->
-  <div class="transparent">
-    <img src="images/ielts-logos.png" alt="Transparent Logos" style="opacity:0.5;">
-  </div>
-
-</body>
-</html>
+  <!-- المحتوى -->
+  <div class="content">
+    <div class="result-card">
+      <img src="images/student1.jpg" alt="صورة الطالب">
+      <table>
+        <tr><td><strong>رقم المركز:</strong></td><td>AE113</td></tr>
+        <tr><td><strong>اسم المركز:</strong></td><td>British Council</td></tr>
+        <tr><td><strong>رقم الطالب:</strong></td><td>507413</td></tr>
+        <tr><td><strong>الاسم:</strong></td><td>محمد أحمد عبد الله الرُدامي</td></tr>
+        <tr><td><strong>تاريخ الميلاد:</strong></td><td>06/06/2002</td></tr>
+        <tr><td><strong>الجنس:</strong></td><td>M</td></tr>
+        <tr><td><strong>الاستماع:</strong></td><td>6.0</td></tr>
+        <tr><td><strong>القراءة:</strong>
