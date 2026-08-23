@@ -9,7 +9,7 @@
   <!-- ✅ الهيدر الأحمر مع شعار الآيلتس -->
   <div class="header-bar">
     <div class="ielts-top-logo">
-      <img src="images/ielts-logo.png" alt="IELTS Logo">
+      <img src="images/ielts-full-logo.png" alt="IELTS Logo with 3 logos">
     </div>
     <nav class="nav-links">
       <a href="index.html">Home</a>
@@ -87,4 +87,14 @@
       document.getElementById("listening").textContent = student.listening;
       document.getElementById("reading").textContent = student.reading;
       document.getElementById("writing").textContent = student.writing;
-      document.getElementById("speaking").textContent
+      document.getElementById("speaking").textContent = student.speaking;
+      document.getElementById("overall").textContent = student.overall;
+      document.getElementById("examDate").textContent = student.examDate;
+      document.getElementById("trfNumber").textContent = serial;
+      document.getElementById("studentPhoto").src = "images/" + student.image;
+    } else {
+      alert("No results found for this candidate.");
+    }
+  </script>
+</body>
+</html>
