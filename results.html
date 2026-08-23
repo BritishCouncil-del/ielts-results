@@ -2,54 +2,133 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>النتائج</title>
+  <title>IELTS TRF Result</title>
   <style>
     body {
-      font-family: Tahoma, sans-serif;
-      background-color: #fff;
-      margin: 40px;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fff;
     }
-    h1 {
+    header {
+      background: #c00;
+      color: #fff;
+      padding: 15px;
       text-align: center;
-      color: #444;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    nav {
+      background: #a00;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      width: 80%;
+      margin: 20px auto;
+    }
+    h2 {
+      color: #333;
+      border-bottom: 2px solid #c00;
+      padding-bottom: 5px;
     }
     table {
-      width: 80%;
-      margin: auto;
+      width: 100%;
       border-collapse: collapse;
+      margin-top: 15px;
     }
     th, td {
       border: 1px solid #ccc;
-      padding: 12px;
-      text-align: center;
+      padding: 10px;
+      text-align: left;
     }
     th {
-      background-color: #f2f2f2;
+      background: #f0f0f0;
     }
-    tr:hover {
-      background-color: #f9f9f9;
+    .download {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .download button {
+      background: #c00;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .download button:hover {
+      background: #900;
+    }
+    footer {
+      background: #f9f9f9;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+      border-top: 1px solid #ddd;
+    }
+    footer img {
+      height: 40px;
+      margin: 0 10px;
     }
   </style>
 </head>
 <body>
-  <h1>نتائج الاختبار</h1>
-  <table>
-    <tr>
-      <th>الاسم</th>
-      <th>الدرجة</th>
-    </tr>
-    <tr>
-      <td>أحمد</td>
-      <td>95%</td>
-    </tr>
-    <tr>
-      <td>محمد</td>
-      <td>88%</td>
-    </tr>
-    <tr>
-      <td>سارة</td>
-      <td>92%</td>
-    </tr>
-  </table>
+  <header>
+    <h1>IELTS</h1>
+  </header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">TRF Query</a>
+    <a href="#">Download Results</a>
+    <a href="#">Manage Users</a>
+    <a href="#">Update Profile</a>
+    <a href="#">FAQs</a>
+    <a href="#">IELTS.org</a>
+  </nav>
+  <div class="container">
+    <h2>Match Found</h2>
+    <table>
+      <tr><th>Centre Number</th><td>AE113</td></tr>
+      <tr><th>Centre Name</th><td>BRITISH COUNCIL</td></tr>
+      <tr><th>Candidate Number</th><td>507413</td></tr>
+      <tr><th>Candidate ID</th><td>784-2002-9850508-0</td></tr>
+      <tr><th>Family Name</th><td>ALSHEHHI</td></tr>
+      <tr><th>First Name</th><td>MOHAMED AHMED ABDULLA ALRUDAMI</td></tr>
+      <tr><th>Date of Birth</th><td>06/06/2002</td></tr>
+      <tr><th>Sex (M/F)</th><td>M</td></tr>
+    </table>
+
+    <h2>Test Results</h2>
+    <table>
+      <tr><th>Listening</th><td>6.0</td></tr>
+      <tr><th>Reading</th><td>5.5</td></tr>
+      <tr><th>Writing</th><td>5.5</td></tr>
+      <tr><th>Speaking</th><td>6.5</td></tr>
+      <tr><th>Overall Band</th><td>6.0</td></tr>
+      <tr><th>Date of Examination</th><td>11/08/2026</td></tr>
+      <tr><th>TRF Number</th><td>26AE507413ALSM113A</td></tr>
+    </table>
+
+    <div class="download">
+      <button>Download PDF</button>
+    </div>
+  </div>
+  <footer>
+    <img src="cambridge.png" alt="Cambridge Assessment English">
+    <img src="britishcouncil.png" alt="British Council">
+    <img src="idp.png" alt="IDP">
+  </footer>
 </body>
 </html>
