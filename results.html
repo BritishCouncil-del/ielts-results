@@ -52,11 +52,29 @@
       0% { left: 100%; }
       100% { left: -100%; }
     }
+    /* القوائم الجانبية */
+    aside {
+      background: #b30000;
+      color: #fff;
+      width: 200px;
+      min-height: 100vh;
+      float: left;
+      padding: 20px;
+    }
+    aside a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      margin: 10px 0;
+      font-size: 14px;
+    }
+    aside a:hover {
+      text-decoration: underline;
+    }
     /* المحتوى */
     .content {
+      margin-left: 220px;
       padding: 20px;
-      display: flex;
-      justify-content: center;
     }
     .result-card {
       background: rgba(255,255,255,0.95);
@@ -113,6 +131,13 @@
     .logos img {
       width: 350px;
     }
+    .banner {
+      margin: 30px auto;
+      text-align: center;
+    }
+    .banner img {
+      width: 600px;
+    }
   </style>
 </head>
 <body>
@@ -136,6 +161,17 @@
     <span>IELTS Academic | IELTS General Training | IELTS UKVI | IELTS Life Skills</span>
   </div>
 
+  <!-- القوائم الجانبية -->
+  <aside>
+    <a href="index.html">الرئيسية</a>
+    <a href="#">استعلام TRF</a>
+    <a href="#">تحميل النتائج</a>
+    <a href="#">إدارة المستخدمين</a>
+    <a href="#">تحديث الملف</a>
+    <a href="#">الأسئلة الشائعة</a>
+    <a href="https://ielts.org">IELTS.org</a>
+  </aside>
+
   <!-- المحتوى -->
   <div class="content">
     <div class="result-card">
@@ -156,13 +192,18 @@
       </table>
       <img src="images/student1.jpg" alt="صورة الطالب">
     </div>
-  </div>
 
-  <a href="#" class="download-btn">تحميل PDF</a>
+    <a href="#" class="download-btn">تحميل PDF</a>
 
-  <!-- الشعارات الثلاثة -->
-  <div class="logos">
-    <img src="images/ielts-logos.png" alt="IELTS Three Logos">
+    <!-- صورة البانر -->
+    <div class="banner">
+      <img src="images/ielts-banner.png" alt="IELTS Banner">
+    </div>
+
+    <!-- الشعارات الثلاثة -->
+    <div class="logos">
+      <img src="images/ielts-logos.png" alt="IELTS Three Logos">
+    </div>
   </div>
 
 </body>
