@@ -10,6 +10,7 @@
       background: url("images/background.jpg") no-repeat center center fixed;
       background-size: cover;
     }
+    /* البار الأحمر */
     header {
       background: #b30000;
       color: #fff;
@@ -34,6 +35,7 @@
       0% { left: 100%; }
       100% { left: -100%; }
     }
+    /* مربع تسجيل الدخول */
     .login-box {
       background: rgba(255,255,255,0.9);
       border: 1px solid #ccc;
@@ -70,30 +72,33 @@
     .login-box button:hover {
       background: #0056b3;
     }
+    /* الشعارات */
     .logos {
       margin: 20px auto;
       text-align: center;
     }
     .logos img {
-      width: 300px;
+      width: 350px;
     }
     .transparent {
       margin-top: 40px;
       text-align: center;
     }
     .transparent img {
-      width: 300px;
+      width: 350px;
       opacity: 0.5;
     }
   </style>
 </head>
 <body>
 
+  <!-- البار الأحمر مع النص والشعار -->
   <header>
     <img src="images/ielts-logo1.png" alt="IELTS Logo">
     <span>جميع أنواع اختبار الآيلتس</span>
   </header>
 
+  <!-- مربع تسجيل الدخول -->
   <div class="login-box">
     <h2>IELTS – Test Report Form Portal</h2>
     <input type="text" placeholder="رقم التسجيل">
@@ -101,10 +106,12 @@
     <button onclick="window.location.href='results.html'">عرض النتيجة</button>
   </div>
 
+  <!-- صورة الشعارات الثلاثة في صورة واحدة -->
   <div class="logos">
     <img src="images/ielts-logos.png" alt="IELTS Three Logos">
   </div>
 
+  <!-- صورة الشعارات الثلاثة الشفافة -->
   <div class="transparent">
     <img src="images/ielts-logos.png" alt="Transparent Logos" style="opacity:0.5;">
   </div>
