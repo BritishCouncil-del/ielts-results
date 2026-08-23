@@ -1,111 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IELTS Verification - Match Found</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
+  <meta charset="UTF-8">
+  <title>IELTS TRF Results</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url("images/background.jpg") no-repeat center center fixed;
+      background-size: cover;
+      text-align: center;
+      color: #333;
+    }
+    header {
+      background: #b30000;
+      color: #fff;
+      padding: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .result-box {
+      background: rgba(255,255,255,0.95);
+      border: 1px solid #ccc;
+      width: 400px;
+      margin: 40px auto;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      border-radius: 6px;
+      text-align: left;
+    }
+    .result-box h2 {
+      text-align: center;
+      color: #b30000;
+      margin-bottom: 20px;
+    }
+    .result-box p {
+      font-size: 16px;
+      margin: 8px 0;
+    }
+    .logos {
+      margin: 30px auto;
+    }
+    .logos img {
+      width: 300px;
+    }
+    .transparent {
+      margin-top: 40px;
+    }
+    .transparent img {
+      width: 300px;
+      opacity: 0.5;
+    }
+  </style>
+</head>
+<body>
 
-        body, html {
-            height: 100%;
-            background-color: #f3f4f6;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-        }
+  <!-- البار الأحمر -->
+  <header>
+    نتائج اختبار الآيلتس
+  </header>
 
-        /* الشريط العلوي الأحمر للموقع */
-        .top-navbar {
-            background-color: #b30006;
-            color: white;
-            padding: 12px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 13px;
-            font-weight: bold;
-            z-index: 10;
-        }
+  <!-- صندوق النتائج -->
+  <div class="result-box">
+    <h2>تفاصيل الطالب</h2>
+    <p><strong>الاسم:</strong> أحمد علي</p>
+    <p><strong>رقم التسجيل:</strong> 509284</p>
+    <p><strong>الدرجة الكلية:</strong> 7.5</p>
+    <p><strong>الاستماع:</strong> 7.0</p>
+    <p><strong>القراءة:</strong> 7.5</p>
+    <p><strong>الكتابة:</strong> 7.0</p>
+    <p><strong>المحادثة:</strong> 8.0</p>
+  </div>
 
-        .top-navbar .left-links {
-            display: flex;
-            gap: 15px;
-        }
+  <!-- الشعارات الثلاثة -->
+  <div class="logos">
+    <img src="images/three-logos.png" alt="IELTS Three Logos">
+  </div>
 
-        /* حاوية العرض الرئيسية المقسمة */
-        .main-wrapper {
-            display: flex;
-            flex: 1;
-            height: calc(100vh - 43px);
-            position: relative;
-        }
+  <!-- الشعارات الثلاثة الشفافة -->
+  <div class="transparent">
+    <img src="images/three-logos-transparent.png" alt="Transparent Logos">
+  </div>
 
-        /* القائمة الجانبية الحمراء الداكنة الثابتة */
-        .sidebar {
-            width: 240px;
-            background-color: #c9141b;
-            color: white;
-            padding-top: 20px;
-            display: flex;
-            flex-direction: column;
-            z-index: 5;
-        }
-
-        .sidebar a {
-            color: white;
-            text-decoration: none;
-            padding: 14px 20px;
-            font-size: 13px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .sidebar a:hover, .sidebar a.active {
-            background-color: #a80f14;
-        }
-
-        /* الخلفية الملتفة للشخصين المحددة بالكامل خلف البطاقة فقط */
-        .content-area-bg {
-            flex: 1;
-            background-image: url('صور/buti.jpg'); 
-            background-size: cover;
-            background-position: center;
-            padding: 30px;
-            overflow-y: auto;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-        }
-
-        /* البطاقة البيضاء العائمة فوق صورة الخلفية */
-        .verification-card {
-            background-color: rgba(255, 255, 255, 0.96);
-            width: 100%;
-            max-width: 780px;
-            border-radius: 12px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-            padding: 25px;
-            margin-bottom: 40px;
-            position: relative;
-        }
-
-        .card-header-logo {
-            display: flex;
-            justify-content: flex-end;
-            margin-bottom: 15px;
-        }
-
-        .card-header-logo img {
-            height: 45px;
-        }
+</body>
+</html>        }
 
         .match-title {
             color: #2b2b2b;
