@@ -1,28 +1,28 @@
-/* ===== البار الأحمر المشترك ===== */
-.news-bar {
-  background-color:#d32f2f;
+/* ===== الهيدر الأحمر ===== */
+.header-bar {
+  background:#d32f2f;
   color:#fff;
-  font-weight:bold;
   padding:10px;
-  font-size:16px;
-  width:100%;
   display:flex;
   align-items:center;
+  justify-content:space-between;
 }
-.news-bar marquee {
-  flex:1;
-  margin-left:10px;
-  color:#fff;
-}
-
-/* ===== شعار الآيلتس ===== */
 .ielts-top-logo img {
   height:60px;
+  margin-right:15px;
+}
+.news-bar {
+  flex:1;
+}
+.news-bar marquee {
+  color:#fff;
+  font-weight:bold;
+  font-size:16px;
 }
 
 /* ===== صفحة الترحيب ===== */
 body.welcome {
-  background: url("images/background.jpg") no-repeat center center fixed;
+  background: url("images/ielts-bg.jpg") no-repeat center center fixed; /* نفس خلفية النتائج */
   background-size: cover;
   font-family: 'Cairo', Tahoma, Arial, sans-serif;
   margin:0;
@@ -67,92 +67,12 @@ body.welcome {
   background:#b71c1c;
 }
 
-/* ✅ صورة الشعارات الثلاثة تحت (صورة واحدة شفافة) */
+/* ===== صورة الشعارات تحت ===== */
 .footer-banner {
   text-align:center;
   margin:20px 0;
 }
 .footer-banner .footer-img {
-  height:40px;   /* حجم صغير متناسق */
-  width:auto;
-}
-
-/* ===== صفحة النتائج ===== */
-body.results {
-  font-family: Arial, sans-serif;
-  margin:0;
-  padding:0;
-  background:#f5f5f5;
-}
-.header-bar {
-  background:#d32f2f;
-  color:#fff;
-  padding:10px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-.nav-links a {
-  color:#fff;
-  margin:0 10px;
-  text-decoration:none;
-  font-weight:bold;
-}
-.nav-links a:hover {
-  text-decoration:underline;
-}
-.result-card {
-  background:#fff;
-  width:80%;
-  margin:30px auto;
-  padding:20px;
-  border-radius:10px;
-  box-shadow:0 0 15px rgba(0,0,0,0.2);
-}
-.result-content {
-  display:flex;
-  align-items:flex-start;
-}
-.student-photo {
-  width:150px;
-  height:auto;
-  margin-right:20px;
-  border:2px solid #ccc;
-  border-radius:8px;
-}
-.results-table {
-  width:100%;
-  border-collapse:collapse;
-}
-.results-table th, .results-table td {
-  padding:10px;
-}
-.results-table tr:nth-child(even) {
-  background:#f0f0f0; /* رمادي غامق */
-}
-.results-table tr:nth-child(odd) {
-  background:#fff; /* أبيض */
-}
-.download-btn {
-  margin-top:20px;
-  background:#d32f2f;
-  color:#fff;
-  border:none;
-  padding:12px 20px;
-  border-radius:6px;
-  cursor:pointer;
-  font-weight:bold;
-}
-.download-btn:hover {
-  background:#b71c1c;
-}
-
-/* ✅ الشعارات الثلاثة تحت (صورة واحدة شفافة) */
-.footer-logos {
-  text-align:center;
-  margin:20px 0;
-}
-.footer-logos .footer-img {
   height:40px;   /* حجم صغير متناسق */
   width:auto;
 }
