@@ -1,134 +1,93 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>IELTS TRF Result</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #fff;
-    }
-    header {
-      background: #c00;
-      color: #fff;
-      padding: 15px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-    nav {
-      background: #a00;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .container {
-      width: 80%;
-      margin: 20px auto;
-    }
-    h2 {
-      color: #333;
-      border-bottom: 2px solid #c00;
-      padding-bottom: 5px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 15px;
-    }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 10px;
-      text-align: left;
-    }
-    th {
-      background: #f0f0f0;
-    }
-    .download {
-      text-align: center;
-      margin-top: 20px;
-    }
-    .download button {
-      background: #c00;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    .download button:hover {
-      background: #900;
-    }
-    footer {
-      background: #f9f9f9;
-      text-align: center;
-      padding: 15px;
-      margin-top: 30px;
-      border-top: 1px solid #ddd;
-    }
-    footer img {
-      height: 40px;
-      margin: 0 10px;
-    }
-  </style>
+  <title>IELTS Results Verification</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <h1>IELTS</h1>
-  </header>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">TRF Query</a>
-    <a href="#">Download Results</a>
-    <a href="#">Manage Users</a>
-    <a href="#">Update Profile</a>
-    <a href="#">FAQs</a>
-    <a href="#">IELTS.org</a>
-  </nav>
-  <div class="container">
-    <h2>Match Found</h2>
-    <table>
-      <tr><th>Centre Number</th><td>AE113</td></tr>
-      <tr><th>Centre Name</th><td>BRITISH COUNCIL</td></tr>
-      <tr><th>Candidate Number</th><td>507413</td></tr>
-      <tr><th>Candidate ID</th><td>784-2002-9850508-0</td></tr>
-      <tr><th>Family Name</th><td>ALSHEHHI</td></tr>
-      <tr><th>First Name</th><td>MOHAMED AHMED ABDULLA ALRUDAMI</td></tr>
-      <tr><th>Date of Birth</th><td>06/06/2002</td></tr>
-      <tr><th>Sex (M/F)</th><td>M</td></tr>
-    </table>
-
-    <h2>Test Results</h2>
-    <table>
-      <tr><th>Listening</th><td>6.0</td></tr>
-      <tr><th>Reading</th><td>5.5</td></tr>
-      <tr><th>Writing</th><td>5.5</td></tr>
-      <tr><th>Speaking</th><td>6.5</td></tr>
-      <tr><th>Overall Band</th><td>6.0</td></tr>
-      <tr><th>Date of Examination</th><td>11/08/2026</td></tr>
-      <tr><th>TRF Number</th><td>26AE507413ALSM113A</td></tr>
-    </table>
-
-    <div class="download">
-      <button>Download PDF</button>
+<body class="results">
+  <!-- ✅ الهيدر الأحمر مع شعار الآيلتس -->
+  <div class="header-bar">
+    <div class="ielts-top-logo">
+      <img src="images/ielts-logo.png" alt="IELTS Logo">
     </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="results.html">TRF Query</a>
+      <a href="#">Download Results</a>
+      <a href="#">Manage Users</a>
+      <a href="#">Update Profile</a>
+      <a href="#">FAQs</a>
+      <a href="https://ielts.org">IELTS.org</a>
+    </nav>
   </div>
-  <footer>
-    <img src="cambridge.png" alt="Cambridge Assessment English">
-    <img src="britishcouncil.png" alt="British Council">
-    <img src="idp.png" alt="IDP">
-  </footer>
+
+  <!-- ✅ كارت النتيجة -->
+  <div class="result-card">
+    <h2>Match Found</h2>
+    <p>Institutions themselves are responsible for determining the IELTS Band Scores appropriate...</p>
+
+    <div class="result-content">
+      <!-- صورة الطالب -->
+      <img id="studentPhoto" alt="Student Photo" class="student-photo">
+
+      <!-- جدول البيانات -->
+      <table class="results-table">
+        <tr><th>Centre Number</th><td id="centreNumber"></td></tr>
+        <tr><th>Centre Name</th><td id="centreName"></td></tr>
+        <tr><th>Candidate Number</th><td id="candidateNumber"></td></tr>
+        <tr><th>Candidate ID</th><td id="candidateID"></td></tr>
+        <tr><th>Family Name</th><td id="familyName"></td></tr>
+        <tr><th>First Name</th><td id="firstName"></td></tr>
+        <tr><th>Date of Birth</th><td id="dob"></td></tr>
+        <tr><th>Sex (M/F)</th><td id="sex"></td></tr>
+        <tr><th>Listening</th><td id="listening"></td></tr>
+        <tr><th>Reading</th><td id="reading"></td></tr>
+        <tr><th>Writing</th><td id="writing"></td></tr>
+        <tr><th>Speaking</th><td id="speaking"></td></tr>
+        <tr><th>Overall Band</th><td id="overall"></td></tr>
+        <tr><th>Date of Examination</th><td id="examDate"></td></tr>
+        <tr><th>TRF Number</th><td id="trfNumber"></td></tr>
+      </table>
+    </div>
+
+    <button class="download-btn">Download PDF</button>
+  </div>
+
+  <!-- ✅ الشعارات الثلاثة تحت -->
+  <div class="footer-logos">
+    <img src="images/cambridge.png" alt="Cambridge">
+    <img src="images/british-council.png" alt="British Council">
+    <img src="images/idp.png" alt="IDP">
+  </div>
+
+  <!-- ✅ جلب بيانات الطالب -->
+  <script src="students.js"></script>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const serial = urlParams.get("serial");
+    const student = students[serial];
+
+    if (student) {
+      document.getElementById("centreNumber").textContent = "AE113";
+      document.getElementById("centreName").textContent = "BRITISH COUNCIL";
+      document.getElementById("candidateNumber").textContent = student.candidate;
+      document.getElementById("candidateID").textContent = student.id || "";
+      document.getElementById("familyName").textContent = student.family || "";
+      document.getElementById("firstName").textContent = student.name;
+      document.getElementById("dob").textContent = student.dob;
+      document.getElementById("sex").textContent = student.sex || "M";
+      document.getElementById("listening").textContent = student.listening;
+      document.getElementById("reading").textContent = student.reading;
+      document.getElementById("writing").textContent = student.writing;
+      document.getElementById("speaking").textContent = student.speaking;
+      document.getElementById("overall").textContent = student.overall;
+      document.getElementById("examDate").textContent = student.examDate;
+      document.getElementById("trfNumber").textContent = serial;
+      document.getElementById("studentPhoto").src = "images/" + student.image;
+    } else {
+      alert("No results found for this candidate.");
+    }
+  </script>
 </body>
 </html>
