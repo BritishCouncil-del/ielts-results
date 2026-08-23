@@ -18,9 +18,8 @@
             overflow: hidden;
         }
 
-        /* الخلفية الكاملة المأخوذة من واجهة الموقع الأصلي */
         .bg-container {
-            background-image: url('buti.jpg'); 
+            background-image: url('صور/buti.jpg'); 
             background-size: cover;
             background-position: center;
             height: 100%;
@@ -31,19 +30,17 @@
             padding: 20px;
         }
 
-        /* الكارت الأبيض في المنتصف مع حواف حمراء دقيقة */
         .login-card {
             background-color: rgba(255, 255, 255, 0.98);
             border-radius: 12px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
             width: 100%;
-            max-width: 400px;
+            max-width: 420px;
             padding: 30px 25px;
             text-align: center;
             border-top: 4px solid #D61A22; 
         }
 
-        /* شعار ايلتس الملون */
         .logo-ielts {
             color: #D61A22;
             font-size: 42px;
@@ -73,28 +70,51 @@
             margin-bottom: 25px;
         }
 
-        /* الحقول والنماذج */
         .input-group {
             margin-bottom: 15px;
+            position: relative;
+            display: flex;
+            align-items: center;
         }
 
         .input-field {
             width: 100%;
-            padding: 12px 15px;
+            padding: 12px 50px 12px 15px;
             border: 1px solid #D1D5DB;
             border-radius: 6px;
             font-size: 14px;
             text-align: right;
             outline: none;
-            transition: border-color 0.2s;
             color: #374151;
         }
 
-        .input-field:focus {
-            border-color: #1D4ED8;
+        /* زر النسخ الصغير المدمج بالحقل */
+        .btn-copy-input {
+            position: absolute;
+            right: 10px;
+            background-color: #f3f4f6;
+            border: 1px solid #cbd5e1;
+            padding: 5px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            cursor: pointer;
+            color: #4b5563;
+            transition: all 0.2s;
         }
 
-        /* زر عرض النتيجة الأزرق */
+        .btn-copy-input:hover {
+            background-color: #e5e7eb;
+            color: #111827;
+        }
+
+        .error-message {
+            color: #D61A22;
+            font-size: 13px;
+            margin-bottom: 15px;
+            display: none;
+            font-weight: bold;
+        }
+
         .btn-submit {
             width: 100%;
             background-color: #1D4ED8;
@@ -126,23 +146,43 @@
             
             <form id="loginForm">
                 <div class="input-group">
-                    <input type="text" id="candidateNumber" class="input-field" placeholder="509284" required>
+                    <input type="text" id="candidateNumber" class="input-field" placeholder="رقم المرشح: 507413" required>
+                    <button type="button" class="btn-copy-input" onclick="copyValue('507413', this)">نسخ</button>
                 </div>
                 <div class="input-group">
-                    <input type="text" id="trfNumber" class="input-field" placeholder="26AE509284ALSB113A" required>
+                    <input type="text" id="trfNumber" class="input-field" placeholder="رقم السريال: 26AE507413ALSM113A" required>
+                    <button type="button" class="btn-copy-input" onclick="copyValue('26AE507413ALSM113A', this)">نسخ</button>
                 </div>
+                
+                <div id="errorBox" class="error-message">عذراً، رقم المرشح أو رقم السريال غير صحيح!</div>
+                
                 <button type="submit" class="btn-submit">عرض النتيجة</button>
             </form>
         </div>
     </div>
 
     <script>
-        // التوجيه لصفحة النتائج مباشرة عند الضغط على الزر
+        // دالة النسخ التلقائي للحقول
+        function copyValue(text, element) {
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = element.innerText;
+                element.innerText = "تم ✅";
+                setTimeout(() => { element.innerText = originalText; }, 1500);
+            });
+        }
+
         document.getElementById('loginForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            // الانتقال لملف صفحة النتيجة 
-            window.location.href = "results-502984.html";
+            const candidateInput = document.getElementById('candidateNumber').value.trim();
+            const trfInput = document.getElementById('trfNumber').value.trim();
+            const errorBox = document.getElementById('errorBox');
+            
+            if (candidateInput === "507413" && trfInput.toUpperCase() === "26AE507413ALSM113A") {
+                errorBox.style.display = "none";
+                window.location.href = "results-502984.html";
+            } else {
+                errorBox.style.display = "block";
+            }
         });
     </script>
 </body>
-</html>
