@@ -1,100 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>IELTS Results Verification</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Verification - Match Found</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body, html {
+            height: 100%;
+            background-color: #f3f4f6;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* الشريط العلوي الأحمر */
+        .top-navbar {
+            background-color: #b30006;
+            color: white;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            font-weight: bold;
+            z-index: 10;
+        }
+
+        .top-navbar .left-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* حاوية العرض الرئيسية المقسمة */
+        .main-wrapper {
+            display: flex;
+            flex: 1;
+            height: calc(100vh - 43px);
+            position: relative;
+        }
+
+        /* صورة الخلفية الكبيرة خلف البطاقة البيضاء */
+        .content-area-bg {
+            flex: 1;
+            background-image: url('buti.jpg'); 
+            background-size: cover;
+            background-position: center;
+            padding: 30px;
+            overflow-y: auto;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        /* القائمة الجانبية الحمراء */
+        .sidebar {
+            width: 240px;
+            background-color: #c9141b;
+            color: white;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .sidebar a:hover, .sidebar a.active {
+            background-color: #a80f14;
+        }
+
+        /* البطاقة البيضاء الرئيسية للبيانات */
+        .verification-card {
+            background-color: white;
+            width: 100%;
+            max-width: 780px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            padding: 25px;
+            margin-bottom: 60px; 
+            position: relative;
+        }
+
+        .card-header-logo {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 15px;
+        }
+
+        .card-header-logo img {
+            height: 45px;
+        }
+
+        .match-title {
+            color: #2b2b2b;
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .match-subtitle {
+            color: #666;
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+
+        /* هيكلة وتصميم الجداول والمحاذاة */
+        .profile-section {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+            align-items: flex-start;
+        }
+
+        .info-table {
+            flex: 1;
+            border-collapse: collapse;
+            font-size: 12px;
+        }
+
+        .info-table td {
+            padding: 8px 12px;
+            border: 4px solid white; 
+        }
+
+        .info-table td.label-cell {
+            background-color: #595959;
+            color: white;
+            width: 35%;
+            font-weight: bold;
+        }
+
+        .info-table td.value-cell {
+            background-color: #e6e6e6;
+            color: #222;
+        }
+
+        /* مربع الصورة الشخصية للمرشح */
+        .candidate-photo {
+            width: 110px;
+            height: 135px;
+            border: 1px solid #ccc;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .candidate-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* عنوان جدول الدرجات */
+        .section-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #2b2b2b;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        .results-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+
+        .results-table td {
+            padding: 8px 12px;
+            border: 4px solid white;
+        }
+
+        .results-table td.label-cell {
+            background-color: #595959;
+            color: white;
+            width: 50%;
+            font-weight: bold;
+        }
+
+        .results-table td.value-cell {
+            background-color: #e6e6e6;
+            color: #222;
+            text-align: left;
+            font-weight: bold;
+            padding-left: 30px;
+        }
+
+        /* درجات وتواريخ الملخص السفلي */
+        .summary-text {
+            font-size: 13px;
+            color: #222;
+            margin-bottom: 8px;
+        }
+        
+        .summary-text strong {
+            font-weight: bold;
+        }
+
+        /* زر تحميل الـ PDF الأحمر */
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #d61a22;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 15px;
+        }
+
+        /* شريط الشعارات الرسمية السفلي */
+        .footer-logos {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .footer-logos img {
+            height: 28px;
+            opacity: 0.9;
+        }
+    </style>
 </head>
-<body class="results">
-  <!-- ✅ الهيدر الأحمر مع الشعار والبار -->
-  <div class="header-bar">
-    <div class="ielts-top-logo">
-      <img src="images/ielts-logos.png" alt="IELTS Logo">
-    </div>
-    <div class="news-bar">
-      <marquee behavior="scroll" direction="left">
-        جميع أنواع اختبار الآيلتس (Academic - General - UKVI - Life Skills)
-      </marquee>
-    </div>
-  </div>
+<body>
 
-  <!-- ✅ القوائم الجانبية -->
-  <div class="sidebar">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="results.html">TRF Query</a></li>
-      <li><a href="#">Download Results</a></li>
-      <li><a href="#">Manage Users</a></li>
-      <li><a href="#">Update Profile</a></li>
-      <li><a href="#">FAQs</a></li>
-      <li><a href="https://ielts.org">IELTS.org</a></li>
-    </ul>
-  </div>
-
-  <!-- ✅ كارت النتيجة -->
-  <div class="result-card">
-    <h2>Match Found</h2>
-    <p>Institutions themselves are responsible for determining the IELTS Band Scores appropriate...</p>
-
-    <div class="result-content">
-      <!-- صورة الطالب -->
-      <img id="studentPhoto" alt="Student Photo" class="student-photo">
-
-      <!-- جدول البيانات -->
-      <table class="results-table">
-        <tr><th>Centre Number</th><td id="centreNumber"></td></tr>
-        <tr><th>Centre Name</th><td id="centreName"></td></tr>
-        <tr><th>Candidate Number</th><td id="candidateNumber"></td></tr>
-        <tr><th>Candidate ID</th><td id="candidateID"></td></tr>
-        <tr><th>Family Name</th><td id="familyName"></td></tr>
-        <tr><th>First Name</th><td id="firstName"></td></tr>
-        <tr><th>Date of Birth</th><td id="dob"></td></tr>
-        <tr><th>Sex (M/F)</th><td id="sex"></td></tr>
-        <tr><th>Listening</th><td id="listening"></td></tr>
-        <tr><th>Reading</th><td id="reading"></td></tr>
-        <tr><th>Writing</th><td id="writing"></td></tr>
-        <tr><th>Speaking</th><td id="speaking"></td></tr>
-        <tr><th>Overall Band</th><td id="overall"></td></tr>
-        <tr><th>Date of Examination</th><td id="examDate"></td></tr>
-        <tr><th>TRF Number</th><td id="trfNumber"></td></tr>
-      </table>
+    <!-- شريط الموقع العلوي -->
+    <div class="top-navbar">
+        <div class="left-links">
+            <span>IELTS</span>
+            <span style="font-weight: normal; color: #ffb3b5;">Academic | General | UKVI | Life Skills</span>
+        </div>
+        <div>All IELTS Test Types (Academic - i...</div>
     </div>
 
-    <button class="download-btn">Download PDF</button>
-  </div>
+    <div class="main-wrapper">
+        <!-- القائمة الجانبية -->
+        <div class="sidebar">
+            <a href="index.html">🏠 Home</a>
+            <a href="#" class="active">📄 TRF Query</a>
+            <a href="#">📥 Download Results</a>
+            <a href="manage.html">👥 Manage Users</a>
+            <a href="profile.html">🔄 Update Profile</a>
+            <a href="faqs.html">❓ FAQs</a>
+            <a href="#" style="margin-top: auto; border-top: 1px solid rgba(255,255,255,0.1);">🌐 IELTS.org</a>
+        </div>
 
-  <!-- ✅ صورة واحدة للشعارات الثلاثة تحت -->
-  <div class="footer-logos">
-    <img src="images/ielts-banner.png" alt="IELTS Banner" class="footer-img">
-  </div>
+        <!-- منطقة المحتوى الرئيسية الحاضنة للبطاقة وبقية التفاصيل -->
+        <div class="content-area-bg">
+            <div class="verification-card">
+                
+                <!-- شعار IELTS الداخلي للبطاقة -->
+                <div class="card-header-logo">
+                    <img src="ielts-logos.png" alt="IELTS Logo">
+                </div>
 
-  <!-- ✅ جلب بيانات الطالب -->
-  <script src="students.js"></script>
-  <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const serial = urlParams.get("serial");
-    const student = students[serial];
+                <div class="match-title">Match Found</div>
+                <div class="match-subtitle">Institutions themselves are responsible for determining the IELTS Band Scores appropriate...</div>
 
-    if (student) {
-      document.getElementById("centreNumber").textContent = "AE113";
-      document.getElementById("centreName").textContent = "BRITISH COUNCIL";
-      document.getElementById("candidateNumber").textContent = student.candidate;
-      document.getElementById("candidateID").textContent = student.id || "";
-      document.getElementById("familyName").textContent = student.family || "";
-      document.getElementById("firstName").textContent = student.name;
-      document.getElementById("dob").textContent = student.dob;
-      document.getElementById("sex").textContent = student.sex || "M";
-      document.getElementById("listening").textContent = student.listening;
-      document.getElementById("reading").textContent = student.reading;
-      document.getElementById("writing").textContent = student.writing;
-      document.getElementById("speaking").textContent = student.speaking;
-      document.getElementById("overall").textContent = student.overall;
-      document.getElementById("examDate").textContent = student.examDate;
-      document.getElementById("trfNumber").textContent = serial;
-      document.getElementById("studentPhoto").src = "images/" + student.image;
-    } else {
-      alert("No results found for this candidate.");
-    }
-  </script>
-</body>
-</html>
+                <!-- قسم البيانات الشخصية والصورة -->
+                <div class="profile-section">
+                    <table class="info-table">
+                        <tr>
+                            <td class="label-cell">Centre Number</td>
+                            <td class="value-cell">AE113</td>
+                        </tr>
+                        <tr>
+                            <td class="label-cell">Centre Name</td>
+                            <td class="value-cell">BRITISH COUNCIL</td>
+                        </tr>
+                        <tr>
+                            <td class="label-cell">Candidate Number</td>
+                            <td class="value-cell">507413</td>
+                        </tr>
+                        <tr>
+                            <td class="label-cell">Candidate ID</td>
+                            <td class="value-cell">784-2002-9850508-0</td>
+                        </tr>
+                        <tr>
+                            <td class="label-cell">Family Name</td>
+                            <td class="value-cell">ALSHEHHI</td>
+                        </tr>
+                        <tr>
+                            <td class="label-cell">First Name</td>
+                            <td class="value-cell">MOHAMED AHMED ABDULLA ALRUDAMI</td>
+                        </tr>
+                        <tr>
+                            <td class="label-cell">Date of Birth</td>
+                            <td class="value-cell">06/06/2002</td>
+                        </tr>
+                        <tr>
+                            <td class="label-cell">Sex (M/F)</td>
+                            <td class="value-cell">M</td>
+                        </tr>
+                    </table>
+
+                    <!-- الصورة الشخصية المربوطة بملف baut.jpg بملفاتك -->
+                    <div class="candidate-photo">
+                        <img src="baut.jpg" alt="Candidate Photo">
+                    </div>
+                </div>
+
+                <!-- قسم درجات الاختبار الرسمية -->
+                <div class="section-title">Test Results</div>
+                <table class="results-table">
+                    <tr>
+                        <td class="label-cell">Listening</td>
+                        <td class="value-cell">5.0</td>
