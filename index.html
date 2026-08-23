@@ -7,7 +7,8 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f9f9f9;
+      background: url("images/background.jpg") no-repeat center center fixed;
+      background-size: cover;
       text-align: center;
     }
     header {
@@ -15,29 +16,29 @@
       color: #fff;
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 10px;
+      justify-content: space-between;
+      padding: 10px 20px;
       font-size: 18px;
       font-weight: bold;
     }
     header img {
       height: 40px;
-      margin-left: 10px;
     }
     .logos {
       margin: 30px auto;
     }
     .logos img {
-      width: 250px;
+      width: 300px;
     }
     .login-box {
-      background: #fff;
+      background: rgba(255,255,255,0.9);
       border: 1px solid #ccc;
-      width: 300px;
+      width: 320px;
       margin: 20px auto;
       padding: 20px;
       text-align: left;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      border-radius: 6px;
     }
     .login-box h2 {
       text-align: center;
@@ -78,11 +79,11 @@
 
   <!-- البار الأحمر مع النص والشعار -->
   <header>
-    <span>جميع أنواع اختبار الآيلتس</span>
     <img src="images/ielts-logo.png" alt="IELTS Logo">
+    <span>جميع أنواع اختبار الآيلتس</span>
   </header>
 
-  <!-- الشعارات الثلاثة -->
+  <!-- الشعارات الثلاثة في صورة واحدة -->
   <div class="logos">
     <img src="images/three-logos.png" alt="IELTS Three Logos">
   </div>
