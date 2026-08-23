@@ -1,100 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>IELTS Results Verification</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Test Result - Demo</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
-<body class="results">
-  <!-- ✅ الهيدر الأحمر مع شعار الآيلتس -->
-  <div class="header-bar">
-    <div class="ielts-top-logo">
-      <img src="images/ielts-logos.png" alt="IELTS Logo with partners">
-    </div>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="results.html">TRF Query</a>
-      <a href="#">Download Results</a>
-      <a href="#">Manage Users</a>
-      <a href="#">Update Profile</a>
-      <a href="#">FAQs</a>
-      <a href="https://ielts.org">IELTS.org</a>
-    </nav>
-  </div>
 
-  <!-- ✅ البار الأحمر -->
-  <div class="news-bar">
-    <marquee behavior="scroll" direction="left">
-      جميع أنواع اختبار الآيلتس (Academic - General - UKVI - Life Skills)
-    </marquee>
-  </div>
+<body class="results-page">
 
-  <!-- ✅ كارت النتيجة -->
-  <div class="result-card">
-    <h2>Match Found</h2>
-    <p>Institutions themselves are responsible for determining the IELTS Band Scores appropriate...</p>
+<header class="topbar">
 
-    <div class="result-content">
-      <!-- صورة الطالب -->
-      <img id="studentPhoto" alt="Student Photo" class="student-photo">
-
-      <!-- جدول البيانات -->
-      <table class="results-table">
-        <tr><th>Centre Number</th><td id="centreNumber"></td></tr>
-        <tr><th>Centre Name</th><td id="centreName"></td></tr>
-        <tr><th>Candidate Number</th><td id="candidateNumber"></td></tr>
-        <tr><th>Candidate ID</th><td id="candidateID"></td></tr>
-        <tr><th>Family Name</th><td id="familyName"></td></tr>
-        <tr><th>First Name</th><td id="firstName"></td></tr>
-        <tr><th>Date of Birth</th><td id="dob"></td></tr>
-        <tr><th>Sex (M/F)</th><td id="sex"></td></tr>
-        <tr><th>Listening</th><td id="listening"></td></tr>
-        <tr><th>Reading</th><td id="reading"></td></tr>
-        <tr><th>Writing</th><td id="writing"></td></tr>
-        <tr><th>Speaking</th><td id="speaking"></td></tr>
-        <tr><th>Overall Band</th><td id="overall"></td></tr>
-        <tr><th>Date of Examination</th><td id="examDate"></td></tr>
-        <tr><th>TRF Number</th><td id="trfNumber"></td></tr>
-      </table>
+    <div class="brand">
+        ENGLISH TEST
     </div>
 
-    <button class="download-btn">Download PDF</button>
-  </div>
+    <div class="test-types">
+        All English Test Types
+        (Academic - General - UKVI - Life Skills)
+    </div>
 
-  <!-- ✅ الشعارات الثلاثة تحت -->
-  <div class="footer-logos">
-    <img src="images/cambridge-logo.png" alt="Cambridge" class="footer-img">
-    <img src="images/british-council-logo.png" alt="British Council" class="footer-img">
-    <img src="images/idp-logo.png" alt="IDP" class="footer-img">
-  </div>
+</header>
 
-  <!-- ✅ جلب بيانات الطالب -->
-  <script src="students.js"></script>
-  <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const serial = urlParams.get("serial");
-    const student = students[serial];
 
-    if (student) {
-      document.getElementById("centreNumber").textContent = "AE113";
-      document.getElementById("centreName").textContent = "BRITISH COUNCIL";
-      document.getElementById("candidateNumber").textContent = student.candidate;
-      document.getElementById("candidateID").textContent = student.id || "";
-      document.getElementById("familyName").textContent = student.family || "";
-      document.getElementById("firstName").textContent = student.name;
-      document.getElementById("dob").textContent = student.dob;
-      document.getElementById("sex").textContent = student.sex || "M";
-      document.getElementById("listening").textContent = student.listening;
-      document.getElementById("reading").textContent = student.reading;
-      document.getElementById("writing").textContent = student.writing;
-      document.getElementById("speaking").textContent = student.speaking;
-      document.getElementById("overall").textContent = student.overall;
-      document.getElementById("examDate").textContent = student.examDate;
-      document.getElementById("trfNumber").textContent = serial;
-      document.getElementById("studentPhoto").src = "images/" + student.image;
-    } else {
-      alert("No results found for this candidate.");
-    }
-  </script>
+<div class="side-menu">
+
+    <a href="index.html">🏠 Home</a>
+
+    <a href="#">📋 Test Query</a>
+
+    <a href="#">📄 Download Results</a>
+
+    <a href="#">👤 Manage Users</a>
+
+    <a href="#">⚙ Update Profile</a>
+
+    <a href="#">❓ FAQs</a>
+
+</div>
+
+
+<main class="results-background">
+
+    <div class="result-card">
+
+        <div class="demo-label">
+            DEMO / UNOFFICIAL RESULT
+        </div>
+
+        <h3>Match Found</h3>
+
+        <p class="responsibility">
+            This is a demonstration results portal.
+        </p>
+
+
+        <div class="candidate-section">
+
+            <table class="candidate-table">
+
+                <tr>
+                    <td>Centre Number</td>
+                    <td>AE113</td>
+                </tr>
+
+                <tr>
+                    <td>Centre Name</td>
+                    <td>TEST CENTRE</td>
+                </tr>
+
+                <tr>
+                    <td>Candidate Number</td>
+                    <td id="candidateNumber">
+                        507413
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Candidate ID</td>
+                    <td>DEMO-2002-9850508</td>
+                </tr>
+
+                <tr>
+                    <td>Family Name</td>
+                    <td>AL SHEHRI</td>
+                </tr>
+
+                <tr>
+                    <td>First Name</td>
+                    <td>MOHAMED AHMED</td>
+                </tr>
+
+                <tr>
+                    <td>Date of Birth</td>
+                    <td>06/06/2002</td>
+                </tr>
+
+                <tr>
+                    <td>Sex (M/F)</td>
+                    <td>M</td>
+                </tr>
+
+            </table>
+
+
+            <img
+                src="candidate.jpg"
+                class="candidate-photo"
+                alt="Candidate"
+            >
+
+        </div>
+
+
+        <h3 class="results-heading">
+            Test Results
+        </h3>
+
+
+        <table class="scores-table">
+
+            <tr>
+                <td>Listening</td>
+                <td>6.0</td>
+            </tr>
+
+            <tr>
+                <td>Reading</td>
+                <td>5.5</td>
+            </tr>
+
+            <tr>
+                <td>Writing</td>
+                <td>5.5</td>
+            </tr>
+
+            <tr>
+                <td>Speaking</td>
+                <td>6.5</td>
+            </tr>
+
+        </table>
+
+
+        <div class="overall">
+            Overall Band: <strong>6.0</strong>
+        </div>
+
+
+        <div class="exam-details">
+
+            <b>Date of Examination:</b>
+            11/08/2026
+
+            <br>
+
+            <b>Result Reference:</b>
+            DEMO-507413-113A
+
+        </div>
+
+
+        <button
+            class="download-button"
+            onclick="window.print()">
+
+            📄 Print / Save Result
+
+        </button>
+
+    </div>
+
+</main>
+
+
+<script>
+
+const params =
+    new URLSearchParams(window.location.search);
+
+const candidate =
+    params.get("candidate");
+
+if(candidate){
+
+    document.getElementById("candidateNumber")
+    .textContent = candidate;
+
+}
+
+</script>
+
 </body>
 </html>
