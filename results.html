@@ -9,9 +9,9 @@
       font-family: Arial, sans-serif;
       background: url("images/background.jpg") no-repeat center center fixed;
       background-size: cover;
-      text-align: center;
       color: #333;
     }
+    /* البار الأحمر */
     header {
       background: #b30000;
       color: #fff;
@@ -36,41 +36,33 @@
       0% { left: 100%; }
       100% { left: -100%; }
     }
-    .result-box {
+    /* الكارد الخاص بالنتائج */
+    .result-card {
       background: rgba(255,255,255,0.95);
       border: 1px solid #ccc;
-      width: 400px;
+      width: 500px;
       margin: 40px auto;
       padding: 20px;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
       border-radius: 6px;
-      text-align: left;
     }
-    .result-box h2 {
+    .result-card h2 {
       text-align: center;
       color: #b30000;
       margin-bottom: 20px;
     }
-    .result-box p {
-      font-size: 16px;
-      margin: 8px 0;
+    .result-card p {
+      font-size: 15px;
+      margin: 6px 0;
     }
-    .logos {
-      margin: 30px auto;
+    .scores {
+      margin-top: 15px;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
     }
-    .logos img {
-      width: 300px;
-    }
-    .transparent {
-      margin-top: 40px;
-    }
-    .transparent img {
-      width: 300px;
-      opacity: 0.5;
-    }
-    .back-btn {
+    .download-btn {
       display: block;
-      margin: 20px auto;
+      margin: 20px auto 0 auto;
       padding: 10px 20px;
       background: #007bff;
       color: #fff;
@@ -78,39 +70,69 @@
       border-radius: 4px;
       cursor: pointer;
       text-decoration: none;
+      text-align: center;
     }
-    .back-btn:hover {
+    .download-btn:hover {
       background: #0056b3;
+    }
+    /* الشعارات */
+    .logos {
+      margin: 30px auto;
+      text-align: center;
+    }
+    .logos img {
+      width: 350px;
+    }
+    .transparent {
+      margin-top: 40px;
+      text-align: center;
+    }
+    .transparent img {
+      width: 350px;
+      opacity: 0.5;
     }
   </style>
 </head>
 <body>
 
+  <!-- البار الأحمر -->
   <header>
     <img src="images/ielts-logo1.png" alt="IELTS Logo">
     <span>نتائج اختبار الآيلتس</span>
   </header>
 
-  <div class="result-box">
-    <h2>مرحبًا أحمد، هذه نتائجك</h2>
-    <p><strong>الاسم:</strong> أحمد علي</p>
-    <p><strong>رقم التسجيل:</strong> 509284</p>
-    <p><strong>الدرجة الكلية:</strong> 7.5</p>
-    <p><strong>الاستماع:</strong> 7.0</p>
-    <p><strong>القراءة:</strong> 7.5</p>
-    <p><strong>الكتابة:</strong> 7.0</p>
-    <p><strong>المحادثة:</strong> 8.0</p>
+  <!-- الكارد الخاص بالنتائج -->
+  <div class="result-card">
+    <h2>تفاصيل الطالب</h2>
+    <p><strong>رقم المركز:</strong> AE113</p>
+    <p><strong>اسم المركز:</strong> British Council</p>
+    <p><strong>رقم الطالب:</strong> 507413</p>
+    <p><strong>الاسم:</strong> محمد أحمد عبد الله الرُدامي</p>
+    <p><strong>تاريخ الميلاد:</strong> 06/06/2002</p>
+    <p><strong>الجنس:</strong> M</p>
+
+    <div class="scores">
+      <p><strong>الاستماع:</strong> 6.0</p>
+      <p><strong>القراءة:</strong> 5.5</p>
+      <p><strong>الكتابة:</strong> 5.5</p>
+      <p><strong>المحادثة:</strong> 6.5</p>
+      <p><strong>الدرجة الكلية:</strong> 6.0</p>
+      <p><strong>تاريخ الامتحان:</strong> 11/08/2026</p>
+      <p><strong>رقم TRF:</strong> 26AE507413ALSM113A</p>
+    </div>
+
+    <a href="#" class="download-btn">تحميل PDF</a>
   </div>
 
+  <!-- الشعارات الثلاثة -->
   <div class="logos">
     <img src="images/ielts-logos.png" alt="IELTS Three Logos">
   </div>
 
+  <!-- الشعارات الثلاثة الشفافة -->
   <div class="transparent">
     <img src="images/ielts-logos.png" alt="Transparent Logos" style="opacity:0.5;">
   </div>
-
-  <a href="index.html" class="back-btn">رجوع لصفحة الترحيب</a>
 
 </body>
 </html>
