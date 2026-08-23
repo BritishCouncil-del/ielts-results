@@ -77,3 +77,9 @@ body.welcome {
   width: 95%;
   max-width: 1000px;
   height: auto;
+}
+
+/* ===== صفحة النتائج ===== */
+body.results {
+  font-family: Arial, sans-serif;
+  margin
