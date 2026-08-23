@@ -1,113 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>English Test Results - Demo</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>IELTS Portal</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
-<body class="home-page">
-
-<header class="topbar">
-    <div class="brand">ENGLISH TEST</div>
-    <div class="test-types">
-        All English Test Types (Academic - General - UKVI - Life Skills)
+<body class="welcome">
+  <!-- ✅ البار الأحمر مع شعار الآيلتس -->
+  <div class="news-bar">
+    <div class="ielts-top-logo">
+      <img src="images/ielts-logos.png" alt="IELTS Logo with partners">
     </div>
-</header>
+    <marquee behavior="scroll" direction="left">
+      جميع أنواع اختبار الآيلتس (Academic - General - UKVI - Life Skills)
+    </marquee>
+  </div>
 
-<div class="side-menu">
-    <a href="#">🏠 Home</a>
-    <a href="#">📋 Test Query</a>
-    <a href="#">📄 Download Results</a>
-    <a href="#">👤 Manage Users</a>
-    <a href="#">⚙ Update Profile</a>
-    <a href="#">❓ FAQs</a>
-</div>
+  <!-- ✅ مربع الترحيب -->
+  <div class="welcome-box">
+    <h1 class="big-ielts">IELTS Portal</h1>
+    <p>أدخل بياناتك للتحقق من نتيجة IELTS الخاصة بك</p>
+    <form action="results.html" method="get" class="search-form">
+      <input type="text" name="candidate" placeholder="Candidate Number" required>
+      <input type="text" name="serial" placeholder="Serial Number" required>
+      <button type="submit">عرض النتيجة</button>
+    </form>
+  </div>
 
-<main class="home-content">
-
-    <div class="portal-logo">
-        ENGLISH<br>
-        <span>TEST RESULTS</span>
-    </div>
-
-    <div class="search-box">
-
-        <div class="demo-title">
-            DEMO RESULTS PORTAL
-        </div>
-
-        <h2>Result Search</h2>
-
-        <p class="search-note">
-            Enter your test information
-        </p>
-
-        <input
-            type="text"
-            id="serial"
-            placeholder="Enter Serial Number"
-        >
-
-        <input
-            type="text"
-            id="candidate"
-            placeholder="Enter Candidate Number"
-        >
-
-        <button onclick="searchResult()">
-            Search Result
-        </button>
-
-        <div id="error"></div>
-
-    </div>
-
-    <div class="bottom-logos">
-        <span>ENGLISH</span>
-        <span>CAMBRIDGE</span>
-        <span>IDP</span>
-    </div>
-
-</main>
-
-<script>
-
-function searchResult(){
-
-    const serial =
-        document.getElementById("serial").value.trim();
-
-    const candidate =
-        document.getElementById("candidate").value.trim();
-
-    const error =
-        document.getElementById("error");
-
-    /*
-      Demo credentials only.
-      Change these values to your own demo data.
-    */
-
-    if(serial === "DEMO123456" && candidate === "507413"){
-
-        window.location.href =
-            "results.html?serial=" +
-            encodeURIComponent(serial) +
-            "&candidate=" +
-            encodeURIComponent(candidate);
-
-    }else{
-
-        error.innerHTML =
-            "No matching demo result was found.";
-
-    }
-
-}
-
-</script>
-
+  <!-- ✅ صورة الشعارات الثلاثة تحت -->
+  <div class="footer-banner">
+    <img src="images/ielts-banner.png" alt="IELTS Banner" class="footer-img">
+  </div>
 </body>
 </html>
