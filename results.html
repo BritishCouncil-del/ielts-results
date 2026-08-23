@@ -17,23 +17,10 @@
       color: #fff;
       display: flex;
       align-items: center;
-      justify-content: space-between;
       padding: 10px 20px;
     }
     header img {
       height: 45px;
-    }
-    nav {
-      display: flex;
-      gap: 15px;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 14px;
-    }
-    nav a:hover {
-      text-decoration: underline;
     }
     /* البار الماشي */
     .marquee {
@@ -69,7 +56,8 @@
       font-size: 14px;
     }
     aside a:hover {
-      text-decoration: underline;
+      background: #8b0000;
+      padding-left: 5px;
     }
     /* المحتوى */
     .content {
@@ -98,7 +86,7 @@
       border-collapse: collapse;
     }
     table tr:nth-child(even) {
-      background: #d3d3d3; /* رمادي غامق */
+      background: #c0c0c0; /* رمادي غامق */
     }
     table tr:nth-child(odd) {
       background: #fff; /* أبيض */
@@ -123,6 +111,14 @@
     .download-btn:hover {
       background: #0056b3;
     }
+    /* البانر */
+    .banner {
+      margin: 30px auto;
+      text-align: center;
+    }
+    .banner img {
+      width: 600px;
+    }
     /* الشعارات */
     .logos {
       margin: 30px auto;
@@ -131,13 +127,6 @@
     .logos img {
       width: 350px;
     }
-    .banner {
-      margin: 30px auto;
-      text-align: center;
-    }
-    .banner img {
-      width: 600px;
-    }
   </style>
 </head>
 <body>
@@ -145,15 +134,6 @@
   <!-- الهيدر الأحمر -->
   <header>
     <img src="images/ielts-logo1.png" alt="IELTS Logo">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="#">TRF Query</a>
-      <a href="#">Download Results</a>
-      <a href="#">Manage Users</a>
-      <a href="#">Update Profile</a>
-      <a href="#">FAQs</a>
-      <a href="https://ielts.org">IELTS.org</a>
-    </nav>
   </header>
 
   <!-- البار الماشي -->
