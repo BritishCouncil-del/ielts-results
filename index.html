@@ -3,75 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <title>IELTS Portal</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: url('background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      direction: rtl;
-    }
-    .overlay {
-      background: rgba(255,255,255,0.85);
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    .container {
-      position: relative;
-      width: 350px;
-      margin: 100px auto;
-      background: #fff;
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      text-align: center;
-    }
-    h1 {
-      color: #c00;
-      margin-bottom: 10px;
-    }
-    p {
-      color: #333;
-      margin-bottom: 20px;
-    }
-    input {
-      width: 90%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      text-align: center;
-      font-size: 16px;
-    }
-    button {
-      width: 95%;
-      padding: 12px;
-      background: #0078d7;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #005a9e;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="overlay"></div>
-  <div class="container">
-    <h1>IELTS</h1>
-    <p>English for International Opportunity<br>Test Report Form Portal</p>
+<body class="welcome">
+  <!-- ✅ البار الأحمر -->
+  <div class="news-bar">
+    <marquee behavior="scroll" direction="left">
+      جميع أنواع اختبار الآيلتس (Academic - General - UKVI - Life Skills)
+    </marquee>
+    <!-- ✅ شعار الآيلتس فوق -->
+    <div class="ielts-top-logo">
+      <img src="images/ielts-logos.png" alt="IELTS Logos">
+    </div>
+  </div>
+
+  <!-- ✅ مربع الترحيب -->
+  <div class="welcome-box">
+    <h1 class="big-ielts">IELTS Portal</h1>
     <p>أدخل بياناتك للتحقق من نتيجة IELTS الخاصة بك</p>
-    <form action="results.html" method="get">
-      <input type="text" name="candidate_number" placeholder="رقم المرشح" value="509284" required>
-      <input type="text" name="trf_number" placeholder="رقم TRF" value="26AE509284ALSB113A" required>
+    <form action="results.html" method="get" class="search-form">
+      <input type="text" name="candidate" placeholder="Candidate Number" required>
+      <input type="text" name="serial" placeholder="Serial Number" required>
       <button type="submit">عرض النتيجة</button>
     </form>
+  </div>
+
+  <!-- ✅ صورة الشعارات الثلاثة تحت -->
+  <div class="footer-banner">
+    <img src="images/ielts-banner.png" alt="IELTS Banner">
   </div>
 </body>
 </html>
