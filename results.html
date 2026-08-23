@@ -17,30 +17,29 @@
       color: #fff;
       display: flex;
       align-items: center;
+      justify-content: space-between;
       padding: 10px 20px;
-      font-size: 18px;
-      font-weight: bold;
-      overflow: hidden;
-      position: relative;
     }
     header img {
       height: 40px;
-      margin-right: 15px;
     }
-    header span {
-      white-space: nowrap;
-      position: absolute;
-      animation: marquee 12s linear infinite;
+    nav {
+      display: flex;
+      gap: 15px;
     }
-    @keyframes marquee {
-      0% { left: 100%; }
-      100% { left: -100%; }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     /* الكارد الخاص بالنتائج */
     .result-card {
       background: rgba(255,255,255,0.95);
       border: 1px solid #ccc;
-      width: 500px;
+      width: 600px;
       margin: 40px auto;
       padding: 20px;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
@@ -95,10 +94,18 @@
 </head>
 <body>
 
-  <!-- البار الأحمر -->
+  <!-- البار الأحمر مع شعار الآيلتس وروابط التنقل -->
   <header>
     <img src="images/ielts-logo1.png" alt="IELTS Logo">
-    <span>نتائج اختبار الآيلتس</span>
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="#">استعلام TRF</a>
+      <a href="#">تحميل النتائج</a>
+      <a href="#">إدارة المستخدمين</a>
+      <a href="#">تحديث الملف</a>
+      <a href="#">الأسئلة الشائعة</a>
+      <a href="https://ielts.org">IELTS.org</a>
+    </nav>
   </header>
 
   <!-- الكارد الخاص بالنتائج -->
