@@ -77,11 +77,4 @@ body.results {
 .header-bar {
   background:#d32f2f;
   color:#fff;
-  padding:10px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-.nav-links a {
-  color:#fff;
-  margin:0
+  padding:
