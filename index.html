@@ -9,32 +9,37 @@
       font-family: Arial, sans-serif;
       background: url("images/background.jpg") no-repeat center center fixed;
       background-size: cover;
-      text-align: center;
     }
     header {
       background: #b30000; /* البار الأحمر */
       color: #fff;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-start;
       padding: 10px 20px;
       font-size: 18px;
       font-weight: bold;
+      overflow: hidden;
+      position: relative;
     }
     header img {
       height: 40px;
+      margin-right: 15px;
     }
-    .logos {
-      margin: 30px auto;
+    header span {
+      white-space: nowrap;
+      position: absolute;
+      animation: marquee 10s linear infinite;
     }
-    .logos img {
-      width: 300px;
+    @keyframes marquee {
+      0% { left: 100%; }
+      100% { left: -100%; }
     }
     .login-box {
       background: rgba(255,255,255,0.9);
       border: 1px solid #ccc;
       width: 320px;
-      margin: 20px auto;
+      margin: 40px auto 20px auto;
       padding: 20px;
       text-align: left;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
@@ -66,40 +71,13 @@
     .login-box button:hover {
       background: #0056b3;
     }
+    .logos {
+      margin: 20px auto;
+      text-align: center;
+    }
+    .logos img {
+      width: 300px;
+    }
     .transparent {
       margin-top: 40px;
-    }
-    .transparent img {
-      width: 300px;
-      opacity: 0.5; /* شفافة */
-    }
-  </style>
-</head>
-<body>
-
-  <!-- البار الأحمر مع النص والشعار -->
-  <header>
-    <img src="images/ielts-logo.png" alt="IELTS Logo">
-    <span>جميع أنواع اختبار الآيلتس</span>
-  </header>
-
-  <!-- الشعارات الثلاثة في صورة واحدة -->
-  <div class="logos">
-    <img src="images/three-logos.png" alt="IELTS Three Logos">
-  </div>
-
-  <!-- مربع تسجيل الدخول -->
-  <div class="login-box">
-    <h2>IELTS – Test Report Form Portal</h2>
-    <input type="text" placeholder="رقم التسجيل">
-    <input type="text" placeholder="الكود السري">
-    <button>عرض النتيجة</button>
-  </div>
-
-  <!-- صورة الشعارات الثلاثة الشفافة -->
-  <div class="transparent">
-    <img src="images/three-logos-transparent.png" alt="Transparent Logos">
-  </div>
-
-</body>
-</html>
+      text
