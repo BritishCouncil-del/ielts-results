@@ -66,12 +66,14 @@ body.welcome {
 .search-form button:hover {
   background:#b71c1c;
 }
+
+/* ✅ صورة الشعارات الثلاثة تحت (صورة واحدة شفافة) */
 .footer-banner {
   text-align:center;
   margin:20px 0;
 }
 .footer-banner .footer-img {
-  height:40px;   /* ✅ تصغير حجم صورة الشعارات */
+  height:40px;   /* حجم صغير متناسق */
   width:auto;
 }
 
@@ -144,11 +146,13 @@ body.results {
 .download-btn:hover {
   background:#b71c1c;
 }
+
+/* ✅ الشعارات الثلاثة تحت (صورة واحدة شفافة) */
 .footer-logos {
   text-align:center;
   margin:20px 0;
 }
 .footer-logos .footer-img {
-  height:40px;   /* ✅ نفس الحجم للشعارات الثلاثة */
-  margin:0 10px;
+  height:40px;   /* حجم صغير متناسق */
+  width:auto;
 }
