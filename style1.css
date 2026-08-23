@@ -17,7 +17,7 @@
 
 /* ===== شعار الآيلتس ===== */
 .ielts-top-logo img {
-  height:50px;
+  height:60px;
 }
 
 /* ===== صفحة الترحيب ===== */
@@ -66,20 +66,22 @@ body.welcome {
 .search-form button:hover {
   background:#b71c1c;
 }
-.footer-banner {
-  position: fixed;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-}
-.footer-banner img {
-  width: 95%;
-  max-width: 1000px;
-  height: auto;
-}
 
 /* ===== صفحة النتائج ===== */
 body.results {
   font-family: Arial, sans-serif;
-  margin
+  margin:0;
+  padding:0;
+  background:#f5f5f5;
+}
+.header-bar {
+  background:#d32f2f;
+  color:#fff;
+  padding:10px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.nav-links a {
+  color:#fff;
+  margin:0
