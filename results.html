@@ -49,17 +49,18 @@
       position: relative;
       font-weight: bold;
       font-size: 18px;
-      margin-top: -60px; /* lift bar up to overlap with curve */
+      margin-top: -70px; /* lift bar up to overlap with curve */
+      text-align: center; /* center text vertically */
+      line-height: 1.5em;
       z-index: 2;
     }
     .marquee span {
-      white-space: nowrap;
-      position: absolute;
+      display: inline-block;
       animation: marquee 20s linear infinite;
     }
     @keyframes marquee {
-      0% { left: 100%; }
-      100% { left: -100%; }
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
     }
     /* Sidebar */
     aside {
@@ -227,4 +228,4 @@
 
     <!-- Banner -->
     <div class="banner">
-      <img src="images/ielts-banner.png" alt="IELTS Banner">
+      <img src="
