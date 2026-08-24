@@ -2,217 +2,65 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>IELTS TRF Results</title>
+  <title>IELTS Header</title>
   <style>
     body {
       margin: 0;
       font-family: "Segoe UI", Arial, sans-serif;
-      background: url("images/background.jpg") no-repeat center center fixed;
-      background-size: cover;
-      color: #333;
+      background: #f5f5f5;
     }
-    /* الهيدر الأحمر */
-    header {
+    /* الهيدر الأحمر مع الكرف */
+    .header {
+      position: relative;
       background: #b30000;
-      padding: 25px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      color: #fff;
+      padding: 40px 30px 70px 30px; /* مساحة كافية للنص */
+      clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); /* الكرف المائل */
+      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
     }
-    header img {
-      height: 100px; /* تكبير الشعار */
-      filter: brightness(0) invert(1); /* تحويل اللون إلى أبيض */
+    .header h1 {
+      margin: 0;
+      font-size: 48px; /* تكبير كلمة IELTS */
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .header h2 {
+      margin: 8px 0 0 0;
+      font-size: 22px;
+      font-weight: normal;
     }
     /* البار الأزرق */
     .marquee {
-      background: #0056b3; /* أزرق */
-      color: #fff; /* أبيض */
-      padding: 15px; /* زيادة العرض */
+      background: #0056b3;
+      color: #fff;
+      padding: 18px; /* زيادة العرض علشان النص يظهر */
       overflow: hidden;
       position: relative;
       font-weight: bold;
-      font-size: 18px; /* تكبير الخط */
+      font-size: 18px;
     }
     .marquee span {
       white-space: nowrap;
       position: absolute;
-      animation: marquee 18s linear infinite;
+      animation: marquee 20s linear infinite;
     }
     @keyframes marquee {
       0% { left: 100%; }
       100% { left: -100%; }
     }
-    /* القوائم الجانبية */
-    aside {
-      background: linear-gradient(180deg, #b30000, #660000);
-      color: #fff;
-      width: 220px;
-      float: left;
-      padding: 20px;
-      box-shadow: 2px 0 6px rgba(0,0,0,0.2);
-      height: auto; /* ينتهي عند القوائم فقط */
-      border-radius: 0 0 12px 0; /* شكل أنيق */
-    }
-    aside a {
-      display: block;
-      color: #fff;
-      text-decoration: none;
-      margin: 12px 0;
-      font-size: 16px;
-      padding: 10px;
-      border-radius: 6px;
-      transition: all 0.3s ease;
-    }
-    aside a:hover {
-      background: #ff4d4d;
-      padding-left: 14px;
-      box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
-    }
-    /* المحتوى */
-    .content {
-      margin-left: 240px;
-      padding: 20px;
-    }
-    .result-card {
-      background: #fff;
-      border: 1px solid #ccc;
-      width: 800px;
-      padding: 25px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
-      border-radius: 12px;
-      display: flex;
-      gap: 30px;
-      align-items: flex-start;
-    }
-    .result-card img {
-      width: 180px;
-      height: auto;
-      border: 2px solid #ccc;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    table tr:nth-child(even) {
-      background: #d3d3d3; /* رمادي غامق */
-    }
-    table tr:nth-child(odd) {
-      background: #fff; /* أبيض */
-    }
-    table tr.score-row {
-      background: #b30000; /* صف السكور باللون الأحمر */
-      color: #fff;
-      font-weight: bold;
-      font-size: 15px;
-    }
-    table td {
-      padding: 12px;
-      border: 1px solid #ccc;
-      font-size: 15px;
-    }
-    .download-btn {
-      display: block;
-      margin: 25px auto 0 auto;
-      padding: 14px 30px;
-      background: linear-gradient(90deg, #007bff, #0056b3);
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      text-decoration: none;
-      text-align: center;
-      font-weight: bold;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
-    }
-    .download-btn:hover {
-      background: #004080;
-      transform: scale(1.05);
-    }
-    /* البانر */
-    .banner {
-      margin: 30px auto;
-      text-align: center;
-    }
-    .banner img {
-      width: 650px;
-      border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
-    }
-    /* الشعارات */
-    .logos {
-      margin: 30px auto;
-      text-align: center;
-    }
-    .logos img {
-      width: 380px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
-    }
   </style>
 </head>
 <body>
 
-  <!-- الهيدر الأحمر -->
-  <header>
-    <img src="images/ielts-logo1.png" alt="IELTS Logo">
-  </header>
+  <!-- الهيدر الأحمر بالكرف -->
+  <div class="header">
+    <h1>IELTS™</h1>
+    <h2>English for International Opportunity</h2>
+  </div>
 
   <!-- البار الأزرق -->
   <div class="marquee">
-    <span><img src="images/ielts-logo2.png" alt="IELTS Small Logo" style="height:24px;vertical-align:middle;margin-right:10px;"> 
-      IELTS Academic | IELTS General Training | IELTS UKVI | IELTS Life Skills
-    </span>
-  </div>
-
-  <!-- القوائم الجانبية -->
-  <aside>
-    <a href="index.html">🏠 الرئيسية</a>
-    <a href="#">📄 استعلام TRF</a>
-    <a href="#">⬇️ تحميل النتائج</a>
-    <a href="#">👥 إدارة المستخدمين</a>
-    <a href="#">⚙️ تحديث الملف</a>
-    <a href="#">❓ الأسئلة الشائعة</a>
-    <a href="https://ielts.org">🌐 IELTS.org</a>
-  </aside>
-
-  <!-- المحتوى -->
-  <div class="content">
-    <div class="result-card">
-      <table>
-        <tr><td><strong>رقم المركز:</strong></td><td>AE113</td></tr>
-        <tr><td><strong>اسم المركز:</strong></td><td>British Council</td></tr>
-        <tr><td><strong>رقم الطالب:</strong></td><td>507413</td></tr>
-        <tr><td><strong>الاسم:</strong></td><td>محمد أحمد عبد الله الرُدامي</td></tr>
-        <tr><td><strong>تاريخ الميلاد:</strong></td><td>06/06/2002</td></tr>
-        <tr><td><strong>الجنس:</strong></td><td>M</td></tr>
-        <tr><td><strong>الاستماع:</strong></td><td>6.0</td></tr>
-        <tr><td><strong>القراءة:</strong></td><td>5.5</td></tr>
-        <tr><td><strong>الكتابة:</strong></td><td>5.5</td></tr>
-        <tr><td><strong>المحادثة:</strong></td><td>6.5</td></tr>
-        <tr class="score-row"><td><strong>الدرجة الكلية:</strong></td><td>6.0</td></tr>
-        <tr><td><strong>تاريخ الامتحان:</strong></td><td>11/08/2026</td></tr>
-        <tr><td><strong>رقم TRF:</strong></td><td>26AE507413ALSM113A</td></tr>
-      </table>
-      <img src="images/student1.jpg" alt="صورة الطالب">
-    </div>
-
-    <a href="#" class="download-btn">تحميل PDF</a>
-
-    <!-- صورة البانر -->
-    <div class="banner">
-      <img src="images/ielts-banner.png" alt="IELTS Banner">
-    </div>
-
-    <!-- الشعارات الثلاثة -->
-    <div class="logos">
-      <img src="images/ielts-logos.png" alt="IELTS Three Logos">
-    </div>
+    <span>IELTS Academic | IELTS General Training | IELTS UKVI | IELTS Life Skills</span>
   </div>
 
 </body>
