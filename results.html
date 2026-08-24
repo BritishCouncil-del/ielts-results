@@ -16,8 +16,8 @@
       position: relative;
       background: #b30000;
       color: #fff;
-      padding: 40px 30px 70px 30px;
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%); /* curve extended to bottom */
+      padding: 40px 30px 120px 30px;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
       box-shadow: 0 3px 8px rgba(0,0,0,0.3);
     }
     .header h1 {
@@ -31,6 +31,15 @@
       font-size: 24px;
       font-weight: normal;
     }
+    .header .logos {
+      position: absolute;
+      bottom: 20px;
+      right: 30px;
+    }
+    .header .logos img {
+      height: 40px;
+      margin-left: 15px;
+    }
     /* Blue bar aligned with header */
     .marquee {
       background: #0056b3;
@@ -40,7 +49,7 @@
       position: relative;
       font-weight: bold;
       font-size: 18px;
-      margin-top: -40px; /* lift bar up to overlap with curve */
+      margin-top: -60px; /* lift bar up to overlap with curve */
       z-index: 2;
     }
     .marquee span {
@@ -152,12 +161,12 @@
       border-radius: 10px;
       box-shadow: 0 3px 10px rgba(0,0,0,0.3);
     }
-    /* Logos */
-    .logos {
+    /* Logos bottom */
+    .logos-bottom {
       margin: 30px auto;
       text-align: center;
     }
-    .logos img {
+    .logos-bottom img {
       width: 380px;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.25);
@@ -170,6 +179,11 @@
   <div class="header">
     <h1>IELTS™</h1>
     <h2>English for International Opportunity</h2>
+    <div class="logos">
+      <img src="images/british-council.png" alt="British Council">
+      <img src="images/idp.png" alt="IDP">
+      <img src="images/cambridge.png" alt="Cambridge">
+    </div>
   </div>
 
   <!-- Blue bar -->
@@ -214,13 +228,3 @@
     <!-- Banner -->
     <div class="banner">
       <img src="images/ielts-banner.png" alt="IELTS Banner">
-    </div>
-
-    <!-- Logos -->
-    <div class="logos">
-      <img src="images/ielts-logos.png" alt="IELTS Logos">
-    </div>
-  </div>
-
-</body>
-</html>
