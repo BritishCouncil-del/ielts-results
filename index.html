@@ -18,12 +18,23 @@
       padding: 40px;
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
       box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
     .header h1 { margin: 0; font-size: 48px; }
+    .header img { height: 80px; }
+    .banner {
+      margin: 30px auto;
+    }
+    .banner img {
+      width: 600px;
+      opacity: 0.8; /* شفافة */
+    }
     .form-box {
       background: #fff;
       width: 400px;
-      margin: 60px auto;
+      margin: 30px auto;
       padding: 30px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
@@ -34,6 +45,10 @@
       margin: 10px 0;
       border: 1px solid #ccc;
       border-radius: 6px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: #0056b3;
     }
     button {
       padding: 12px 25px;
@@ -51,14 +66,18 @@
 <body>
 
   <div class="header">
-    <h1>IELTS™ TRF Portal</h1>
-    <h2>Enter Your Details</h2>
+    <h1>IELTS™ Portal</h1>
+    <img src="images/ielts-logos.png" alt="IELTS Logos">
+  </div>
+
+  <div class="banner">
+    <img src="images/ielts-banner.png" alt="IELTS Three Logos">
   </div>
 
   <div class="form-box">
     <form onsubmit="return goToResults()">
-      <input type="text" id="centre" placeholder="Enter Centre Number" required>
-      <input type="text" id="candidate" placeholder="Enter Candidate Number" required>
+      <input type="text" id="centre" placeholder="IELTS Centre Number" required>
+      <input type="text" id="candidate" placeholder="IELTS Candidate Number" required>
       <button type="submit">View Result</button>
     </form>
   </div>
@@ -67,10 +86,8 @@
     function goToResults() {
       const centre = document.getElementById('centre').value;
       const candidate = document.getElementById('candidate').value;
-      // حفظ البيانات في localStorage
       localStorage.setItem('centre', centre);
       localStorage.setItem('candidate', candidate);
-      // تحويل لصفحة النتائج
       window.location.href = "results.html";
       return false;
     }
