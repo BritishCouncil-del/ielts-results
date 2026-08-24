@@ -1,16 +1,39 @@
-<form onsubmit="return goToResults()">
-  <input type="text" id="serial" placeholder="TRF Serial Number" required>
-  <input type="text" id="candidate" placeholder="Candidate Number" required>
-  <button type="submit">View Result</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IELTS TRF Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<script>
-  function goToResults() {
-    const serial = document.getElementById('serial').value.trim();
-    const candidate = document.getElementById('candidate').value.trim();
-    localStorage.setItem('serial', serial);
-    localStorage.setItem('candidate', candidate);
-    window.location.href = "results.html";
-    return false;
-  }
-</script>
+  <div class="header">
+    <h1>IELTS™ Portal</h1>
+    <img src="images/ielts-logos.png" alt="IELTS Logos">
+  </div>
+
+  <div class="banner">
+    <img src="images/ielts-banner.png" alt="IELTS Banner">
+  </div>
+
+  <div class="form-box">
+    <form onsubmit="return goToResults()">
+      <input type="text" id="serial" placeholder="TRF Serial Number" required>
+      <input type="text" id="candidate" placeholder="Candidate Number" required>
+      <button type="submit">View Result</button>
+    </form>
+  </div>
+
+  <script>
+    function goToResults() {
+      const serial = document.getElementById('serial').value.trim();
+      const candidate = document.getElementById('candidate').value.trim();
+      localStorage.setItem('serial', serial);
+      localStorage.setItem('candidate', candidate);
+      window.location.href = "results.html";
+      return false;
+    }
+  </script>
+
+</body>
+</html>
