@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>IELTS TRF Results</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
@@ -11,6 +10,8 @@
       background: url("images/background.jpg") no-repeat center center fixed;
       background-size: cover;
       color: #333;
+      width: 1200px;   /* ثابت */
+      margin: 0 auto;  /* يوسّط الصفحة */
     }
     /* Header */
     .header {
@@ -21,7 +22,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
       box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     }
     .header h1 {
@@ -35,26 +35,18 @@
       font-weight: normal;
     }
     .header img {
-      height: 80px;
+      height: 100px;
     }
     /* Blue bar */
     .marquee {
       background: linear-gradient(90deg, #007bff, #0056b3);
       color: #fff;
-      padding: 20px;
+      padding: 25px;
       text-align: center;
       font-weight: bold;
-      font-size: 18px;
+      font-size: 20px;
       margin-top: -40px;
       box-shadow: inset 0 -3px 6px rgba(0,0,0,0.3);
-    }
-    .marquee span {
-      display: inline-block;
-      animation: marquee 15s linear infinite;
-    }
-    @keyframes marquee {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
     }
     /* Sidebar */
     aside {
@@ -88,12 +80,11 @@
     .result-card {
       background: #fff;
       border: 1px solid #ccc;
-      max-width: 800px;
+      width: 800px;
       padding: 20px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.25);
       border-radius: 12px;
       display: flex;
-      flex-wrap: wrap;
       gap: 20px;
     }
     .result-card img {
@@ -142,8 +133,7 @@
       text-align: center;
     }
     .banner-bottom img {
-      width: 100%;
-      max-width: 900px;
+      width: 900px;
       border-radius: 10px;
       box-shadow: 0 3px 10px rgba(0,0,0,0.3);
     }
@@ -155,30 +145,6 @@
     .extra-image img {
       width: 300px;
       background: transparent;
-    }
-    /* Responsive */
-    @media (max-width: 768px) {
-      aside {
-        width: 100%;
-        float: none;
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-      }
-      .content {
-        margin-left: 0;
-      }
-      .header {
-        flex-direction: column;
-        text-align: center;
-      }
-      .header img {
-        margin-top: 15px;
-      }
-      .result-card {
-        flex-direction: column;
-        align-items: center;
-      }
     }
   </style>
 </head>
@@ -224,4 +190,24 @@
         <tr><td><strong>Writing:</strong></td><td>5.5</td></tr>
         <tr><td><strong>Speaking:</strong></td><td>6.5</td></tr>
         <tr class="score-row"><td><strong>Overall Band Score:</strong></td><td>6.0</td></tr>
-        <tr><td><strong>Test Date:</strong></td><td>11/08/
+        <tr><td><strong>Test Date:</strong></td><td>11/08/2026</td></tr>
+        <tr><td><strong>TRF Number:</strong></td><td>26AE507413ALSM113A</td></tr>
+      </table>
+      <img src="images/student1.jpg" alt="Candidate Photo">
+    </div>
+
+    <a href="#" class="download-btn">Download PDF</a>
+
+    <!-- Banner bottom -->
+    <div class="banner-bottom">
+      <img src="images/ielts-banner.png" alt="IELTS Banner with Three Logos">
+    </div>
+
+    <!-- Extra transparent image -->
+    <div class="extra-image">
+      <img src="images/extra-transparent.png" alt="Extra Transparent Logo">
+    </div>
+  </div>
+
+</body>
+</html>
