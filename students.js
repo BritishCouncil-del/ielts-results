@@ -9,6 +9,9 @@ var students = {
     reading: "5.5",
     writing: "5.5",
     speaking: "6.0",
+    centre: "AE113",
+    centreName: "British Council",
+    trfNumber: "2GAE509426ALBM113A",
     image: "albedwawi.png"
   }
 };
