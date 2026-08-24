@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>IELTS TRF Results</title>
@@ -11,7 +11,7 @@
       background-size: cover;
       color: #333;
     }
-    /* الهيدر الأحمر بالكرف */
+    /* Red header with slanted curve */
     .header {
       position: relative;
       background: #b30000;
@@ -22,7 +22,7 @@
     }
     .header h1 {
       margin: 0;
-      font-size: 52px; /* كلمة IELTS كبيرة */
+      font-size: 52px;
       font-weight: bold;
       letter-spacing: 1px;
     }
@@ -31,7 +31,7 @@
       font-size: 22px;
       font-weight: normal;
     }
-    /* البار الأزرق */
+    /* Blue bar aligned with header curve */
     .marquee {
       background: #0056b3;
       color: #fff;
@@ -40,6 +40,8 @@
       position: relative;
       font-weight: bold;
       font-size: 18px;
+      margin-top: -30px; /* overlap to align with curve */
+      z-index: 1;
     }
     .marquee span {
       white-space: nowrap;
@@ -50,7 +52,7 @@
       0% { left: 100%; }
       100% { left: -100%; }
     }
-    /* القوائم الجانبية */
+    /* Sidebar */
     aside {
       background: linear-gradient(180deg, #b30000, #660000);
       color: #fff;
@@ -75,7 +77,7 @@
       padding-left: 14px;
       box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
     }
-    /* المحتوى */
+    /* Content */
     .content {
       margin-left: 240px;
       padding: 20px;
@@ -105,13 +107,13 @@
       overflow: hidden;
     }
     table tr:nth-child(even) {
-      background: #d3d3d3; /* رمادي غامق */
+      background: #d3d3d3;
     }
     table tr:nth-child(odd) {
-      background: #fff; /* أبيض */
+      background: #fff;
     }
     table tr.score-row {
-      background: #b30000; /* صف السكور باللون الأحمر */
+      background: #b30000;
       color: #fff;
       font-weight: bold;
       font-size: 15px;
@@ -140,7 +142,7 @@
       background: #004080;
       transform: scale(1.05);
     }
-    /* البانر */
+    /* Banner */
     .banner {
       margin: 30px auto;
       text-align: center;
@@ -150,7 +152,7 @@
       border-radius: 10px;
       box-shadow: 0 3px 10px rgba(0,0,0,0.3);
     }
-    /* الشعارات */
+    /* Logos */
     .logos {
       margin: 30px auto;
       text-align: center;
@@ -164,59 +166,59 @@
 </head>
 <body>
 
-  <!-- الهيدر الأحمر بالكرف -->
+  <!-- Red header with curve -->
   <div class="header">
     <h1>IELTS™</h1>
     <h2>English for International Opportunity</h2>
   </div>
 
-  <!-- البار الأزرق -->
+  <!-- Blue bar -->
   <div class="marquee">
     <span>IELTS Academic | IELTS General Training | IELTS UKVI | IELTS Life Skills</span>
   </div>
 
-  <!-- القوائم الجانبية -->
+  <!-- Sidebar -->
   <aside>
-    <a href="index.html">🏠 الرئيسية</a>
-    <a href="#">📄 استعلام TRF</a>
-    <a href="#">⬇️ تحميل النتائج</a>
-    <a href="#">👥 إدارة المستخدمين</a>
-    <a href="#">⚙️ تحديث الملف</a>
-    <a href="#">❓ الأسئلة الشائعة</a>
+    <a href="index.html">🏠 Home</a>
+    <a href="#">📄 TRF Query</a>
+    <a href="#">⬇️ Download Results</a>
+    <a href="#">👥 Manage Users</a>
+    <a href="#">⚙️ Update Profile</a>
+    <a href="#">❓ FAQs</a>
     <a href="https://ielts.org">🌐 IELTS.org</a>
   </aside>
 
-  <!-- المحتوى -->
+  <!-- Content -->
   <div class="content">
     <div class="result-card">
       <table>
-        <tr><td><strong>رقم المركز:</strong></td><td>AE113</td></tr>
-        <tr><td><strong>اسم المركز:</strong></td><td>British Council</td></tr>
-        <tr><td><strong>رقم الطالب:</strong></td><td>507413</td></tr>
-        <tr><td><strong>الاسم:</strong></td><td>محمد أحمد عبد الله الرُدامي</td></tr>
-        <tr><td><strong>تاريخ الميلاد:</strong></td><td>06/06/2002</td></tr>
-        <tr><td><strong>الجنس:</strong></td><td>M</td></tr>
-        <tr><td><strong>الاستماع:</strong></td><td>6.0</td></tr>
-        <tr><td><strong>القراءة:</strong></td><td>5.5</td></tr>
-        <tr><td><strong>الكتابة:</strong></td><td>5.5</td></tr>
-        <tr><td><strong>المحادثة:</strong></td><td>6.5</td></tr>
-        <tr class="score-row"><td><strong>الدرجة الكلية:</strong></td><td>6.0</td></tr>
-        <tr><td><strong>تاريخ الامتحان:</strong></td><td>11/08/2026</td></tr>
-        <tr><td><strong>رقم TRF:</strong></td><td>26AE507413ALSM113A</td></tr>
+        <tr><td><strong>Centre Number:</strong></td><td>AE113</td></tr>
+        <tr><td><strong>Centre Name:</strong></td><td>British Council</td></tr>
+        <tr><td><strong>Candidate Number:</strong></td><td>507413</td></tr>
+        <tr><td><strong>Name:</strong></td><td>Mohamed Ahmed Abdallah Al-Rudamy</td></tr>
+        <tr><td><strong>Date of Birth:</strong></td><td>06/06/2002</td></tr>
+        <tr><td><strong>Gender:</strong></td><td>M</td></tr>
+        <tr><td><strong>Listening:</strong></td><td>6.0</td></tr>
+        <tr><td><strong>Reading:</strong></td><td>5.5</td></tr>
+        <tr><td><strong>Writing:</strong></td><td>5.5</td></tr>
+        <tr><td><strong>Speaking:</strong></td><td>6.5</td></tr>
+        <tr class="score-row"><td><strong>Overall Band Score:</strong></td><td>6.0</td></tr>
+        <tr><td><strong>Test Date:</strong></td><td>11/08/2026</td></tr>
+        <tr><td><strong>TRF Number:</strong></td><td>26AE507413ALSM113A</td></tr>
       </table>
-      <img src="images/student1.jpg" alt="صورة الطالب">
+      <img src="images/student1.jpg" alt="Candidate Photo">
     </div>
 
-    <a href="#" class="download-btn">تحميل PDF</a>
+    <a href="#" class="download-btn">Download PDF</a>
 
-    <!-- صورة البانر -->
+    <!-- Banner -->
     <div class="banner">
       <img src="images/ielts-banner.png" alt="IELTS Banner">
     </div>
 
-    <!-- الشعارات الثلاثة -->
+    <!-- Logos -->
     <div class="logos">
-      <img src="images/ielts-logos.png" alt="IELTS Three Logos">
+      <img src="images/ielts-logos.png" alt="IELTS Logos">
     </div>
   </div>
 
