@@ -19,6 +19,12 @@
       padding: 40px 30px 120px 30px;
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
       box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header-text {
+      flex: 1;
     }
     .header h1 {
       margin: 0;
@@ -31,27 +37,21 @@
       font-size: 24px;
       font-weight: normal;
     }
-    .header .logos {
-      position: absolute;
-      bottom: 20px;
-      right: 30px;
-    }
-    .header .logos img {
-      height: 40px;
-      margin-left: 15px;
+    .header img {
+      height: 80px;
+      margin-left: 20px;
     }
     /* Blue bar aligned with header */
     .marquee {
       background: #0056b3;
       color: #fff;
-      padding: 20px;
+      padding: 25px;
       overflow: hidden;
       position: relative;
       font-weight: bold;
-      font-size: 18px;
-      margin-top: -70px; /* lift bar up to overlap with curve */
-      text-align: center; /* center text vertically */
-      line-height: 1.5em;
+      font-size: 20px;
+      margin-top: -70px; /* overlap with curve */
+      text-align: center;
       z-index: 2;
     }
     .marquee span {
@@ -178,13 +178,11 @@
 
   <!-- Red header with curve -->
   <div class="header">
-    <h1>IELTS™</h1>
-    <h2>English for International Opportunity</h2>
-    <div class="logos">
-      <img src="images/british-council.png" alt="British Council">
-      <img src="images/idp.png" alt="IDP">
-      <img src="images/cambridge.png" alt="Cambridge">
+    <div class="header-text">
+      <h1>IELTS™</h1>
+      <h2>English for International Opportunity</h2>
     </div>
+    <img src="images/ielts-logo.png" alt="IELTS Logo">
   </div>
 
   <!-- Blue bar -->
@@ -224,8 +222,4 @@
       <img src="images/student1.jpg" alt="Candidate Photo">
     </div>
 
-    <a href="#" class="download-btn">Download PDF</a>
-
-    <!-- Banner -->
-    <div class="banner">
-      <img src="
+    <a href="#" class="download-btn">
