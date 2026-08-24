@@ -14,29 +14,30 @@
     /* الهيدر الأحمر */
     header {
       background: #b30000;
-      padding: 20px 25px;
+      padding: 25px;
       display: flex;
       align-items: center;
+      justify-content: flex-start;
       box-shadow: 0 2px 6px rgba(0,0,0,0.3);
     }
     header img {
-      height: 90px; /* تكبير الشعار */
+      height: 100px; /* تكبير الشعار */
       filter: brightness(0) invert(1); /* تحويل اللون إلى أبيض */
     }
     /* البار الأزرق */
     .marquee {
       background: #0056b3; /* أزرق */
       color: #fff; /* أبيض */
-      padding: 12px;
+      padding: 15px; /* زيادة العرض */
       overflow: hidden;
       position: relative;
       font-weight: bold;
-      font-size: 16px;
+      font-size: 18px; /* تكبير الخط */
     }
     .marquee span {
       white-space: nowrap;
       position: absolute;
-      animation: marquee 15s linear infinite;
+      animation: marquee 18s linear infinite;
     }
     @keyframes marquee {
       0% { left: 100%; }
@@ -46,55 +47,55 @@
     aside {
       background: linear-gradient(180deg, #b30000, #660000);
       color: #fff;
-      width: 200px;
+      width: 220px;
       float: left;
       padding: 20px;
       box-shadow: 2px 0 6px rgba(0,0,0,0.2);
       height: auto; /* ينتهي عند القوائم فقط */
-      display: inline-block;
+      border-radius: 0 0 12px 0; /* شكل أنيق */
     }
     aside a {
       display: block;
       color: #fff;
       text-decoration: none;
       margin: 12px 0;
-      font-size: 15px;
-      padding: 8px;
-      border-radius: 4px;
+      font-size: 16px;
+      padding: 10px;
+      border-radius: 6px;
       transition: all 0.3s ease;
     }
     aside a:hover {
       background: #ff4d4d;
-      padding-left: 12px;
+      padding-left: 14px;
       box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
     }
     /* المحتوى */
     .content {
-      margin-left: 220px;
+      margin-left: 240px;
       padding: 20px;
     }
     .result-card {
-      background: rgba(255,255,255,0.97);
+      background: #fff;
       border: 1px solid #ccc;
-      width: 780px;
-      padding: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      border-radius: 8px;
+      width: 800px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+      border-radius: 12px;
       display: flex;
-      gap: 25px;
+      gap: 30px;
       align-items: flex-start;
     }
     .result-card img {
-      width: 170px;
+      width: 180px;
       height: auto;
       border: 2px solid #ccc;
-      border-radius: 6px;
+      border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
     table {
       width: 100%;
       border-collapse: collapse;
-      border-radius: 6px;
+      border-radius: 8px;
       overflow: hidden;
     }
     table tr:nth-child(even) {
@@ -107,20 +108,21 @@
       background: #b30000; /* صف السكور باللون الأحمر */
       color: #fff;
       font-weight: bold;
+      font-size: 15px;
     }
     table td {
-      padding: 10px;
+      padding: 12px;
       border: 1px solid #ccc;
-      font-size: 14px;
+      font-size: 15px;
     }
     .download-btn {
       display: block;
       margin: 25px auto 0 auto;
-      padding: 12px 25px;
+      padding: 14px 30px;
       background: linear-gradient(90deg, #007bff, #0056b3);
       color: #fff;
       border: none;
-      border-radius: 6px;
+      border-radius: 8px;
       cursor: pointer;
       text-decoration: none;
       text-align: center;
@@ -138,9 +140,9 @@
       text-align: center;
     }
     .banner img {
-      width: 620px;
-      border-radius: 8px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+      width: 650px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
     }
     /* الشعارات */
     .logos {
@@ -148,9 +150,9 @@
       text-align: center;
     }
     .logos img {
-      width: 360px;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      width: 380px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
     }
   </style>
 </head>
@@ -163,7 +165,7 @@
 
   <!-- البار الأزرق -->
   <div class="marquee">
-    <span><img src="images/ielts-logo2.png" alt="IELTS Small Logo" style="height:22px;vertical-align:middle;margin-right:8px;"> 
+    <span><img src="images/ielts-logo2.png" alt="IELTS Small Logo" style="height:24px;vertical-align:middle;margin-right:10px;"> 
       IELTS Academic | IELTS General Training | IELTS UKVI | IELTS Life Skills
     </span>
   </div>
