@@ -3,7 +3,131 @@
 <head>
   <meta charset="UTF-8">
   <title>IELTS TRF Results</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: url("images/background.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+    /* Red header */
+    .header {
+      background: #b30000;
+      color: #fff;
+      padding: 40px;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      width: 100%;
+    }
+    .header h1 { margin: 0; font-size: 48px; }
+    .header h2 { margin: 5px 0 0 0; font-size: 20px; }
+    .header img { height: 80px; }
+
+    /* Blue bar */
+    .marquee {
+      background: #0056b3;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: -20px;
+      box-shadow: inset 0 -3px 6px rgba(0,0,0,0.3);
+      width: 100%;
+    }
+    .marquee span {
+      display: inline-block;
+      animation: marquee 20s linear infinite;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* Sidebar */
+    aside {
+      background: linear-gradient(180deg, #b30000, #660000);
+      color: #fff;
+      width: 220px;
+      float: left;
+      padding: 20px;
+      border-radius: 0 0 12px 0;
+      box-shadow: 2px 0 8px rgba(0,0,0,0.3);
+      transform: translateX(-250px);
+      animation: slideIn 1s forwards;
+    }
+    @keyframes slideIn { to { transform: translateX(0); } }
+    aside a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      margin: 10px 0;
+      font-size: 16px;
+      padding: 8px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+    aside a:hover { background: #ff4d4d; transform: scale(1.05); }
+
+    /* Content */
+    .content { margin-left: 240px; padding: 20px; }
+    .result-card {
+      background: #fff;
+      border: 1px solid #ccc;
+      max-width: 800px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+      border-radius: 12px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      opacity: 0;
+      animation: fadeIn 1.5s forwards;
+    }
+    @keyframes fadeIn { to { opacity: 1; } }
+    .result-card img {
+      width: 160px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    table {
+      flex: 1;
+      border-collapse: collapse;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    table tr:nth-child(even) { background: #f0f0f0; }
+    table tr:nth-child(odd) { background: #fff; }
+    table tr.score-row { background: #b30000; color: #fff; font-weight: bold; }
+    table td { padding: 10px; border: 1px solid #ccc; font-size: 14px; }
+    table tr:hover { background: #ffe0e0; cursor: pointer; transition: background 0.3s ease; }
+
+    /* Banner bottom */
+    .banner-bottom { margin: 30px auto; text-align: center; }
+    .banner-bottom img {
+      width: 100%;
+      max-width: 900px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+    footer a { color: #00aaff; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
 </head>
 <body>
 
@@ -34,19 +158,23 @@
 
   <!-- Content -->
   <div class="content">
-    <div class="result-card" id="result">
+    <div class="result-card">
       <table>
-        <tr><td><strong>Name:</strong></td><td id="studentName"></td></tr>
-        <tr><td><strong>Candidate Number:</strong></td><td id="candidateNumber"></td></tr>
-        <tr><td><strong>Date of Birth:</strong></td><td id="dob"></td></tr>
-        <tr><td><strong>Exam Date:</strong></td><td id="examDate"></td></tr>
-        <tr><td><strong>Listening:</strong></td><td id="listening"></td></tr>
-        <tr><td><strong>Reading:</strong></td><td id="reading"></td></tr>
-        <tr><td><strong>Writing:</strong></td><td id="writing"></td></tr>
-        <tr><td><strong>Speaking:</strong></td><td id="speaking"></td></tr>
-        <tr class="score-row"><td><strong>Overall Band Score:</strong></td><td id="overall"></td></tr>
+        <tr><td><strong>Centre Number:</strong></td><td>AE113</td></tr>
+        <tr><td><strong>Centre Name:</strong></td><td>British Council</td></tr>
+        <tr><td><strong>Candidate Number:</strong></td><td>507413</td></tr>
+        <tr><td><strong>Name:</strong></td><td>Mohamed Ahmed Abdallah Al-Rudamy</td></tr>
+        <tr><td><strong>Date of Birth:</strong></td><td>06/06/2002</td></tr>
+        <tr><td><strong>Gender:</strong></td><td>M</td></tr>
+        <tr><td><strong>Listening:</strong></td><td>6.0</td></tr>
+        <tr><td><strong>Reading:</strong></td><td>5.5</td></tr>
+        <tr><td><strong>Writing:</strong></td><td>5.5</td></tr>
+        <tr><td><strong>Speaking:</strong></td><td>6.5</td></tr>
+        <tr class="score-row"><td><strong>Overall Band Score:</strong></td><td>6.0</td></tr>
+        <tr><td><strong>Test Date:</strong></td><td>11/08/2026</td></tr>
+        <tr><td><strong>TRF Number:</strong></td><td>26AE507413ALSM113A</td></tr>
       </table>
-      <img id="studentPhoto" src="" alt="Candidate Photo">
+      <img src="images/student1.jpg" alt="Candidate Photo">
     </div>
 
     <!-- Banner bottom -->
@@ -61,31 +189,5 @@
     <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
   </footer>
 
-  <script src="students.js"></script>
-  <script>
-    function getQueryParam(param) {
-      const urlParams = new URLSearchParams(window.location.search);
-      return urlParams.get(param);
-    }
-
-    const serial = getQueryParam("serial");
-    const candidate = getQueryParam("candidate");
-    const student = students[serial];
-
-    if (student && student.candidate === candidate) {
-      document.getElementById("studentName").textContent = student.name;
-      document.getElementById("candidateNumber").textContent = student.candidate;
-      document.getElementById("dob").textContent = student.dob;
-      document.getElementById("examDate").textContent = student.examDate;
-      document.getElementById("overall").textContent = student.overall;
-      document.getElementById("listening").textContent = student.listening;
-      document.getElementById("reading").textContent = student.reading;
-      document.getElementById("writing").textContent = student.writing;
-      document.getElementById("speaking").textContent = student.speaking;
-      document.getElementById("studentPhoto").src = "images/" + student.image;
-    } else {
-      document.getElementById("result").innerHTML = "<p>No results found for this candidate.</p>";
-    }
-  </script>
 </body>
 </html>
