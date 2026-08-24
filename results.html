@@ -11,37 +11,37 @@
       background-size: cover;
       color: #333;
     }
-    /* Red header with slanted curve */
+    /* Red header with full slanted curve */
     .header {
       position: relative;
       background: #b30000;
       color: #fff;
       padding: 40px 30px 70px 30px;
-      clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%); /* curve extended to bottom */
       box-shadow: 0 3px 8px rgba(0,0,0,0.3);
     }
     .header h1 {
       margin: 0;
-      font-size: 52px;
+      font-size: 56px;
       font-weight: bold;
       letter-spacing: 1px;
     }
     .header h2 {
       margin: 8px 0 0 0;
-      font-size: 22px;
+      font-size: 24px;
       font-weight: normal;
     }
-    /* Blue bar aligned with header curve */
+    /* Blue bar aligned with header */
     .marquee {
       background: #0056b3;
       color: #fff;
-      padding: 18px;
+      padding: 20px;
       overflow: hidden;
       position: relative;
       font-weight: bold;
       font-size: 18px;
-      margin-top: -30px; /* overlap to align with curve */
-      z-index: 1;
+      margin-top: -40px; /* lift bar up to overlap with curve */
+      z-index: 2;
     }
     .marquee span {
       white-space: nowrap;
