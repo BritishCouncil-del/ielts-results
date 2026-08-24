@@ -9,8 +9,8 @@
       font-family: "Segoe UI", Arial, sans-serif;
       background: url("images/background.jpg") no-repeat center center fixed;
       background-size: cover;
-      color: #333;
       text-align: center;
+      color: #333;
     }
     .header {
       background: #b30000;
@@ -19,10 +19,7 @@
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
       box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     }
-    .header h1 {
-      margin: 0;
-      font-size: 48px;
-    }
+    .header h1 { margin: 0; font-size: 48px; }
     .form-box {
       background: #fff;
       width: 400px;
@@ -48,10 +45,7 @@
       font-weight: bold;
       transition: all 0.3s ease;
     }
-    button:hover {
-      background: #004080;
-      transform: scale(1.05);
-    }
+    button:hover { background: #004080; transform: scale(1.05); }
   </style>
 </head>
 <body>
@@ -62,12 +56,25 @@
   </div>
 
   <div class="form-box">
-    <form action="results.html" method="get">
-      <input type="text" name="centre" placeholder="Enter Centre Number" required>
-      <input type="text" name="candidate" placeholder="Enter Candidate Number" required>
+    <form onsubmit="return goToResults()">
+      <input type="text" id="centre" placeholder="Enter Centre Number" required>
+      <input type="text" id="candidate" placeholder="Enter Candidate Number" required>
       <button type="submit">View Result</button>
     </form>
   </div>
+
+  <script>
+    function goToResults() {
+      const centre = document.getElementById('centre').value;
+      const candidate = document.getElementById('candidate').value;
+      // حفظ البيانات في localStorage
+      localStorage.setItem('centre', centre);
+      localStorage.setItem('candidate', candidate);
+      // تحويل لصفحة النتائج
+      window.location.href = "results.html";
+      return false;
+    }
+  </script>
 
 </body>
 </html>
