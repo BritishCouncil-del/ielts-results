@@ -13,20 +13,32 @@
     }
     /* الهيدر الأحمر */
     header {
-      background: linear-gradient(90deg, #b30000, #8b0000);
+      background: #b30000;
       color: #fff;
       display: flex;
       align-items: center;
       padding: 12px 25px;
+      position: relative;
       box-shadow: 0 2px 6px rgba(0,0,0,0.3);
     }
     header img {
       height: 50px;
     }
+    /* الكرف تحت كلمة IELTS */
+    header::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 20px;
+      background: #b30000;
+      border-radius: 0 0 50% 50%;
+    }
     /* البار الماشي */
     .marquee {
-      background: #8b0000;
-      color: #fff;
+      background: #0056b3; /* أزرق */
+      color: #fff; /* أبيض */
       padding: 8px;
       overflow: hidden;
       position: relative;
@@ -201,7 +213,3 @@
 
     <!-- صورة البانر -->
     <div class="banner">
-      <img src="images/ielts-banner.png" alt="IELTS Banner">
-    </div>
-
-    <!-- الشعارات الثلاث
