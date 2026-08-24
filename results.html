@@ -32,16 +32,46 @@
       font-size: 18px;
       margin-top: -40px;
     }
+    aside {
+      background: linear-gradient(180deg, #b30000, #660000);
+      color: #fff;
+      width: 220px;
+      float: left;
+      padding: 20px;
+      min-height: 100vh;
+    }
+    aside a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      margin: 10px 0;
+      font-size: 16px;
+      padding: 8px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+    aside a:hover { background: #ff4d4d; transform: scale(1.05); }
     .content {
-      margin: 40px auto;
-      width: 900px;
+      margin-left: 240px;
+      padding: 20px;
+    }
+    .result-card {
       background: #fff;
-      padding: 25px;
-      border-radius: 12px;
+      border: 1px solid #ccc;
+      max-width: 800px;
+      padding: 20px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+      border-radius: 12px;
+      display: flex;
+      gap: 20px;
+    }
+    .result-card img {
+      width: 160px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
     }
     table {
-      width: 100%;
+      flex: 1;
       border-collapse: collapse;
       border-radius: 8px;
       overflow: hidden;
@@ -49,17 +79,7 @@
     table tr:nth-child(even) { background: #f0f0f0; }
     table tr:nth-child(odd) { background: #fff; }
     table tr.score-row { background: #b30000; color: #fff; font-weight: bold; }
-    table td { padding: 12px; border: 1px solid #ccc; }
-    .banner-bottom {
-      margin: 30px auto;
-      text-align: center;
-    }
-    .banner-bottom img {
-      width: 100%;
-      max-width: 900px;
-      border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
-    }
+    table td { padding: 10px; border: 1px solid #ccc; font-size: 14px; }
   </style>
 </head>
 <body>
@@ -76,33 +96,27 @@
     <span>IELTS Academic | IELTS General Training | IELTS UKVI | IELTS Life Skills</span>
   </div>
 
+  <!-- Sidebar -->
+  <aside>
+    <a href="index.html">🏠 Home</a>
+    <a href="#">📄 TRF Query</a>
+    <a href="#">⬇️ Download Results</a>
+    <a href="#">👥 Manage Users</a>
+    <a href="#">⚙️ Update Profile</a>
+    <a href="#">❓ FAQs</a>
+    <a href="https://ielts.org">🌐 IELTS.org</a>
+  </aside>
+
+  <!-- Content -->
   <div class="content">
-    <table>
-      <tr><td><strong>Centre Number:</strong></td><td id="centre"></td></tr>
-      <tr><td><strong>Centre Name:</strong></td><td>British Council</td></tr>
-      <tr><td><strong>Candidate Number:</strong></td><td id="candidate"></td></tr>
-      <tr><td><strong>Name:</strong></td><td>Mohamed Ahmed Abdallah Al-Rudamy</td></tr>
-      <tr><td><strong>Date of Birth:</strong></td><td>06/06/2002</td></tr>
-      <tr><td><strong>Gender:</strong></td><td>M</td></tr>
-      <tr><td><strong>Listening:</strong></td><td>6.0</td></tr>
-      <tr><td><strong>Reading:</strong></td><td>5.5</td></tr>
-      <tr><td><strong>Writing:</strong></td><td>5.5</td></tr>
-      <tr><td><strong>Speaking:</strong></td><td>6.5</td></tr>
-      <tr class="score-row"><td><strong>Overall Band Score:</strong></td><td>6.0</td></tr>
-      <tr><td><strong>Test Date:</strong></td><td>11/08/2026</td></tr>
-      <tr><td><strong>TRF Number:</strong></td><td>26AE507413ALSM113A</td></tr>
-    </table>
-  </div>
-
-  <div class="banner-bottom">
-    <img src="images/ielts-banner.png" alt="IELTS Banner">
-  </div>
-
-  <script>
-    // قراءة البيانات من localStorage
-    document.getElementById('centre').textContent = localStorage.getItem('centre');
-    document.getElementById('candidate').textContent = localStorage.getItem('candidate');
-  </script>
-
-</body>
-</html>
+    <div class="result-card">
+      <table>
+        <tr><td><strong>Centre Number:</strong></td><td id="centre"></td></tr>
+        <tr><td><strong>Centre Name:</strong></td><td>British Council</td></tr>
+        <tr><td><strong>Candidate Number:</strong></td><td id="candidate"></td></tr>
+        <tr><td><strong>Name:</strong></td><td>Mohamed Ahmed Abdallah Al-Rudamy</td></tr>
+        <tr><td><strong>Date of Birth:</strong></td><td>06/06/2002</td></tr>
+        <tr><td><strong>Gender:</strong></td><td>M</td></tr>
+        <tr><td><strong>Listening:</strong></td><td>6.0</td></tr>
+        <tr><td><strong>Reading:</strong></td><td>5.5</td></tr>
+        <tr><td><strong>Writing:</strong></td><td>5.
