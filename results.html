@@ -7,20 +7,17 @@
 </head>
 <body class="results">
 
-  <!-- الهيدر الأحمر -->
   <div class="header">
     <img src="images/ielts-logos.png" alt="IELTS Logo" class="ielts-logo">
     <h1>IELTS Results</h1>
   </div>
 
-  <!-- البار المتحرك -->
   <div class="marquee">
     <marquee behavior="scroll" direction="left" scrollamount="6">
       All IELTS Test Types (Academic - General - UKVI - Life Skills)
     </marquee>
   </div>
 
-  <!-- القوائم الجانبية -->
   <aside class="sidebar">
     <ul>
       <li><a href="index.html">🏠 Home</a></li>
@@ -33,7 +30,6 @@
     </ul>
   </aside>
 
-  <!-- مربع النتائج -->
   <div class="content">
     <div class="result-card" id="result">
       <div class="result-layout">
@@ -56,11 +52,6 @@
         <img id="studentPhoto" src="images/albedwawi.png" alt="Candidate Photo" class="student-photo">
       </div>
     </div>
-
-    <!-- صورة الشعارات -->
-    <div class="banner-bottom">
-      <img src="images/ielts-banner.png" alt="IELTS Banner" class="banner-img">
-    </div>
   </div>
 
   <footer>
@@ -69,5 +60,31 @@
   </footer>
 
   <script src="students.js"></script>
+  <script>
+    const serial = localStorage.getItem('serial');
+    const candidate = localStorage.getItem('candidate');
+    const student = students[serial];
+
+    if (student && student.candidate === candidate) {
+      document.getElementById("centreNumber").textContent = student.centre;
+      document.getElementById("centreName").textContent = student.centreName;
+      document.getElementById("candidateNumber").textContent = student.candidate;
+      document.getElementById("candidateId").textContent = student.candidateId;
+      document.getElementById("studentName").textContent = student.name;
+      document.getElementById("dob").textContent = student.dob;
+      document.getElementById("sex").textContent = student.sex;
+      document.getElementById("examDate").textContent = student.examDate;
+      document.getElementById("overall").textContent = student.overall;
+      document.getElementById("listening").textContent = student.listening;
+      document.getElementById("reading").textContent = student.reading;
+      document.getElementById("writing").textContent = student.writing;
+      document.getElementById("speaking").textContent = student.speaking;
+      document.getElementById("trfNumber").textContent = student.trfNumber;
+      document.getElementById("studentPhoto").src = "images/" + student.image;
+    } else {
+      document.getElementById("result").innerHTML =
+        "<p style='color:red;font-weight:bold;'>❌ No results found. Please check your Serial Number and Candidate Number.</p>";
+    }
+  </script>
 </body>
 </html>
