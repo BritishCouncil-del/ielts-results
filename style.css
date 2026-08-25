@@ -1,12 +1,3 @@
-/* خلفية صفحة الترحيب */
-body.welcome {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: url("images/background.jpg") no-repeat center center fixed;
-  background-size: cover;
-  color: #333;
-}
-
 /* خلفية صفحة النتائج */
 body.results {
   margin: 0;
@@ -42,9 +33,95 @@ body.results {
   font-size: 16px;
 }
 
-/* مربع البحث */
-.form-box {
+/* القوائم الجانبية */
+.sidebar {
+  width: 200px;
+  background: #b30000;
+  color: #fff;
+  position: absolute; /* يقف عند القوائم فقط */
+  top: 120px;
+  left: 0;
+  border-radius: 0 0 8px 0;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar li {
+  margin: 10px 0;
+}
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 15px;
+  display: block;
+}
+.sidebar a:hover {
+  background: #800000;
+  border-radius: 6px;
+}
+
+/* مربع النتائج */
+.result-card {
   background: #fff;
-  padding: 25px;
+  padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  margin-left: 220px;
+  margin-top: 40px;
+}
+.result-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.result-card table {
+  width: 70%;
+  border-collapse: collapse;
+}
+.result-card td {
+  padding: 10px;
+  font-size: 16px;
+}
+.result-card tr:nth-child(odd) {
+  background: #fff;
+}
+.result-card tr:nth-child(even) {
+  background: #ddd; /* رمادي غامق */
+}
+.score-row {
+  background: #b30000; /* أحمر */
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+.student-photo {
+  width: 140px;
+  border-radius: 8px;
+  border: 2px solid #b30000;
+  margin-left: 20px;
+  align-self: flex-start; /* يظهر بجوار البيانات فوق */
+}
+
+/* صورة الشعارات */
+.banner-img {
+  opacity: 0.6;
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+}
+
+/* الفوتر */
+footer {
+  background: #b30000;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
