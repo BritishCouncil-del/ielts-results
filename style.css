@@ -1,27 +1,23 @@
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
-  background: url("images/background.jpg") no-repeat center center fixed;
-  background-size: cover;
+  background: #f9f9f9;
   color: #333;
 }
 
-/* الهيدر الأحمر */
+/* الهيدر */
 .header {
   background: #b30000;
   color: #fff;
-  padding: 30px;
+  padding: 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 .header h1 {
   margin: 0;
-  font-size: 40px;
-}
-.header img {
-  height: 70px;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 /* البار */
@@ -34,50 +30,10 @@ body {
   font-size: 18px;
 }
 
-/* مربع البحث */
-.form-box {
-  background: #fff;
-  width: 400px;
-  margin: 50px auto;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  text-align: center;
-}
-.form-box h2 {
-  color: #b30000;
-  margin-bottom: 20px;
-}
-input {
-  width: 90%;
-  padding: 12px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: bold;
-  color: #0056b3;
-}
-button {
-  padding: 12px 25px;
-  background: linear-gradient(90deg, #007bff, #0056b3);
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-button:hover {
-  background: #004080;
-  transform: scale(1.05);
-}
-
-/* صفحة النتائج */
+/* القوائم الجانبية */
 aside {
   width: 200px;
-  background: #f2f2f2;
+  background: #b30000;
   padding: 20px;
   float: left;
   height: 100%;
@@ -87,51 +43,52 @@ aside a {
   padding: 10px;
   margin: 5px 0;
   text-decoration: none;
-  color: #333;
+  color: #fff;
   font-weight: bold;
+  transition: all 0.3s ease;
 }
 aside a:hover {
-  background: #ddd;
+  background: #800000;
   border-radius: 6px;
+  transform: scale(1.05);
 }
 
+/* المحتوى */
 .content {
   margin-left: 220px;
   padding: 20px;
 }
 
+/* مربع النتائج */
 .result-card {
   background: #fff;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  display: flex;
-  justify-content: space-between;
 }
 .result-card table {
-  width: 70%;
+  width: 100%;
   border-collapse: collapse;
 }
 .result-card td {
-  padding: 8px;
+  padding: 10px;
   font-size: 16px;
 }
-.result-card img {
-  width: 150px;
-  height: 180px;
-  border: 2px solid #ccc;
-  border-radius: 8px;
+.result-card tr:nth-child(even) {
+  background: #f2f2f2;
+}
+.result-card tr:nth-child(odd) {
+  background: #fff;
 }
 
-.banner-bottom {
-  text-align: center;
-  margin-top: 30px;
-}
-.banner-bottom img {
-  width: 300px;
-  opacity: 0.7;
+/* صف الأسكور */
+.score-row {
+  background: #b30000;
+  color: #fff;
+  font-weight: bold;
 }
 
+/* الفوتر */
 footer {
   background: #b30000;
   color: #fff;
