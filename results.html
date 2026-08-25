@@ -36,25 +36,27 @@
     <div class="welcome" id="welcomeMessage"></div>
 
     <div class="result-card" id="result">
-      <table>
-        <tr><td><strong>Centre Number:</strong></td><td id="centreNumber"></td></tr>
-        <tr><td><strong>Centre Name:</strong></td><td id="centreName"></td></tr>
-        <tr><td><strong>Candidate Number:</strong></td><td id="candidateNumber"></td></tr>
-        <tr><td><strong>Name:</strong></td><td id="studentName"></td></tr>
-        <tr><td><strong>Date of Birth:</strong></td><td id="dob"></td></tr>
-        <tr><td><strong>Listening:</strong></td><td id="listening"></td></tr>
-        <tr><td><strong>Reading:</strong></td><td id="reading"></td></tr>
-        <tr><td><strong>Writing:</strong></td><td id="writing"></td></tr>
-        <tr><td><strong>Speaking:</strong></td><td id="speaking"></td></tr>
-        <tr class="score-row"><td><strong>Overall Band Score:</strong></td><td id="overall"></td></tr>
-        <tr><td><strong>Test Date:</strong></td><td id="examDate"></td></tr>
-        <tr><td><strong>TRF Number:</strong></td><td id="trfNumber"></td></tr>
-      </table>
-      <img id="studentPhoto" src="" alt="Candidate Photo" class="student-photo">
+      <div class="result-layout">
+        <table>
+          <tr><td><strong>Centre Number:</strong></td><td id="centreNumber"></td></tr>
+          <tr><td><strong>Centre Name:</strong></td><td id="centreName"></td></tr>
+          <tr><td><strong>Candidate Number:</strong></td><td id="candidateNumber"></td></tr>
+          <tr><td><strong>Name:</strong></td><td id="studentName"></td></tr>
+          <tr><td><strong>Date of Birth:</strong></td><td id="dob"></td></tr>
+          <tr><td><strong>Listening:</strong></td><td id="listening"></td></tr>
+          <tr><td><strong>Reading:</strong></td><td id="reading"></td></tr>
+          <tr><td><strong>Writing:</strong></td><td id="writing"></td></tr>
+          <tr><td><strong>Speaking:</strong></td><td id="speaking"></td></tr>
+          <tr class="score-row"><td><strong>Overall Band Score:</strong></td><td id="overall"></td></tr>
+          <tr><td><strong>Test Date:</strong></td><td id="examDate"></td></tr>
+          <tr><td><strong>TRF Number:</strong></td><td id="trfNumber"></td></tr>
+        </table>
+        <img id="studentPhoto" src="images/albedwawi.png" alt="Candidate Photo" class="student-photo">
+      </div>
     </div>
 
     <div class="banner-bottom">
-      <img src="images/ielts-banner.png" alt="IELTS Banner">
+      <img src="images/ielts-banner.png" alt="IELTS Banner" class="banner-img">
     </div>
   </div>
 
@@ -87,7 +89,6 @@
       document.getElementById("writing").textContent = student.writing;
       document.getElementById("speaking").textContent = student.speaking;
       document.getElementById("trfNumber").textContent = student.trfNumber;
-      document.getElementById("studentPhoto").src = "images/" + student.image;
     } else {
       document.getElementById("result").innerHTML =
         "<p style='color:red;font-weight:bold;'>❌ No results found. Please check your Serial Number and Candidate Number.</p>";
