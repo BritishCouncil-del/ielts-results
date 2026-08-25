@@ -33,7 +33,7 @@ body {
   font-size: 18px;
 }
 
-/* نموذج البحث */
+/* مربع البحث */
 .form-box {
   background: #fff;
   padding: 20px;
@@ -51,7 +51,7 @@ body {
   border-radius: 8px;
 }
 .ielts-title {
-  font-size: 32px;
+  font-size: 36px;
   color: #b30000;
   margin-bottom: 20px;
   font-weight: bold;
@@ -76,12 +76,3 @@ body {
 
 /* مربع النتائج */
 .result-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-.result-layout {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
