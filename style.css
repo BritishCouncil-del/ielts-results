@@ -1,5 +1,5 @@
-/* خلفية صفحة الترحيب */
-body.welcome {
+/* خلفية صفحة النتائج */
+body.results {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
   background: url("images/background.jpg") no-repeat center center fixed;
@@ -7,7 +7,7 @@ body.welcome {
   color: #333;
 }
 
-/* الهيدر */
+/* الهيدر الأحمر */
 .header {
   background: #b30000;
   color: #fff;
@@ -33,55 +33,81 @@ body.welcome {
   font-size: 16px;
 }
 
-/* مربع البحث */
-.form-box {
-  background: rgba(255,255,255,0.95);
-  padding: 35px;
-  border-radius: 15px;
-  box-shadow: 0 6px 25px rgba(0,0,0,0.4);
-  width: 420px;
-  margin: 100px auto;
-  text-align: center;
-  border: 2px solid #b30000;
-  animation: fadeInUp 1.5s ease forwards;
+/* القوائم الجانبية */
+.sidebar {
+  width: 200px;
+  background: #b30000;
+  color: #fff;
+  position: absolute;
+  top: 160px; /* نزل العمود تحت البار */
+  left: 0;
+  border-radius: 0 0 8px 0;
 }
-.ielts-title {
-  font-size: 55px;
-  color: #b30000;
-  margin-bottom: 25px;
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar li {
+  margin: 10px 0;
+}
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
   font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  padding: 8px 15px;
+  display: block;
 }
-.form-box input {
-  width: 90%;
-  padding: 14px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+.sidebar a:hover {
+  background: #800000;
+  border-radius: 6px;
+}
+
+/* مربع النتائج */
+.result-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  margin-left: 220px;
+  margin-top: 40px;
+}
+.result-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.result-card table {
+  width: 70%;
+  border-collapse: collapse;
+}
+.result-card td {
+  padding: 10px;
   font-size: 16px;
 }
-.btn-animate {
-  width: 95%;
-  background: linear-gradient(45deg,#b30000,#800000);
-  color: #fff;
-  border: none;
-  padding: 14px;
-  font-weight: bold;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 18px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.result-card tr:nth-child(odd) {
+  background: #fff;
 }
-.btn-animate:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+.result-card tr:nth-child(even) {
+  background: #ccc; /* رمادي غامق */
+}
+.score-row {
+  background: #b30000; /* أحمر */
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+.student-photo {
+  width: 140px;
+  border-radius: 8px;
+  border: 2px solid #b30000;
+  margin-left: 20px;
+  align-self: flex-start; /* يظهر بجوار البيانات فوق */
 }
 
 /* صورة الشعارات */
 .banner-img {
-  opacity: 0.7;
+  opacity: 0.6;
   display: block;
   margin: 20px auto;
   max-width: 100%;
@@ -98,16 +124,4 @@ footer {
 footer a {
   color: #fff;
   text-decoration: underline;
-}
-
-/* Animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
