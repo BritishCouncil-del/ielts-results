@@ -15,27 +15,25 @@ var students = {
     centre: "AE113",
     centreName: "BRITISH COUNCIL",
     trfNumber: "2GAE509426ALBM113A",
-    image: "albedwawi.png"
-  }
+    image: "albedwawawi.png"
+  },
 
-  // هنا تقدر تضيف أي طالب جديد بنفس الشكل 👇
-  /*
-  "TRF_NUMBER_الجديد": {
-    candidate: "رقم المرشح",
-    candidateId: "ID الطالب",
-    name: "اسم الطالب بالكامل",
-    dob: "تاريخ الميلاد",
-    sex: "M/F",
-    examDate: "تاريخ الامتحان",
-    overall: "الدرجة الكلية",
-    listening: "درجة الاستماع",
-    reading: "درجة القراءة",
-    writing: "درجة الكتابة",
-    speaking: "درجة المحادثة",
-    centre: "رقم المركز",
-    centreName: "اسم المركز",
-    trfNumber: "TRF_NUMBER_الجديد",
-    image: "اسم ملف الصورة.png"
+  // الطالب الثاني (مثال تجريبي)
+  "2GAE509999ALBM113B": {
+    candidate: "509999",
+    candidateId: "784-2005-1234567-8",
+    name: "ALI HASSAN MOHAMED",
+    dob: "01/01/2005",
+    sex: "M",
+    examDate: "25/08/2026",
+    overall: "6.0",
+    listening: "6.5",
+    reading: "6.0",
+    writing: "5.5",
+    speaking: "6.0",
+    centre: "AE113",
+    centreName: "BRITISH COUNCIL",
+    trfNumber: "2GAE509999ALBM113B",
+    image: "alihassan.png"
   }
-  */
 };
