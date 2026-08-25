@@ -1,162 +1,145 @@
-/* ===== الهيدر الأحمر ===== */
-.header-bar {
-  background:#d32f2f;
-  color:#fff;
-  padding:10px;
-  display:flex;
-  align-items:center;
-}
-.ielts-top-logo img {
-  height:60px;
-  margin-right:15px;
-}
-.news-bar {
-  flex:1;
-}
-.news-bar marquee {
-  color:#fff;
-  font-weight:bold;
-  font-size:16px;
-}
-
-/* ===== صفحة الترحيب ===== */
-body.welcome {
-  background: url("images/ielts-bg.jpg") no-repeat center center fixed;
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: url("images/background.jpg") no-repeat center center fixed;
   background-size: cover;
-  font-family: 'Cairo', Tahoma, Arial, sans-serif;
-  margin:0;
-  padding:0;
-}
-.welcome-box {
-  background:#fff;
-  width:400px;
-  margin:200px auto 60px auto;
-  padding:30px;
-  border-radius:15px;
-  text-align:center;
-  box-shadow:0 0 20px rgba(0,0,0,0.25);
-  border:2px solid #d32f2f;
-}
-.big-ielts {
-  font-size:40px;
-  color:#d32f2f;
-  margin-bottom:20px;
-  font-weight:bold;
-}
-.search-form input {
-  width:90%;
-  padding:12px;
-  margin-bottom:12px;
-  border:1px solid #ccc;
-  border-radius:8px;
-  font-size:14px;
-}
-.search-form button {
-  width:95%;
-  background:#d32f2f;
-  color:#fff;
-  border:none;
-  padding:12px;
-  font-weight:bold;
-  border-radius:8px;
-  cursor:pointer;
-  font-size:16px;
-}
-.search-form button:hover {
-  background:#b71c1c;
+  color: #333;
 }
 
-/* ===== صورة الشعارات تحت ===== */
-.footer-banner, .footer-logos {
-  text-align:center;
-  margin:20px 0;
+/* الهيدر الأحمر */
+.header {
+  background: #b30000;
+  color: #fff;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
-.footer-img {
-  height:40px;   /* حجم صغير متناسق */
-  width:auto;
+.header h1 {
+  margin: 0;
+  font-size: 40px;
 }
-
-/* ===== صفحة النتائج ===== */
-body.results {
-  font-family: Arial, sans-serif;
-  margin:0;
-  padding:0;
-  background: url("images/ielts-bg.jpg") no-repeat center center fixed;
-  background-size: cover;
-}
-
-/* ===== القوائم الجانبية ===== */
-.sidebar {
-  width:200px;
-  float:left;
-  background:#fff;
-  border-right:2px solid #ccc;
-  min-height:100vh;
-  padding:15px;
-}
-.sidebar ul {
-  list-style:none;
-  padding:0;
-}
-.sidebar ul li {
-  margin:10px 0;
-}
-.sidebar ul li a {
-  text-decoration:none;
-  color:#d32f2f;
-  font-weight:bold;
-}
-.sidebar ul li a:hover {
-  text-decoration:underline;
+.header img {
+  height: 70px;
 }
 
-/* ===== كارت النتيجة ===== */
+/* البار */
+.marquee {
+  background: #0056b3;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* مربع البحث */
+.form-box {
+  background: #fff;
+  width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  text-align: center;
+}
+.form-box h2 {
+  color: #b30000;
+  margin-bottom: 20px;
+}
+input {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #0056b3;
+}
+button {
+  padding: 12px 25px;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+button:hover {
+  background: #004080;
+  transform: scale(1.05);
+}
+
+/* صفحة النتائج */
+aside {
+  width: 200px;
+  background: #f2f2f2;
+  padding: 20px;
+  float: left;
+  height: 100%;
+}
+aside a {
+  display: block;
+  padding: 10px;
+  margin: 5px 0;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+aside a:hover {
+  background: #ddd;
+  border-radius: 6px;
+}
+
+.content {
+  margin-left: 220px;
+  padding: 20px;
+}
+
 .result-card {
-  background:#fff;
-  width:75%;
-  margin:30px auto;
-  padding:20px;
-  border-radius:10px;
-  box-shadow:0 0 15px rgba(0,0,0,0.2);
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: space-between;
 }
-.result-content {
-  display:flex;
-  align-items:flex-start;
+.result-card table {
+  width: 70%;
+  border-collapse: collapse;
 }
-.student-photo {
-  width:150px;
-  height:auto;
-  margin-right:20px;
-  border:2px solid #ccc;
-  border-radius:8px;
+.result-card td {
+  padding: 8px;
+  font-size: 16px;
 }
-
-/* ===== جدول النتائج أبيض/رمادي ===== */
-.results-table {
-  width:100%;
-  border-collapse:collapse;
-}
-.results-table th, .results-table td {
-  padding:10px;
-}
-.results-table tr:nth-child(even) {
-  background:#f0f0f0; /* رمادي غامق */
-}
-.results-table tr:nth-child(odd) {
-  background:#fff; /* أبيض */
+.result-card img {
+  width: 150px;
+  height: 180px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
 }
 
-/* ===== زر تحميل PDF ===== */
-.download-btn {
-  margin-top:20px;
-  background:#d32f2f;
-  color:#fff;
-  border:none;
-  padding:12px 20px;
-  border-radius:6px;
-  cursor:pointer;
-  font-weight:bold;
+.banner-bottom {
+  text-align: center;
+  margin-top: 30px;
 }
-.download-btn:hover {
-  background:#b71c1c;
+.banner-bottom img {
+  width: 300px;
+  opacity: 0.7;
+}
+
+footer {
+  background: #b30000;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+footer a {
+  color: #fff;
+  text-decoration: underline;
 }
