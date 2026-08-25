@@ -20,12 +20,11 @@ body {
   font-weight: bold;
 }
 
-/* البار */
+/* البار المتحرك */
 .marquee {
   background: #0056b3;
   color: #fff;
   padding: 10px;
-  text-align: center;
   font-weight: bold;
   font-size: 18px;
 }
