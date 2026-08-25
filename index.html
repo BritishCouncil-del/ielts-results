@@ -28,6 +28,7 @@
       <input type="text" id="candidate" placeholder="Candidate Number" required>
       <button type="submit" class="btn-animate">عرض النتيجة</button>
     </form>
+    <p id="errorMsg" style="color:red;font-weight:bold;"></p>
   </div>
 
   <!-- صورة الشعارات -->
@@ -40,13 +41,21 @@
     <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
   </footer>
 
+  <script src="students.js"></script>
   <script>
     function goToResults() {
       const serial = document.getElementById('serial').value.trim();
       const candidate = document.getElementById('candidate').value.trim();
-      localStorage.setItem('serial', serial);
-      localStorage.setItem('candidate', candidate);
-      window.location.href = "results.html";
+      const student = students[serial];
+
+      if (student && student.candidate === candidate) {
+        localStorage.setItem('serial', serial);
+        localStorage.setItem('candidate', candidate);
+        window.location.href = "results.html";
+      } else {
+        document.getElementById("errorMsg").textContent =
+          "❌ Invalid Serial or Candidate Number. Please try again.";
+      }
       return false;
     }
   </script>
