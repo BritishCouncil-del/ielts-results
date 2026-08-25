@@ -1,73 +1,127 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>IELTS TRF Results</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body class="results">
+/* خلفية صفحة النتائج */
+body.results {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: url("images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+}
 
-  <!-- الهيدر الأحمر -->
-  <div class="header">
-    <img src="images/ielts-logos.png" alt="IELTS Logo" class="ielts-logo">
-    <h1>IELTS Results</h1>
-  </div>
+/* الهيدر الأحمر */
+.header {
+  background: #b30000;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+.header h1 {
+  margin-left: 15px;
+  font-size: 22px;
+  font-weight: bold;
+}
+.ielts-logo {
+  height: 40px;
+}
 
-  <!-- البار المتحرك -->
-  <div class="marquee">
-    <marquee behavior="scroll" direction="left" scrollamount="6">
-      جميع أنواع اختبار الآيلتس (Academic - General - UKVI - Life Skills)
-    </marquee>
-  </div>
+/* البار المتحرك */
+.marquee {
+  background: #0056b3;
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
 
-  <!-- القوائم الجانبية -->
-  <aside class="sidebar">
-    <ul>
-      <li><a href="index.html">🏠 Home</a></li>
-      <li><a href="#">TRF Query</a></li>
-      <li><a href="#">Download Results</a></li>
-      <li><a href="#">Manage Users</a></li>
-      <li><a href="#">Update Profile</a></li>
-      <li><a href="#">FAQs</a></li>
-      <li><a href="https://ielts.org" target="_blank">IELTS.org</a></li>
-    </ul>
-  </aside>
+/* القوائم الجانبية */
+.sidebar {
+  width: 200px;
+  background: #b30000;
+  color: #fff;
+  position: absolute;
+  top: 160px; /* نزل العمود تحت البار */
+  left: 0;
+  border-radius: 0 0 8px 0;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar li {
+  margin: 10px 0;
+}
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 15px;
+  display: block;
+}
+.sidebar a:hover {
+  background: #800000;
+  border-radius: 6px;
+}
 
-  <!-- مربع النتائج -->
-  <div class="content">
-    <div class="result-card" id="result">
-      <div class="result-layout">
-        <table>
-          <tr><td><strong>Centre Number:</strong></td><td id="centreNumber"></td></tr>
-          <tr><td><strong>Centre Name:</strong></td><td id="centreName"></td></tr>
-          <tr><td><strong>Candidate Number:</strong></td><td id="candidateNumber"></td></tr>
-          <tr><td><strong>Candidate ID:</strong></td><td id="candidateId"></td></tr>
-          <tr><td><strong>Name:</strong></td><td id="studentName"></td></tr>
-          <tr><td><strong>Date of Birth:</strong></td><td id="dob"></td></tr>
-          <tr><td><strong>Sex:</strong></td><td id="sex"></td></tr>
-          <tr><td><strong>Listening:</strong></td><td id="listening"></td></tr>
-          <tr><td><strong>Reading:</strong></td><td id="reading"></td></tr>
-          <tr><td><strong>Writing:</strong></td><td id="writing"></td></tr>
-          <tr><td><strong>Speaking:</strong></td><td id="speaking"></td></tr>
-          <tr class="score-row"><td><strong>Overall Band Score:</strong></td><td id="overall"></td></tr>
-          <tr><td><strong>Test Date:</strong></td><td id="examDate"></td></tr>
-          <tr><td><strong>TRF Number:</strong></td><td id="trfNumber"></td></tr>
-        </table>
-        <img id="studentPhoto" src="images/albedwawi.png" alt="Candidate Photo" class="student-photo">
-      </div>
-    </div>
+/* مربع النتائج */
+.result-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  margin-left: 220px;
+  margin-top: 40px;
+}
+.result-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.result-card table {
+  width: 70%;
+  border-collapse: collapse;
+}
+.result-card td {
+  padding: 10px;
+  font-size: 16px;
+}
+.result-card tr:nth-child(odd) {
+  background: #fff;
+}
+.result-card tr:nth-child(even) {
+  background: #ccc; /* رمادي غامق */
+}
+.score-row {
+  background: #b30000; /* أحمر */
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+.student-photo {
+  width: 140px;
+  border-radius: 8px;
+  border: 2px solid #b30000;
+  margin-left: 20px;
+  align-self: flex-start; /* يظهر بجوار البيانات فوق */
+}
 
-    <!-- صورة الشعارات -->
-    <div class="banner-bottom">
-      <img src="images/ielts-banner.png" alt="IELTS Banner" class="banner-img">
-    </div>
-  </div>
+/* صورة الشعارات */
+.banner-img {
+  opacity: 0.7;
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+}
 
-  <footer>
-    © 2026 IELTS Results Portal | All Rights Reserved | 
-    <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
-  </footer>
-
-  <script src="students.js"></script>
-</body>
-</html>
+/* الفوتر */
+footer {
+  background: #b30000;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
