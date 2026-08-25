@@ -1,7 +1,8 @@
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
-  background: #f9f9f9;
+  background: url("images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
   color: #333;
 }
 
@@ -9,15 +10,18 @@ body {
 .header {
   background: #b30000;
   color: #fff;
-  padding: 25px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .header h1 {
   margin: 0;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
+}
+.ielts-logo {
+  height: 50px; /* تصغير الشعار */
 }
 
 /* البار المتحرك */
@@ -74,10 +78,10 @@ aside a:hover {
   font-size: 16px;
 }
 .result-card tr:nth-child(even) {
-  background: #f2f2f2;
+  background: #e0e0e0; /* رمادي غامق */
 }
 .result-card tr:nth-child(odd) {
-  background: #fff;
+  background: #fff; /* أبيض */
 }
 
 /* صف الأسكور */
@@ -85,6 +89,14 @@ aside a:hover {
   background: #b30000;
   color: #fff;
   font-weight: bold;
+}
+
+/* صورة الطالب */
+.student-photo {
+  margin-top: 15px;
+  width: 120px;
+  border-radius: 8px;
+  border: 2px solid #b30000;
 }
 
 /* الفوتر */
