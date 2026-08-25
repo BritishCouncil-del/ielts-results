@@ -7,23 +7,47 @@
 </head>
 <body>
 
+  <!-- الهيدر -->
   <div class="header">
-    <h1 style="color:white;">IELTS™ Portal</h1>
-    <img src="images/ielts-logos.png" alt="IELTS Logos">
+    <h1>IELTS – English for International Opportunity</h1>
+    <img src="images/ielts-logos.png" alt="IELTS Logo" class="ielts-logo">
   </div>
 
+  <!-- البار المتحرك -->
   <div class="marquee">
-    <span>جميع أنواع اختبار الآيلتس (Academic - General - UKVI - Life Skills)</span>
+    <marquee behavior="scroll" direction="left" scrollamount="6">
+      IELTS Academic | IELTS General Training | IELTS UKVI | IELTS Life Skills
+    </marquee>
   </div>
 
-  <div class="form-box">
-    <h2 style="color:#b30000;">IELTS</h2>
-    <form onsubmit="return goToResults()">
-      <input type="text" id="serial" placeholder="TRF Serial Number" required>
-      <input type="text" id="candidate" placeholder="Candidate Number" required>
-      <button type="submit">View Result</button>
-    </form>
+  <!-- القوائم الجانبية -->
+  <aside>
+    <a href="index.html">🏠 Home</a>
+    <a href="#">📄 TRF Query</a>
+    <a href="#">⬇️ Download Results</a>
+    <a href="#">👥 Manage Users</a>
+    <a href="#">⚙️ Update Profile</a>
+    <a href="#">❓ FAQs</a>
+    <a href="https://ielts.org">🌐 IELTS.org</a>
+  </aside>
+
+  <!-- نموذج الدخول -->
+  <div class="content">
+    <div class="form-box">
+      <h2 style="color:#b30000;">IELTS TRF Portal</h2>
+      <form onsubmit="return goToResults()">
+        <input type="text" id="serial" placeholder="TRF Serial Number" required>
+        <input type="text" id="candidate" placeholder="Candidate Number" required>
+        <button type="submit" class="btn-animate">View Result</button>
+      </form>
+    </div>
   </div>
+
+  <!-- الفوتر -->
+  <footer>
+    © 2026 IELTS Results Portal | All Rights Reserved | 
+    <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
+  </footer>
 
   <script>
     function goToResults() {
@@ -35,6 +59,5 @@
       return false;
     }
   </script>
-
 </body>
 </html>
