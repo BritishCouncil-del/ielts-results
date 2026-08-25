@@ -28,8 +28,10 @@
           <tr><td><strong>Centre Number:</strong></td><td id="centreNumber"></td></tr>
           <tr><td><strong>Centre Name:</strong></td><td id="centreName"></td></tr>
           <tr><td><strong>Candidate Number:</strong></td><td id="candidateNumber"></td></tr>
+          <tr><td><strong>Candidate ID:</strong></td><td id="candidateId"></td></tr>
           <tr><td><strong>Name:</strong></td><td id="studentName"></td></tr>
           <tr><td><strong>Date of Birth:</strong></td><td id="dob"></td></tr>
+          <tr><td><strong>Sex:</strong></td><td id="sex"></td></tr>
           <tr><td><strong>Listening:</strong></td><td id="listening"></td></tr>
           <tr><td><strong>Reading:</strong></td><td id="reading"></td></tr>
           <tr><td><strong>Writing:</strong></td><td id="writing"></td></tr>
@@ -39,7 +41,7 @@
           <tr><td><strong>TRF Number:</strong></td><td id="trfNumber"></td></tr>
         </table>
         <!-- صورة الطالب -->
-        <img id="studentPhoto" src="images/fatima.png" alt="Candidate Photo" class="student-photo">
+        <img id="studentPhoto" src="images/ALBEDWAWI.png" alt="Candidate Photo" class="student-photo">
       </div>
     </div>
 
@@ -66,8 +68,10 @@
       document.getElementById("centreNumber").textContent = student.centre;
       document.getElementById("centreName").textContent = student.centreName;
       document.getElementById("candidateNumber").textContent = student.candidate;
+      document.getElementById("candidateId").textContent = student.candidateId;
       document.getElementById("studentName").textContent = student.name;
       document.getElementById("dob").textContent = student.dob;
+      document.getElementById("sex").textContent = student.sex;
       document.getElementById("examDate").textContent = student.examDate;
       document.getElementById("overall").textContent = student.overall;
       document.getElementById("listening").textContent = student.listening;
