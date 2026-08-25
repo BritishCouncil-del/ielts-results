@@ -38,8 +38,8 @@ body.results {
   width: 200px;
   background: #b30000;
   color: #fff;
-  position: absolute;
-  top: 160px; /* نزل العمود تحت البار */
+  position: absolute; /* يقف عند القوائم فقط */
+  top: 120px;
   left: 0;
   border-radius: 0 0 8px 0;
 }
