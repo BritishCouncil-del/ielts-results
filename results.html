@@ -16,7 +16,7 @@
   <!-- البار المتحرك -->
   <div class="marquee">
     <marquee behavior="scroll" direction="left" scrollamount="6">
-      جميع أنواع اختبار الآيلتس (Academic - General - UKVI - Life Skills)
+      All IELTS Test Types (Academic - General - UKVI - Life Skills)
     </marquee>
   </div>
 
@@ -69,31 +69,5 @@
   </footer>
 
   <script src="students.js"></script>
-  <script>
-    const serial = localStorage.getItem('serial');
-    const candidate = localStorage.getItem('candidate');
-    const student = students[serial];
-
-    if (student && student.candidate === candidate) {
-      document.getElementById("centreNumber").textContent = student.centre;
-      document.getElementById("centreName").textContent = student.centreName;
-      document.getElementById("candidateNumber").textContent = student.candidate;
-      document.getElementById("candidateId").textContent = student.candidateId;
-      document.getElementById("studentName").textContent = student.name;
-      document.getElementById("dob").textContent = student.dob;
-      document.getElementById("sex").textContent = student.sex;
-      document.getElementById("examDate").textContent = student.examDate;
-      document.getElementById("overall").textContent = student.overall;
-      document.getElementById("listening").textContent = student.listening;
-      document.getElementById("reading").textContent = student.reading;
-      document.getElementById("writing").textContent = student.writing;
-      document.getElementById("speaking").textContent = student.speaking;
-      document.getElementById("trfNumber").textContent = student.trfNumber;
-      document.getElementById("studentPhoto").src = "images/" + student.image;
-    } else {
-      document.getElementById("result").innerHTML =
-        "<p style='color:red;font-weight:bold;'>❌ No results found. Please check your Serial Number and Candidate Number.</p>";
-    }
-  </script>
 </body>
 </html>
