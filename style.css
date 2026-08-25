@@ -33,4 +33,55 @@ body {
   font-size: 18px;
 }
 
-/*
+/* نموذج البحث */
+.form-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  width: 350px;
+  margin: 40px auto;
+  text-align: center;
+}
+.form-box input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #b30000;
+  border-radius: 8px;
+}
+.ielts-title {
+  font-size: 32px;
+  color: #b30000;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* زرار */
+.btn-animate {
+  background: #b30000;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-animate:hover {
+  background: #800000;
+  transform: scale(1.1);
+}
+
+/* مربع النتائج */
+.result-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.result-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
