@@ -1,5 +1,5 @@
 var students = {
-  "2GAE509426ALBM113A": {
+  "26AE509426ALBM113A": {
     candidate: "509426",
     candidateId: "784-2008-9639313-7",
     name: "MOHAMMAD ALI KHAMIS HAMAD ALBEDWAWI",
@@ -13,7 +13,7 @@ var students = {
     speaking: "6.0",
     centre: "AE113",
     centreName: "BRITISH COUNCIL",
-    trfNumber: "2GAE509426ALBM113A",
+    trfNumber: "26AE509426ALBM113A",
     image: "albedwawawi.png"
   }
 };
