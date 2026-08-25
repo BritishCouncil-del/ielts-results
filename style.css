@@ -42,11 +42,9 @@ body.results {
   font-size: 16px;
 }
 
-/* القوائم الجانبية */
-.sidebar {
-  width: 200px;
-  background: #b30000;
-  color: #fff;
-  position: absolute; /* يقف عند القوائم فقط */
-  top: 120px;
-  left
+/* مربع البحث */
+.form-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0
