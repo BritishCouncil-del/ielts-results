@@ -7,21 +7,18 @@
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- الهيدر الأحمر -->
   <div class="header">
-    <div>
-      <h1>IELTS™</h1>
-      <h2>English for International Opportunity</h2>
-    </div>
+    <h1 style="color:white;">IELTS™</h1>
     <img src="images/ielts-logos.png" alt="IELTS Logos">
   </div>
 
-  <!-- Blue bar -->
+  <!-- البار -->
   <div class="marquee">
     <span>IELTS Academic | IELTS General Training | IELTS UKVI | IELTS Life Skills</span>
   </div>
 
-  <!-- Sidebar -->
+  <!-- القوائم الجانبية -->
   <aside>
     <a href="index.html">🏠 Home</a>
     <a href="#">📄 TRF Query</a>
@@ -32,11 +29,8 @@
     <a href="https://ielts.org">🌐 IELTS.org</a>
   </aside>
 
-  <!-- Content -->
+  <!-- بيانات الطالب -->
   <div class="content">
-    <!-- رسالة الترحيب -->
-    <div class="welcome" id="welcomeMessage"></div>
-
     <div class="result-card" id="result">
       <table>
         <tr><td><strong>Centre Number:</strong></td><td id="centreNumber"></td></tr>
@@ -55,13 +49,13 @@
       <img id="studentPhoto" src="" alt="Candidate Photo">
     </div>
 
-    <!-- Banner bottom -->
+    <!-- شعار الثلاث شعارات -->
     <div class="banner-bottom">
       <img src="images/ielts-banner.png" alt="IELTS Banner">
     </div>
   </div>
 
-  <!-- Footer -->
+  <!-- الفوتر -->
   <footer>
     © 2026 IELTS Results Portal | All Rights Reserved | 
     <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
@@ -74,11 +68,6 @@
     const student = students[serial];
 
     if (student && student.candidate === candidate) {
-      // رسالة الترحيب
-      document.getElementById("welcomeMessage").innerHTML =
-        `<h2 style="color:#0056b3;">🎉 مرحبًا ${student.name}، هذه نتائجك الرسمية</h2>`;
-
-      // عرض البيانات
       document.getElementById("centreNumber").textContent = student.centre;
       document.getElementById("centreName").textContent = student.centreName;
       document.getElementById("candidateNumber").textContent = student.candidate;
