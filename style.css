@@ -1,8 +1,125 @@
+/* خلفية عامة */
+body.welcome {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: url("images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+}
+
+body.results {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: url("images/background-results.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+}
+
+/* الهيدر الأحمر */
+.header {
+  background: #b30000;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.header h1 {
+  margin: 0 0 0 15px;
+  font-size: 22px;
+  font-weight: bold;
+}
+.ielts-logo {
+  height: 40px;
+}
+
+/* البار المتحرك */
+.marquee {
+  background: #0056b3;
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* مربع البحث في صفحة الترحيب */
+.form-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  width: 350px;
+  margin: 60px auto;
+  text-align: center;
+}
+.form-box input {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #b30000;
+  border-radius: 8px;
+  font-size: 14px;
+}
+.ielts-title {
+  font-size: 36px;
+  color: #b30000;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.btn-animate {
+  background: #b30000;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-animate:hover {
+  background: #800000;
+  transform: scale(1.1);
+}
+
+/* صفحة النتائج */
+.sidebar {
+  width: 200px;
+  background: #b30000;
+  color: #fff;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  height: 100%;
+  padding-top: 20px;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar li {
+  margin: 15px 0;
+}
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 15px;
+  display: block;
+}
+.sidebar a:hover {
+  background: #800000;
+  border-radius: 6px;
+}
+
+/* مربع النتائج */
 .result-card {
   background: #fff;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  margin-left: 220px; /* علشان يبعد عن القائمة الجانبية */
+  margin-top: 40px;
 }
 .result-layout {
   display: flex;
@@ -18,12 +135,7 @@
   font-size: 16px;
 }
 .result-card tr:nth-child(even) {
-  background: #444; /* رمادي غامق */
-  color: #fff;
-}
-.result-card tr:nth-child(odd) {
-  background: #fff; /* أبيض */
-  color: #000;
+  background: #f2f2f2;
 }
 .score-row {
   background: #b30000;
@@ -36,9 +148,24 @@
   border: 2px solid #b30000;
   margin-left: 20px;
 }
+
+/* صورة الشعارات */
 .banner-img {
   opacity: 0.6;
   display: block;
   margin: 20px auto;
   max-width: 100%;
+}
+
+/* الفوتر */
+footer {
+  background: #b30000;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+footer a {
+  color: #fff;
+  text-decoration: underline;
 }
