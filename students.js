@@ -14,6 +14,6 @@ var students = {
     centre: "AE113",
     centreName: "BRITISH COUNCIL",
     trfNumber: "2GAE509426ALBM113A",
-    image: "ALBEDWAWI.png"
+    image: "albedwawi.png"   // ← نفس اسم الصورة بالضبط
   }
 };
