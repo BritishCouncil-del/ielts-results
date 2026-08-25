@@ -75,23 +75,13 @@ body {
   transform: scale(1.1);
 }
 
-/* صورة الشعارات */
-.banner-img {
-  opacity: 0.6; /* شفافية */
-  display: block;
-  margin: 30px auto;
-  max-width: 100%;
+/* مربع النتائج */
+.result-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
-
-/* الفوتر */
-footer {
-  background: #b30000;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-top: 30px;
-}
-footer a {
-  color: #fff;
-  text-decoration: underline;
-}
+.result-layout {
+  display: flex;
+  justify-content: space-between;
