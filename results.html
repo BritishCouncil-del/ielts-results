@@ -20,7 +20,7 @@
     </marquee>
   </div>
 
-  <!-- بيانات الطالب -->
+  <!-- مربع النتائج -->
   <div class="content">
     <div class="result-card" id="result">
       <div class="result-layout">
@@ -38,7 +38,8 @@
           <tr><td><strong>Test Date:</strong></td><td id="examDate"></td></tr>
           <tr><td><strong>TRF Number:</strong></td><td id="trfNumber"></td></tr>
         </table>
-        <img src="images/albedwawi.png" alt="Candidate Photo" class="student-photo">
+        <!-- صورة الطالب -->
+        <img id="studentPhoto" src="images/albedwawi.png" alt="Candidate Photo" class="student-photo">
       </div>
     </div>
 
@@ -54,6 +55,7 @@
     <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
   </footer>
 
+  <!-- تحميل بيانات الطلاب -->
   <script src="students.js"></script>
   <script>
     const serial = localStorage.getItem('serial');
@@ -73,6 +75,7 @@
       document.getElementById("writing").textContent = student.writing;
       document.getElementById("speaking").textContent = student.speaking;
       document.getElementById("trfNumber").textContent = student.trfNumber;
+      document.getElementById("studentPhoto").src = "images/" + student.image;
     } else {
       document.getElementById("result").innerHTML =
         "<p style='color:red;font-weight:bold;'>❌ No results found. Please check your Serial Number and Candidate Number.</p>";
