@@ -2,42 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>IELTS TRF Portal</title>
+  <title>IELTS Portal</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="welcome">
 
-  <!-- الهيدر -->
+  <!-- الهيدر الأحمر -->
   <div class="header">
-    <h1>IELTS – English for International Opportunity</h1>
     <img src="images/ielts-logos.png" alt="IELTS Logo" class="ielts-logo">
+    <h1>IELTS Portal</h1>
   </div>
 
   <!-- البار المتحرك -->
   <div class="marquee">
     <marquee behavior="scroll" direction="left" scrollamount="6">
-      IELTS Academic | IELTS General Training | IELTS UKVI | IELTS Life Skills
+      جميع أنواع اختبار الآيلتس (Academic - General - UKVI - Life Skills)
     </marquee>
   </div>
 
   <!-- مربع البحث -->
-  <div class="content">
-    <div class="form-box">
-      <h1 class="ielts-title">IELTS</h1>
-      <form onsubmit="return goToResults()">
-        <input type="text" id="serial" placeholder="TRF Serial Number" required>
-        <input type="text" id="candidate" placeholder="Candidate Number" required>
-        <button type="submit" class="btn-animate">View Result</button>
-      </form>
-    </div>
-
-    <!-- صورة الشعارات الثلاثة -->
-    <div class="banner-bottom">
-      <img src="images/ielts-banner.png" alt="IELTS Banner" class="banner-img">
-    </div>
+  <div class="form-box">
+    <h1 class="ielts-title">IELTS</h1>
+    <form onsubmit="return goToResults()">
+      <input type="text" id="serial" placeholder="Serial Number" required>
+      <input type="text" id="candidate" placeholder="Candidate Number" required>
+      <button type="submit" class="btn-animate">عرض النتيجة</button>
+    </form>
   </div>
 
-  <!-- الفوتر -->
+  <!-- صورة الشعارات الثلاثة -->
+  <div class="banner-bottom">
+    <img src="images/ielts-banner.png" alt="IELTS Banner" class="banner-img">
+  </div>
+
   <footer>
     © 2026 IELTS Results Portal | All Rights Reserved | 
     <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
