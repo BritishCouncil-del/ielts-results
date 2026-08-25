@@ -1,16 +1,8 @@
-/* خلفية عامة */
-body.welcome {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: url("images/background.jpg") no-repeat center center fixed;
-  background-size: cover;
-  color: #333;
-}
-
+/* خلفية صفحة النتائج */
 body.results {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
-  background: url("images/background-results.jpg") no-repeat center center fixed;
+  background: url("images/results-background.jpg") no-repeat center center fixed;
   background-size: cover;
   color: #333;
 }
@@ -22,10 +14,9 @@ body.results {
   padding: 15px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
 }
 .header h1 {
-  margin: 0 0 0 15px;
+  margin-left: 15px;
   font-size: 22px;
   font-weight: bold;
 }
@@ -42,63 +33,23 @@ body.results {
   font-size: 16px;
 }
 
-/* مربع البحث في صفحة الترحيب */
-.form-box {
-  background: #fff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  width: 350px;
-  margin: 60px auto;
-  text-align: center;
-}
-.form-box input {
-  width: 90%;
-  padding: 12px;
-  margin: 10px 0;
-  border: 2px solid #b30000;
-  border-radius: 8px;
-  font-size: 14px;
-}
-.ielts-title {
-  font-size: 36px;
-  color: #b30000;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-.btn-animate {
-  background: #b30000;
-  color: #fff;
-  border: none;
-  padding: 12px 25px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.btn-animate:hover {
-  background: #800000;
-  transform: scale(1.1);
-}
-
-/* صفحة النتائج */
+/* القوائم الجانبية */
 .sidebar {
   width: 200px;
   background: #b30000;
   color: #fff;
-  position: fixed;
-  top: 100px;
+  position: absolute; /* يقف عند القوائم فقط */
+  top: 120px;
   left: 0;
-  height: 100%;
-  padding-top: 20px;
+  border-radius: 0 0 8px 0;
 }
 .sidebar ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 .sidebar li {
-  margin: 15px 0;
+  margin: 10px 0;
 }
 .sidebar a {
   color: #fff;
@@ -118,7 +69,7 @@ body.results {
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  margin-left: 220px; /* علشان يبعد عن القائمة الجانبية */
+  margin-left: 220px;
   margin-top: 40px;
 }
 .result-layout {
@@ -138,9 +89,10 @@ body.results {
   background: #f2f2f2;
 }
 .score-row {
-  background: #b30000;
+  background: #b30000; /* أحمر */
   color: #fff;
   font-weight: bold;
+  font-size: 18px;
 }
 .student-photo {
   width: 140px;
