@@ -33,22 +33,4 @@ body {
   font-size: 18px;
 }
 
-/* القوائم الجانبية */
-aside {
-  width: 200px;
-  background: #b30000;
-  padding: 20px;
-  float: left;
-  height: 100%;
-}
-aside a {
-  display: block;
-  padding: 10px;
-  margin: 5px 0;
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  animation: pulse 3s infinite;
-}
-aside
+/*
