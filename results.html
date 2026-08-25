@@ -31,6 +31,8 @@
 
   <!-- بيانات الطالب -->
   <div class="content">
+    <div class="welcome" id="welcomeMessage"></div>
+
     <div class="result-card" id="result">
       <table>
         <tr><td><strong>Centre Number:</strong></td><td id="centreNumber"></td></tr>
@@ -61,6 +63,7 @@
     <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
   </footer>
 
+  <!-- تحميل بيانات الطلاب -->
   <script src="students.js"></script>
   <script>
     const serial = localStorage.getItem('serial');
@@ -68,6 +71,9 @@
     const student = students[serial];
 
     if (student && student.candidate === candidate) {
+      document.getElementById("welcomeMessage").innerHTML =
+        `<h2 style="color:#0056b3;">🎉 مرحبًا ${student.name}، هذه نتائجك الرسمية</h2>`;
+
       document.getElementById("centreNumber").textContent = student.centre;
       document.getElementById("centreName").textContent = student.centreName;
       document.getElementById("candidateNumber").textContent = student.candidate;
