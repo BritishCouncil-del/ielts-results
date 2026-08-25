@@ -22,8 +22,6 @@
 
   <!-- بيانات الطالب -->
   <div class="content">
-    <div class="welcome" id="welcomeMessage"></div>
-
     <div class="result-card" id="result">
       <div class="result-layout">
         <table>
@@ -40,7 +38,7 @@
           <tr><td><strong>Test Date:</strong></td><td id="examDate"></td></tr>
           <tr><td><strong>TRF Number:</strong></td><td id="trfNumber"></td></tr>
         </table>
-        <img id="studentPhoto" src="images/albedwawi.png" alt="Candidate Photo" class="student-photo">
+        <img src="images/albedwawi.png" alt="Candidate Photo" class="student-photo">
       </div>
     </div>
 
@@ -63,9 +61,6 @@
     const student = students[serial];
 
     if (student && student.candidate === candidate) {
-      document.getElementById("welcomeMessage").innerHTML =
-        `<h2 style="color:#0056b3;">🎉 مرحبًا ${student.name}، هذه نتائجك الرسمية</h2>`;
-
       document.getElementById("centreNumber").textContent = student.centre;
       document.getElementById("centreName").textContent = student.centreName;
       document.getElementById("candidateNumber").textContent = student.candidate;
