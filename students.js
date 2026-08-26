@@ -1,6 +1,6 @@
 const students = {
   // 👤 الطالب القديم
-  "2GAE509426ALBM113A": {
+  "26AE509426ALBM113A": {
     candidate: "509426",
     candidateId: "C001",
     name: "MOHAMMAD ALI KHAMIS HAMAD ALBEDWAWI",
