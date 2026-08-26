@@ -1,5 +1,5 @@
 const students = {
-  // 👤 الطالب القديم (السيريال يبدأ بـ 26)
+  // الطالب القديم (السيريال يبدأ بـ 26)
   "26AE509426ALBM113A": {
     candidate: "509426",
     candidateId: "C001",
@@ -18,7 +18,7 @@ const students = {
     image: "albedwawi.png"
   },
 
-  // 👤 الطالب الجديد
+  // الطالب الجديد
   "26EG009471ABDA001A": {
     candidate: "009471",
     candidateId: "A04468374",
