@@ -1,5 +1,5 @@
 const students = {
-  // 👤 طالب قديم (مثال موجود عندك)
+  // 👤 الطالب القديم
   "2GAE509426ALBM113A": {
     candidate: "509426",
     candidateId: "C001",
@@ -18,7 +18,7 @@ const students = {
     image: "albedwawi.png"
   },
 
-  // 👤 الطالب الجديد من تقرير الـ IELTS
+  // 👤 الطالب الجديد
   "26EG009471ABDA001A": {
     candidate: "009471",              // رقم المرشح
     candidateId: "A04468374",         // رقم الهوية
@@ -34,6 +34,6 @@ const students = {
     trfNumber: "26EG009471ABDA001A",  // رقم السيريال/TRF
     centre: "EG001",
     centreName: "British Council",
-    image: "abdelaaty.png"            // ضع صورة الطالب في مجلد images بنفس الاسم
+    image: "abdelaaty.png"            // صورة الطالب موجودة في مجلد images
   }
 };
