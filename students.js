@@ -20,8 +20,8 @@ const students = {
 
   // 👤 الطالب الجديد
   "26EG009471ABDA001A": {
-    candidate: "009471",              // رقم المرشح
-    candidateId: "A04468374",         // رقم الهوية
+    candidate: "009471",
+    candidateId: "A04468374",
     name: "AHMED ABDELAATY ABDELHALIM",
     dob: "1995-01-01",
     sex: "M",
@@ -31,9 +31,9 @@ const students = {
     reading: "7.0",
     writing: "6.0",
     speaking: "6.5",
-    trfNumber: "26EG009471ABDA001A",  // رقم السيريال/TRF
+    trfNumber: "26EG009471ABDA001A",
     centre: "EG001",
     centreName: "British Council",
-    image: "abdelaaty.png"            // صورة الطالب موجودة في مجلد images
+    image: "abdelaaty.png"
   }
 };
