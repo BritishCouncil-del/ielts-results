@@ -1,5 +1,5 @@
 const students = {
-  // 👤 الطالب القديم
+  // 👤 الطالب القديم (السيريال يبدأ بـ 26)
   "26AE509426ALBM113A": {
     candidate: "509426",
     candidateId: "C001",
@@ -12,7 +12,7 @@ const students = {
     reading: "5.5",
     writing: "5.5",
     speaking: "6.0",
-    trfNumber: "2GAE509426ALBM113A",
+    trfNumber: "26AE509426ALBM113A",
     centre: "AE113",
     centreName: "British Council",
     image: "albedwawi.png"
