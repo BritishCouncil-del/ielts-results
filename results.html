@@ -1,3 +1,4 @@
+نتائج جديده 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,18 +7,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="results">
-
   <div class="header">
-    <img src="images/ielts-logos.png" alt="IELTS Logos" class="ielts-logo">
+    <img src="images/ielts-logos.png" alt="IELTS Logo" class="ielts-logo">
     <h1>IELTS Results</h1>
   </div>
-
   <div class="marquee">
     <marquee behavior="scroll" direction="left" scrollamount="6">
       All IELTS Test Types (Academic - General - UKVI - Life Skills)
     </marquee>
   </div>
-
   <aside class="sidebar">
     <ul>
       <li><a href="index.html">🏠 Home</a></li>
@@ -29,7 +27,6 @@
       <li><a href="https://ielts.org" target="_blank">IELTS.org</a></li>
     </ul>
   </aside>
-
   <div class="content">
     <div class="result-card" id="result">
       <div class="result-layout">
@@ -38,8 +35,6 @@
           <tr><td><strong>Centre Name:</strong></td><td id="centreName"></td></tr>
           <tr><td><strong>Candidate Number:</strong></td><td id="candidateNumber"></td></tr>
           <tr><td><strong>Candidate ID:</strong></td><td id="candidateId"></td></tr>
-          <tr><td><strong>Family Name:</strong></td><td id="familyName"></td></tr>
-          <tr><td><strong>First Name:</strong></td><td id="firstName"></td></tr>
           <tr><td><strong>Name:</strong></td><td id="studentName"></td></tr>
           <tr><td><strong>Date of Birth:</strong></td><td id="dob"></td></tr>
           <tr><td><strong>Sex:</strong></td><td id="sex"></td></tr>
@@ -51,31 +46,24 @@
           <tr><td><strong>Test Date:</strong></td><td id="examDate"></td></tr>
           <tr><td><strong>TRF Number:</strong></td><td id="trfNumber"></td></tr>
         </table>
-
-        <!-- صورة الطالب -->
-        <img id="studentPhoto" src="images/default.png" alt="Candidate Photo" class="student-photo">
+        <img id="studentPhoto" src="images/albedwawi.png" alt="Candidate Photo" class="student-photo">
       </div>
     </div>
   </div>
-
   <footer>
     © 2026 IELTS Results Portal | All Rights Reserved | 
     <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
   </footer>
-
   <script src="students.js"></script>
   <script>
-    const serial = localStorage.getItem('serial')?.trim();
-    const candidate = localStorage.getItem('candidate')?.trim();
+    const serial = localStorage.getItem('serial');
+    const candidate = localStorage.getItem('candidate');
     const student = students[serial];
-
-    if (student && (student.candidate.trim() === candidate || candidate === "")) {
+    if (student && student.candidate === candidate) {
       document.getElementById("centreNumber").textContent = student.centre;
       document.getElementById("centreName").textContent = student.centreName;
       document.getElementById("candidateNumber").textContent = student.candidate;
       document.getElementById("candidateId").textContent = student.candidateId;
-      document.getElementById("familyName").textContent = student.familyName;
-      document.getElementById("firstName").textContent = student.firstName;
       document.getElementById("studentName").textContent = student.name;
       document.getElementById("dob").textContent = student.dob;
       document.getElementById("sex").textContent = student.sex;
@@ -89,7 +77,7 @@
       document.getElementById("studentPhoto").src = "images/" + student.image;
     } else {
       document.getElementById("result").innerHTML =
-        "<p style='color:red;font-weight:bold;'>❌ رقم تسلسلي أو رقم مرشح غير صالح. يرجى المحاولة مرة أخرى.</p>";
+        "<p style='color:red;font-weight:bold;'>❌ No results found. Please check your Serial Number and Candidate Number.</p>";
     }
   </script>
 </body>
