@@ -7,20 +7,17 @@
 </head>
 <body>
 
-  <!-- الهيدر الأحمر -->
   <div class="header">
     <img src="images/ielts-logo1.png" class="logo-main" alt="IELTS Logo">
     <h1>IELTS™ English for International Opportunity</h1>
   </div>
 
-  <!-- البار الأزرق -->
   <div class="bar">
     <div class="bar-text">
       🌐 Welcome to the IELTS Test Report Form Portal — 🎓 Academic | 📑 General Training | 🏛 UKVI
     </div>
   </div>
 
-  <!-- العمود الأحمر للقوائم -->
   <div class="sidebar">
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -33,7 +30,6 @@
     </ul>
   </div>
 
-  <!-- النص التوضيحي -->
   <div class="content">
     <div class="info-box">
       <p><strong>Match Found</strong></p>
@@ -44,22 +40,18 @@
       </p>
     </div>
 
-    <!-- عنوان النتائج -->
     <h2 class="results-title">TRF Results Details</h2>
 
-    <!-- مربع النتائج -->
     <div class="result-card">
       <img id="studentPhoto" class="student-photo" alt="Candidate Photo">
       <table class="results-table" id="resultsTable"></table>
     </div>
   </div>
 
-  <!-- صورة البانر -->
   <div class="banner">
     <img src="images/ielts-banner.png" alt="IELTS Banner">
   </div>
 
-  <!-- الفوتر -->
   <footer>
     © 2026 IELTS Results Portal | All Rights Reserved |
     <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
@@ -80,6 +72,8 @@
         <tr><td><strong>Date of Examination:</strong></td><td>${student.examDate}</td></tr>
         <tr class="score-row"><td colspan="2"><strong>Overall Band Score: ${student.overallScore}</strong></td></tr>
       `;
+    } else {
+      document.getElementById("resultsTable").innerHTML = "<tr><td colspan='2'>❌ لا توجد بيانات</td></tr>";
     }
   </script>
 
