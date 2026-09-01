@@ -1,39 +1,71 @@
-<div class="header">
-  <img src="images/ielts-logo1.png" class="logo-main" alt="IELTS Logo">
-  <h1>IELTS™ English for International Opportunity</h1>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IELTS Results</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<div class="bar">
-  <div class="bar-text">
-    🌐 Welcome to the IELTS Test Report Form Portal — 🎓 Academic | 📑 General Training | 🏛 UKVI
+  <!-- الهيدر الأحمر -->
+  <div class="header">
+    <img src="images/ielts-logo1.png" class="logo-main" alt="IELTS Logo">
+    <h1>IELTS™ English for International Opportunity</h1>
   </div>
-</div>
 
-<div class="sidebar">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="#">TRF Query</a></li>
-    <li><a href="#">Download Results</a></li>
-    <li><a href="#">Manage My Ro Users</a></li>
-    <li><a href="#">Update My Profile</a></li>
-    <li><a href="#">FAQs</a></li>
-    <li><a href="https://ielts.org" target="_blank">IELTS.org</a></li>
-  </ul>
-</div>
-
-<div class="content">
-  <div class="result-card">
-    <img id="studentPhoto" class="student-photo" alt="Candidate Photo">
-    <table class="results-table" id="resultsTable"></table>
+  <!-- البار الأزرق المتحرك -->
+  <div class="bar">
+    <div class="bar-text">
+      🌐 Welcome to the IELTS Test Report Form Portal — 🎓 Academic | 📑 General Training | 🏛 UKVI
+    </div>
   </div>
-</div>
 
-<!-- صورة البانر تحت مربع النتائج -->
-<div class="footer-logos">
-  <img src="images/ielts-banner.png" class="footer-img" alt="IELTS Banner">
-</div>
+  <!-- العمود الأحمر للقوائم -->
+  <div class="sidebar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">TRF Query</a></li>
+      <li><a href="#">Download Results</a></li>
+      <li><a href="#">Manage My Ro Users</a></li>
+      <li><a href="#">Update My Profile</a></li>
+      <li><a href="#">FAQs</a></li>
+      <li><a href="https://ielts.org" target="_blank">IELTS.org</a></li>
+    </ul>
+  </div>
 
-<footer>
-  © 2026 IELTS Results Portal | All Rights Reserved |
-  <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
-</footer>
+  <!-- مربع بيانات الطالب -->
+  <div class="content">
+    <div class="result-card">
+      <img id="studentPhoto" class="student-photo" alt="Candidate Photo">
+      <table class="results-table" id="resultsTable"></table>
+    </div>
+  </div>
+
+  <!-- صورة البانر تحت مربع النتائج -->
+  <div class="banner">
+    <img src="images/ielts-banner.png" alt="IELTS Banner">
+  </div>
+
+  <!-- سطر حقوق النشر -->
+  <footer>
+    © 2026 IELTS Results Portal | All Rights Reserved |
+    <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
+  </footer>
+
+  <script>
+    const student = JSON.parse(localStorage.getItem("student"));
+    if(student){
+      document.getElementById("studentPhoto").src = student.photo;
+      const table = document.getElementById("resultsTable");
+      table.innerHTML = `
+        <tr><td><strong>Centre Number:</strong></td><td>${student.centreNumber}</td></tr>
+        <tr><td><strong>Candidate Number:</strong></td><td>${student.candidateNumber}</td></tr>
+        <tr><td><strong>Candidate Name:</strong></td><td>${student.name}</td></tr>
+        <tr><td><strong>TRF Number:</strong></td><td>${student.trfNumber}</td></tr>
+        <tr class="score-row"><td><strong>Overall Band Score:</strong></td><td>${student.overallScore}</td></tr>
+      `;
+    }
+  </script>
+
+</body>
+</html>
