@@ -1,4 +1,52 @@
-/* العلامة المائية المتكررة في مربع البحث */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: url("images/ielts-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+}
+
+/* الهيدر الأحمر */
+.header {
+  background-color: #b30000;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.header img.logo-main {
+  height: 90px;
+  margin-right: 15px;
+  filter: brightness(0) invert(1);
+}
+.header h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* البار الأزرق */
+.bar {
+  background-image: linear-gradient(to right, #004080, #0055aa);
+  color: #fff;
+  padding: 12px;
+  font-weight: bold;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 3px solid #b30000;
+}
+.bar-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollText 18s linear infinite;
+  font-size: 18px;
+}
+@keyframes scrollText {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(-100%); }
+}
+
+/* مربع البحث */
 .welcome-box {
   background: #fff;
   margin: 40px auto;
@@ -10,60 +58,78 @@
   position: relative;
   overflow: hidden;
 }
-.welcome-box::before {
-  content: "IELTS IELTS IELTS IELTS";
-  position: absolute;
-  top: 20%;
-  left: 0;
-  width: 100%;
-  font-size: 18px;
-  color: rgba(179, 0, 0, 0.1);
+.big-title {
+  font-size: 40px;
+  color: #b30000;
+  margin-bottom: 20px;
+}
+.welcome-box input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.welcome-box button {
+  background: #004080;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   font-weight: bold;
-  transform: rotate(-30deg);
-  white-space: nowrap;
-  animation: watermarkMove 6s linear infinite;
+}
+.welcome-box button:hover {
+  background: #003060;
+}
+.error {
+  color: #b30000;
+  margin-top: 10px;
+  font-weight: bold;
 }
 
-/* العلامة المائية المتكررة في مربع النتائج */
-.result-card {
-  background: #fff;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.25);
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  width: 70%;
-  position: relative;
-  overflow: hidden;
-}
-.result-card::before {
-  content: "IELTS IELTS IELTS IELTS IELTS";
+/* العلامة المائية المتكررة داخل مربع البحث */
+.welcome-box::before {
+  content: "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS";
   position: absolute;
-  top: 40%;
+  top: 0;
   left: 0;
-  width: 100%;
-  font-size: 22px;
+  width: 400%;
+  height: 400%;
+  font-size: 14px;
   color: rgba(179, 0, 0, 0.08);
   font-weight: bold;
   transform: rotate(-30deg);
   white-space: nowrap;
-  animation: watermarkMove 8s linear infinite;
+  animation: watermarkScroll 15s linear infinite;
 }
 
 /* حركة العلامة المائية */
-@keyframes watermarkMove {
-  0%   { transform: rotate(-30deg) translateX(-30px); }
-  50%  { transform: rotate(-30deg) translateX(30px); }
-  100% { transform: rotate(-30deg) translateX(-30px); }
+@keyframes watermarkScroll {
+  0%   { transform: rotate(-30deg) translateX(-100px); }
+  50%  { transform: rotate(-30deg) translateX(100px); }
+  100% { transform: rotate(-30deg) translateX(-100px); }
 }
 
-/* صف الاسكور النهائي */
-.score-row {
+/* صورة الشعارات الثلاثة */
+.logos {
+  text-align: center;
+  margin: 20px 0;
+}
+.logos img {
+  max-width: 250px;
+  opacity: 0.7;
+}
+
+/* الفوتر */
+footer {
   background: #b30000;
   color: #fff;
-  font-weight: bold;
   text-align: center;
-  font-size: 16px;
+  padding: 15px;
+  margin-top: 10px;
+}
+footer a {
+  color: #fff;
+  text-decoration: underline;
 }
