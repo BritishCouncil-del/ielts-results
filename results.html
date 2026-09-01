@@ -7,18 +7,19 @@
 </head>
 <body class="results">
 
-  <div class="header">
-    <img src="images/ielts-logos.png" alt="IELTS Logo" class="ielts-logo">
-    <h1>IELTS Results</h1>
+  <!-- الهيدر الأحمر -->
+  <div class="header" style="background-color:#b30000; padding:15px; text-align:center;">
+    <img src="images/ielts-logo.png" alt="IELTS Logo" style="height:60px;">
+    <h1 style="color:white;">IELTS Results</h1>
   </div>
 
-  <div class="marquee">
-    <marquee behavior="scroll" direction="left" scrollamount="6">
-      All IELTS Test Types (Academic - General - UKVI - Life Skills)
-    </marquee>
+  <!-- البار الأزرق -->
+  <div class="bar" style="background-color:#004080; color:white; padding:10px; text-align:center;">
+    IELTS™ English for International Opportunity
   </div>
 
-  <aside class="sidebar">
+  <!-- القوائم الجانبية -->
+  <aside class="sidebar" style="position:fixed; top:120px; left:0; width:200px; background:#f5f5f5; padding:10px;">
     <ul>
       <li><a href="index.html">🏠 Home</a></li>
       <li><a href="#">TRF Query</a></li>
@@ -30,8 +31,9 @@
     </ul>
   </aside>
 
-  <div class="content">
-    <div class="result-card" id="result">
+  <!-- بيانات الطالب -->
+  <div class="content" style="margin-left:220px; padding:20px;">
+    <div class="result-card" id="result" style="background:#fff; padding:20px; border-radius:8px;">
       <div class="result-layout">
         <table>
           <tr><td><strong>Centre Number:</strong></td><td id="centreNumber"></td></tr>
@@ -51,12 +53,18 @@
           <tr><td><strong>Test Date:</strong></td><td id="examDate"></td></tr>
           <tr><td><strong>TRF Number:</strong></td><td id="trfNumber"></td></tr>
         </table>
-        <img id="studentPhoto" src="images/default.png" alt="Candidate Photo" class="student-photo">
+
+        <!-- صورة الطالب -->
+        <img id="studentPhoto" src="images/default.png" alt="Candidate Photo" class="student-photo" style="margin-top:20px; max-width:150px;">
+
+        <!-- صورة الشعارات الثلاثة -->
+        <img src="images/three-logos.png" alt="IELTS Logos" style="display:block; margin:20px auto; max-width:300px; opacity:0.8;">
       </div>
     </div>
   </div>
 
-  <footer>
+  <!-- الفوتر -->
+  <footer style="text-align:center; margin-top:40px; color:#333;">
     © 2026 IELTS Results Portal | All Rights Reserved | 
     <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
   </footer>
