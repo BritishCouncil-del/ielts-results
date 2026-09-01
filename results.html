@@ -8,18 +8,17 @@
 <body class="results">
 
   <!-- الهيدر الأحمر -->
-  <div class="header" style="background-color:#b30000; padding:15px; text-align:center;">
-    <img src="images/ielts-logo.png" alt="IELTS Logo" style="height:60px;">
-    <h1 style="color:white;">IELTS Results</h1>
+  <div class="header">
+    <h1>IELTS</h1>
   </div>
 
   <!-- البار الأزرق -->
-  <div class="bar" style="background-color:#004080; color:white; padding:10px; text-align:center;">
-    IELTS™ English for International Opportunity
+  <div class="bar">
+    All IELTS Test Types (Academic - General - UKVI - Life Skills)
   </div>
 
   <!-- القوائم الجانبية -->
-  <aside class="sidebar" style="position:fixed; top:120px; left:0; width:200px; background:#f5f5f5; padding:10px;">
+  <aside class="sidebar">
     <ul>
       <li><a href="index.html">🏠 Home</a></li>
       <li><a href="#">TRF Query</a></li>
@@ -32,19 +31,20 @@
   </aside>
 
   <!-- بيانات الطالب -->
-  <div class="content" style="margin-left:220px; padding:20px;">
-    <div class="result-card" id="result" style="background:#fff; padding:20px; border-radius:8px;">
+  <div class="content">
+    <div class="result-card" id="result">
       <div class="result-layout">
+        <!-- صورة الطالب -->
+        <img id="studentPhoto" src="images/default.png" alt="Candidate Photo" class="student-photo">
+
         <table>
           <tr><td><strong>Centre Number:</strong></td><td id="centreNumber"></td></tr>
           <tr><td><strong>Centre Name:</strong></td><td id="centreName"></td></tr>
           <tr><td><strong>Candidate Number:</strong></td><td id="candidateNumber"></td></tr>
           <tr><td><strong>Candidate ID:</strong></td><td id="candidateId"></td></tr>
-          <tr><td><strong>Family Name:</strong></td><td id="familyName"></td></tr>
-          <tr><td><strong>First Name:</strong></td><td id="firstName"></td></tr>
           <tr><td><strong>Name:</strong></td><td id="studentName"></td></tr>
           <tr><td><strong>Date of Birth:</strong></td><td id="dob"></td></tr>
-          <tr><td><strong>Sex:</strong></td><td id="sex"></td></tr>
+          <tr><td><strong>Gender:</strong></td><td id="sex"></td></tr>
           <tr><td><strong>Listening:</strong></td><td id="listening"></td></tr>
           <tr><td><strong>Reading:</strong></td><td id="reading"></td></tr>
           <tr><td><strong>Writing:</strong></td><td id="writing"></td></tr>
@@ -54,17 +54,14 @@
           <tr><td><strong>TRF Number:</strong></td><td id="trfNumber"></td></tr>
         </table>
 
-        <!-- صورة الطالب -->
-        <img id="studentPhoto" src="images/default.png" alt="Candidate Photo" class="student-photo" style="margin-top:20px; max-width:150px;">
-
         <!-- صورة الشعارات الثلاثة -->
-        <img src="images/three-logos.png" alt="IELTS Logos" style="display:block; margin:20px auto; max-width:300px; opacity:0.8;">
+        <img src="images/three-logos.png" alt="IELTS Logos" class="logos-transparent">
       </div>
     </div>
   </div>
 
   <!-- الفوتر -->
-  <footer style="text-align:center; margin-top:40px; color:#333;">
+  <footer>
     © 2026 IELTS Results Portal | All Rights Reserved | 
     <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
   </footer>
@@ -80,8 +77,6 @@
       document.getElementById("centreName").textContent = student.centreName;
       document.getElementById("candidateNumber").textContent = student.candidate;
       document.getElementById("candidateId").textContent = student.candidateId;
-      document.getElementById("familyName").textContent = student.familyName;
-      document.getElementById("firstName").textContent = student.firstName;
       document.getElementById("studentName").textContent = student.name;
       document.getElementById("dob").textContent = student.dob;
       document.getElementById("sex").textContent = student.sex;
@@ -95,7 +90,7 @@
       document.getElementById("studentPhoto").src = "images/" + student.image;
     } else {
       document.getElementById("result").innerHTML =
-        "<p style='color:red;font-weight:bold;'>❌ رقم تسلسلي أو رقم مرشح غير صالح. يرجى المحاولة مرة أخرى.</p>";
+        "<p style='color:red;font-weight:bold;'>❌ Invalid Serial or Candidate Number. Please try again.</p>";
     }
   </script>
 </body>
