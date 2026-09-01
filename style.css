@@ -25,7 +25,7 @@ body {
   font-weight: bold;
 }
 
-/* البار الأزرق */
+/* البار الأزرق المتحرك */
 .bar {
   background-image: linear-gradient(to right, #004080, #0055aa);
   color: #fff;
@@ -46,7 +46,32 @@ body {
   to   { transform: translateX(-100%); }
 }
 
-/* مربع البحث */
+/* القوائم الجانبية */
+.sidebar {
+  width: 200px;
+  float: left;
+  background: #b30000;
+  padding: 15px;
+  display: inline-block; /* يخلي العمود ينتهي عند آخر عنصر */
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar ul li {
+  margin: 10px 0;
+}
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.sidebar ul li a:hover {
+  text-decoration: underline;
+}
+
+/* مربع الترحيب */
 .welcome-box {
   background: #fff;
   margin: 40px auto;
@@ -79,6 +104,51 @@ body {
 }
 .welcome-box button:hover {
   background: #003060;
+}
+
+/* مربع النتائج */
+.content {
+  margin-left: 220px;
+  padding: 20px;
+}
+.result-card {
+  background: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  width: 70%;
+}
+.student-photo {
+  width: 150px;
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+/* جدول النتائج */
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2); /* تظليل */
+}
+.results-table td {
+  padding: 10px;
+  border: 1px solid #ccc; /* حدود واضحة */
+}
+.results-table tr:nth-child(even) {
+  background: #f9f9f9; /* خلفية بيضاء */
+}
+.results-table tr:nth-child(odd) {
+  background: #e0e0e0; /* خلفية رمادي غامق */
+}
+.score-row {
+  background: #b30000;
+  color: #fff;
+  font-weight: bold;
 }
 
 /* صورة البانر */
