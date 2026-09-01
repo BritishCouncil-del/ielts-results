@@ -120,7 +120,7 @@ body {
   font-weight: bold;
 }
 
-/* العلامة المائية المتحركة */
+/* العلامة المائية المتحركة في مربع البحث */
 .welcome-box::before {
   content: "IELTS";
   position: absolute;
@@ -132,13 +132,6 @@ body {
   font-weight: bold;
   pointer-events: none;
   animation: watermarkBounce 6s ease-in-out infinite;
-}
-
-/* حركة العلامة المائية رايحة جاية */
-@keyframes watermarkBounce {
-  0%   { transform: translate(-50%, -50%) translateX(-40px); }
-  50%  { transform: translate(-50%, -50%) translateX(40px); }
-  100% { transform: translate(-50%, -50%) translateX(-40px); }
 }
 
 /* مربع النتائج */
@@ -156,7 +149,30 @@ body {
   align-items: flex-start;
   gap: 20px;
   width: 70%;
+  position: relative; /* علشان العلامة المائية */
 }
+
+/* العلامة المائية المتحركة في مربع النتائج */
+.result-card::before {
+  content: "IELTS";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  color: rgba(179, 0, 0, 0.08);
+  font-weight: bold;
+  pointer-events: none;
+  animation: watermarkBounce 8s ease-in-out infinite;
+}
+
+/* حركة العلامة المائية */
+@keyframes watermarkBounce {
+  0%   { transform: translate(-50%, -50%) translateX(-40px); }
+  50%  { transform: translate(-50%, -50%) translateX(40px); }
+  100% { transform: translate(-50%, -50%) translateX(-40px); }
+}
+
 .student-photo {
   width: 150px;
   height: auto;
