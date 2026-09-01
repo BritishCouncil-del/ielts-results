@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>IELTS TRF Results</title>
+  <title>IELTS Results</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="results">
+<body>
 
   <!-- الهيدر الأحمر -->
   <div class="header">
@@ -30,80 +30,47 @@
     </ul>
   </aside>
 
-  <!-- بيانات الطلاب -->
+  <!-- بيانات الطالب -->
   <div class="content">
-
-    <!-- الطالب الأول -->
     <div class="result-card">
-      <img src="images/student1.jpg" alt="Candidate Photo" class="student-photo">
-      <table class="results-table">
-        <tr><td><strong>Centre Number:</strong></td><td>AE113</td></tr>
-        <tr><td><strong>Centre Name:</strong></td><td>British Council</td></tr>
-        <tr><td><strong>Candidate Number:</strong></td><td>507413</td></tr>
-        <tr><td><strong>Name:</strong></td><td>Mohamed Ahmed Abdallah Al-Rudamy</td></tr>
-        <tr><td><strong>Date of Birth:</strong></td><td>06/06/2002</td></tr>
-        <tr><td><strong>Gender:</strong></td><td>M</td></tr>
-        <tr><td><strong>Listening:</strong></td><td>6.0</td></tr>
-        <tr><td><strong>Reading:</strong></td><td>5.5</td></tr>
-        <tr><td><strong>Writing:</strong></td><td>5.5</td></tr>
-        <tr><td><strong>Speaking:</strong></td><td>6.5</td></tr>
-        <tr class="score-row"><td><strong>Overall Band Score:</strong></td><td>6.0</td></tr>
-        <tr><td><strong>Test Date:</strong></td><td>11/08/2026</td></tr>
-        <tr><td><strong>TRF Number:</strong></td><td>26AE507413ALSM113A</td></tr>
-      </table>
+      <img id="studentPhoto" class="student-photo" alt="Candidate Photo">
+      <table class="results-table" id="resultsTable"></table>
     </div>
 
-    <!-- الطالب الثاني -->
-    <div class="result-card">
-      <img src="images/student2.jpg" alt="Candidate Photo" class="student-photo">
-      <table class="results-table">
-        <tr><td><strong>Centre Number:</strong></td><td>EG001</td></tr>
-        <tr><td><strong>Centre Name:</strong></td><td>British Council</td></tr>
-        <tr><td><strong>Candidate Number:</strong></td><td>009471</td></tr>
-        <tr><td><strong>Name:</strong></td><td>Ahmed Abdelaaty Abdelhalim</td></tr>
-        <tr><td><strong>Date of Birth:</strong></td><td>01/01/1995</td></tr>
-        <tr><td><strong>Gender:</strong></td><td>M</td></tr>
-        <tr><td><strong>Listening:</strong></td><td>7.5</td></tr>
-        <tr><td><strong>Reading:</strong></td><td>7.0</td></tr>
-        <tr><td><strong>Writing:</strong></td><td>6.0</td></tr>
-        <tr><td><strong>Speaking:</strong></td><td>6.5</td></tr>
-        <tr class="score-row"><td><strong>Overall Band Score:</strong></td><td>7.0</td></tr>
-        <tr><td><strong>Test Date:</strong></td><td>22/08/2026</td></tr>
-        <tr><td><strong>TRF Number:</strong></td><td>26EG009471ABDA001A</td></tr>
-      </table>
-    </div>
-
-    <!-- الطالب الثالث -->
-    <div class="result-card">
-      <img src="images/student3.jpg" alt="Candidate Photo" class="student-photo">
-      <table class="results-table">
-        <tr><td><strong>Centre Number:</strong></td><td>AE113</td></tr>
-        <tr><td><strong>Centre Name:</strong></td><td>British Council</td></tr>
-        <tr><td><strong>Candidate Number:</strong></td><td>509426</td></tr>
-        <tr><td><strong>Name:</strong></td><td>Mohammad Ali Khamis Hamad Albedwawi</td></tr>
-        <tr><td><strong>Date of Birth:</strong></td><td>19/07/2008</td></tr>
-        <tr><td><strong>Gender:</strong></td><td>M</td></tr>
-        <tr><td><strong>Listening:</strong></td><td>5.0</td></tr>
-        <tr><td><strong>Reading:</strong></td><td>5.5</td></tr>
-        <tr><td><strong>Writing:</strong></td><td>5.5</td></tr>
-        <tr><td><strong>Speaking:</strong></td><td>6.0</td></tr>
-        <tr class="score-row"><td><strong>Overall Band Score:</strong></td><td>5.5</td></tr>
-        <tr><td><strong>Test Date:</strong></td><td>22/08/2026</td></tr>
-        <tr><td><strong>TRF Number:</strong></td><td>26AE509426ALBM113A</td></tr>
-      </table>
-    </div>
-
-    <!-- صورة الشعارات الثلاثة -->
+    <!-- الشعارات الثلاثة -->
     <div class="footer-logos">
-      <img src="images/three-logos.png" alt="IELTS Logos" class="footer-img">
+      <img src="images/ielts-logos.png" alt="IELTS Logos" class="footer-img">
     </div>
   </div>
 
   <!-- الفوتر -->
   <footer>
-    © 2026 IELTS Results Portal | All Rights Reserved | 
+    © 2026 IELTS Results Portal | All Rights Reserved |
     <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
   </footer>
+
+  <script>
+    const student = JSON.parse(localStorage.getItem("student"));
+    if(student){
+      document.getElementById("studentPhoto").src = student.photo;
+      const table = document.getElementById("resultsTable");
+      table.innerHTML = `
+        <tr><td><strong>Centre Number:</strong></td><td>${student.centreNumber}</td></tr>
+        <tr><td><strong>Centre Name:</strong></td><td>${student.centreName}</td></tr>
+        <tr><td><strong>Candidate Number:</strong></td><td>${student.candidateNumber}</td></tr>
+        <tr><td><strong>Name:</strong></td><td>${student.name}</td></tr>
+        <tr><td><strong>Date of Birth:</strong></td><td>${student.dob}</td></tr>
+        <tr><td><strong>Gender:</strong></td><td>${student.gender}</td></tr>
+        <tr><td><strong>Listening:</strong></td><td>${student.listening}</td></tr>
+        <tr><td><strong>Reading:</strong></td><td>${student.reading}</td></tr>
+        <tr><td><strong>Writing:</strong></td><td>${student.writing}</td></tr>
+        <tr><td><strong>Speaking:</strong></td><td>${student.speaking}</td></tr>
+        <tr class="score-row"><td><strong>Overall Band Score:</strong></td><td>${student.overall}</td></tr>
+        <tr><td><strong>Test Date:</strong></td><td>${student.testDate}</td></tr>
+        <tr><td><strong>TRF Number:</strong></td><td>${student.trfNumber}</td></tr>
+      `;
+    }
+  </script>
 
 </body>
 </html>
