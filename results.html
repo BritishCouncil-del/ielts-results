@@ -33,7 +33,7 @@
     </ul>
   </div>
 
-  <!-- مربع بيانات الطالب -->
+  <!-- مربع بيانات الطالب والدرجات -->
   <div class="content">
     <div class="result-card">
       <img id="studentPhoto" class="student-photo" alt="Candidate Photo">
@@ -62,6 +62,10 @@
         <tr><td><strong>Candidate Number:</strong></td><td>${student.candidateNumber}</td></tr>
         <tr><td><strong>Candidate Name:</strong></td><td>${student.name}</td></tr>
         <tr><td><strong>TRF Number:</strong></td><td>${student.trfNumber}</td></tr>
+        <tr><td><strong>Listening:</strong></td><td>${student.listening}</td></tr>
+        <tr><td><strong>Reading:</strong></td><td>${student.reading}</td></tr>
+        <tr><td><strong>Writing:</strong></td><td>${student.writing}</td></tr>
+        <tr><td><strong>Speaking:</strong></td><td>${student.speaking}</td></tr>
         <tr class="score-row"><td><strong>Overall Band Score:</strong></td><td>${student.overallScore}</td></tr>
       `;
     }
