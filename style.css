@@ -71,39 +71,29 @@ body {
   text-decoration: underline;
 }
 
-/* مربع الترحيب */
-.welcome-box {
+/* النص التوضيحي فوق الجدول */
+.info-box {
   background: #fff;
-  margin: 40px auto;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  width: 350px;
-  text-align: center;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  width: 70%;
+  font-size: 14px;
+  line-height: 1.6;
 }
-.welcome-box h2 {
-  margin-bottom: 20px;
+.info-box strong {
   color: #b30000;
-  font-size: 32px;
+  font-size: 16px;
 }
-.welcome-box input {
-  width: 90%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-.welcome-box button {
-  background: #004080;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+
+/* عنوان النتائج */
+.results-title {
+  text-align: center;
+  color: #004080;
+  margin: 15px auto;
+  font-size: 20px;
   font-weight: bold;
-}
-.welcome-box button:hover {
-  background: #003060;
 }
 
 /* مربع النتائج */
@@ -133,17 +123,17 @@ body {
 .results-table {
   width: 100%;
   border-collapse: collapse;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2); /* تظليل */
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 .results-table td {
   padding: 10px;
-  border: 1px solid #ccc; /* حدود واضحة */
+  border: 1px solid #ccc;
 }
 .results-table tr:nth-child(even) {
-  background: #f9f9f9; /* خلفية بيضاء */
+  background: #fff; /* أبيض */
 }
 .results-table tr:nth-child(odd) {
-  background: #e0e0e0; /* خلفية رمادي غامق */
+  background: #d9d9d9; /* رمادي غامق */
 }
 .score-row {
   background: #b30000;
