@@ -13,7 +13,7 @@
     <h1>IELTS™ English for International Opportunity</h1>
   </div>
 
-  <!-- البار الأزرق -->
+  <!-- البار الأزرق المتحرك -->
   <div class="bar">
     <div class="bar-text">
       🌐 Welcome to the IELTS Test Report Form Portal — 🎓 Academic | 📑 General Training | 🏛 UKVI
@@ -33,33 +33,20 @@
     </ul>
   </div>
 
-  <!-- النص التوضيحي -->
+  <!-- مربع بيانات الطالب والدرجات -->
   <div class="content">
-    <div class="info-box">
-      <p><strong>Match Found</strong></p>
-      <p>
-        Institutions themselves are responsible for determining the IELTS Band Scores appropriate to their particular courses or requirements.  
-        Institutions should note that IELTS Band Scores reflect English language proficiency alone which is one of the many factors relevant to academic success or failure.  
-        It is standard practice for the scores reported on an IELTS Test Report Form to be accepted by institutions as evidence of a candidate’s English language ability for a two-year period from the date of the test.
-      </p>
-    </div>
-
-    <!-- عنوان النتائج -->
-    <h2 class="results-title">TRF Results Details</h2>
-
-    <!-- مربع النتائج -->
     <div class="result-card">
       <img id="studentPhoto" class="student-photo" alt="Candidate Photo">
       <table class="results-table" id="resultsTable"></table>
     </div>
   </div>
 
-  <!-- صورة البانر -->
+  <!-- صورة البانر تحت مربع النتائج -->
   <div class="banner">
     <img src="images/ielts-banner.png" alt="IELTS Banner">
   </div>
 
-  <!-- الفوتر -->
+  <!-- سطر حقوق النشر -->
   <footer>
     © 2026 IELTS Results Portal | All Rights Reserved |
     <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
@@ -72,19 +59,14 @@
       const table = document.getElementById("resultsTable");
       table.innerHTML = `
         <tr><td><strong>Centre Number:</strong></td><td>${student.centreNumber}</td></tr>
-        <tr><td><strong>Centre Name:</strong></td><td>${student.centreName}</td></tr>
         <tr><td><strong>Candidate Number:</strong></td><td>${student.candidateNumber}</td></tr>
-        <tr><td><strong>Candidate ID:</strong></td><td>${student.candidateId}</td></tr>
         <tr><td><strong>Candidate Name:</strong></td><td>${student.name}</td></tr>
-        <tr><td><strong>Date of Birth:</strong></td><td>${student.dob}</td></tr>
-        <tr><td><strong>Sex (M/F):</strong></td><td>${student.sex}</td></tr>
-        <tr><td><strong>Date of Examination:</strong></td><td>${student.examDate}</td></tr>
         <tr><td><strong>TRF Number:</strong></td><td>${student.trfNumber}</td></tr>
         <tr><td><strong>Listening:</strong></td><td>${student.listening}</td></tr>
         <tr><td><strong>Reading:</strong></td><td>${student.reading}</td></tr>
         <tr><td><strong>Writing:</strong></td><td>${student.writing}</td></tr>
         <tr><td><strong>Speaking:</strong></td><td>${student.speaking}</td></tr>
-        <tr class="score-row"><td colspan="2"><strong>Overall Band Score: ${student.overallScore}</strong></td></tr>
+        <tr class="score-row"><td><strong>Overall Band Score:</strong></td><td>${student.overallScore}</td></tr>
       `;
     }
   </script>
