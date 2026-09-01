@@ -77,7 +77,7 @@ body {
   background: #8c0000;
 }
 
-/* مربع البحث */
+/* مربع البحث في صفحة الترحيب */
 .welcome-box {
   background: #fff;
   margin: 40px auto;
@@ -113,8 +113,13 @@ body {
 .welcome-box button:hover {
   background: #003060;
 }
+.error {
+  color: #b30000;
+  margin-top: 10px;
+  font-weight: bold;
+}
 
-/* النص التوضيحي */
+/* النص التوضيحي فوق النتائج */
 .info-box {
   background: #fff;
   margin: 20px auto;
