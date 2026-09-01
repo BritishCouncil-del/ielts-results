@@ -59,6 +59,6 @@ const students = {
     trfNumber: "26AE509284ALSB113A",
     centre: "AE113",
     centreName: "British Council",
-    image: "baut.png"   // ← اتأكدنا إن الاسم مطابق للصورة عندك
+    image: "baut.png"   // ← مطابق لاسم الملف عندك بالضبط
   }
 };
