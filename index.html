@@ -8,20 +8,17 @@
 </head>
 <body>
 
-  <!-- الهيدر الأحمر -->
   <div class="header">
     <img src="images/ielts-logo1.png" class="logo-main" alt="IELTS Logo">
     <h1>IELTS™ English for International Opportunity</h1>
   </div>
 
-  <!-- البار الأزرق -->
   <div class="bar">
     <div class="bar-text">
       🌐 Welcome to the IELTS Test Report Form Portal — 🎓 Academic | 📑 General Training | 🏛 UKVI
     </div>
   </div>
 
-  <!-- مربع البحث -->
   <div class="welcome-box">
     <h2 class="big-title">IELTS</h2>
     <form onsubmit="return checkStudent();">
@@ -32,12 +29,10 @@
     <div id="error" class="error"></div>
   </div>
 
-  <!-- صورة الشعارات الثلاثة -->
   <div class="logos">
     <img src="images/ielts-logos.png" alt="IELTS Logos">
   </div>
 
-  <!-- الفوتر -->
   <footer>
     © 2026 IELTS Results Portal | All Rights Reserved |
     <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
@@ -47,7 +42,11 @@
     function checkStudent() {
       const candidate = document.getElementById("candidateNumber").value.trim();
       const trf = document.getElementById("trfNumber").value.trim();
-      const student = students.find(s => s.candidateNumber === candidate && s.trfNumber === trf);
+
+      const student = students.find(s => 
+        s.candidateNumber === candidate && s.trfNumber === trf
+      );
+
       if(student){
         localStorage.setItem("student", JSON.stringify(student));
         window.location.href = "results.html";
