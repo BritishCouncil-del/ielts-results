@@ -1,194 +1,37 @@
-/* خلفية صفحة الترحيب */
-body.welcome {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: url("images/background.jpg") no-repeat center center fixed;
-  background-size: cover;
-  color: #333;
-}
-
-/* مربع البحث */
-.form-box {
-  background: rgba(255,255,255,0.95);
-  padding: 35px;
-  border-radius: 15px;
-  box-shadow: 0 6px 25px rgba(0,0,0,0.4);
-  width: 420px;
-  margin: 100px auto;
-  text-align: center;
-  border: 2px solid #b30000;
-}
-.ielts-title {
-  font-size: 55px;
-  color: #b30000;
-  margin-bottom: 25px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
-}
-.form-box input {
-  width: 90%;
-  padding: 14px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 16px;
-}
-.btn-animate {
-  width: 95%;
-  background: linear-gradient(45deg,#b30000,#800000);
-  color: #fff;
-  border: none;
-  padding: 14px;
-  font-weight: bold;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 18px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.btn-animate:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-}
-
-/* مربع الخطأ (Alert أنيق) */
-#errorMsg {
-  background: #ffe5e5;
-  border: 2px solid #b30000;
-  color: #b30000;
-  padding: 10px;
-  border-radius: 8px;
-  margin-top: 15px;
-  font-weight: bold;
-  display: inline-block;
-}
-
-/* خلفية صفحة النتائج */
-body.results {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: url("images/background.jpg") no-repeat center center fixed;
-  background-size: cover;
-  color: #333;
-}
-
-/* الهيدر الأحمر */
-.header {
-  background: #b30000;
-  color: #fff;
-  padding: 15px;
-  display: flex;
-  align-items: center;
-}
-.header h1 {
-  margin-left: 15px;
-  font-size: 22px;
-  font-weight: bold;
-}
-.ielts-logo {
-  height: 40px;
-}
-
-/* البار المتحرك */
-.marquee {
-  background: #0056b3;
-  color: #fff;
-  padding: 10px;
-  font-weight: bold;
-  font-size: 16px;
-}
-
 /* القوائم الجانبية */
 .sidebar {
-  width: 200px;
-  background: #b30000;
-  color: #fff;
-  position: absolute;
-  top: 120px;
+  position: fixed;
+  top: 100px;   /* نزّل العمود تحت البار الأزرق */
   left: 0;
-  border-radius: 0 0 8px 0;
-}
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.sidebar li {
-  margin: 10px 0;
-}
-.sidebar a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 8px 15px;
-  display: block;
-}
-.sidebar a:hover {
-  background: #800000;
-  border-radius: 6px;
+  width: 200px;
+  background-color: #f5f5f5;
+  padding: 10px;
+  z-index: 10;
 }
 
-/* مربع النتائج */
+/* صورة الشعارات الثلاثة */
+.logos-transparent {
+  display: block;
+  margin: 20px auto;
+  max-width: 300px;
+  opacity: 0.8;   /* شفافية بسيطة */
+}
+
+/* باقي التنسيقات الأساسية */
+.header {
+  background-color: #004080;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.content {
+  margin-left: 220px; /* علشان يسيب مساحة للـ sidebar */
+  padding: 20px;
+}
+
 .result-card {
   background: #fff;
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  margin-left: 220px;
-  margin-top: 40px;
-}
-.result-layout {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-.result-card table {
-  width: 70%;
-  border-collapse: collapse;
-}
-.result-card td {
-  padding: 10px;
-  font-size: 16px;
-}
-.result-card tr:nth-child(odd) {
-  background: #fff;
-}
-.result-card tr:nth-child(even) {
-  background: #ccc; /* رمادي غامق */
-}
-.score-row {
-  background: #fff;       /* خلفية بيضاء */
-  color: #b30000;         /* النص باللون الأحمر */
-  font-weight: bold;
-  font-size: 20px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-}
-.student-photo {
-  width: 140px;
   border-radius: 8px;
-  border: 2px solid #b30000;
-  margin-left: 20px;
-  align-self: flex-start;
-}
-
-/* صورة الشعارات */
-.banner-img {
-  opacity: 0.6;
-  display: block;
-  margin: 20px auto;
-  max-width: 100%;
-}
-
-/* الفوتر */
-footer {
-  background: #b30000;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-}
-footer a {
-  color: #fff;
-  text-decoration: underline;
 }
