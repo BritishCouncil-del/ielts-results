@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
-  background: url("images/ielts-bg.jpg") no-repeat center center fixed;
+  background: url("images/background.jpg") no-repeat center center fixed;
   background-size: cover;
   color: #333;
 }
@@ -14,12 +14,8 @@ body {
   align-items: center;
   color: white;
 }
-.header img.logo-small {
-  height: 40px;
-  margin-right: 10px;
-}
 .header img.logo-main {
-  height: 70px;
+  height: 80px;   /* كبير متناسق مع الهيدر */
   margin-right: 15px;
   filter: brightness(0) invert(1); /* يخلي الشعار أبيض */
 }
@@ -29,7 +25,7 @@ body {
   font-weight: bold;
 }
 
-/* البار الأزرق المتحرك */
+/* البار الأزرق */
 .bar {
   background-image: linear-gradient(to right, #004080, #0055aa);
   color: #fff;
@@ -89,25 +85,6 @@ body {
   color: #b30000;
   font-size: 32px;
 }
-.welcome-box input {
-  width: 90%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-.welcome-box button {
-  background: #004080;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-}
-.welcome-box button:hover {
-  background: #003060;
-}
 
 /* مربع النتائج */
 .content {
@@ -148,7 +125,7 @@ body {
 /* الشعارات */
 .footer-logos {
   text-align: center;
-  margin: 30px 0;
+  margin: 20px 0;
 }
 .footer-img {
   max-width: 300px;
@@ -161,7 +138,7 @@ footer {
   color: #fff;
   text-align: center;
   padding: 15px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 footer a {
   color: #fff;
