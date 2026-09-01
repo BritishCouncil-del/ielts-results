@@ -61,6 +61,6 @@ const students = [
     speaking: "6.5",
     overall: "6.0",
     testDate: "11/08/2026",
-    photo: "images/baut.png"   // الصورة الصحيحة من مجلد الصور
+    photo: "images/baut.png"   // صورة الطالب الرابع
   }
 ];
