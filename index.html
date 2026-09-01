@@ -1,57 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>IELTS Portal</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="students.js"></script>
-</head>
-<body>
+<div class="header">
+  <img src="images/ielts-logos.png" class="logo-small" alt="IELTS Logos">
+  <img src="images/ielts-logo1.png" class="logo-main" alt="IELTS Logo">
+  <h1>IELTS™ English for International Opportunity</h1>
+</div>
 
-  <div class="header">
-    <img src="images/ielts-logo1.png" alt="IELTS Logo">
-    <h1>IELTS™ English for International Opportunity</h1>
+<div class="bar">
+  <div class="bar-text">
+    🌐 Welcome to the IELTS Test Report Form Portal — 🎓 Academic | 📑 General Training | 🏛 UKVI
   </div>
+</div>
 
-  <div class="bar">
-    <div class="bar-text">
-      🌐 Welcome to the IELTS Test Report Form Portal — 🎓 Academic | 📑 General Training | 🏛 UKVI
-    </div>
-  </div>
+<div class="welcome-box">
+  <h2>IELTS</h2>
+  <form onsubmit="return checkStudent();">
+    <input type="text" id="candidateNumber" placeholder="Candidate Number" required>
+    <input type="text" id="trfNumber" placeholder="TRF Number" required>
+    <button type="submit">عرض النتيجة</button>
+  </form>
+  <div id="error" class="error"></div>
+</div>
 
-  <div class="welcome-box">
-    <h2>IELTS</h2>
-    <form onsubmit="return checkStudent();">
-      <input type="text" id="candidateNumber" placeholder="Candidate Number" required>
-      <input type="text" id="trfNumber" placeholder="TRF Number" required>
-      <button type="submit">عرض النتيجة</button>
-    </form>
-    <div id="error" class="error"></div>
-  </div>
+<div class="footer-logos">
+  <img src="images/ielts-logos.png" class="footer-img" alt="IELTS Logos">
+</div>
 
-  <div class="footer-logos">
-    <img src="images/ielts-logos.png" class="footer-img" alt="IELTS Logos">
-  </div>
+<footer>
+  © 2026 IELTS Results Portal | All Rights Reserved |
+  <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
+</footer>
 
-  <footer>
-    © 2026 IELTS Results Portal | All Rights Reserved |
-    <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
-  </footer>
-
-  <script>
-    function checkStudent() {
-      const candidate = document.getElementById("candidateNumber").value.trim();
-      const trf = document.getElementById("trfNumber").value.trim();
-      const student = students.find(s => s.candidateNumber === candidate && s.trfNumber === trf);
-      if(student){
-        localStorage.setItem("student", JSON.stringify(student));
-        window.location.href = "results.html";
-      } else {
-        document.getElementById("error").innerText = "❌ البيانات غير صحيحة";
-      }
-      return false;
-    }
-  </script>
-
-</body>
-</html>
+<!-- صورة البانر تحت الفوتر -->
+<div class="footer-logos">
+  <img src="images/ielts-banner.png" class="footer-img" alt="IELTS Banner">
+</div>
