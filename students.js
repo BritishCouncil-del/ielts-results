@@ -46,5 +46,21 @@ const students = [
     overall: "5.5",
     testDate: "22/08/2026",
     photo: "images/baut.png"
+  },
+  {
+    candidateNumber: "509284",
+    trfNumber: "26AE509284ALSB113A",
+    name: "Buti Saeed Salem Almahdhi",
+    dob: "18/02/2009",
+    gender: "M",
+    centreNumber: "AE113",
+    centreName: "British Council",
+    listening: "6.0",
+    reading: "5.5",
+    writing: "5.5",
+    speaking: "6.5",
+    overall: "6.0",
+    testDate: "11/08/2026",
+    photo: "images/albedwawi.png"
   }
 ];
