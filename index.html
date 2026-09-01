@@ -5,29 +5,39 @@
   <title>IELTS Test Portal</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="index">
+<body class="index" style="background: url('images/background.jpg') no-repeat center center fixed; background-size: cover;">
 
-  <div class="header">
-    <img src="images/ielts-logos.png" alt="IELTS Logo" class="ielts-logo">
-    <h1>اختبار الآيلتس</h1>
+  <!-- الهيدر الأحمر -->
+  <div class="header" style="background-color:#b30000; padding:15px; text-align:center;">
+    <img src="images/ielts-logo.png" alt="IELTS Logo" class="ielts-logo" style="height:60px;">
   </div>
 
-  <div class="content">
+  <!-- البار الأزرق -->
+  <div class="bar" style="background-color:#004080; color:white; padding:10px; text-align:center;">
+    جميع أنواع اختبار الآيلتس
+  </div>
+
+  <!-- مربع البحث -->
+  <div class="content" style="text-align:center; margin-top:40px;">
     <form onsubmit="saveData(); return false;">
-      <label for="serial">رقم تسلسلي:</label>
-      <input type="text" id="serial" name="serial" required>
-
-      <label for="candidate">رقم المرشح:</label>
-      <input type="text" id="candidate" name="candidate">
-
-      <button type="submit" class="btn">عرض النتيجة</button>
+      <input type="text" id="serial" name="serial" placeholder="Serial Number" required style="padding:10px; width:250px;">
+      <input type="text" id="candidate" name="candidate" placeholder="Candidate Number" style="padding:10px; width:250px;">
+      <br><br>
+      <input type="text" value="IELTS" readonly style="font-size:24px; font-weight:bold; color:#b30000; border:none; background:transparent; text-align:center;">
+      <br><br>
+      <button type="submit" class="btn" style="padding:10px 20px; background:#b30000; color:white; border:none;">بحث</button>
     </form>
-
-    <div id="errorMsg" class="error"></div>
   </div>
 
-  <footer>
-    الموقع الرسمي لاختبار IELTS | بوابة نتائج اختبار IELTS ©2026 جميع الحقوق محفوظة
+  <!-- صورة الشعارات الثلاثة -->
+  <div style="text-align:center; margin-top:30px;">
+    <img src="images/three-logos.png" alt="IELTS Logos" style="max-width:300px; opacity:0.8;">
+  </div>
+
+  <!-- الفوتر -->
+  <footer style="text-align:center; margin-top:40px; color:#333;">
+    © 2026 IELTS Results Portal | All Rights Reserved | 
+    <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
   </footer>
 
   <script>
