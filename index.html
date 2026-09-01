@@ -1,49 +1,51 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>IELTS Portal</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>IELTS Test Portal</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="welcome">
-  <div class="header">
-    <img src="images/ielts-logos.png" alt="IELTS Logo" class="ielts-logo">
-    <h1>IELTS Portal</h1>
-  </div>
-  <div class="marquee">
-    <marquee behavior="scroll" direction="left" scrollamount="6">
-      جميع أنواع اختبار الآيلتس (Academic - General - UKVI - Life Skills)
-    </marquee>
-  </div>
-  <div class="form-box">
-    <h1 class="ielts-title">IELTS</h1>
-    <form onsubmit="return goToResults()">
-      <input type="text" id="serial" placeholder="Serial Number" required>
-      <input type="text" id="candidate" placeholder="Candidate Number" required>
-      <button type="submit" class="btn-animate">عرض النتيجة</button>
-    </form>
-    <p id="errorMsg" style="color:red;font-weight:bold;"></p>
-  </div>
-  <footer>
-    © 2026 IELTS Results Portal | All Rights Reserved | 
-    <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
-  </footer>
-  <script src="students.js"></script>
-  <script>
-    function goToResults() {
-      const serial = document.getElementById('serial').value.trim();
-      const candidate = document.getElementById('candidate').value.trim();
-      const student = students[serial];
-      if (student && student.candidate === candidate) {
-        localStorage.setItem('serial', serial);
-        localStorage.setItem('candidate', candidate);
-        window.location.href = "results.html";
-      } else {
-        document.getElementById("errorMsg").textContent =
-          "❌ Invalid Serial or Candidate Number. Please try again.";
-      }
-      return false;
-    }
-  </script>
+<body class="index">
+
+  <!-- الهيدر الأحمر -->
+  <div class="header">
+    <img src="images/ielts-logo.png" alt="IELTS Logo" class="ielts-logo">
+  </div>
+
+  <!-- البار الأزرق -->
+  <div class="bar">
+    IELTS™ English for International Opportunity
+  </div>
+
+  <!-- مربع البحث -->
+  <div class="content">
+    <form onsubmit="saveData(); return false;" class="search-box">
+      <div class="ielts-title">IELTS</div>
+      <input type="text" id="serial" name="serial" placeholder="Serial Number" required>
+      <input type="text" id="candidate" name="candidate" placeholder="Candidate Number">
+      <button type="submit" class="btn">Search</button>
+    </form>
+  </div>
+
+  <!-- صورة الشعارات الثلاثة -->
+  <div class="logos">
+    <img src="images/three-logos.png" alt="IELTS Logos" class="logos-transparent">
+  </div>
+
+  <!-- الفوتر -->
+  <footer>
+    © 2026 IELTS Results Portal | All Rights Reserved | 
+    <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
+  </footer>
+
+  <script>
+    function saveData() {
+      const serialInput = document.getElementById("serial").value.trim();
+      const candidateInput = document.getElementById("candidate").value.trim();
+      localStorage.setItem("serial", serialInput);
+      localStorage.setItem("candidate", candidateInput);
+      window.location.href = "results.html";
+    }
+  </script>
 </body>
 </html>
