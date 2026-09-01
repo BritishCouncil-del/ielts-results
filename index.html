@@ -5,23 +5,21 @@
   <title>IELTS Test Portal</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="index">
+<body class="index" style="background: url('images/background.jpg') no-repeat center center fixed; background-size: cover;">
 
   <div class="header">
-    <img src="images/ielts-logos.png" alt="IELTS Logo" class="ielts-logo">
-    <h1>IELTS Test Portal</h1>
+    <img src="images/ielts-logos.png" alt="IELTS Logos" class="ielts-logo">
+    <h1>بوابة اختبار الآيلتس</h1>
   </div>
 
   <div class="content">
-    <form onsubmit="saveData(); return false;">
-      <label for="serial">رقم تسلسلي:</label>
-      <input type="text" id="serial" name="serial" required>
-
-      <label for="candidate">رقم المرشح:</label>
-      <input type="text" id="candidate" name="candidate">
-
-      <button type="submit" class="btn">عرض النتيجة</button>
-    </form>
+    <div class="search-box">
+      <form onsubmit="saveData(); return false;">
+        <input type="text" id="serial" name="serial" placeholder="أدخل الرقم التسلسلي" required>
+        <input type="text" id="candidate" name="candidate" placeholder="أدخل رقم المرشح">
+        <button type="submit" class="btn">🔍 بحث</button>
+      </form>
+    </div>
   </div>
 
   <footer>
