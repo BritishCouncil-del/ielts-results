@@ -1,84 +1,4 @@
-body {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: url("images/background.jpg") no-repeat center center fixed;
-  background-size: cover;
-  color: #333;
-}
-
-/* الهيدر الأحمر */
-.header {
-  background-color: #b30000;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  color: white;
-}
-.header img.logo-main {
-  height: 90px;
-  margin-right: 15px;
-  filter: brightness(0) invert(1);
-}
-.header h1 {
-  margin: 0;
-  font-size: 26px;
-  font-weight: bold;
-}
-
-/* البار الأزرق */
-.bar {
-  background-image: linear-gradient(to right, #004080, #0055aa);
-  color: #fff;
-  padding: 12px;
-  font-weight: bold;
-  width: 100%;
-  overflow: hidden;
-  border-bottom: 3px solid #b30000;
-}
-.bar-text {
-  display: inline-block;
-  white-space: nowrap;
-  animation: scrollText 18s linear infinite;
-  font-size: 18px;
-}
-@keyframes scrollText {
-  from { transform: translateX(100%); }
-  to   { transform: translateX(-100%); }
-}
-
-/* العمود الجانبي */
-.sidebar {
-  width: 200px;
-  float: left;
-  background: #b30000;
-  padding: 15px;
-  display: inline-block;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.3);
-}
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.sidebar ul li {
-  margin: 10px 0;
-}
-.sidebar ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  display: block;
-  padding: 8px;
-  border-radius: 5px;
-  transition: background 0.3s, transform 0.2s;
-}
-.sidebar ul li a:hover {
-  background: #8c0000;
-  transform: scale(1.05);
-}
-
-/* مربع البحث في صفحة الترحيب */
+/* العلامة المائية المتكررة في مربع البحث */
 .welcome-box {
   background: #fff;
   margin: 40px auto;
@@ -90,164 +10,49 @@ body {
   position: relative;
   overflow: hidden;
 }
-.welcome-box h2 {
-  margin-bottom: 20px;
-  color: #b30000;
-  font-size: 32px;
-}
-.welcome-box input {
-  width: 90%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-.welcome-box button {
-  background: #004080;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-}
-.welcome-box button:hover {
-  background: #003060;
-}
-.error {
-  color: #b30000;
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-/* العلامة المائية المتحركة في مربع البحث */
 .welcome-box::before {
-  content: "IELTS";
+  content: "IELTS IELTS IELTS IELTS IELTS";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 60px;
-  color: rgba(179, 0, 0, 0.1);
-  font-weight: bold;
-  pointer-events: none;
-  animation: watermarkBounce 6s ease-in-out infinite;
-}
-
-/* مربع النتائج */
-.content {
-  margin-left: 220px;
-  padding: 20px;
-}
-.result-card {
-  background: #fff;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.25);
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  width: 70%;
-  position: relative; /* علشان العلامة المائية */
-}
-
-/* العلامة المائية المتحركة في مربع النتائج */
-.result-card::before {
-  content: "IELTS";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 100px;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  font-size: 14px;
   color: rgba(179, 0, 0, 0.08);
   font-weight: bold;
-  pointer-events: none;
-  animation: watermarkBounce 8s ease-in-out infinite;
+  transform: rotate(-30deg);
+  white-space: nowrap;
+  animation: watermarkScroll 10s linear infinite;
+}
+
+/* العلامة المائية المتكررة في مربع النتائج */
+.result-card::before {
+  content: "IELTS IELTS IELTS IELTS IELTS IELTS IELTS";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  font-size: 18px;
+  color: rgba(179, 0, 0, 0.08);
+  font-weight: bold;
+  transform: rotate(-30deg);
+  white-space: nowrap;
+  animation: watermarkScroll 12s linear infinite;
 }
 
 /* حركة العلامة المائية */
-@keyframes watermarkBounce {
-  0%   { transform: translate(-50%, -50%) translateX(-40px); }
-  50%  { transform: translate(-50%, -50%) translateX(40px); }
-  100% { transform: translate(-50%, -50%) translateX(-40px); }
+@keyframes watermarkScroll {
+  0%   { transform: rotate(-30deg) translateX(-50px); }
+  50%  { transform: rotate(-30deg) translateX(50px); }
+  100% { transform: rotate(-30deg) translateX(-50px); }
 }
 
-.student-photo {
-  width: 150px;
-  height: auto;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-}
-
-/* جدول النتائج */
-.results-table {
-  width: 100%;
-  border-collapse: collapse;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-.results-table td {
-  padding: 10px;
-  border: 1px solid #ccc;
-}
-.results-table tr:nth-child(even) {
-  background: #f9f9f9;
-}
-.results-table tr:nth-child(odd) {
-  background: #e0e0e0;
-}
+/* صف الاسكور النهائي */
 .score-row {
   background: #b30000;
   color: #fff;
   font-weight: bold;
   text-align: center;
   font-size: 16px;
-}
-
-/* النص التوضيحي */
-.info-box {
-  background: #fff;
-  margin: 20px auto;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: inset 0 0 10px rgba(0,0,0,0.15);
-  width: 70%;
-  font-size: 14px;
-  line-height: 1.6;
-}
-.info-box strong {
-  color: #b30000;
-  font-size: 16px;
-}
-
-/* عنوان النتائج */
-.results-title {
-  text-align: center;
-  color: #004080;
-  margin: 15px auto;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-/* صورة البانر */
-.banner {
-  text-align: center;
-  margin: 20px 0;
-}
-.banner img {
-  max-width: 400px;
-  opacity: 0.95;
-}
-
-/* الفوتر */
-footer {
-  background: #b30000;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-top: 10px;
-}
-footer a {
-  color: #fff;
-  text-decoration: underline;
 }
