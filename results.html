@@ -33,9 +33,8 @@
     </ul>
   </div>
 
-  <!-- مربع النتائج -->
+  <!-- النص التوضيحي -->
   <div class="content">
-    <!-- النص التوضيحي فوق الجدول -->
     <div class="info-box">
       <p><strong>Match Found</strong></p>
       <p>
@@ -45,21 +44,22 @@
       </p>
     </div>
 
-    <!-- عنوان TRF Results Details -->
+    <!-- عنوان النتائج -->
     <h2 class="results-title">TRF Results Details</h2>
 
+    <!-- مربع النتائج -->
     <div class="result-card">
       <img id="studentPhoto" class="student-photo" alt="Candidate Photo">
       <table class="results-table" id="resultsTable"></table>
     </div>
   </div>
 
-  <!-- صورة البانر تحت مربع النتائج -->
+  <!-- صورة البانر -->
   <div class="banner">
     <img src="images/ielts-banner.png" alt="IELTS Banner">
   </div>
 
-  <!-- سطر حقوق النشر -->
+  <!-- الفوتر -->
   <footer>
     © 2026 IELTS Results Portal | All Rights Reserved |
     <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
@@ -84,7 +84,7 @@
         <tr><td><strong>Reading:</strong></td><td>${student.reading}</td></tr>
         <tr><td><strong>Writing:</strong></td><td>${student.writing}</td></tr>
         <tr><td><strong>Speaking:</strong></td><td>${student.speaking}</td></tr>
-        <tr class="score-row"><td><strong>Overall Band Score:</strong></td><td>${student.overallScore}</td></tr>
+        <tr class="score-row"><td colspan="2"><strong>Overall Band Score: ${student.overallScore}</strong></td></tr>
       `;
     }
   </script>
