@@ -15,7 +15,7 @@ body {
   color: white;
 }
 .header img.logo-main {
-  height: 80px;   /* كبير متناسق مع الهيدر */
+  height: 90px;   /* كبير متناسق مع الهيدر */
   margin-right: 15px;
   filter: brightness(0) invert(1); /* يخلي الشعار أبيض */
 }
@@ -25,7 +25,7 @@ body {
   font-weight: bold;
 }
 
-/* البار الأزرق */
+/* البار الأزرق المتحرك */
 .bar {
   background-image: linear-gradient(to right, #004080, #0055aa);
   color: #fff;
@@ -85,6 +85,25 @@ body {
   color: #b30000;
   font-size: 32px;
 }
+.welcome-box input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.welcome-box button {
+  background: #004080;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.welcome-box button:hover {
+  background: #003060;
+}
 
 /* مربع النتائج */
 .content {
@@ -122,14 +141,14 @@ body {
   font-weight: bold;
 }
 
-/* الشعارات */
-.footer-logos {
+/* صورة البانر */
+.banner {
   text-align: center;
   margin: 20px 0;
 }
-.footer-img {
-  max-width: 300px;
-  opacity: 0.9;
+.banner img {
+  max-width: 400px;
+  opacity: 0.95;
 }
 
 /* الفوتر */
