@@ -63,11 +63,11 @@
 
   <script src="students.js"></script>
   <script>
-    const serial = localStorage.getItem('serial');
-    const candidate = localStorage.getItem('candidate');
+    const serial = localStorage.getItem('serial')?.trim();
+    const candidate = localStorage.getItem('candidate')?.trim();
     const student = students[serial];
 
-    if (student && student.candidate === candidate) {
+    if (student && (student.candidate.trim() === candidate || candidate === "")) {
       document.getElementById("centreNumber").textContent = student.centre;
       document.getElementById("centreName").textContent = student.centreName;
       document.getElementById("candidateNumber").textContent = student.candidate;
@@ -87,7 +87,7 @@
       document.getElementById("studentPhoto").src = "images/" + student.image;
     } else {
       document.getElementById("result").innerHTML =
-        "<p style='color:red;font-weight:bold;'>❌ No results found. Please check your Serial Number and Candidate Number.</p>";
+        "<p style='color:red;font-weight:bold;'>❌ رقم تسلسلي أو رقم مرشح غير صالح. يرجى المحاولة مرة أخرى.</p>";
     }
   </script>
 </body>
