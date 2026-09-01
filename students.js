@@ -2,17 +2,6 @@ const students = {
   // الطالب القديم
   "26AE509426ALBM113A": {
     candidate: "509426",
-    candidateتمام يا أحمد 🌹  
-دي النسخة النهائية للكود بعد ما ظبطنا كل حاجة، بما فيها صورة الطالب الجديد اللي موجودة عندك باسم **baut.png** في مجلد `images/`.  
-
----
-
-## 📄 students.js (النهائي)
-```js
-const students = {
-  // الطالب القديم
-  "26AE509426ALBM113A": {
-    candidate: "509426",
     candidateId: "C001",
     familyName: "ALBEDWAWI",
     firstName: "MOHAMMAD ALI KHAMIS HAMAD",
@@ -70,6 +59,6 @@ const students = {
     trfNumber: "26AE509284ALSB113A",
     centre: "AE113",
     centreName: "British Council",
-    image: "baut.png"   // ← هنا اتأكدنا إن الاسم مطابق للصورة عندك
+    image: "Baut.png"   // ← اتأكدنا إن الاسم مطابق للصورة عندك
   }
 };
