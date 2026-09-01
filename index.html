@@ -1,54 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>IELTS Portal</title>
+  <title>IELTS Test Portal</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="welcome">
+<body class="index">
 
   <div class="header">
     <img src="images/ielts-logos.png" alt="IELTS Logo" class="ielts-logo">
-    <h1>IELTS Portal</h1>
+    <h1>اختبار الآيلتس</h1>
   </div>
 
-  <div class="marquee">
-    <marquee behavior="scroll" direction="left" scrollamount="6">
-      جميع أنواع اختبار الآيلتس (Academic - General - UKVI - Life Skills)
-    </marquee>
-  </div>
+  <div class="content">
+    <form onsubmit="saveData(); return false;">
+      <label for="serial">رقم تسلسلي:</label>
+      <input type="text" id="serial" name="serial" required>
 
-  <div class="form-box">
-    <h1 class="ielts-title">IELTS</h1>
-    <form onsubmit="return goToResults()">
-      <input type="text" id="serial" placeholder="Serial Number" required>
-      <input type="text" id="candidate" placeholder="Candidate Number" required>
-      <button type="submit" class="btn-animate">عرض النتيجة</button>
+      <label for="candidate">رقم المرشح:</label>
+      <input type="text" id="candidate" name="candidate">
+
+      <button type="submit" class="btn">عرض النتيجة</button>
     </form>
-    <p id="errorMsg" style="color:red;font-weight:bold;"></p>
+
+    <div id="errorMsg" class="error"></div>
   </div>
 
   <footer>
-    © 2026 IELTS Results Portal | All Rights Reserved | 
-    <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
+    الموقع الرسمي لاختبار IELTS | بوابة نتائج اختبار IELTS ©2026 جميع الحقوق محفوظة
   </footer>
 
-  <script src="students.js"></script>
   <script>
-    function goToResults() {
-      const serial = document.getElementById('serial').value.trim();
-      const candidate = document.getElementById('candidate').value.trim();
-      const student = students[serial];
-
-      if (student && student.candidate === candidate) {
-        localStorage.setItem('serial', serial);
-        localStorage.setItem('candidate', candidate);
-        window.location.href = "results.html";
-      } else {
-        document.getElementById("errorMsg").textContent =
-          "❌ رقم تسلسلي أو رقم مرشح غير صالح. يرجى المحاولة مرة أخرى.";
-      }
-      return false;
+    function saveData() {
+      const serialInput = document.getElementById("serial").value.trim();
+      const candidateInput = document.getElementById("candidate").value.trim();
+      localStorage.setItem("serial", serialInput);
+      localStorage.setItem("candidate", candidateInput);
+      window.location.href = "results.html";
     }
   </script>
 </body>
