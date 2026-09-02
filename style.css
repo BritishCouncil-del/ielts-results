@@ -101,7 +101,7 @@ body {
   height: 200%;
   background: url("images/علامه مائيه.png") repeat;
   background-size: 150px;
-  opacity: 0.08; /* شفافية */
+  opacity: 0.1; /* شفافية أوضح */
   transform: rotate(-30deg);
   animation: watermarkScroll 15s linear infinite;
 }
@@ -118,7 +118,7 @@ body {
 }
 .logos img {
   max-width: 250px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 /* البانر الأبيض المتحرك */
