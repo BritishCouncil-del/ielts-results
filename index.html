@@ -2,55 +2,71 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>IELTS Portal</title>
+  <title>IELTS Portal - Welcome</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="welcome">
 
+  <!-- Header -->
   <div class="header">
     <img src="images/ielts-logos.png" alt="IELTS Logo" class="ielts-logo">
-    <h1>IELTS Portal</h1>
+    <h1>IELTS™ English for International Opportunity</h1>
   </div>
 
-  <div class="marquee">
+  <!-- Blue bar -->
+  <div class="bar">
     <marquee behavior="scroll" direction="left" scrollamount="6">
-      جميع أنواع اختبار الآيلتس (Academic - General - UKVI - Life Skills)
+      IELTS Test Report Form Portal - Academic - General - UKVI - Life Skills
     </marquee>
   </div>
 
-  <div class="form-box">
-    <h1 class="ielts-title">IELTS</h1>
-    <form onsubmit="return goToResults()">
-      <input type="text" id="serial" placeholder="Enter Serial/TRF Number" required>
-      <button type="submit" class="btn-animate">عرض النتيجة</button>
-    </form>
-    <div id="errorMsg"></div>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <ul>
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="trf.html">📄 TRF Query</a></li>
+        <li><a href="results.html">📊 Results</a></li>
+        <li><a href="faq.html">❓ FAQs</a></li>
+        <li><a href="https://ielts.org" target="_blank">🌐 IELTS.org</a></li>
+      </ul>
+    </div>
+
+    <!-- Welcome Box -->
+    <div class="results-box">
+      <h2>IELTS – Test Report Form Portal</h2>
+      <p class="note">Enter your details below to view your IELTS Test Report Form.</p>
+
+      <!-- مربع تسجيل الدخول -->
+      <div class="login-box">
+        <form action="results.html" method="get">
+          <label for="candidateNumber">Candidate Number:</label>
+          <input type="text" id="candidateNumber" name="candidateNumber" placeholder="Enter Candidate Number">
+
+          <label for="trfCode">TRF Code:</label>
+          <input type="text" id="trfCode" name="trfCode" placeholder="Enter TRF Code">
+
+          <button type="submit">عرض النتيجة</button>
+        </form>
+      </div>
+
+      <!-- شعار IELTS -->
+      <div class="logo-section">
+        <img src="images/ielts-logos.png" alt="IELTS Logos">
+      </div>
+
+      <!-- بانر شفاف -->
+      <div class="banner-section">
+        <img src="images/ielts-banner.png" alt="IELTS Banner">
+      </div>
+    </div>
   </div>
 
+  <!-- Footer -->
   <footer>
     © 2026 IELTS Results Portal | All Rights Reserved | 
     <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
   </footer>
 
-  <!-- ربط ملف الطلاب -->
-  <script src="students.js"></script>
-  <script>
-    function goToResults() {
-      const serial = document.getElementById('serial').value.trim();
-      const student = students[serial];
-
-      if (student) {
-        // تخزين السيريال علشان صفحة النتائج تقراه
-        localStorage.setItem('serial', serial);
-        // فتح صفحة النتائج
-        window.location.href = "results.html";
-      } else {
-        // رسالة خطأ بنفس مكان الفورم
-        document.getElementById("errorMsg").innerHTML =
-          "<div class='alert-box'>❌ الرقم غير صحيح</div>";
-      }
-      return false;
-    }
-  </script>
 </body>
 </html>
