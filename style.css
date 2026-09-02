@@ -8,26 +8,60 @@ body {
   flex-direction: column;
 }
 
-/* ====== خلفية صفحة الترحيب ====== */
+/* ====== Header ====== */
+.header {
+  background: linear-gradient(90deg, #b30000, #800000);
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+.ielts-logo {
+  height: 60px;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+/* ====== Blue bar ====== */
+.bar {
+  background: linear-gradient(90deg, #003366, #005599);
+  color: #fff;
+  font-weight: bold;
+  padding: 8px;
+}
+
+/* ====== Footer ====== */
+footer {
+  background: #f0f0f0;
+  text-align: center;
+  padding: 15px;
+  border-top: 1px solid #ccc;
+  margin-top: auto;
+}
+footer a {
+  color: #003366;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ====== صفحة الترحيب ====== */
 body.welcome {
   background: url("images/background.jpg") no-repeat center center fixed;
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* يخلي المحتوى في النص */
+  justify-content: center;
   align-items: center;
 }
-
-/* ====== مربع البحث فقط (ترحيب) ====== */
 body.welcome .login-box {
-  background: rgba(255, 255, 255, 0.6); /* شفاف */
+  background: rgba(255, 255, 255, 0.6);
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
   max-width: 400px;
   width: 100%;
 }
-
 body.welcome .login-box form {
   display: flex;
   flex-direction: column;
@@ -55,43 +89,20 @@ body.welcome .login-box button:hover {
   background: #002244;
 }
 
-/* ====== خلفية صفحة النتائج ====== */
+/* ====== صفحة النتائج ====== */
 body.results {
   background: url("images/background.jpg") no-repeat center center fixed;
   background-size: cover;
   display: flex;
   flex-direction: column;
 }
-
-/* ====== Header ====== */
-.header {
-  background: linear-gradient(90deg, #b30000, #800000);
-  color: #fff;
-  padding: 15px;
-  text-align: center;
-}
-.ielts-logo {
-  height: 60px;
-  vertical-align: middle;
-  margin-right: 15px;
-}
-
-/* ====== Blue bar ====== */
-.bar {
-  background: linear-gradient(90deg, #003366, #005599);
-  color: #fff;
-  font-weight: bold;
-  padding: 8px;
-}
-
-/* ====== Container ====== */
 body.results .container {
   flex: 1;
   display: flex;
   align-items: stretch;
 }
 
-/* ====== Sidebar (العمود الأحمر) ====== */
+/* ====== Sidebar ====== */
 body.results .sidebar {
   width: 200px;
   background: #b30000;
@@ -164,7 +175,7 @@ body.results .sidebar ul li a:hover {
   background: linear-gradient(90deg, #ffe6e6, #fff);
 }
 
-/* ====== تنسيق مميز للـ Overall Band Score ====== */
+/* ====== Overall Band Score ====== */
 .results-table .score {
   font-size: 20px;
   font-weight: bold;
@@ -216,20 +227,4 @@ body.results .sidebar ul li a:hover {
 .banner-section img {
   max-width: 400px;
   opacity: 0.7;
-}
-
-/* ====== Footer ====== */
-footer {
-  background: #f0f0f0;
-  text-align: center;
-  padding: 15px;
-  border-top: 1px solid #ccc;
-  margin-top: auto;
-}
-footer a {
-  color: #003366;
-  text-decoration: none;
-}
-footer a:hover {
-  text-decoration: underline;
 }
