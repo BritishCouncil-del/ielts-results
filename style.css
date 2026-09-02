@@ -12,9 +12,9 @@ body {
 .header {
   background: linear-gradient(90deg, #b30000, #800000);
   color: #fff;
-  padding: 40px; /* أكبر */
+  padding: 40px;
   text-align: center;
-  width: 100%; /* يملى الصفحة بالكامل */
+  width: 100%;
 }
 .ielts-logo {
   height: 80px;
@@ -27,19 +27,19 @@ body {
   background: linear-gradient(90deg, #003366, #005599);
   color: #fff;
   font-weight: bold;
-  padding: 20px; /* أكبر */
+  padding: 20px;
   font-size: 18px;
-  width: 100%; /* يملى الصفحة بالكامل */
+  width: 100%;
 }
 
 /* ====== Footer ====== */
 footer {
   background: #f0f0f0;
   text-align: center;
-  padding: 20px; /* أكبر */
+  padding: 20px;
   border-top: 1px solid #ccc;
   margin-top: auto;
-  width: 100%; /* يملى الصفحة بالكامل */
+  width: 100%;
 }
 footer a {
   color: #003366;
@@ -107,10 +107,10 @@ body.welcome .banner-section {
 }
 body.welcome .banner-section img {
   max-width: 500px;
-  opacity: 0.7; /* شفاف */
+  opacity: 0.7;
 }
 
-/* ====== صفحة النتائج (بدون حركة) ====== */
+/* ====== صفحة النتائج ====== */
 body.results {
   background: url("images/background.jpg") no-repeat center center fixed;
   background-size: cover;
@@ -120,13 +120,16 @@ body.results {
 body.results .container {
   flex: 1;
   display: flex;
-  align-items: stretch;
+  align-items: flex-start;
 }
+
+/* Sidebar يقف مع الجدول */
 body.results .sidebar {
   width: 200px;
   background: #b30000;
   display: flex;
   flex-direction: column;
+  align-self: flex-start;
 }
 body.results .sidebar ul {
   list-style: none;
@@ -143,6 +146,8 @@ body.results .sidebar ul li a {
 body.results .sidebar ul li a:hover {
   background: #800000;
 }
+
+/* Results Box */
 .results-box {
   background: rgba(255,255,255,0.95);
   margin: 20px;
@@ -167,11 +172,14 @@ body.results .sidebar ul li a:hover {
   border-radius: 8px;
   margin-bottom: 20px;
 }
+
+/* جدول النتائج */
 .results-content {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   position: relative;
+  margin-bottom: 30px; /* نهاية الجدول قبل الشعارات */
 }
 .results-table {
   width: 70%;
@@ -195,6 +203,8 @@ body.results .sidebar ul li a:hover {
   text-align: center;
   border-radius: 6px;
 }
+
+/* صورة الطالب */
 .student-photo {
   width: 150px;
   border: 2px solid #ccc;
@@ -202,7 +212,8 @@ body.results .sidebar ul li a:hover {
   margin-left: 20px;
   align-self: flex-start;
 }
-/* ====== علامة مائية ثابتة بدون حركة ====== */
+
+/* علامة مائية ثابتة */
 .watermark::before {
   content: "IELTS IELTS IELTS IELTS";
   position: absolute;
@@ -213,19 +224,22 @@ body.results .sidebar ul li a:hover {
   transform: rotate(-20deg);
   white-space: nowrap;
 }
+
+/* الشعارات تحت الجدول */
 .logo-section {
   text-align: center;
   margin: 20px 0;
 }
 .logo-section img {
-  height: 50px;
-  margin: 0 10px;
+  height: 80px; /* أكبر */
+  opacity: 0.8; /* شفاف */
+  margin: 0 15px;
 }
 .banner-section {
   text-align: center;
-  margin: 10px 0;
+  margin: 10px 0 30px;
 }
 .banner-section img {
-  max-width: 400px;
-  opacity: 0.7;
+  max-width: 600px; /* أكبر */
+  opacity: 0.6; /* شفاف */
 }
