@@ -21,13 +21,11 @@
   transition: transform 0.3s ease;
 }
 .bar-item img.icon {
-  height: 22px;
+  height: 32px; /* حجم الأيقونة */
   vertical-align: middle;
-  margin-right: 8px;
 }
 .bar-item:hover {
   transform: scale(1.2);
-  color: gold;
 }
 @keyframes barMove {
   from { transform: translateX(100%); }
@@ -40,7 +38,7 @@
   margin: 25px 0;
 }
 .logos img {
-  max-width: 380px; /* larger size */
+  max-width: 420px; /* أكبر حجم */
   opacity: 1;
   animation: logos3D 10s infinite alternate ease-in-out;
 }
