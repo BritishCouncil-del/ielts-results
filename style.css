@@ -1,4 +1,4 @@
-/* ====== إعدادات عامة ====== */
+/* ====== خلفية عامة ====== */
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
@@ -47,15 +47,13 @@ body.results {
 body.results .container {
   flex: 1;
   display: flex;
-  align-items: stretch;
+  align-items: stretch; /* يخلي العمود الجانبي يمتد لحد طول المحتوى */
 }
 
-/* ====== Sidebar (العمود الأحمر للنتائج فقط) ====== */
+/* ====== Sidebar (للنتائج فقط) ====== */
 body.results .sidebar {
   width: 200px;
   background: #b30000;
-  display: flex;
-  flex-direction: column;
 }
 body.results .sidebar ul {
   list-style: none;
@@ -76,12 +74,11 @@ body.results .sidebar ul li a:hover {
 /* ====== Box عام ====== */
 .results-box {
   background: rgba(255,255,255,0.95);
-  margin: 20px auto;
+  margin: 20px;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
   flex: 1;
-  max-width: 600px;
 }
 .results-box h2 {
   text-align: center;
@@ -95,7 +92,7 @@ body.results .sidebar ul li a:hover {
   line-height: 1.5;
 }
 
-/* ====== مربع تسجيل الدخول (ترحيب) ====== */
+/* ====== مربع تسجيل الدخول ====== */
 .login-box {
   background: rgba(255,255,255,0.9);
   padding: 20px;
@@ -158,7 +155,7 @@ body.results .sidebar ul li a:hover {
   color: #b30000;
 }
 
-/* ====== صورة الطالب (ثابتة بدون حركة) ====== */
+/* ====== صورة الطالب (ثابتة بدون حركة زووم) ====== */
 .student-photo {
   width: 150px;
   border: 2px solid #ccc;
