@@ -25,7 +25,7 @@ body {
   margin-right: 20px;
 }
 .logo-box img {
-  height: 70px; /* smaller logo size */
+  height: 70px;
 }
 .header h1 {
   margin: 0;
@@ -33,7 +33,7 @@ body {
   font-weight: bold;
 }
 
-/* Blue bar */
+/* Blue bar with IELTS test types */
 .bar {
   background-image: linear-gradient(to right, #004080, #0055aa);
   color: #fff;
@@ -41,12 +41,25 @@ body {
   font-weight: bold;
   width: 100%;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
 }
 .bar-text {
   display: inline-block;
   white-space: nowrap;
   animation: scrollText 30s linear infinite;
   font-size: 18px;
+}
+.bar-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 16px;
+}
+.bar-icons span::before {
+  content: "✔ ";
+  color: gold;
 }
 @keyframes scrollText {
   from { transform: translateX(100%); }
@@ -100,13 +113,13 @@ body {
 
 /* Watermark inside welcome box */
 .welcome-box::before {
-  content: "IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS";
+  content: "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: bold;
   color: goldenrod;
   opacity: 0.15;
@@ -128,7 +141,7 @@ body {
   margin: 20px 0;
 }
 .logos img {
-  max-width: 220px; /* smaller size for balance */
+  max-width: 180px; /* smaller size */
   opacity: 1;
   animation: logos3D 10s infinite alternate ease-in-out;
 }
