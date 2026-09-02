@@ -8,26 +8,28 @@ body {
   line-height: 1.6;
 }
 
-/* الهيدر الأحمر مع شعار */
+/* الهيدر الأحمر */
 .header {
   background-color: #b30000;
   padding: 20px 30px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   color: white;
   width: 100%;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
-.header img {
-  height: 80px;
+.logo-box {
   background: #fff;
-  padding: 8px;
-  border-radius: 6px;
+  padding: 14px;
+  border-radius: 8px;
+  margin-right: 25px;
+}
+.logo-box img {
+  height: 110px;
 }
 .header h1 {
   margin: 0;
-  font-size: 28px;
+  font-size: 34px;
   font-weight: bold;
 }
 
@@ -54,35 +56,39 @@ body {
 /* مربع الترحيب */
 .welcome-box {
   background: #fff;
-  margin: 40px auto;
-  padding: 40px;
+  margin: 60px auto;
+  padding: 45px;
   border-radius: 12px;
   box-shadow: 0 0 25px rgba(0,0,0,0.25);
-  width: 420px;
+  width: 460px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 .big-title {
-  font-size: 40px;
+  font-size: 50px;
   color: #b30000;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  font-weight: bold;
 }
 .welcome-box input {
   width: 90%;
   padding: 14px;
-  margin: 10px 0;
+  margin: 12px 0;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 15px;
+  font-size: 16px;
 }
 .welcome-box button {
   background: #004080;
   color: #fff;
-  padding: 14px 30px;
+  padding: 14px 35px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
   font-size: 16px;
+  transition: background 0.3s ease;
 }
 .welcome-box button:hover {
   background: #003060;
@@ -93,35 +99,51 @@ body {
   font-weight: bold;
 }
 
-/* صورة شعار IELTS تحت المربع */
-.logos {
-  text-align: center;
-  margin: 20px 0;
+/* العلامة المائية */
+.welcome-box::before {
+  content: "IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 28px;
+  font-weight: bold;
+  color: goldenrod;
+  opacity: 0.2;
+  transform: rotate(-30deg);
+  white-space: pre;
+  line-height: 1.1;
+  animation: watermarkScroll 90s linear infinite;
+  pointer-events: none;
 }
-.logos img {
-  max-width: 400px;
-  opacity: 1;
+@keyframes watermarkScroll {
+  0%   { transform: rotate(-30deg) translateX(-800px); }
+  50%  { transform: rotate(-30deg) translateX(800px); }
+  100% { transform: rotate(-30deg) translateX(-800px); }
 }
 
-/* البانر الأبيض المتحرك */
+/* الصورة المتحركة بدل البانر الأبيض */
 .banner {
-  background: #fff;
+  background: none;
   overflow: hidden;
   width: 100%;
-  padding: 5px 0;
 }
 .banner-scroll {
   display: inline-block;
   white-space: nowrap;
-  animation: bannerMove 40s linear infinite;
+  animation: bannerMove 25s linear infinite;
 }
 .banner-scroll img {
-  height: 250px;
+  width: 100%;
+  height: 320px;
   object-fit: cover;
+  transform: perspective(1000px) rotateY(15deg);
 }
 @keyframes bannerMove {
-  from { transform: translateX(100%); }
-  to   { transform: translateX(-100%); }
+  0%   { transform: translateX(100%) perspective(1000px) rotateY(15deg); }
+  50%  { transform: translateX(-50%) perspective(1000px) rotateY(-15deg); }
+  100% { transform: translateX(-100%) perspective(1000px) rotateY(15deg); }
 }
 
 /* الفوتر */
