@@ -2,42 +2,68 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>نتائج اختبار IELTS</title>
+  <title>TRF Results Details</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="results">
 
+  <!-- Header أحمر -->
   <div class="header">
     <img src="images/ielts-logos.png" alt="IELTS Logo" class="ielts-logo">
-    <h1>IELTS Results</h1>
+    <h1>IELTS – English for International Opportunity</h1>
   </div>
 
-  <div class="marquee">
+  <!-- Blue bar متحرك -->
+  <div class="bar">
     <marquee behavior="scroll" direction="left" scrollamount="6">
       Match Found - IELTS Academic - General - UKVI - Life Skills
     </marquee>
   </div>
 
-  <div class="results-box">
-    <h2>Test Report Form (TRF)</h2>
-    <img id="studentPhoto" src="" alt="Student Photo" style="width:150px;float:right;margin:10px;">
-    <table>
-      <tr><td><strong>Candidate Number:</strong></td><td id="candidateNumber"></td></tr>
-      <tr><td><strong>Candidate ID:</strong></td><td id="candidateId"></td></tr>
-      <tr><td><strong>Name:</strong></td><td id="studentName"></td></tr>
-      <tr><td><strong>Date of Birth:</strong></td><td id="dob"></td></tr>
-      <tr><td><strong>Sex:</strong></td><td id="sex"></td></tr>
-      <tr><td><strong>Test Date:</strong></td><td id="examDate"></td></tr>
-      <tr><td><strong>Centre:</strong></td><td id="centre"></td></tr>
-      <tr><td><strong>Centre Name:</strong></td><td id="centreName"></td></tr>
-      <tr><td><strong>Listening:</strong></td><td id="listening"></td></tr>
-      <tr><td><strong>Reading:</strong></td><td id="reading"></td></tr>
-      <tr><td><strong>Writing:</strong></td><td id="writing"></td></tr>
-      <tr><td><strong>Speaking:</strong></td><td id="speaking"></td></tr>
-      <tr><td><strong>Overall Band Score:</strong></td><td id="overall" class="score"></td></tr>
-    </table>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">TRF Query</a></li>
+        <li><a href="#">Download Results</a></li>
+        <li><a href="#">Manage My Ro Users</a></li>
+        <li><a href="#">Update My Profile</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">IELTS.org</a></li>
+      </ul>
+    </div>
+
+    <!-- Results Box -->
+    <div class="results-box">
+      <h2>TRF Results Details</h2>
+      <p class="note">
+        Institutions themselves are responsible for determining the IELTS Band Scores appropriate to their particular courses or requirements. Institutions should note that IELTS Band Scores reflect English language proficiency alone which is one of the many factors relevant to academic success or failure. It is standard practice for the scores reported on an IELTS Test Report Form to be accepted by institutions as evidence of a candidate’s English language ability for a two-year period from the date of the test.
+      </p>
+
+      <img id="studentPhoto" src="" alt="Student Photo" style="width:150px;float:right;margin:10px;">
+
+      <table>
+        <tr><td><strong>Centre Number:</strong></td><td id="centre"></td></tr>
+        <tr><td><strong>Centre Name:</strong></td><td id="centreName"></td></tr>
+        <tr><td><strong>Candidate Number:</strong></td><td id="candidateNumber"></td></tr>
+        <tr><td><strong>Candidate ID:</strong></td><td id="candidateId"></td></tr>
+        <tr><td><strong>Family Name:</strong></td><td id="familyName"></td></tr>
+        <tr><td><strong>First Name:</strong></td><td id="firstName"></td></tr>
+        <tr><td><strong>Date of Birth:</strong></td><td id="dob"></td></tr>
+        <tr><td><strong>Sex (M/F):</strong></td><td id="sex"></td></tr>
+        <tr><td><strong>Date of Examination:</strong></td><td id="examDate"></td></tr>
+        <tr><td><strong>TRF Number:</strong></td><td id="trfNumber"></td></tr>
+        <tr><td><strong>Listening:</strong></td><td id="listening"></td></tr>
+        <tr><td><strong>Reading:</strong></td><td id="reading"></td></tr>
+        <tr><td><strong>Writing:</strong></td><td id="writing"></td></tr>
+        <tr><td><strong>Speaking:</strong></td><td id="speaking"></td></tr>
+        <tr><td><strong>Overall Band:</strong></td><td id="overall" class="score"></td></tr>
+      </table>
+    </div>
   </div>
 
+  <!-- Footer -->
   <footer>
     © 2026 IELTS Results Portal | All Rights Reserved | 
     <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
@@ -49,19 +75,21 @@
     const student = students[serial];
 
     if (student) {
-      document.getElementById("studentName").textContent = student.name;
+      document.getElementById("centre").textContent = student.centre;
+      document.getElementById("centreName").textContent = student.centreName;
       document.getElementById("candidateNumber").textContent = student.candidate;
       document.getElementById("candidateId").textContent = student.candidateId;
+      document.getElementById("familyName").textContent = student.name.split(" ").slice(-1)[0];
+      document.getElementById("firstName").textContent = student.name.split(" ").slice(0,-1).join(" ");
       document.getElementById("dob").textContent = student.dob;
       document.getElementById("sex").textContent = student.sex;
       document.getElementById("examDate").textContent = student.examDate;
-      document.getElementById("centre").textContent = student.centre;
-      document.getElementById("centreName").textContent = student.centreName;
-      document.getElementById("overall").textContent = student.overall;
+      document.getElementById("trfNumber").textContent = student.trfNumber;
       document.getElementById("listening").textContent = student.listening;
       document.getElementById("reading").textContent = student.reading;
       document.getElementById("writing").textContent = student.writing;
       document.getElementById("speaking").textContent = student.speaking;
+      document.getElementById("overall").textContent = student.overall;
       document.getElementById("studentPhoto").src = "images/" + student.image;
     } else {
       document.querySelector(".results-box").innerHTML = "<p style='color:red'>❌ البيانات غير صحيحة أو الطالب غير موجود</p>";
