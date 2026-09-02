@@ -28,7 +28,7 @@ body {
 }
 .header h1 {
   margin: 0;
-  font-size: 30px; /* كبرنا العنوان */
+  font-size: 32px; /* كبرنا العنوان */
   font-weight: bold;
 }
 
@@ -98,7 +98,7 @@ body {
 
 /* العلامة المائية داخل مربع البحث */
 .welcome-box::before {
-  content: "IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS";
+  content: "IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS";
   position: absolute;
   top: 0;
   left: 0;
@@ -134,7 +134,7 @@ body {
   background: #fff;
   overflow: hidden;
   width: 100%;
-  padding: 10px 0; /* صغرنا البار الأبيض */
+  padding: 5px 0; /* صغرنا البار الأبيض */
 }
 .banner-scroll {
   display: inline-block;
@@ -143,7 +143,7 @@ body {
 }
 .banner-scroll img {
   width: 100%;   /* الصورة تملأ عرض البار */
-  height: 220px; /* كبرنا الصورة لتملأ البار */
+  height: 250px; /* كبرنا الصورة لتملأ البار */
   object-fit: cover;
 }
 @keyframes bannerMove {
