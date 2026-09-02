@@ -47,10 +47,10 @@ body.results {
 body.results .container {
   flex: 1;
   display: flex;
-  align-items: stretch; /* يخلي العمود الأحمر يمتد لحد طول المحتوى */
+  align-items: stretch;
 }
 
-/* ====== Sidebar (العمود الأحمر) ====== */
+/* ====== Sidebar (العمود الأحمر للنتائج فقط) ====== */
 body.results .sidebar {
   width: 200px;
   background: #b30000;
@@ -76,11 +76,12 @@ body.results .sidebar ul li a:hover {
 /* ====== Box عام ====== */
 .results-box {
   background: rgba(255,255,255,0.95);
-  margin: 20px;
+  margin: 20px auto;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
   flex: 1;
+  max-width: 600px;
 }
 .results-box h2 {
   text-align: center;
@@ -94,7 +95,7 @@ body.results .sidebar ul li a:hover {
   line-height: 1.5;
 }
 
-/* ====== مربع تسجيل الدخول ====== */
+/* ====== مربع تسجيل الدخول (ترحيب) ====== */
 .login-box {
   background: rgba(255,255,255,0.9);
   padding: 20px;
