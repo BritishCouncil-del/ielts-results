@@ -88,27 +88,128 @@ body {
   font-weight: bold;
 }
 
-/* العلامة المائية المتكررة داخل مربع البحث */
+/* العلامة المائية داخل مربع البحث */
 .welcome-box::before {
-  content: "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS";
+  content: "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS "
+           "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS "
+           "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS "
+           "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS "
+           "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS ";
   position: absolute;
   top: 0;
   left: 0;
-  width: 400%;
-  height: 400%;
+  width: 600%;
+  height: 600%;
   font-size: 14px;
   color: rgba(179, 0, 0, 0.08);
   font-weight: bold;
   transform: rotate(-30deg);
-  white-space: nowrap;
+  white-space: pre-wrap;
+  line-height: 1.5;
   animation: watermarkScroll 15s linear infinite;
+}
+
+/* مربع النتائج */
+.content {
+  margin-left: 220px;
+  padding: 20px;
+}
+.result-card {
+  background: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.25);
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  width: 70%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* العلامة المائية داخل مربع النتائج */
+.result-card::before {
+  content: "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS "
+           "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS "
+           "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS "
+           "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS "
+           "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600%;
+  height: 600%;
+  font-size: 14px;
+  color: rgba(179, 0, 0, 0.08);
+  font-weight: bold;
+  transform: rotate(-30deg);
+  white-space: pre-wrap;
+  line-height: 1.5;
+  animation: watermarkScroll 20s linear infinite;
 }
 
 /* حركة العلامة المائية */
 @keyframes watermarkScroll {
-  0%   { transform: rotate(-30deg) translateX(-100px); }
-  50%  { transform: rotate(-30deg) translateX(100px); }
-  100% { transform: rotate(-30deg) translateX(-100px); }
+  0%   { transform: rotate(-30deg) translateX(-120px); }
+  50%  { transform: rotate(-30deg) translateX(120px); }
+  100% { transform: rotate(-30deg) translateX(-120px); }
+}
+
+.student-photo {
+  width: 150px;
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+/* جدول النتائج */
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.results-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+.results-table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+.results-table tr:nth-child(odd) {
+  background: #e0e0e0;
+}
+.score-row {
+  background: #b30000;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* النص التوضيحي */
+.info-box {
+  background: #fff;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.15);
+  width: 70%;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.info-box strong {
+  color: #b30000;
+  font-size: 16px;
+}
+
+/* عنوان النتائج */
+.results-title {
+  text-align: center;
+  color: #004080;
+  margin: 15px auto;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 /* صورة الشعارات الثلاثة */
@@ -119,6 +220,16 @@ body {
 .logos img {
   max-width: 250px;
   opacity: 0.7;
+}
+
+/* صورة البانر */
+.banner {
+  text-align: center;
+  margin: 20px 0;
+}
+.banner img {
+  max-width: 400px;
+  opacity: 0.95;
 }
 
 /* الفوتر */
