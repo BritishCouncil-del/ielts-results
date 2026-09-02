@@ -1,4 +1,4 @@
-/* إعدادات عامة */
+/* General settings */
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
@@ -8,7 +8,7 @@ body {
   line-height: 1.6;
 }
 
-/* الهيدر الأحمر */
+/* Red header with white logo box */
 .header {
   background-color: #b30000;
   padding: 20px 30px;
@@ -20,20 +20,20 @@ body {
 }
 .logo-box {
   background: #fff;
-  padding: 14px;
+  padding: 8px;
   border-radius: 8px;
-  margin-right: 25px;
+  margin-right: 20px;
 }
 .logo-box img {
-  height: 110px;
+  height: 70px; /* smaller logo size */
 }
 .header h1 {
   margin: 0;
-  font-size: 34px;
+  font-size: 28px;
   font-weight: bold;
 }
 
-/* البار الأزرق */
+/* Blue bar */
 .bar {
   background-image: linear-gradient(to right, #004080, #0055aa);
   color: #fff;
@@ -53,36 +53,35 @@ body {
   to   { transform: translateX(-100%); }
 }
 
-/* مربع الترحيب */
+/* Welcome box */
 .welcome-box {
   background: #fff;
-  margin: 60px auto;
-  padding: 45px;
+  margin: 40px auto;
+  padding: 40px;
   border-radius: 12px;
   box-shadow: 0 0 25px rgba(0,0,0,0.25);
-  width: 460px;
+  width: 420px;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 .big-title {
-  font-size: 50px;
+  font-size: 40px;
   color: #b30000;
-  margin-bottom: 25px;
-  font-weight: bold;
+  margin-bottom: 20px;
 }
 .welcome-box input {
   width: 90%;
   padding: 14px;
-  margin: 12px 0;
+  margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 16px;
+  font-size: 15px;
 }
 .welcome-box button {
   background: #004080;
   color: #fff;
-  padding: 14px 35px;
+  padding: 14px 30px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -99,18 +98,18 @@ body {
   font-weight: bold;
 }
 
-/* العلامة المائية */
+/* Watermark inside welcome box */
 .welcome-box::before {
-  content: "IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS";
+  content: "IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: bold;
   color: goldenrod;
-  opacity: 0.2;
+  opacity: 0.15;
   transform: rotate(-30deg);
   white-space: pre;
   line-height: 1.1;
@@ -123,22 +122,38 @@ body {
   100% { transform: rotate(-30deg) translateX(-800px); }
 }
 
-/* الصورة المتحركة بدل البانر الأبيض */
+/* Logos under search box */
+.logos {
+  text-align: center;
+  margin: 20px 0;
+}
+.logos img {
+  max-width: 220px; /* smaller size for balance */
+  opacity: 1;
+  animation: logos3D 10s infinite alternate ease-in-out;
+}
+@keyframes logos3D {
+  from { transform: rotateY(0deg) scale(1); }
+  to   { transform: rotateY(25deg) scale(1.05); }
+}
+
+/* White banner with moving 3D image */
 .banner {
-  background: none;
+  background: #fff;
   overflow: hidden;
   width: 100%;
+  padding: 5px 0;
 }
 .banner-scroll {
   display: inline-block;
   white-space: nowrap;
-  animation: bannerMove 25s linear infinite;
 }
 .banner-scroll img {
   width: 100%;
-  height: 320px;
+  height: 280px;
   object-fit: cover;
   transform: perspective(1000px) rotateY(15deg);
+  animation: bannerMove 25s linear infinite;
 }
 @keyframes bannerMove {
   0%   { transform: translateX(100%) perspective(1000px) rotateY(15deg); }
@@ -146,7 +161,7 @@ body {
   100% { transform: translateX(-100%) perspective(1000px) rotateY(15deg); }
 }
 
-/* الفوتر */
+/* Footer */
 footer {
   background: #b30000;
   color: #fff;
