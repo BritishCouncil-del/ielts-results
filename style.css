@@ -1,4 +1,4 @@
-/* ====== Header أحمر ====== */
+/* Header */
 .header {
   background: #b30000;
   color: #fff;
@@ -15,7 +15,7 @@
   height: 60px;
 }
 
-/* ====== Blue bar متحرك ====== */
+/* Blue bar */
 .bar {
   background: #003366;
   overflow: hidden;
@@ -36,45 +36,7 @@
   to { transform: translateX(-100%); }
 }
 
-/* ====== Welcome Box ====== */
-.welcome-box {
-  background: #fff;
-  margin: 40px auto;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-  width: 500px;
-  text-align: center;
-}
-.big-title {
-  color: #b30000;
-  margin-bottom: 20px;
-}
-.welcome-box input {
-  display: block;
-  width: 90%;
-  margin: 10px auto;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-.welcome-box button {
-  background: #003366;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-.welcome-box button:hover {
-  background: #0055aa;
-}
-.error {
-  color: red;
-  margin-top: 10px;
-}
-
-/* ====== Sidebar أحمر ====== */
+/* Sidebar */
 .sidebar {
   width: 200px;
   background: #b30000;
@@ -97,7 +59,7 @@
   background: #800000;
 }
 
-/* ====== Results Box ====== */
+/* Results Box */
 .results-box {
   background: #fff;
   margin: 20px;
@@ -126,7 +88,7 @@
   color: #b30000;
 }
 
-/* ====== Logos ====== */
+/* Logos */
 .logos {
   text-align: center;
   margin: 20px 0;
@@ -135,7 +97,7 @@
   max-width: 300px;
 }
 
-/* ====== Banner متحرك ====== */
+/* Banner */
 .banner {
   text-align: center;
   margin: 20px 0;
@@ -153,7 +115,7 @@
   to { transform: translateX(-100%); }
 }
 
-/* ====== Footer ====== */
+/* Footer */
 footer {
   background: #f0f0f0;
   text-align: center;
