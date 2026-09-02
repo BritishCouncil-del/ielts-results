@@ -33,39 +33,35 @@ body {
   font-weight: bold;
 }
 
-/* Blue bar with IELTS test types */
+/* Blue bar with moving items */
 .bar {
   background: linear-gradient(90deg, #003366, #0055aa);
   color: #fff;
-  padding: 15px 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: bold;
+  padding: 12px 0;
+  overflow: hidden;
   box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
-.bar-text {
+.bar-scroll {
+  display: inline-block;
+  white-space: nowrap;
+  animation: barMove 25s linear infinite;
+}
+.bar-item {
+  display: inline-block;
+  margin: 0 25px;
   font-size: 18px;
-  letter-spacing: 1px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
 }
-.bar-icons {
-  display: flex;
-  gap: 20px;
-}
-.bar-icons span {
-  background: rgba(255,255,255,0.1);
-  padding: 6px 12px;
-  border-radius: 6px;
-  font-size: 14px;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-.bar-icons span:hover {
-  transform: scale(1.1);
-  background: rgba(255,255,255,0.25);
-}
-.bar-icons span::before {
-  content: "★ ";
+.bar-item:hover {
+  transform: scale(1.2);
   color: gold;
+}
+@keyframes barMove {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(-100%); }
 }
 
 /* Welcome box */
@@ -96,11 +92,6 @@ body {
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 16px;
-  transition: border-color 0.3s ease;
-}
-.welcome-box input:focus {
-  border-color: #004080;
-  outline: none;
 }
 .welcome-box button {
   background: linear-gradient(90deg, #004080, #0066cc);
@@ -111,7 +102,6 @@ body {
   cursor: pointer;
   font-weight: bold;
   font-size: 16px;
-  transition: transform 0.3s ease, background 0.3s ease;
 }
 .welcome-box button:hover {
   transform: scale(1.05);
@@ -126,7 +116,7 @@ body {
 
 /* Watermark inside welcome box */
 .welcome-box::before {
-  content: "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS";
+  content: "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS";
   position: absolute;
   top: 0;
   left: 0;
@@ -148,13 +138,13 @@ body {
   100% { transform: rotate(-30deg) translateX(-800px); }
 }
 
-/* Logos under search box */
+/* Logos under search box (larger size) */
 .logos {
   text-align: center;
-  margin: 20px 0;
+  margin: 25px 0;
 }
 .logos img {
-  max-width: 150px; /* smaller size */
+  max-width: 300px; /* larger size */
   opacity: 1;
   animation: logos3D 10s infinite alternate ease-in-out;
 }
@@ -163,16 +153,12 @@ body {
   to   { transform: rotateY(25deg) scale(1.05); }
 }
 
-/* White banner with moving 3D image */
+/* Moving banner image */
 .banner {
   background: #fff;
   overflow: hidden;
   width: 100%;
   padding: 5px 0;
-}
-.banner-scroll {
-  display: inline-block;
-  white-space: nowrap;
 }
 .banner-scroll img {
   width: 100%;
