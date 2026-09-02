@@ -1,29 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>IELTS Results</title>
+  <title>نتائج اختبار IELTS</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="results">
 
-  <!-- Header -->
   <div class="header">
-    <div class="logo-box">
-      <img src="images/ielts-logo1.png" alt="IELTS Logo">
-    </div>
-    <h1>IELTS™ English for International Opportunity</h1>
+    <img src="images/ielts-logos.png" alt="IELTS Logo" class="ielts-logo">
+    <h1>IELTS Results</h1>
   </div>
 
-  <!-- Results Box -->
+  <div class="marquee">
+    <marquee behavior="scroll" direction="left" scrollamount="6">
+      Match Found - IELTS Academic - General - UKVI - Life Skills
+    </marquee>
+  </div>
+
   <div class="results-box">
     <h2>Test Report Form (TRF)</h2>
     <img id="studentPhoto" src="" alt="Student Photo" style="width:150px;float:right;margin:10px;">
     <table>
       <tr><td><strong>Candidate Number:</strong></td><td id="candidateNumber"></td></tr>
+      <tr><td><strong>Candidate ID:</strong></td><td id="candidateId"></td></tr>
       <tr><td><strong>Name:</strong></td><td id="studentName"></td></tr>
       <tr><td><strong>Date of Birth:</strong></td><td id="dob"></td></tr>
+      <tr><td><strong>Sex:</strong></td><td id="sex"></td></tr>
       <tr><td><strong>Test Date:</strong></td><td id="examDate"></td></tr>
+      <tr><td><strong>Centre:</strong></td><td id="centre"></td></tr>
+      <tr><td><strong>Centre Name:</strong></td><td id="centreName"></td></tr>
       <tr><td><strong>Listening:</strong></td><td id="listening"></td></tr>
       <tr><td><strong>Reading:</strong></td><td id="reading"></td></tr>
       <tr><td><strong>Writing:</strong></td><td id="writing"></td></tr>
@@ -32,27 +38,25 @@
     </table>
   </div>
 
-  <!-- Footer -->
   <footer>
-    <p>©2026 IELTS Verification System | <a href="#">britishcouncil.org</a></p>
+    © 2026 IELTS Results Portal | All Rights Reserved | 
+    <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
   </footer>
 
   <script src="students.js"></script>
   <script>
-    function getQueryParam(param) {
-      const urlParams = new URLSearchParams(window.location.search);
-      return urlParams.get(param);
-    }
-
-    const serial = getQueryParam("serial");
-    const candidate = getQueryParam("candidate");
+    const serial = localStorage.getItem('serial');
     const student = students[serial];
 
-    if (student && student.candidate === candidate) {
+    if (student) {
       document.getElementById("studentName").textContent = student.name;
       document.getElementById("candidateNumber").textContent = student.candidate;
+      document.getElementById("candidateId").textContent = student.candidateId;
       document.getElementById("dob").textContent = student.dob;
+      document.getElementById("sex").textContent = student.sex;
       document.getElementById("examDate").textContent = student.examDate;
+      document.getElementById("centre").textContent = student.centre;
+      document.getElementById("centreName").textContent = student.centreName;
       document.getElementById("overall").textContent = student.overall;
       document.getElementById("listening").textContent = student.listening;
       document.getElementById("reading").textContent = student.reading;
@@ -60,7 +64,7 @@
       document.getElementById("speaking").textContent = student.speaking;
       document.getElementById("studentPhoto").src = "images/" + student.image;
     } else {
-      alert("❌ البيانات غير صحيحة أو الطالب غير موجود");
+      document.querySelector(".results-box").innerHTML = "<p style='color:red'>❌ البيانات غير صحيحة أو الطالب غير موجود</p>";
     }
   </script>
 </body>
