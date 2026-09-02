@@ -20,7 +20,7 @@
     </marquee>
   </div>
 
-  <!-- Container مع العمود الأحمر -->
+  <!-- Container -->
   <div class="container">
     <!-- Sidebar -->
     <div class="sidebar">
@@ -44,33 +44,13 @@
         It is standard practice for the scores reported on an IELTS Test Report Form to be accepted by institutions as evidence of a candidate’s English language ability for a two-year period from the date of the test.
       </p>
 
+      <!-- بيانات الطالب -->
       <div class="results-content">
-        <!-- جدول النتائج -->
-        <table class="results-table">
-          <tr><td>Centre Number</td><td>AE001</td></tr>
-          <tr><td>Centre Name</td><td>British Council</td></tr>
-          <tr><td>Candidate Number</td><td>509284</td></tr>
-          <tr><td>Candidate ID</td><td>A04468375</td></tr>
-          <tr><td>Name</td><td>BUTI SAEED SALEM ALMAHDHI ALSHAMSI</td></tr>
-          <tr><td>Date of Birth</td><td>2009-02-18</td></tr>
-          <tr><td>Gender</td><td>M</td></tr>
-          <tr><td>Date of Examination</td><td>2026-08-11</td></tr>
-          <tr><td>TRF Number</td><td>26AE509284ALSB113A</td></tr>
-          <tr><td>Listening</td><td>6.0</td></tr>
-          <tr><td>Reading</td><td>5.5</td></tr>
-          <tr><td>Writing</td><td>5.5</td></tr>
-          <tr><td>Speaking</td><td>6.5</td></tr>
-          <tr>
-            <td class="score">Overall Band Score</td>
-            <td class="score">6.0</td>
-          </tr>
-        </table>
-
-        <!-- صورة الطالب -->
-        <img src="images/student1.jpg" alt="Student Photo" class="student-photo">
+        <table class="results-table" id="resultsTable"></table>
+        <img id="studentPhoto" alt="Student Photo" class="student-photo">
       </div>
 
-      <!-- الشعارات الرسمية -->
+      <!-- الشعارات -->
       <div class="logo-section">
         <img src="images/ielts-logos.png" alt="IELTS Logos">
       </div>
@@ -86,5 +66,32 @@
     <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
   </footer>
 
+  <!-- Script لعرض بيانات الطالب -->
+  <script src="students.js"></script>
+  <script>
+    const student = JSON.parse(localStorage.getItem("studentData"));
+    if (student) {
+      const table = document.getElementById("resultsTable");
+      table.innerHTML = `
+        <tr><td>Centre Number</td><td>${student.centre}</td></tr>
+        <tr><td>Centre Name</td><td>${student.centreName}</td></tr>
+        <tr><td>Candidate Number</td><td>${student.candidate}</td></tr>
+        <tr><td>Candidate ID</td><td>${student.candidateId}</td></tr>
+        <tr><td>Name</td><td>${student.name}</td></tr>
+        <tr><td>Date of Birth</td><td>${student.dob}</td></tr>
+        <tr><td>Gender</td><td>${student.sex}</td></tr>
+        <tr><td>Date of Examination</td><td>${student.examDate}</td></tr>
+        <tr><td>TRF Number</td><td>${student.trfNumber}</td></tr>
+        <tr><td>Listening</td><td>${student.listening}</td></tr>
+        <tr><td>Reading</td><td>${student.reading}</td></tr>
+        <tr><td>Writing</td><td>${student.writing}</td></tr>
+        <tr><td>Speaking</td><td>${student.speaking}</td></tr>
+        <tr><td class="score">Overall Band Score</td><td class="score">${student.overall}</td></tr>
+      `;
+      document.getElementById("studentPhoto").src = "images/" + student.image;
+    } else {
+      document.getElementById("resultsTable").innerHTML = "<tr><td colspan='2'>لا توجد بيانات</td></tr>";
+    }
+  </script>
 </body>
 </html>
