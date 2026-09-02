@@ -1,132 +1,158 @@
+/* General */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: url("images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
 /* Header */
 .header {
-  background: #b30000;
-  color: #fff;
-  padding: 15px;
-  text-align: center;
-  position: relative;
+  background-color: #b30000;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  color: white;
 }
 .logo-box {
-  position: absolute;
-  left: 20px;
-  top: 10px;
+  background: #fff;
+  padding: 8px;
+  border-radius: 8px;
+  margin-right: 20px;
 }
 .logo-box img {
-  height: 60px;
+  height: 70px;
 }
 
 /* Blue bar */
 .bar {
-  background: #003366;
+  background: linear-gradient(90deg, #003366, #0055aa);
+  color: #fff;
+  padding: 12px 0;
   overflow: hidden;
-  white-space: nowrap;
 }
 .bar-scroll {
   display: inline-block;
-  animation: scrollText 15s linear infinite;
+  white-space: nowrap;
+  animation: barMove 25s linear infinite;
 }
 .bar-item {
   display: inline-block;
-  color: #fff;
-  padding: 0 30px;
+  margin: 0 25px;
+  font-size: 18px;
   font-weight: bold;
 }
-@keyframes scrollText {
+.bar-item img.icon {
+  height: 28px;
+  vertical-align: middle;
+}
+@keyframes barMove {
   from { transform: translateX(100%); }
-  to { transform: translateX(-100%); }
+  to   { transform: translateX(-100%); }
 }
 
-/* Sidebar */
-.sidebar {
-  width: 200px;
-  background: #b30000;
-  float: left;
-  min-height: 100vh;
-}
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.sidebar ul li a {
-  display: block;
-  padding: 12px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-.sidebar ul li a:hover {
-  background: #800000;
-}
-
-/* Results Box */
-.results-box {
+/* Welcome box */
+.welcome-box {
   background: #fff;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-  width: calc(100% - 240px);
-  float: right;
-}
-.results-box h2 {
+  margin: 50px auto;
+  padding: 50px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  width: 460px;
   text-align: center;
+  position: relative;
+  border: 3px solid #b30000;
+}
+.big-title {
+  font-size: 42px;
   color: #b30000;
-  margin-bottom: 20px;
-}
-.results-box table {
-  width: 100%;
-  border-collapse: collapse;
-}
-.results-box td {
-  padding: 8px;
-  border-bottom: 1px solid #ddd;
-}
-.results-box .score {
-  font-size: 20px;
+  margin-bottom: 25px;
   font-weight: bold;
+  text-transform: uppercase;
+}
+.welcome-box input {
+  width: 90%;
+  padding: 14px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.welcome-box button {
+  background: linear-gradient(90deg, #004080, #0066cc);
+  color: #fff;
+  padding: 14px 35px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.error {
   color: #b30000;
+  margin-top: 15px;
 }
 
-/* Logos */
+/* Watermark inside welcome box */
+.welcome-box::before {
+  content: "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 40px;
+  font-weight: bold;
+  color: goldenrod;
+  opacity: 0.12;
+  transform: rotate(-30deg);
+  animation: watermarkScroll 20s linear infinite;
+  pointer-events: none;
+}
+@keyframes watermarkScroll {
+  0%   { transform: rotate(-30deg) translateX(-400px); }
+  50%  { transform: rotate(-30deg) translateX(400px); }
+  100% { transform: rotate(-30deg) translateX(-400px); }
+}
+
+/* Logos under search box */
 .logos {
   text-align: center;
-  margin: 20px 0;
+  margin: 25px 0;
 }
 .logos img {
-  max-width: 300px;
+  max-width: 420px;
+  animation: logos3D 10s infinite alternate ease-in-out;
+}
+@keyframes logos3D {
+  from { transform: rotateY(0deg) scale(1); }
+  to   { transform: rotateY(25deg) scale(1.05); }
 }
 
-/* Banner */
+/* Moving banner image */
 .banner {
-  text-align: center;
-  margin: 20px 0;
+  overflow: hidden;
+  width: 100%;
+  padding: 5px 0;
 }
-.banner-scroll {
-  display: inline-block;
-  animation: scrollBanner 10s linear infinite;
+.banner-scroll img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  animation: bannerMove 25s linear infinite;
 }
-.banner img {
-  max-width: 400px;
-  background: transparent;
-}
-@keyframes scrollBanner {
-  from { transform: translateX(100%); }
-  to { transform: translateX(-100%); }
+@keyframes bannerMove {
+  0%   { transform: translateX(100%); }
+  50%  { transform: translateX(-50%); }
+  100% { transform: translateX(-100%); }
 }
 
 /* Footer */
 footer {
-  background: #f0f0f0;
+  background: #b30000;
+  color: #fff;
   text-align: center;
-  padding: 15px;
-  margin-top: 20px;
-  border-top: 1px solid #ccc;
+  padding: 20px;
 }
 footer a {
-  color: #003366;
-  text-decoration: none;
-}
-footer a:hover {
+  color: #fff;
   text-decoration: underline;
 }
