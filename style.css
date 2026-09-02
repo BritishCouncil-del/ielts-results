@@ -90,11 +90,7 @@ body {
 
 /* العلامة المائية داخل مربع البحث */
 .welcome-box::before {
-  content: "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS "
-           "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS "
-           "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS "
-           "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS "
-           "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS ";
+  content: "IELTS ".repeat(100); /* تكرار الكلمة 100 مرة */
   position: absolute;
   top: 0;
   left: 0;
@@ -130,11 +126,7 @@ body {
 
 /* العلامة المائية داخل مربع النتائج */
 .result-card::before {
-  content: "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS "
-           "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS "
-           "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS "
-           "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS "
-           "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS ";
+  content: "IELTS ".repeat(100); /* تكرار الكلمة 100 مرة */
   position: absolute;
   top: 0;
   left: 0;
