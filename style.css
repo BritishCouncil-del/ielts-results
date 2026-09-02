@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
-  background: url("images/background.jpg") no-repeat center center fixed;
+  background: url("صور/background.jpg") no-repeat center center fixed;
   background-size: cover;
   color: #333;
 }
@@ -99,7 +99,7 @@ body {
   left: 0;
   width: 200%;
   height: 200%;
-  background: url("images/علامه مائيه.png") repeat;
+  background: url("صور/علامه مائيه.png") repeat;
   background-size: 150px;
   opacity: 0.1; /* شفافية أوضح */
   transform: rotate(-30deg);
