@@ -53,42 +53,40 @@ body {
   to   { transform: translateX(-100%); }
 }
 
-/* مربع الترحيب */
+/* مربع البحث */
 .welcome-box {
   background: #fff;
   margin: 60px auto;
-  padding: 45px;
+  padding: 40px;
   border-radius: 12px;
   box-shadow: 0 0 25px rgba(0,0,0,0.25);
-  width: 460px;
+  width: 420px;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 .big-title {
-  font-size: 50px;
+  font-size: 46px;
   color: #b30000;
-  margin-bottom: 25px;
-  font-weight: bold;
+  margin-bottom: 20px;
 }
 .welcome-box input {
-  width: 90%;
+  width: 92%;
   padding: 14px;
   margin: 12px 0;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 16px;
+  font-size: 15px;
 }
 .welcome-box button {
   background: #004080;
   color: #fff;
-  padding: 14px 35px;
+  padding: 14px 30px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
   font-size: 16px;
-  transition: background 0.3s ease;
 }
 .welcome-box button:hover {
   background: #003060;
@@ -99,9 +97,9 @@ body {
   font-weight: bold;
 }
 
-/* العلامة المائية */
+/* العلامة المائية داخل مربع البحث */
 .welcome-box::before {
-  content: "IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS";
+  content: "IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS";
   position: absolute;
   top: 0;
   left: 0;
@@ -109,18 +107,17 @@ body {
   height: 100%;
   font-size: 28px;
   font-weight: bold;
-  color: goldenrod;
-  opacity: 0.2;
+  color: goldenrod; /* اللون الذهبي */
+  opacity: 0.25;
   transform: rotate(-30deg);
   white-space: pre;
   line-height: 1.1; /* صفوف كثيرة متقاربة */
-  animation: watermarkScroll 90s linear infinite;
-  pointer-events: none; /* عشان ما تغطيش على الحقول */
+  animation: watermarkScroll 80s linear infinite;
 }
 @keyframes watermarkScroll {
-  0%   { transform: rotate(-30deg) translateX(-800px); }
-  50%  { transform: rotate(-30deg) translateX(800px); }
-  100% { transform: rotate(-30deg) translateX(-800px); }
+  0%   { transform: rotate(-30deg) translateX(-700px); }
+  50%  { transform: rotate(-30deg) translateX(700px); }
+  100% { transform: rotate(-30deg) translateX(-700px); }
 }
 
 /* الشعارات */
