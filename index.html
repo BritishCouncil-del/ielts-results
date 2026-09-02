@@ -1,34 +1,46 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>IELTS Verification</title>
+  <title>IELTS Portal</title>
   <link rel="stylesheet" href="style.css">
+  <script src="students.js"></script>
 </head>
 <body>
 
   <!-- الهيدر الأحمر -->
   <div class="header">
     <div class="logo-box">
-      <img src="images/ielts-logo.png" alt="IELTS Logo">
+      <img src="images/ielts-logo1.png" alt="IELTS Logo">
     </div>
-    <h1>IELTS Verification System</h1>
+    <h1>IELTS™ English for International Opportunity</h1>
   </div>
 
-  <!-- البار الأزرق -->
+  <!-- البار الأزرق المتحرك -->
   <div class="bar">
-    <div class="bar-text">Welcome to IELTS Verification Portal - Check Your Results Easily</div>
+    <div class="bar-text">
+      🌐 Welcome to the IELTS Test Report Form Portal — 🎓 Academic | 📑 General Training | 🏛 UKVI
+    </div>
   </div>
 
-  <!-- مربع الترحيب -->
+  <!-- مربع البحث -->
   <div class="welcome-box">
-    <h1 class="big-title">IELTS Check</h1>
-    <input type="text" placeholder="Enter Candidate ID">
-    <button>Search</button>
-    <p class="error">Error message here</p>
+    <h2 class="big-title">IELTS</h2>
+    <p>أدخل بياناتك للتحقق من نتيجة IELTS الخاصة بك</p>
+    <form onsubmit="return checkStudent();">
+      <input type="text" id="candidateNumber" placeholder="Candidate Number" required>
+      <input type="text" id="trfNumber" placeholder="TRF Number" required>
+      <button type="submit">عرض النتيجة</button>
+    </form>
+    <div id="error" class="error"></div>
   </div>
 
-  <!-- الصورة المتحركة بدل البانر الأبيض -->
+  <!-- صورة الشعارات -->
+  <div class="logos">
+    <img src="images/ielts-logos.png" alt="IELTS Logos">
+  </div>
+
+  <!-- البانر الأبيض المتحرك -->
   <div class="banner">
     <div class="banner-scroll">
       <img src="images/ielts-banner.png" alt="IELTS Banner">
@@ -37,8 +49,28 @@
 
   <!-- الفوتر -->
   <footer>
-    <p>© 2026 IELTS Verification System | <a href="#">Contact Us</a></p>
+    © 2026 IELTS Results Portal | All Rights Reserved |
+    <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
   </footer>
+
+  <script>
+    function checkStudent() {
+      const candidate = document.getElementById("candidateNumber").value.trim();
+      const trf = document.getElementById("trfNumber").value.trim();
+
+      const student = students.find(s => 
+        s.candidateNumber === candidate && s.trfNumber === trf
+      );
+
+      if(student){
+        localStorage.setItem("student", JSON.stringify(student));
+        window.location.href = "results.html";
+      } else {
+        document.getElementById("error").innerText = "❌ البيانات غير صحيحة";
+      }
+      return false;
+    }
+  </script>
 
 </body>
 </html>
