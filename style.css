@@ -5,6 +5,7 @@ body {
   background: url("images/background.jpg") no-repeat center center fixed;
   background-size: cover;
   color: #333;
+  line-height: 1.6;
 }
 
 /* الهيدر الأحمر */
@@ -97,25 +98,25 @@ body {
 
 /* العلامة المائية داخل مربع البحث */
 .welcome-box::before {
-  content: "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS";
+  content: "IELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS\nIELTS IELTS IELTS IELTS";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  font-size: 40px;
+  font-size: 38px;
   font-weight: bold;
   color: goldenrod; /* اللون الذهبي */
-  opacity: 0.15;
+  opacity: 0.25;
   transform: rotate(-30deg);
   white-space: pre;
-  line-height: 1.5;
-  animation: watermarkScroll 40s linear infinite;
+  line-height: 1.6;
+  animation: watermarkScroll 50s linear infinite;
 }
 @keyframes watermarkScroll {
-  0%   { transform: rotate(-30deg) translateX(-200px); }
-  50%  { transform: rotate(-30deg) translateX(200px); }
-  100% { transform: rotate(-30deg) translateX(-200px); }
+  0%   { transform: rotate(-30deg) translateX(-300px); }
+  50%  { transform: rotate(-30deg) translateX(300px); }
+  100% { transform: rotate(-30deg) translateX(-300px); }
 }
 
 /* الشعارات */
@@ -142,7 +143,7 @@ body {
   animation: bannerMove 60s linear infinite;
 }
 .banner-scroll img {
-  height: 160px; /* كبرنا حجم البانر */
+  height: 180px; /* كبرنا حجم البانر */
 }
 @keyframes bannerMove {
   from { transform: translateX(100%); }
@@ -161,4 +162,4 @@ footer {
 footer a {
   color: #fff;
   text-decoration: underline;
-} حد
+}
