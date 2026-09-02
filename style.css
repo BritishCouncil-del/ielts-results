@@ -3,9 +3,8 @@ body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
   background: url("images/background.jpg") no-repeat center center fixed;
-  background-size: cover;   /* الخلفية تغطي الشاشة بالكامل */
+  background-size: cover;
   color: #333;
-  line-height: 1.6;
 }
 
 /* الهيدر الأحمر */
@@ -24,11 +23,11 @@ body {
   margin-right: 20px;
 }
 .logo-box img {
-  height: 90px; /* كبرنا حجم الشعار */
+  height: 90px;
 }
 .header h1 {
   margin: 0;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: bold;
 }
 
@@ -44,7 +43,7 @@ body {
 .bar-text {
   display: inline-block;
   white-space: nowrap;
-  animation: scrollText 30s linear infinite; /* حركة أبطأ */
+  animation: scrollText 30s linear infinite;
   font-size: 18px;
 }
 @keyframes scrollText {
@@ -59,13 +58,13 @@ body {
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0 0 25px rgba(0,0,0,0.25);
-  width: 420px; /* كبرنا العرض */
+  width: 420px;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 .big-title {
-  font-size: 46px;
+  font-size: 44px;
   color: #b30000;
   margin-bottom: 20px;
 }
@@ -98,22 +97,25 @@ body {
 
 /* العلامة المائية داخل مربع البحث */
 .welcome-box::before {
-  content: "";
+  content: "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS";
   position: absolute;
   top: 0;
   left: 0;
-  width: 700%;   /* أكبر مساحة */
-  height: 700%;  /* أكبر مساحة */
-  background: url("images/علامه مائيه.png") repeat;
-  background-size: 350px; /* كبرنا حجم العلامة */
-  opacity: 0.3; /* أوضح */
+  width: 100%;
+  height: 100%;
+  font-size: 40px;
+  font-weight: bold;
+  color: goldenrod; /* اللون الذهبي */
+  opacity: 0.15;
   transform: rotate(-30deg);
-  animation: watermarkScroll 70s linear infinite; /* حركة أبطأ */
+  white-space: pre;
+  line-height: 1.5;
+  animation: watermarkScroll 40s linear infinite;
 }
 @keyframes watermarkScroll {
-  0%   { transform: rotate(-30deg) translateX(-600px); }
-  50%  { transform: rotate(-30deg) translateX(600px); }
-  100% { transform: rotate(-30deg) translateX(-600px); }
+  0%   { transform: rotate(-30deg) translateX(-200px); }
+  50%  { transform: rotate(-30deg) translateX(200px); }
+  100% { transform: rotate(-30deg) translateX(-200px); }
 }
 
 /* الشعارات */
@@ -122,7 +124,7 @@ body {
   margin: 30px 0;
 }
 .logos img {
-  max-width: 400px; /* كبرنا حجم الشعارات */
+  max-width: 400px;
   opacity: 1;
 }
 
@@ -137,10 +139,10 @@ body {
 .banner-scroll {
   display: inline-block;
   white-space: nowrap;
-  animation: bannerMove 70s linear infinite; /* حركة أبطأ */
+  animation: bannerMove 60s linear infinite;
 }
 .banner-scroll img {
-  height: 140px; /* كبرنا حجم البانر */
+  height: 160px; /* كبرنا حجم البانر */
 }
 @keyframes bannerMove {
   from { transform: translateX(100%); }
@@ -159,4 +161,4 @@ footer {
 footer a {
   color: #fff;
   text-decoration: underline;
-}
+} حد
