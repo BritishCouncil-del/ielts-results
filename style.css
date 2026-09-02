@@ -10,7 +10,7 @@ body {
 
 /* ====== خلفية صفحة الترحيب ====== */
 body.welcome {
-  background: url("images/ielts-banner.png") no-repeat center center fixed;
+  background: url("images/background.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -98,7 +98,7 @@ body.results {
   background: #002244;
 }
 
-/* ====== جدول النتائج + صورة الطالب ====== */
+/* ====== جدول النتائج ====== */
 .results-content {
   display: flex;
   justify-content: space-between;
@@ -124,17 +124,14 @@ body.results {
   font-weight: bold;
   color: #b30000;
 }
+
+/* ====== صورة الطالب (بدون حركة زووم) ====== */
 .student-photo {
   width: 150px;
   border: 2px solid #ccc;
   border-radius: 8px;
   margin-left: 20px;
   align-self: flex-start;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.student-photo:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 /* ====== علامة مائية متحركة (نتائج) ====== */
