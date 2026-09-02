@@ -20,6 +20,11 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
   transition: transform 0.3s ease;
 }
+.bar-item img.icon {
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
 .bar-item:hover {
   transform: scale(1.2);
   color: gold;
@@ -35,7 +40,7 @@
   margin: 25px 0;
 }
 .logos img {
-  max-width: 340px; /* larger size */
+  max-width: 360px; /* larger size */
   opacity: 1;
   animation: logos3D 10s infinite alternate ease-in-out;
 }
