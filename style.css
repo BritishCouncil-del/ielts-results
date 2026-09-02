@@ -45,28 +45,29 @@ body.results {
 .container {
   flex: 1;
   display: flex;
+  justify-content: center; /* في الترحيب نخلي المحتوى في النص */
   align-items: flex-start;
 }
 
-/* ====== Sidebar ====== */
-.sidebar {
+/* ====== Sidebar (للنتائج فقط) ====== */
+body.results .sidebar {
   width: 200px;
   background: #b30000;
   min-height: 100%;
 }
-.sidebar ul {
+body.results .sidebar ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.sidebar ul li a {
+body.results .sidebar ul li a {
   display: block;
   padding: 12px;
   color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
-.sidebar ul li a:hover {
+body.results .sidebar ul li a:hover {
   background: #800000;
 }
 
@@ -78,6 +79,7 @@ body.results {
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
   flex: 1;
+  max-width: 600px;
 }
 .results-box h2 {
   text-align: center;
@@ -229,13 +231,3 @@ footer {
   background: #f0f0f0;
   text-align: center;
   padding: 15px;
-  border-top: 1px solid #ccc;
-  margin-top: auto;
-}
-footer a {
-  color: #003366;
-  text-decoration: none;
-}
-footer a:hover {
-  text-decoration: underline;
-}
