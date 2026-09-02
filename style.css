@@ -231,15 +231,15 @@ body.results .sidebar ul li a:hover {
   margin: 20px 0;
 }
 .logo-section img {
-  height: 80px; /* أكبر */
-  opacity: 0.8; /* شفاف */
-  margin: 0 15px;
+  height: 120px; /* أكبر */
+  opacity: 0.85; /* شفاف */
+  margin: 0 20px;
 }
 .banner-section {
   text-align: center;
   margin: 10px 0 30px;
 }
 .banner-section img {
-  max-width: 600px; /* أكبر */
-  opacity: 0.6; /* شفاف */
+  max-width: 700px; /* أكبر */
+  opacity: 0.65; /* شفاف */
 }
