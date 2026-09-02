@@ -1,4 +1,4 @@
-/* ====== خلفية عامة للصفحات ====== */
+/* ====== خلفية عامة ====== */
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
@@ -10,7 +10,7 @@ body {
 
 /* ====== خلفية صفحة الترحيب ====== */
 body.welcome {
-  background: url("images/welcome-bg.jpg") no-repeat center center fixed;
+  background: url("images/background.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -70,7 +70,7 @@ body.results {
   background: #800000;
 }
 
-/* ====== Box عام للترحيب والنتائج ====== */
+/* ====== Box عام ====== */
 .results-box {
   background: rgba(255,255,255,0.95);
   margin: 20px;
@@ -177,7 +177,7 @@ body.results {
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-/* ====== علامة مائية متحركة ====== */
+/* ====== علامة مائية متحركة (صفحة النتائج) ====== */
 .watermark::before {
   content: "IELTS IELTS IELTS IELTS";
   position: absolute;
@@ -211,6 +211,17 @@ body.results {
 .banner-section img {
   max-width: 400px;
   opacity: 0.7;
+}
+
+/* ====== بانر شفاف متحرك (صفحة الترحيب) ====== */
+.moving-banner img {
+  max-width: 400px;
+  opacity: 0.7;
+  animation: floatBanner 6s ease-in-out infinite alternate;
+}
+@keyframes floatBanner {
+  from { transform: translateY(0); }
+  to { transform: translateY(-15px); }
 }
 
 /* ====== Footer ====== */
