@@ -18,6 +18,7 @@
     </div>
   </div>
 
+  <!-- العمود الأحمر -->
   <div class="sidebar">
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -30,6 +31,7 @@
     </ul>
   </div>
 
+  <!-- المحتوى -->
   <div class="content">
     <div class="info-box">
       <p><strong>Match Found</strong></p>
@@ -42,6 +44,7 @@
 
     <h2 class="results-title">TRF Results Details</h2>
 
+    <!-- مربع النتائج -->
     <div class="result-card">
       <img id="studentPhoto" class="student-photo" alt="Candidate Photo">
       <table class="results-table" id="resultsTable"></table>
@@ -70,6 +73,10 @@
         <tr><td><strong>Date of Birth:</strong></td><td>${student.dob}</td></tr>
         <tr><td><strong>Sex (M/F):</strong></td><td>${student.sex}</td></tr>
         <tr><td><strong>Date of Examination:</strong></td><td>${student.examDate}</td></tr>
+        <tr><td><strong>Listening:</strong></td><td>6.0</td></tr>
+        <tr><td><strong>Reading:</strong></td><td>6.5</td></tr>
+        <tr><td><strong>Writing:</strong></td><td>5.5</td></tr>
+        <tr><td><strong>Speaking:</strong></td><td>6.0</td></tr>
         <tr class="score-row"><td colspan="2"><strong>Overall Band Score: ${student.overallScore}</strong></td></tr>
       `;
     } else {
