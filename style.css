@@ -5,6 +5,7 @@ body {
   background: url("images/background.jpg") no-repeat center center fixed;
   background-size: cover;   /* الخلفية تغطي الشاشة بالكامل */
   color: #333;
+  line-height: 1.6;
 }
 
 /* الهيدر الأحمر */
@@ -23,11 +24,11 @@ body {
   margin-right: 20px;
 }
 .logo-box img {
-  height: 85px; /* كبرنا حجم الشعار */
+  height: 90px; /* كبرنا حجم الشعار */
 }
 .header h1 {
   margin: 0;
-  font-size: 26px;
+  font-size: 28px;
   font-weight: bold;
 }
 
@@ -43,7 +44,7 @@ body {
 .bar-text {
   display: inline-block;
   white-space: nowrap;
-  animation: scrollText 25s linear infinite; /* حركة أبطأ */
+  animation: scrollText 30s linear infinite; /* حركة أبطأ */
   font-size: 18px;
 }
 @keyframes scrollText {
@@ -54,31 +55,32 @@ body {
 /* مربع البحث */
 .welcome-box {
   background: #fff;
-  margin: 50px auto;
-  padding: 35px;
+  margin: 60px auto;
+  padding: 40px;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.25);
-  width: 400px; /* كبرنا العرض */
+  box-shadow: 0 0 25px rgba(0,0,0,0.25);
+  width: 420px; /* كبرنا العرض */
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 .big-title {
-  font-size: 44px;
+  font-size: 46px;
   color: #b30000;
   margin-bottom: 20px;
 }
 .welcome-box input {
   width: 92%;
-  padding: 12px;
+  padding: 14px;
   margin: 12px 0;
   border: 1px solid #ccc;
   border-radius: 6px;
+  font-size: 15px;
 }
 .welcome-box button {
   background: #004080;
   color: #fff;
-  padding: 12px 28px;
+  padding: 14px 30px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -100,27 +102,27 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 600%;   /* أكبر مساحة */
-  height: 600%;  /* أكبر مساحة */
+  width: 700%;   /* أكبر مساحة */
+  height: 700%;  /* أكبر مساحة */
   background: url("images/علامه مائيه.png") repeat;
-  background-size: 320px; /* كبرنا حجم العلامة */
-  opacity: 0.25; /* أوضح */
+  background-size: 350px; /* كبرنا حجم العلامة */
+  opacity: 0.3; /* أوضح */
   transform: rotate(-30deg);
-  animation: watermarkScroll 60s linear infinite; /* حركة أبطأ */
+  animation: watermarkScroll 70s linear infinite; /* حركة أبطأ */
 }
 @keyframes watermarkScroll {
-  0%   { transform: rotate(-30deg) translateX(-500px); }
-  50%  { transform: rotate(-30deg) translateX(500px); }
-  100% { transform: rotate(-30deg) translateX(-500px); }
+  0%   { transform: rotate(-30deg) translateX(-600px); }
+  50%  { transform: rotate(-30deg) translateX(600px); }
+  100% { transform: rotate(-30deg) translateX(-600px); }
 }
 
 /* الشعارات */
 .logos {
   text-align: center;
-  margin: 25px 0;
+  margin: 30px 0;
 }
 .logos img {
-  max-width: 380px; /* كبرنا حجم الشعارات */
+  max-width: 400px; /* كبرنا حجم الشعارات */
   opacity: 1;
 }
 
@@ -129,16 +131,16 @@ body {
   background: #fff;
   overflow: hidden;
   width: 100%;
-  padding: 20px 0;
+  padding: 25px 0;
   box-shadow: inset 0 2px 6px rgba(0,0,0,0.2);
 }
 .banner-scroll {
   display: inline-block;
   white-space: nowrap;
-  animation: bannerMove 60s linear infinite; /* حركة أبطأ */
+  animation: bannerMove 70s linear infinite; /* حركة أبطأ */
 }
 .banner-scroll img {
-  height: 120px; /* كبرنا حجم البانر */
+  height: 140px; /* كبرنا حجم البانر */
 }
 @keyframes bannerMove {
   from { transform: translateX(100%); }
@@ -150,9 +152,9 @@ footer {
   background: #b30000;
   color: #fff;
   text-align: center;
-  padding: 18px;
-  margin-top: 20px;
-  font-size: 14px;
+  padding: 20px;
+  margin-top: 25px;
+  font-size: 15px;
 }
 footer a {
   color: #fff;
