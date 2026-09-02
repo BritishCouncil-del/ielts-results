@@ -1,158 +1,147 @@
-/* General */
-body {
+/* خلفية عامة */
+body.welcome, body.results {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
   background: url("images/background.jpg") no-repeat center center fixed;
   background-size: cover;
+  color: #333;
 }
 
-/* Header */
+/* ====== Header ====== */
 .header {
-  background-color: #b30000;
-  padding: 20px 30px;
-  display: flex;
-  align-items: center;
-  color: white;
-}
-.logo-box {
-  background: #fff;
-  padding: 8px;
-  border-radius: 8px;
-  margin-right: 20px;
-}
-.logo-box img {
-  height: 70px;
-}
-
-/* Blue bar */
-.bar {
-  background: linear-gradient(90deg, #003366, #0055aa);
+  background: #b30000;
   color: #fff;
-  padding: 12px 0;
-  overflow: hidden;
+  padding: 15px;
+  text-align: center;
 }
-.bar-scroll {
-  display: inline-block;
-  white-space: nowrap;
-  animation: barMove 25s linear infinite;
-}
-.bar-item {
-  display: inline-block;
-  margin: 0 25px;
-  font-size: 18px;
-  font-weight: bold;
-}
-.bar-item img.icon {
-  height: 28px;
+.ielts-logo {
+  height: 60px;
   vertical-align: middle;
-}
-@keyframes barMove {
-  from { transform: translateX(100%); }
-  to   { transform: translateX(-100%); }
+  margin-right: 15px;
 }
 
-/* Welcome box */
-.welcome-box {
-  background: #fff;
-  margin: 50px auto;
-  padding: 50px;
-  border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-  width: 460px;
-  text-align: center;
-  position: relative;
-  border: 3px solid #b30000;
+/* ====== Blue bar ====== */
+.bar, .marquee {
+  background: #003366;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px;
 }
-.big-title {
-  font-size: 42px;
+
+/* ====== صندوق الترحيب ====== */
+.form-box {
+  background: rgba(255,255,255,0.95);
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+  width: 420px;
+  margin: 100px auto;
+  text-align: center;
+  border: 2px solid #b30000;
+}
+.ielts-title {
+  font-size: 55px;
   color: #b30000;
   margin-bottom: 25px;
   font-weight: bold;
   text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
 }
-.welcome-box input {
+.form-box input {
   width: 90%;
   padding: 14px;
-  margin: 12px 0;
+  margin-bottom: 15px;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 10px;
+  font-size: 16px;
 }
-.welcome-box button {
-  background: linear-gradient(90deg, #004080, #0066cc);
+.btn-animate {
+  width: 95%;
+  background: linear-gradient(45deg,#b30000,#800000);
   color: #fff;
-  padding: 14px 35px;
   border: none;
-  border-radius: 8px;
+  padding: 14px;
+  font-weight: bold;
+  border-radius: 10px;
   cursor: pointer;
-  font-weight: bold;
+  font-size: 18px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.error {
-  color: #b30000;
-  margin-top: 15px;
-}
-
-/* Watermark inside welcome box */
-.welcome-box::before {
-  content: "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  font-size: 40px;
-  font-weight: bold;
-  color: goldenrod;
-  opacity: 0.12;
-  transform: rotate(-30deg);
-  animation: watermarkScroll 20s linear infinite;
-  pointer-events: none;
-}
-@keyframes watermarkScroll {
-  0%   { transform: rotate(-30deg) translateX(-400px); }
-  50%  { transform: rotate(-30deg) translateX(400px); }
-  100% { transform: rotate(-30deg) translateX(-400px); }
+.btn-animate:hover {
+  transform: scale(1.05);
 }
 
-/* Logos under search box */
-.logos {
-  text-align: center;
-  margin: 25px 0;
-}
-.logos img {
-  max-width: 420px;
-  animation: logos3D 10s infinite alternate ease-in-out;
-}
-@keyframes logos3D {
-  from { transform: rotateY(0deg) scale(1); }
-  to   { transform: rotateY(25deg) scale(1.05); }
-}
-
-/* Moving banner image */
-.banner {
-  overflow: hidden;
-  width: 100%;
-  padding: 5px 0;
-}
-.banner-scroll img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  animation: bannerMove 25s linear infinite;
-}
-@keyframes bannerMove {
-  0%   { transform: translateX(100%); }
-  50%  { transform: translateX(-50%); }
-  100% { transform: translateX(-100%); }
-}
-
-/* Footer */
-footer {
+/* ====== Sidebar ====== */
+.sidebar {
+  width: 200px;
   background: #b30000;
+  float: left;
+  min-height: 100vh;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar ul li a {
+  display: block;
+  padding: 12px;
   color: #fff;
-  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+}
+.sidebar ul li a:hover {
+  background: #800000;
+}
+
+/* ====== Results Box ====== */
+.results-box {
+  background: rgba(255,255,255,0.95);
+  margin: 20px;
   padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  width: calc(100% - 240px);
+  float: right;
+}
+.results-box h2 {
+  text-align: center;
+  color: #b30000;
+  margin-bottom: 20px;
+}
+.results-box table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.results-box td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+.results-box .score {
+  font-size: 20px;
+  font-weight: bold;
+  color: #b30000;
+}
+.note {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* ====== Footer ====== */
+footer {
+  background: #f0f0f0;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
 }
 footer a {
-  color: #fff;
+  color: #003366;
+  text-decoration: none;
+}
+footer a:hover {
   text-decoration: underline;
 }
