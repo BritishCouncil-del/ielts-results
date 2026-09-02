@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
   background: url("images/background.jpg") no-repeat center center fixed;
-  background-size: cover;
+  background-size: cover;   /* الخلفية تغطي الشاشة */
   color: #333;
 }
 
@@ -21,11 +21,11 @@ body {
   margin-right: 15px;
 }
 .logo-box img {
-  height: 70px; /* كبرنا حجم الشعار */
+  height: 80px; /* كبرنا حجم الشعار */
 }
 .header h1 {
   margin: 0;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
 }
 
@@ -41,8 +41,8 @@ body {
 .bar-text {
   display: inline-block;
   white-space: nowrap;
-  animation: scrollText 20s linear infinite; /* الحركة أبطأ */
-  font-size: 16px;
+  animation: scrollText 25s linear infinite; /* حركة أبطأ */
+  font-size: 18px;
 }
 @keyframes scrollText {
   from { transform: translateX(100%); }
@@ -56,19 +56,19 @@ body {
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  width: 350px;
+  width: 380px; /* كبرنا العرض */
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 .big-title {
-  font-size: 40px;
+  font-size: 42px;
   color: #b30000;
   margin-bottom: 20px;
 }
 .welcome-box input {
   width: 90%;
-  padding: 10px;
+  padding: 12px;
   margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -76,7 +76,7 @@ body {
 .welcome-box button {
   background: #004080;
   color: #fff;
-  padding: 10px 20px;
+  padding: 12px 25px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -97,18 +97,18 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 400%;   /* كبرنا المساحة */
-  height: 400%;  /* كبرنا المساحة */
+  width: 500%;   /* أكبر مساحة */
+  height: 500%;  /* أكبر مساحة */
   background: url("images/علامه مائيه.png") repeat;
-  background-size: 250px; /* كبرنا حجم العلامة */
-  opacity: 0.25; /* أوضح */
+  background-size: 300px; /* كبرنا حجم العلامة */
+  opacity: 0.3; /* أوضح */
   transform: rotate(-30deg);
-  animation: watermarkScroll 40s linear infinite; /* حركة أبطأ */
+  animation: watermarkScroll 50s linear infinite; /* حركة أبطأ */
 }
 @keyframes watermarkScroll {
-  0%   { transform: rotate(-30deg) translateX(-300px); }
-  50%  { transform: rotate(-30deg) translateX(300px); }
-  100% { transform: rotate(-30deg) translateX(-300px); }
+  0%   { transform: rotate(-30deg) translateX(-400px); }
+  50%  { transform: rotate(-30deg) translateX(400px); }
+  100% { transform: rotate(-30deg) translateX(-400px); }
 }
 
 /* الشعارات */
@@ -117,7 +117,7 @@ body {
   margin: 20px 0;
 }
 .logos img {
-  max-width: 300px; /* كبرنا حجم الشعارات */
+  max-width: 350px; /* كبرنا حجم الشعارات */
   opacity: 1;
 }
 
@@ -126,15 +126,15 @@ body {
   background: #fff;
   overflow: hidden;
   width: 100%;
-  padding: 10px 0;
+  padding: 15px 0;
 }
 .banner-scroll {
   display: inline-block;
   white-space: nowrap;
-  animation: bannerMove 40s linear infinite; /* حركة أبطأ */
+  animation: bannerMove 50s linear infinite; /* حركة أبطأ */
 }
 .banner-scroll img {
-  height: 70px; /* كبرنا حجم البانر */
+  height: 100px; /* كبرنا حجم البانر */
 }
 @keyframes bannerMove {
   from { transform: translateX(100%); }
