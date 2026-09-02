@@ -96,7 +96,6 @@ body.results {
 .results-table td {
   padding: 8px;
   border-bottom: 1px solid #ddd;
-  transition: background 0.4s ease;
 }
 
 /* صفوف متبادلة */
@@ -107,7 +106,7 @@ body.results {
   background-color: #ffffff; /* أبيض */
 }
 
-/* تأثير Hover */
+/* تأثير Hover فقط */
 .results-table tr:hover {
   background: linear-gradient(90deg, #ffe6e6, #fff);
 }
