@@ -18,6 +18,8 @@ body.welcome {
 body.results {
   background: url("images/background.jpg") no-repeat center center fixed;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ====== Header ====== */
@@ -41,18 +43,17 @@ body.results {
   padding: 8px;
 }
 
-/* ====== Container للنتائج فقط ====== */
+/* ====== Container للنتائج ====== */
 body.results .container {
   flex: 1;
   display: flex;
-  align-items: flex-start;
+  align-items: stretch; /* يخلي العمود الجانبي يمتد لحد طول المحتوى */
 }
 
 /* ====== Sidebar (للنتائج فقط) ====== */
 body.results .sidebar {
   width: 200px;
   background: #b30000;
-  min-height: 100%;
 }
 body.results .sidebar ul {
   list-style: none;
@@ -73,11 +74,11 @@ body.results .sidebar ul li a:hover {
 /* ====== Box عام ====== */
 .results-box {
   background: rgba(255,255,255,0.95);
-  margin: 40px auto;
+  margin: 20px;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-  max-width: 600px;
+  flex: 1;
 }
 .results-box h2 {
   text-align: center;
