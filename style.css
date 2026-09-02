@@ -31,11 +31,14 @@ body.results {
   padding: 8px;
 }
 
-/* ====== Sidebar ====== */
+/* ====== Container ====== */
 .container {
   flex: 1;
   display: flex;
+  align-items: flex-start;
 }
+
+/* ====== Sidebar ====== */
 .sidebar {
   width: 200px;
   background: #b30000;
