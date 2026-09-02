@@ -1,162 +1,203 @@
-/* ===== الهيدر الأحمر ===== */
-.header-bar {
-  background:#d32f2f;
-  color:#fff;
-  padding:10px;
-  display:flex;
-  align-items:center;
-}
-.ielts-top-logo img {
-  height:60px;
-  margin-right:15px;
-}
-.news-bar {
-  flex:1;
-}
-.news-bar marquee {
-  color:#fff;
-  font-weight:bold;
-  font-size:16px;
-}
 
-/* ===== صفحة الترحيب ===== */
-body.welcome {
-  background: url("images/ielts-bg.jpg") no-repeat center center fixed;
-  background-size: cover;
-  font-family: 'Cairo', Tahoma, Arial, sans-serif;
-  margin:0;
-  padding:0;
-}
-.welcome-box {
-  background:#fff;
-  width:400px;
-  margin:200px auto 60px auto;
-  padding:30px;
-  border-radius:15px;
-  text-align:center;
-  box-shadow:0 0 20px rgba(0,0,0,0.25);
-  border:2px solid #d32f2f;
-}
-.big-ielts {
-  font-size:40px;
-  color:#d32f2f;
-  margin-bottom:20px;
-  font-weight:bold;
-}
-.search-form input {
-  width:90%;
-  padding:12px;
-  margin-bottom:12px;
-  border:1px solid #ccc;
-  border-radius:8px;
-  font-size:14px;
-}
-.search-form button {
-  width:95%;
-  background:#d32f2f;
-  color:#fff;
-  border:none;
-  padding:12px;
-  font-weight:bold;
-  border-radius:8px;
-  cursor:pointer;
-  font-size:16px;
-}
-.search-form button:hover {
-  background:#b71c1c;
-}
-
-/* ===== صورة الشعارات تحت ===== */
-.footer-banner, .footer-logos {
-  text-align:center;
-  margin:20px 0;
-}
-.footer-img {
-  height:40px;   /* حجم صغير متناسق */
-  width:auto;
-}
-
-/* ===== صفحة النتائج ===== */
-body.results {
-  font-family: Arial, sans-serif;
-  margin:0;
-  padding:0;
-  background: url("images/ielts-bg.jpg") no-repeat center center fixed;
-  background-size: cover;
-}
-
-/* ===== القوائم الجانبية ===== */
-.sidebar {
-  width:200px;
-  float:left;
-  background:#fff;
-  border-right:2px solid #ccc;
-  min-height:100vh;
-  padding:15px;
-}
-.sidebar ul {
-  list-style:none;
-  padding:0;
-}
-.sidebar ul li {
-  margin:10px 0;
-}
-.sidebar ul li a {
-  text-decoration:none;
-  color:#d32f2f;
-  font-weight:bold;
-}
-.sidebar ul li a:hover {
-  text-decoration:underline;
-}
-
-/* ===== كارت النتيجة ===== */
-.result-card {
-  background:#fff;
-  width:75%;
-  margin:30px auto;
-  padding:20px;
-  border-radius:10px;
-  box-shadow:0 0 15px rgba(0,0,0,0.2);
-}
-.result-content {
-  display:flex;
-  align-items:flex-start;
-}
-.student-photo {
-  width:150px;
-  height:auto;
-  margin-right:20px;
-  border:2px solid #ccc;
-  border-radius:8px;
-}
-
-/* ===== جدول النتائج أبيض/رمادي ===== */
-.results-table {
-  width:100%;
-  border-collapse:collapse;
-}
-.results-table th, .results-table td {
-  padding:10px;
-}
-.results-table tr:nth-child(even) {
-  background:#f0f0f0; /* رمادي غامق */
-}
-.results-table tr:nth-child(odd) {
-  background:#fff; /* أبيض */
-}
-
-/* ===== زر تحميل PDF ===== */
-.download-btn {
-  margin-top:20px;
-  background:#d32f2f;
-  color:#fff;
-  border:none;
-  padding:12px 20px;
-  border-radius:6px;
-  cursor:pointer;
-  font-weight:bold;
-}
-.download-btn:hover {
-  background:#b71c1c;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IELTS TRF Results</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: url("images/background.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+    /* Red header */
+    .header {
+      background: #b30000;
+      color: #fff;
+      padding: 40px;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      width: 100%;
+    }
+    .header h1 { margin: 0; font-size: 48px; }
+    .header h2 { margin: 5px 0 0 0; font-size: 20px; }
+    .header img { height: 80px; }
+    /* Blue bar */
+    .marquee {
+      background: #0056b3;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: -20px;
+      box-shadow: inset 0 -3px 6px rgba(0,0,0,0.3);
+      width: 100%;
+    }
+    .marquee span {
+      display: inline-block;
+      animation: marquee 20s linear infinite;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    /* Sidebar */
+    aside {
+      background: linear-gradient(180deg, #b30000, #660000);
+      color: #fff;
+      width: 220px;
+      float: left;
+      padding: 20px;
+      border-radius: 0 0 12px 0;
+      box-shadow: 2px 0 8px rgba(0,0,0,0.3);
+      /* Animation */
+      transform: translateX(-250px);
+      animation: slideIn 1s forwards;
+    }
+    @keyframes slideIn {
+      to { transform: translateX(0); }
+    }
+    aside a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      margin: 10px 0;
+      font-size: 16px;
+      padding: 8px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+    aside a:hover { background: #ff4d4d; transform: scale(1.05); }
+    /* Content */
+    .content {
+      margin-left: 240px;
+      padding: 20px;
+    }
+    .result-card {
+      background: #fff;
+      border: 1px solid #ccc;
+      max-width: 800px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+      border-radius: 12px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      opacity: 0;
+      animation: fadeIn 1.5s forwards;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    .result-card img {
+      width: 160px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    table {
+      flex: 1;
+      border-collapse: collapse;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    table tr:nth-child(even) { background: #f0f0f0; }
+    table tr:nth-child(odd) { background: #fff; }
+    table tr.score-row { background: #b30000; color: #fff; font-weight: bold; }
+    table td { padding: 10px; border: 1px solid #ccc; font-size: 14px; }
+    /* Hover effect on table rows */
+    table tr:hover {
+      background: #ffe0e0;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    /* Banner bottom */
+    .banner-bottom {
+      margin: 30px auto;
+      text-align: center;
+    }
+    .banner-bottom img {
+      width: 100%;
+      max-width: 900px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    }
+    /* Footer */
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+    footer a {
+      color: #00aaff;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <div>
+      <h1>IELTS™</h1>
+      <h2>English for International Opportunity</h2>
+    </div>
+    <img src="images/ielts-logos.png" alt="IELTS Logos">
+  </div>
+  <!-- Blue bar -->
+  <div class="marquee">
+    <span>IELTS Academic | IELTS General Training | IELTS UKVI | IELTS Life Skills</span>
+  </div>
+  <!-- Sidebar -->
+  <aside>
+    <a href="index.html">🏠 Home</a>
+    <a href="#">📄 TRF Query</a>
+    <a href="#">⬇️ Download Results</a>
+    <a href="#">👥 Manage Users</a>
+    <a href="#">⚙️ Update Profile</a>
+    <a href="#">❓ FAQs</a>
+    <a href="https://ielts.org">🌐 IELTS.org</a>
+  </aside>
+  <!-- Content -->
+  <div class="content">
+    <div class="result-card">
+      <table>
+        <tr><td><strong>Centre Number:</strong></td><td>AE113</td></tr>
+        <tr><td><strong>Centre Name:</strong></td><td>British Council</td></tr>
+        <tr><td><strong>Candidate Number:</strong></td><td>507413</td></tr>
+        <tr><td><strong>Name:</strong></td><td>Mohamed Ahmed Abdallah Al-Rudamy</td></tr>
+        <tr><td><strong>Date of Birth:</strong></td><td>06/06/2002</td></tr>
+        <tr><td><strong>Gender:</strong></td><td>M</td></tr>
+        <tr><td><strong>Listening:</strong></td><td>6.0</td></tr>
+        <tr><td><strong>Reading:</strong></td><td>5.5</td></tr>
+        <tr><td><strong>Writing:</strong></td><td>5.5</td></tr>
+        <tr><td><strong>Speaking:</strong></td><td>6.5</td></tr>
+        <tr class="score-row"><td><strong>Overall Band Score:</strong></td><td>6.0</td></tr>
+        <tr><td><strong>Test Date:</strong></td><td>11/08/2026</td></tr>
+        <tr><td><strong>TRF Number:</strong></td><td>26AE507413ALSM113A</td></tr>
+      </table>
+      <img src="images/student1.jpg" alt="Candidate Photo">
+    </div>
+    <!-- Banner bottom -->
+    <div class="banner-bottom">
+      <img src="images/ielts-banner.png" alt="IELTS Banner">
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer>
+    © 2026 IELTS Results Portal | All Rights Reserved | 
+    <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
+  </footer>
+</body>
+</html>
