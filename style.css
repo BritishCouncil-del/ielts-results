@@ -19,16 +19,16 @@ body {
 }
 .logo-box {
   background: #fff;
-  padding: 10px;
+  padding: 12px;
   border-radius: 6px;
   margin-right: 20px;
 }
 .logo-box img {
-  height: 90px;
+  height: 95px; /* كبرنا حجم الشعار */
 }
 .header h1 {
   margin: 0;
-  font-size: 26px;
+  font-size: 28px;
   font-weight: bold;
 }
 
@@ -65,7 +65,7 @@ body {
   overflow: hidden;
 }
 .big-title {
-  font-size: 44px;
+  font-size: 46px;
   color: #b30000;
   margin-bottom: 20px;
 }
@@ -104,19 +104,19 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  font-size: 38px;
+  font-size: 42px;
   font-weight: bold;
   color: goldenrod; /* اللون الذهبي */
   opacity: 0.25;
   transform: rotate(-30deg);
   white-space: pre;
   line-height: 1.6;
-  animation: watermarkScroll 50s linear infinite;
+  animation: watermarkScroll 60s linear infinite; /* حركة أبطأ */
 }
 @keyframes watermarkScroll {
-  0%   { transform: rotate(-30deg) translateX(-300px); }
-  50%  { transform: rotate(-30deg) translateX(300px); }
-  100% { transform: rotate(-30deg) translateX(-300px); }
+  0%   { transform: rotate(-30deg) translateX(-400px); }
+  50%  { transform: rotate(-30deg) translateX(400px); }
+  100% { transform: rotate(-30deg) translateX(-400px); }
 }
 
 /* الشعارات */
@@ -125,7 +125,7 @@ body {
   margin: 30px 0;
 }
 .logos img {
-  max-width: 400px;
+  max-width: 420px; /* كبرنا حجم الشعارات */
   opacity: 1;
 }
 
@@ -134,16 +134,17 @@ body {
   background: #fff;
   overflow: hidden;
   width: 100%;
-  padding: 25px 0;
-  box-shadow: inset 0 2px 6px rgba(0,0,0,0.2);
+  padding: 0; /* البانر بدون فراغات */
 }
 .banner-scroll {
   display: inline-block;
   white-space: nowrap;
-  animation: bannerMove 60s linear infinite;
+  animation: bannerMove 70s linear infinite;
 }
 .banner-scroll img {
-  height: 180px; /* كبرنا حجم البانر */
+  width: 100%;   /* الصورة تملأ عرض البار */
+  height: 200px; /* كبرنا حجم الصورة لتملأ البار */
+  object-fit: cover;
 }
 @keyframes bannerMove {
   from { transform: translateX(100%); }
