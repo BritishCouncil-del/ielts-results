@@ -21,7 +21,7 @@
   transition: transform 0.3s ease;
 }
 .bar-item img.icon {
-  height: 20px;
+  height: 22px;
   vertical-align: middle;
   margin-right: 8px;
 }
@@ -40,7 +40,7 @@
   margin: 25px 0;
 }
 .logos img {
-  max-width: 360px; /* larger size */
+  max-width: 380px; /* larger size */
   opacity: 1;
   animation: logos3D 10s infinite alternate ease-in-out;
 }
