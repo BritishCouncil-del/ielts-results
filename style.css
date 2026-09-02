@@ -97,18 +97,18 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 200%;
-  height: 200%;
+  width: 300%;
+  height: 300%;
   background: url("صور/علامه مائيه.png") repeat;
-  background-size: 180px;
+  background-size: 200px;
   opacity: 0.15; /* شفافية أوضح */
   transform: rotate(-30deg);
-  animation: watermarkScroll 15s linear infinite;
+  animation: watermarkScroll 20s linear infinite;
 }
 @keyframes watermarkScroll {
-  0%   { transform: rotate(-30deg) translateX(-150px); }
-  50%  { transform: rotate(-30deg) translateX(150px); }
-  100% { transform: rotate(-30deg) translateX(-150px); }
+  0%   { transform: rotate(-30deg) translateX(-200px); }
+  50%  { transform: rotate(-30deg) translateX(200px); }
+  100% { transform: rotate(-30deg) translateX(-200px); }
 }
 
 /* الشعارات */
