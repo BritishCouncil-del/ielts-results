@@ -98,14 +98,27 @@ body.results {
   border-bottom: 1px solid #ddd;
   transition: background 0.4s ease;
 }
-.results-table tr:hover {
-  background: linear-gradient(90deg, #ffe6e6, #fff); /* تأثير Hover متدرج */
+
+/* صفوف متبادلة */
+.results-table tr:nth-child(even) {
+  background-color: #f2f2f2; /* رمادي فاتح */
 }
+.results-table tr:nth-child(odd) {
+  background-color: #ffffff; /* أبيض */
+}
+
+/* تأثير Hover */
+.results-table tr:hover {
+  background: linear-gradient(90deg, #ffe6e6, #fff);
+}
+
 .results-box .score {
   font-size: 20px;
   font-weight: bold;
   color: #b30000;
 }
+
+/* صورة الطالب */
 .student-photo {
   width: 150px;
   border: 2px solid #ccc;
