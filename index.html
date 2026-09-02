@@ -32,6 +32,7 @@
     <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
   </footer>
 
+  <!-- ربط ملف الطلاب -->
   <script src="students.js"></script>
   <script>
     function goToResults() {
@@ -44,6 +45,7 @@
         // فتح صفحة النتائج
         window.location.href = "results.html";
       } else {
+        // رسالة خطأ بنفس مكان الفورم
         document.getElementById("errorMsg").innerHTML =
           "<div class='alert-box'>❌ الرقم غير صحيح</div>";
       }
