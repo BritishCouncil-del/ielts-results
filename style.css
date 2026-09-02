@@ -10,7 +10,7 @@ body {
 
 /* ====== خلفية صفحة الترحيب ====== */
 body.welcome {
-  background: url("images/background.jpg") no-repeat center center fixed;
+  background: url("images/ielts-banner.png") no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -41,44 +41,13 @@ body.results {
   padding: 8px;
 }
 
-/* ====== Container ====== */
-.container {
-  flex: 1;
-  display: flex;
-  justify-content: center; /* في الترحيب نخلي المحتوى في النص */
-  align-items: flex-start;
-}
-
-/* ====== Sidebar (للنتائج فقط) ====== */
-body.results .sidebar {
-  width: 200px;
-  background: #b30000;
-  min-height: 100%;
-}
-body.results .sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-body.results .sidebar ul li a {
-  display: block;
-  padding: 12px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-body.results .sidebar ul li a:hover {
-  background: #800000;
-}
-
 /* ====== Box عام ====== */
 .results-box {
   background: rgba(255,255,255,0.95);
-  margin: 20px;
+  margin: 40px auto;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-  flex: 1;
   max-width: 600px;
 }
 .results-box h2 {
@@ -93,7 +62,7 @@ body.results .sidebar ul li a:hover {
   line-height: 1.5;
 }
 
-/* ====== مربع تسجيل الدخول (صفحة الترحيب) ====== */
+/* ====== مربع تسجيل الدخول ====== */
 .login-box {
   background: rgba(255,255,255,0.9);
   padding: 20px;
@@ -145,27 +114,16 @@ body.results .sidebar ul li a:hover {
   padding: 8px;
   border-bottom: 1px solid #ddd;
 }
-
-/* صفوف متبادلة */
-.results-table tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-.results-table tr:nth-child(odd) {
-  background-color: #ffffff;
-}
-
-/* تأثير Hover */
+.results-table tr:nth-child(even) { background-color: #f2f2f2; }
+.results-table tr:nth-child(odd) { background-color: #ffffff; }
 .results-table tr:hover {
   background: linear-gradient(90deg, #ffe6e6, #fff);
 }
-
 .results-box .score {
   font-size: 20px;
   font-weight: bold;
   color: #b30000;
 }
-
-/* صورة الطالب */
 .student-photo {
   width: 150px;
   border: 2px solid #ccc;
@@ -179,7 +137,7 @@ body.results .sidebar ul li a:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-/* ====== علامة مائية متحركة (صفحة النتائج) ====== */
+/* ====== علامة مائية متحركة (نتائج) ====== */
 .watermark::before {
   content: "IELTS IELTS IELTS IELTS";
   position: absolute;
@@ -215,7 +173,7 @@ body.results .sidebar ul li a:hover {
   opacity: 0.7;
 }
 
-/* ====== بانر شفاف متحرك (صفحة الترحيب) ====== */
+/* ====== بانر شفاف متحرك (ترحيب) ====== */
 .moving-banner img {
   max-width: 400px;
   opacity: 0.7;
@@ -231,3 +189,13 @@ footer {
   background: #f0f0f0;
   text-align: center;
   padding: 15px;
+  border-top: 1px solid #ccc;
+  margin-top: auto;
+}
+footer a {
+  color: #003366;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
