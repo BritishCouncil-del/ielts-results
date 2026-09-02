@@ -16,6 +16,7 @@ const students = {
     centreName: "British Council",
     image: "abdelaaty.png"
   },
+
   "26AE509284ALSB113A": {
     candidate: "509284",
     candidateId: "A04468375",
@@ -33,6 +34,7 @@ const students = {
     centreName: "British Council",
     image: "baut.png"
   },
+
   "2GAE509426ALBM113A": {
     candidate: "509426",
     candidateId: "A04468376",
@@ -50,6 +52,7 @@ const students = {
     centreName: "British Council",
     image: "albedwawi.png"
   },
+
   "26AE507413ALSM113A": {
     candidate: "507413",
     candidateId: "A04468377",
@@ -66,5 +69,24 @@ const students = {
     centre: "AE003",
     centreName: "British Council",
     image: "student1.jpg"
+  },
+
+  /* ====== الطالب الجديد ====== */
+  "26EG009265ALSH001A": {
+    candidate: "009265",
+    candidateId: "B42169678",
+    name: "HUSSEIN LUTFI HUSSEIN AL-SABBAGH",
+    dob: "1982-04-26",
+    sex: "M",
+    examDate: "2026-09-02",
+    overall: "8.0",
+    listening: "8.5",
+    reading: "8.0",
+    writing: "7.5",
+    speaking: "8.0",
+    trfNumber: "26EG009265ALSH001A",
+    centre: "EG001",
+    centreName: "British Council",
+    image: "AL-SABBAGH.png"
   }
 };
