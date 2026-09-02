@@ -14,7 +14,7 @@ body {
   color: #fff;
   padding: 40px; /* أكبر */
   text-align: center;
-  width: 100%; /* يملى الصفحة */
+  width: 100%; /* يملى الصفحة بالكامل */
 }
 .ielts-logo {
   height: 80px;
@@ -29,7 +29,7 @@ body {
   font-weight: bold;
   padding: 20px; /* أكبر */
   font-size: 18px;
-  width: 100%; /* يملى الصفحة */
+  width: 100%; /* يملى الصفحة بالكامل */
 }
 
 /* ====== Footer ====== */
@@ -39,7 +39,7 @@ footer {
   padding: 20px; /* أكبر */
   border-top: 1px solid #ccc;
   margin-top: auto;
-  width: 100%; /* يملى الصفحة */
+  width: 100%; /* يملى الصفحة بالكامل */
 }
 footer a {
   color: #003366;
