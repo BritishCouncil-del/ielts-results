@@ -100,15 +100,15 @@ body {
   width: 200%;
   height: 200%;
   background: url("صور/علامه مائيه.png") repeat;
-  background-size: 150px;
-  opacity: 0.1; /* شفافية أوضح */
+  background-size: 180px;
+  opacity: 0.15; /* شفافية أوضح */
   transform: rotate(-30deg);
   animation: watermarkScroll 15s linear infinite;
 }
 @keyframes watermarkScroll {
-  0%   { transform: rotate(-30deg) translateX(-120px); }
-  50%  { transform: rotate(-30deg) translateX(120px); }
-  100% { transform: rotate(-30deg) translateX(-120px); }
+  0%   { transform: rotate(-30deg) translateX(-150px); }
+  50%  { transform: rotate(-30deg) translateX(150px); }
+  100% { transform: rotate(-30deg) translateX(-150px); }
 }
 
 /* الشعارات */
