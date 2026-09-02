@@ -1,158 +1,170 @@
-/* General */
-body {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: url("images/background.jpg") no-repeat center center fixed;
-  background-size: cover;
-}
-
-/* Header */
+/* ====== Header أحمر ====== */
 .header {
-  background-color: #b30000;
-  padding: 20px 30px;
-  display: flex;
-  align-items: center;
-  color: white;
+  background: #b30000;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  position: relative;
 }
 .logo-box {
-  background: #fff;
-  padding: 8px;
-  border-radius: 8px;
-  margin-right: 20px;
+  position: absolute;
+  left: 20px;
+  top: 10px;
 }
 .logo-box img {
-  height: 70px;
+  height: 60px;
 }
 
-/* Blue bar */
+/* ====== Blue bar متحرك ====== */
 .bar {
-  background: linear-gradient(90deg, #003366, #0055aa);
-  color: #fff;
-  padding: 12px 0;
+  background: #003366;
   overflow: hidden;
+  white-space: nowrap;
 }
 .bar-scroll {
   display: inline-block;
-  white-space: nowrap;
-  animation: barMove 25s linear infinite;
+  animation: scrollText 15s linear infinite;
 }
 .bar-item {
   display: inline-block;
-  margin: 0 25px;
-  font-size: 18px;
+  color: #fff;
+  padding: 0 30px;
   font-weight: bold;
 }
-.bar-item img.icon {
-  height: 28px;
-  vertical-align: middle;
-}
-@keyframes barMove {
+@keyframes scrollText {
   from { transform: translateX(100%); }
-  to   { transform: translateX(-100%); }
+  to { transform: translateX(-100%); }
 }
 
-/* Welcome box */
+/* ====== Welcome Box ====== */
 .welcome-box {
   background: #fff;
-  margin: 50px auto;
-  padding: 50px;
-  border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
-  width: 460px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  width: 500px;
   text-align: center;
-  position: relative;
-  border: 3px solid #b30000;
 }
 .big-title {
-  font-size: 42px;
   color: #b30000;
-  margin-bottom: 25px;
-  font-weight: bold;
-  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 .welcome-box input {
+  display: block;
   width: 90%;
-  padding: 14px;
-  margin: 12px 0;
+  margin: 10px auto;
+  padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 .welcome-box button {
-  background: linear-gradient(90deg, #004080, #0066cc);
+  background: #003366;
   color: #fff;
-  padding: 14px 35px;
   border: none;
-  border-radius: 8px;
+  padding: 10px 20px;
+  border-radius: 6px;
   cursor: pointer;
-  font-weight: bold;
+}
+.welcome-box button:hover {
+  background: #0055aa;
 }
 .error {
-  color: #b30000;
-  margin-top: 15px;
+  color: red;
+  margin-top: 10px;
 }
 
-/* Watermark inside welcome box */
-.welcome-box::before {
-  content: "IELTS IELTS IELTS IELTS IELTS IELTS IELTS IELTS";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  font-size: 40px;
+/* ====== Sidebar أحمر ====== */
+.sidebar {
+  width: 200px;
+  background: #b30000;
+  float: left;
+  min-height: 100vh;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar ul li a {
+  display: block;
+  padding: 12px;
+  color: #fff;
+  text-decoration: none;
   font-weight: bold;
-  color: goldenrod;
-  opacity: 0.12;
-  transform: rotate(-30deg);
-  animation: watermarkScroll 20s linear infinite;
-  pointer-events: none;
 }
-@keyframes watermarkScroll {
-  0%   { transform: rotate(-30deg) translateX(-400px); }
-  50%  { transform: rotate(-30deg) translateX(400px); }
-  100% { transform: rotate(-30deg) translateX(-400px); }
+.sidebar ul li a:hover {
+  background: #800000;
 }
 
-/* Logos under search box */
+/* ====== Results Box ====== */
+.results-box {
+  background: #fff;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  width: calc(100% - 240px);
+  float: right;
+}
+.results-box h2 {
+  text-align: center;
+  color: #b30000;
+  margin-bottom: 20px;
+}
+.results-box table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.results-box td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+.results-box .score {
+  font-size: 20px;
+  font-weight: bold;
+  color: #b30000;
+}
+
+/* ====== Logos ====== */
 .logos {
   text-align: center;
-  margin: 25px 0;
+  margin: 20px 0;
 }
 .logos img {
-  max-width: 420px;
-  animation: logos3D 10s infinite alternate ease-in-out;
-}
-@keyframes logos3D {
-  from { transform: rotateY(0deg) scale(1); }
-  to   { transform: rotateY(25deg) scale(1.05); }
+  max-width: 300px;
 }
 
-/* Moving banner image */
+/* ====== Banner متحرك ====== */
 .banner {
-  overflow: hidden;
-  width: 100%;
-  padding: 5px 0;
+  text-align: center;
+  margin: 20px 0;
 }
-.banner-scroll img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  animation: bannerMove 25s linear infinite;
+.banner-scroll {
+  display: inline-block;
+  animation: scrollBanner 10s linear infinite;
 }
-@keyframes bannerMove {
-  0%   { transform: translateX(100%); }
-  50%  { transform: translateX(-50%); }
-  100% { transform: translateX(-100%); }
+.banner img {
+  max-width: 400px;
+  background: transparent;
+}
+@keyframes scrollBanner {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
 }
 
-/* Footer */
+/* ====== Footer ====== */
 footer {
-  background: #b30000;
-  color: #fff;
+  background: #f0f0f0;
   text-align: center;
-  padding: 20px;
+  padding: 15px;
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
 }
 footer a {
-  color: #fff;
+  color: #003366;
+  text-decoration: none;
+}
+footer a:hover {
   text-decoration: underline;
 }
