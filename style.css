@@ -106,7 +106,7 @@ body.results {
   background-color: #ffffff; /* أبيض */
 }
 
-/* تأثير Hover فقط */
+/* تأثير Hover */
 .results-table tr:hover {
   background: linear-gradient(90deg, #ffe6e6, #fff);
 }
