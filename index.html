@@ -1,97 +1,50 @@
-DOCTYPE html>
+ترحيب 
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>IELTS TRF Portal</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: url("images/background.jpg") no-repeat center center fixed;
-      background-size: cover;
-      text-align: center;
-      color: #333;
-    }
-    .header {
-      background: #b30000;
-      color: #fff;
-      padding: 40px;
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .header h1 { margin: 0; font-size: 48px; }
-    .header img { height: 80px; }
-    .banner {
-      margin: 30px auto;
-    }
-    .banner img {
-      width: 600px;
-      opacity: 0.8; /* شفافة */
-    }
-    .form-box {
-      background: #fff;
-      width: 400px;
-      margin: 30px auto;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
-    input {
-      width: 90%;
-      padding: 12px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      text-align: center;
-      font-size: 18px;
-      font-weight: bold;
-      color: #0056b3;
-    }
-    button {
-      padding: 12px 25px;
-      background: linear-gradient(90deg, #007bff, #0056b3);
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: all 0.3s ease;
-    }
-    button:hover { background: #004080; transform: scale(1.05); }
-  </style>
+  <meta charset="UTF-8">
+  <title>IELTS Portal</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-  <div class="header">
-    <h1>IELTS™ Portal</h1>
-    <img src="images/ielts-logos.png" alt="IELTS Logos">
-  </div>
-
-  <div class="banner">
-    <img src="images/ielts-banner.png" alt="IELTS Three Logos">
-  </div>
-
-  <div class="form-box">
-    <form onsubmit="return goToResults()">
-      <input type="text" id="centre" placeholder="IELTS Centre Number" required>
-      <input type="text" id="candidate" placeholder="IELTS Candidate Number" required>
-      <button type="submit">View Result</button>
-    </form>
-  </div>
-
-  <script>
-    function goToResults() {
-      const centre = document.getElementById('centre').value;
-      const candidate = document.getElementById('candidate').value;
-      localStorage.setItem('centre', centre);
-      localStorage.setItem('candidate', candidate);
-      window.location.href = "results.html";
-      return false;
-    }
-  </script>
-
+<body class="welcome">
+  <div class="header">
+    <img src="images/ielts-logos.png" alt="IELTS Logo" class="ielts-logo">
+    <h1>IELTS Portal</h1>
+  </div>
+  <div class="marquee">
+    <marquee behavior="scroll" direction="left" scrollamount="6">
+      جميع أنواع اختبار الآيلتس (Academic - General - UKVI - Life Skills)
+    </marquee>
+  </div>
+  <div class="form-box">
+    <h1 class="ielts-title">IELTS</h1>
+    <form onsubmit="return goToResults()">
+      <input type="text" id="serial" placeholder="Serial Number" required>
+      <input type="text" id="candidate" placeholder="Candidate Number" required>
+      <button type="submit" class="btn-animate">عرض النتيجة</button>
+    </form>
+    <p id="errorMsg" style="color:red;font-weight:bold;"></p>
+  </div>
+  <footer>
+    © 2026 IELTS Results Portal | All Rights Reserved | 
+    <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
+  </footer>
+  <script src="students.js"></script>
+  <script>
+    function goToResults() {
+      const serial = document.getElementById('serial').value.trim();
+      const candidate = document.getElementById('candidate').value.trim();
+      const student = students[serial];
+      if (student && student.candidate === candidate) {
+        localStorage.setItem('serial', serial);
+        localStorage.setItem('candidate', candidate);
+        window.location.href = "results.html";
+      } else {
+        document.getElementById("errorMsg").textContent =
+          "❌ Invalid Serial or Candidate Number. Please try again.";
+      }
+      return false;
+    }
+  </script>
 </body>
 </html>
