@@ -1,37 +1,63 @@
-<div class="login-box">
-  <form id="searchForm">
-    <label for="candidateNumber">Candidate Number:</label>
-    <input type="text" id="candidateNumber" name="candidateNumber" placeholder="Enter Candidate Number">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IELTS Portal - Welcome</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="welcome">
 
-    <label for="trfCode">TRF Code:</label>
-    <input type="text" id="trfCode" name="trfCode" placeholder="Enter TRF Code">
+  <div class="header">
+    <img src="images/ielts-logos.png" alt="IELTS Logo" class="ielts-logo">
+    <h1>IELTS™ English for International Opportunity</h1>
+  </div>
 
-    <button type="submit">عرض النتيجة</button>
-  </form>
-</div>
+  <div class="bar">
+    <marquee behavior="scroll" direction="left" scrollamount="6">
+      Welcome to IELTS Test Report Form Portal - Academic | General | UKVI | Life Skills
+    </marquee>
+  </div>
 
-<script src="students.js"></script>
-<script>
-  document.getElementById("searchForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-    const candidateNumber = document.getElementById("candidateNumber").value.trim();
-    const trfCode = document.getElementById("trfCode").value.trim();
+  <!-- مربع البحث فقط -->
+  <div class="login-box">
+    <form id="searchForm">
+      <label for="candidateNumber">Candidate Number:</label>
+      <input type="text" id="candidateNumber" name="candidateNumber" placeholder="Enter Candidate Number">
 
-    // البحث في بيانات الطلاب
-    let student = null;
-    for (const key in students) {
-      if (students[key].candidate === candidateNumber || students[key].trfNumber === trfCode) {
-        student = students[key];
-        break;
+      <label for="trfCode">TRF Code:</label>
+      <input type="text" id="trfCode" name="trfCode" placeholder="Enter TRF Code">
+
+      <button type="submit">عرض النتيجة</button>
+    </form>
+  </div>
+
+  <footer>
+    © 2026 IELTS Results Portal | All Rights Reserved | 
+    <a href="https://ielts.org" target="_blank">Official IELTS Website</a>
+  </footer>
+
+  <script src="students.js"></script>
+  <script>
+    document.getElementById("searchForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const candidateNumber = document.getElementById("candidateNumber").value.trim();
+      const trfCode = document.getElementById("trfCode").value.trim();
+
+      let student = null;
+      for (const key in students) {
+        if (students[key].candidate === candidateNumber || students[key].trfNumber === trfCode) {
+          student = students[key];
+          break;
+        }
       }
-    }
 
-    if (student) {
-      // حفظ بيانات الطالب في localStorage علشان نعرضها في صفحة النتائج
-      localStorage.setItem("studentData", JSON.stringify(student));
-      window.location.href = "results.html";
-    } else {
-      alert("لم يتم العثور على بيانات الطالب");
-    }
-  });
-</script>
+      if (student) {
+        localStorage.setItem("studentData", JSON.stringify(student));
+        window.location.href = "results.html";
+      } else {
+        alert("لم يتم العثور على بيانات الطالب");
+      }
+    });
+  </script>
+</body>
+</html>
