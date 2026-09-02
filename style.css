@@ -5,6 +5,9 @@ body.results {
   background: url("images/background.jpg") no-repeat center center fixed;
   background-size: cover;
   color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ====== Header ====== */
@@ -29,10 +32,13 @@ body.results {
 }
 
 /* ====== Sidebar ====== */
+.container {
+  flex: 1;
+  display: flex;
+}
 .sidebar {
   width: 200px;
   background: #b30000;
-  float: left;
   min-height: 100%;
 }
 .sidebar ul {
@@ -58,8 +64,7 @@ body.results {
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-  width: calc(100% - 240px);
-  float: right;
+  flex: 1;
 }
 .results-box h2 {
   text-align: center;
@@ -73,11 +78,15 @@ body.results {
   line-height: 1.5;
 }
 
-/* ====== جدول النتائج ====== */
+/* ====== جدول النتائج + صورة الطالب ====== */
+.results-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 .results-table {
-  width: 100%;
+  width: 70%;
   border-collapse: collapse;
-  margin-bottom: 20px;
 }
 .results-table td {
   padding: 8px;
@@ -88,14 +97,12 @@ body.results {
   font-weight: bold;
   color: #b30000;
 }
-
-/* ====== صورة الطالب ====== */
 .student-photo {
   width: 150px;
   border: 2px solid #ccc;
   border-radius: 8px;
-  margin: 10px auto;
-  display: block;
+  margin-left: 20px;
+  align-self: flex-start; /* يخلي الصورة فوق */
 }
 
 /* ====== شعار IELTS ====== */
@@ -122,8 +129,8 @@ footer {
   background: #f0f0f0;
   text-align: center;
   padding: 15px;
-  margin-top: 20px;
   border-top: 1px solid #ccc;
+  margin-top: auto; /* يخلي الفوتر ينزل تحت */
 }
 footer a {
   color: #003366;
