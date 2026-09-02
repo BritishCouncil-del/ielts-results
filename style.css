@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
-  background: url("images/bg.jpg") no-repeat center center fixed;
+  background: url("images/background.jpg") no-repeat center center fixed;
   background-size: cover;
   color: #333;
 }
@@ -93,18 +93,16 @@ body {
 
 /* العلامة المائية داخل مربع البحث */
 .welcome-box::before {
-  content: "IELTS ".repeat(200);
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 800%;
-  height: 800%;
-  font-size: 14px;
-  color: rgba(179, 0, 0, 0.08);
-  font-weight: bold;
+  width: 200%;
+  height: 200%;
+  background: url("images/علامه مائيه.png") repeat;
+  background-size: 150px;
+  opacity: 0.08; /* شفافية */
   transform: rotate(-30deg);
-  white-space: pre-wrap;
-  line-height: 1.5;
   animation: watermarkScroll 15s linear infinite;
 }
 @keyframes watermarkScroll {
@@ -123,14 +121,24 @@ body {
   opacity: 0.8;
 }
 
-/* البانر الأبيض */
+/* البانر الأبيض المتحرك */
 .banner {
-  text-align: center;
-  margin: 20px 0;
+  background: #fff;
+  overflow: hidden;
+  width: 100%;
+  padding: 10px 0;
 }
-.banner img {
-  max-width: 400px;
-  opacity: 0.95;
+.banner-scroll {
+  display: inline-block;
+  white-space: nowrap;
+  animation: bannerMove 25s linear infinite;
+}
+.banner-scroll img {
+  height: 60px;
+}
+@keyframes bannerMove {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(-100%); }
 }
 
 /* الفوتر */
