@@ -60,6 +60,13 @@
   100% { transform: rotate(-30deg) translateX(-120px); }
 }
 
+.student-photo {
+  width: 150px;
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
 /* جدول النتائج */
 .results-table {
   width: 100%;
