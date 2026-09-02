@@ -123,13 +123,14 @@ body.results .container {
   align-items: flex-start;
 }
 
-/* Sidebar يقف مع الجدول */
+/* Sidebar يطول لحد نهاية الجدول */
 body.results .sidebar {
   width: 200px;
   background: #b30000;
   display: flex;
   flex-direction: column;
-  align-self: flex-start;
+  align-self: stretch;
+  min-height: 100%;
 }
 body.results .sidebar ul {
   list-style: none;
@@ -179,7 +180,7 @@ body.results .sidebar ul li a:hover {
   justify-content: space-between;
   align-items: flex-start;
   position: relative;
-  margin-bottom: 30px; /* نهاية الجدول قبل الشعارات */
+  margin-bottom: 30px;
 }
 .results-table {
   width: 70%;
@@ -232,7 +233,7 @@ body.results .sidebar ul li a:hover {
 }
 .logo-section img {
   height: 120px; /* أكبر */
-  opacity: 0.85; /* شفاف */
+  opacity: 0.85;
   margin: 0 20px;
 }
 .banner-section {
@@ -241,5 +242,5 @@ body.results .sidebar ul li a:hover {
 }
 .banner-section img {
   max-width: 700px; /* أكبر */
-  opacity: 0.65; /* شفاف */
+  opacity: 0.65;
 }
