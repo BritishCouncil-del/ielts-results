@@ -77,7 +77,7 @@ const students = {
     name: "HUSSEIN LUTFI HUSSEIN AL-SABBAGH",
     dob: "1982-04-26",
     sex: "M",
-    examDate: "2026-09-02",
+    examDate: "2026-09-12",
     overall: "8.0",
     listening: "8.5",
     reading: "8.0",
@@ -89,14 +89,14 @@ const students = {
     image: "AL-SABBAGH.png"
   },
 
-  /* ====== الطالبة الجديدة ====== */
+  /* ====== الطالبة ALREEM بعد التعديل ====== */
   "26AE050981ALDA113A": {
     candidate: "050981",
     candidateId: "784-1993-4292742-5",
     name: "ALREEM NASSER MUSABBEH FADEL ALDEREI",
     dob: "1993-11-17",
     sex: "F",
-    examDate: "2026-08-12",
+    examDate: "2026-09-12",   // ✅ التاريخ الجديد
     overall: "6.0",
     listening: "6.5",
     reading: "6.0",
@@ -105,6 +105,7 @@ const students = {
     trfNumber: "26AE050981ALDA113A",
     centre: "AE113",
     centreName: "Higher Colleges of Technology",
-    image: "alderei.png"
+    image: "alderei.png",
+    cefr: "B2"   // ✅ إضافة CEFR Level
   }
 };
