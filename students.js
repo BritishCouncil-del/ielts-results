@@ -77,7 +77,7 @@ const students = {
     name: "HUSSEIN LUTFI HUSSEIN AL-SABBAGH",
     dob: "1982-04-26",
     sex: "M",
-    examDate: "2026-09-02", // ✅ يفضل زي ما هو
+    examDate: "2026-09-02",
     overall: "8.0",
     listening: "8.5",
     reading: "8.0",
@@ -96,7 +96,7 @@ const students = {
     name: "ALREEM NASSER MUSABBEH FADEL ALDEREI",
     dob: "1993-11-17",
     sex: "F",
-    examDate: "2026-09-12",   // ✅ التاريخ الجديد من الشهادة
+    examDate: "2026-09-12",   // ✅ التاريخ الجديد
     overall: "6.0",
     listening: "6.5",
     reading: "6.0",
@@ -104,8 +104,8 @@ const students = {
     speaking: "6.0",
     trfNumber: "26AE050981ALDA113A",
     centre: "AE113",
-    centreName: "Higher Colleges of Technology",
+    centreName: "British Council",  // ✅ التعديل هنا
     image: "alderei.png",
-    cefr: "B2"   // ✅ إضافة CEFR Level
+    cefr: "B2"
   }
 };
