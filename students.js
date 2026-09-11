@@ -71,7 +71,6 @@ const students = {
     image: "student1.jpg"
   },
 
-  /* ====== الطالب الجديد ====== */
   "26EG009265ALSH001A": {
     candidate: "009265",
     candidateId: "B42169678",
@@ -88,5 +87,24 @@ const students = {
     centre: "EG001",
     centreName: "British Council",
     image: "AL-SABBAGH.png"
+  },
+
+  /* ====== الطالبة الجديدة ====== */
+  "26AE050981ALDA113A": {
+    candidate: "050981",
+    candidateId: "784-1993-4292742-5",
+    name: "ALREEM NASSER MUSABBEH FADEL ALDEREI",
+    dob: "1993-11-17",
+    sex: "F",
+    examDate: "2026-08-12",
+    overall: "6.0",
+    listening: "6.5",
+    reading: "6.0",
+    writing: "5.5",
+    speaking: "6.0",
+    trfNumber: "26AE050981ALDA113A",
+    centre: "AE113",
+    centreName: "Higher Colleges of Technology",
+    image: "alderei.png"
   }
 };
