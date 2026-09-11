@@ -77,7 +77,7 @@ const students = {
     name: "HUSSEIN LUTFI HUSSEIN AL-SABBAGH",
     dob: "1982-04-26",
     sex: "M",
-    examDate: "2026-09-12",
+    examDate: "2026-09-02", // ✅ يفضل زي ما هو
     overall: "8.0",
     listening: "8.5",
     reading: "8.0",
@@ -96,7 +96,7 @@ const students = {
     name: "ALREEM NASSER MUSABBEH FADEL ALDEREI",
     dob: "1993-11-17",
     sex: "F",
-    examDate: "2026-09-12",   // ✅ التاريخ الجديد
+    examDate: "2026-09-12",   // ✅ التاريخ الجديد من الشهادة
     overall: "6.0",
     listening: "6.5",
     reading: "6.0",
