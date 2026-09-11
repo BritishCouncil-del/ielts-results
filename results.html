@@ -87,6 +87,7 @@
         <tr><td>Writing</td><td>${student.writing}</td></tr>
         <tr><td>Speaking</td><td>${student.speaking}</td></tr>
         <tr><td class="score">Overall Band Score</td><td class="score">${student.overall}</td></tr>
+        <tr><td>CEFR Level</td><td>${student.cefr || "N/A"}</td></tr>
       `;
       document.getElementById("studentPhoto").src = "images/" + student.image;
     } else {
