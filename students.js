@@ -89,14 +89,13 @@ const students = {
     image: "AL-SABBAGH.png"
   },
 
-  /* ====== الطالبة ALREEM بعد التعديل ====== */
   "26AE050981ALDA113A": {
     candidate: "050981",
     candidateId: "784-1993-4292742-5",
     name: "ALREEM NASSER MUSABBEH FADEL ALDEREI",
     dob: "1993-11-17",
     sex: "F",
-    examDate: "2026-09-12",   // ✅ التاريخ الجديد
+    examDate: "2026-09-12",
     overall: "6.0",
     listening: "6.5",
     reading: "6.0",
@@ -104,8 +103,28 @@ const students = {
     speaking: "6.0",
     trfNumber: "26AE050981ALDA113A",
     centre: "AE113",
-    centreName: "British Council",  // ✅ التعديل هنا
+    centreName: "British Council",
     image: "alderei.png",
+    cefr: "B2"
+  },
+
+  /* ====== الطالب الجديد ALMANSOORI ====== */
+  "26AE051072ALMS113A": {
+    candidate: "051072",
+    candidateId: "784-2001-3736948-2",
+    name: "SAEED MAJED RASHED ALDHAHAK ALMANSOORI",
+    dob: "2001-08-12",
+    sex: "M",
+    examDate: "2026-09-12",
+    overall: "5.5",
+    listening: "5.5",
+    reading: "5.0",
+    writing: "5.0",
+    speaking: "6.0",
+    trfNumber: "26AE051072ALMS113A",
+    centre: "AE113",
+    centreName: "British Council",
+    image: "almansoori.png", // ✅ اسم الصورة
     cefr: "B2"
   }
 };
