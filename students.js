@@ -108,7 +108,6 @@ const students = {
     cefr: "B2"
   },
 
-  /* ====== الطالب الجديد ALMANSOORI ====== */
   "26AE051072ALMS113A": {
     candidate: "051072",
     candidateId: "784-2001-3736948-2",
@@ -124,7 +123,26 @@ const students = {
     trfNumber: "26AE051072ALMS113A",
     centre: "AE113",
     centreName: "British Council",
-    image: "almansoori.png", // ✅ اسم الصورة
+    image: "almansoori.png",
+    cefr: "B2"
+  },
+
+  "26AE051371ALYM113A": {
+    candidate: "051371",
+    candidateId: "784-2008-8628282-9",
+    name: "MANAL ABDULLA MOHAMED SAAD ALYAAQEIB",
+    dob: "2008-10-02",
+    sex: "F",
+    examDate: "2026-09-22",
+    overall: "6.0",
+    listening: "6.0",
+    reading: "5.5",
+    writing: "6.0",
+    speaking: "6.5",
+    trfNumber: "26AE051371ALYM113A",
+    centre: "AE113",
+    centreName: "British Council",
+    image: "alyaqeib.png",
     cefr: "B2"
   }
 };
