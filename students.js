@@ -71,24 +71,6 @@ const students = {
     image: "student1.jpg"
   },
 
-  "26EG009265ALSH001A": {
-    candidate: "009265",
-    candidateId: "B42169678",
-    name: "HUSSEIN LUTFI HUSSEIN AL-SABBAGH",
-    dob: "1982-04-26",
-    sex: "M",
-    examDate: "2026-09-02",
-    overall: "8.0",
-    listening: "8.5",
-    reading: "8.0",
-    writing: "7.5",
-    speaking: "8.0",
-    trfNumber: "26EG009265ALSH001A",
-    centre: "EG001",
-    centreName: "British Council",
-    image: "AL-SABBAGH.png"
-  },
-
   "26AE050981ALDA113A": {
     candidate: "050981",
     candidateId: "784-1993-4292742-5",
@@ -143,6 +125,25 @@ const students = {
     centre: "AE113",
     centreName: "British Council",
     image: "alyaqeib.png",
+    cefr: "B2"
+  },
+
+  "25MY009265ALAH001A": {
+    candidate: "009265",
+    candidateId: "N02692840",
+    name: "HAMMAM MAHMOUD ALAHMAD",
+    dob: "1995-10-18",
+    sex: "M",
+    examDate: "2026-10-20",
+    overall: "5.5",
+    listening: "6.5",
+    reading: "6.0",
+    writing: "5.5",
+    speaking: "6.0",
+    trfNumber: "25MY009265ALAH001A",
+    centre: "MY001",
+    centreName: "British Council",
+    image: "alahmad.png",
     cefr: "B2"
   }
 };
