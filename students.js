@@ -152,7 +152,7 @@ const students = {
     name: "HUMAM LOTFI HUSSEIN",
     dob: "2008-07-19",
     sex: "M",
-    examDate: "2026-10-21",   // ✅ تاريخ الاختبار الجديد
+    examDate: "2026-10-21",
     overall: "7.0",
     listening: "7.5",
     reading: "7.0",
@@ -162,6 +162,26 @@ const students = {
     centre: "EG001",
     centreName: "British Council",
     image: "humam.png",
-    issueDate: "2026-10-23"   // ✅ تاريخ الاستلام الجديد
+    issueDate: "2026-10-23"
+  },
+
+  "26AE517263ALMR113A": {
+    candidate: "517263",
+    candidateId: "784-2002-5904253-7",
+    name: "RAUDA AHMED ABDULLA AHMED ALMAHRI",
+    dob: "2002-05-20",
+    sex: "F",
+    examDate: "2026-11-14",
+    overall: "5.5",
+    listening: "5.0",
+    reading: "5.5",
+    writing: "5.5",
+    speaking: "6.0",
+    trfNumber: "26AE517263ALMR113A",
+    centre: "AE113",
+    centreName: "British Council",
+    image: "almahri.png",
+    cefr: "B2",
+    issueDate: "2026-11-17"
   }
 };
